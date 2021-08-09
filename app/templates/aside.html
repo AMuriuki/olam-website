@@ -123,56 +123,6 @@
                     </li>
                 </ul><!-- .nk-menu-sub -->
             </li><!-- .nk-menu-item -->
-            <li class="nk-menu-item has-sub">
-                <a href="html/components.html" class="nk-menu-link nk-menu-toggle">
-                    <span class="nk-menu-text">Community</span>
-                </a>
-                <ul class="nk-menu-sub">
-                    <li class="nk-menu-item has-sub"><a href="#" class="nk-menu-link nk-menu-toggle"
-                            data-original-title="" title=""><span class="nk-menu-icon"><em
-                                    class="icon ni ni-users"></em></span>
-                            <h6 class="overline-title text-primary-alt">Learn</h6>
-                        </a>
-                        <ul class="nk-menu-sub">
-                            <li class="nk-menu-item"><a href="/demo4/user-list-regular.html" class="nk-menu-link"
-                                    data-original-title="" title=""><span class="nk-menu-text">Tutorials</span></a></li>
-                            <li class="nk-menu-item"><a href="/demo4/user-list-compact.html" class="nk-menu-link"
-                                    data-original-title="" title=""><span class="nk-menu-text">Documentation</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nk-menu-item has-sub"><a href="#" class="nk-menu-link nk-menu-toggle"
-                            data-original-title="" title=""><span class="nk-menu-icon"><em
-                                    class="icon ni ni-users"></em></span>
-                            <h6 class="overline-title text-primary-alt">Collaborate</h6>
-                        </a>
-                        <ul class="nk-menu-sub">
-                            <li class="nk-menu-item"><a href="/demo4/user-list-regular.html" class="nk-menu-link"
-                                    data-original-title="" title=""><span class="nk-menu-text">Forums</span></a></li>
-                            <li class="nk-menu-item"><a href="/demo4/user-list-compact.html" class="nk-menu-link"
-                                    data-original-title="" title=""><span class="nk-menu-text">Events</span></a></li>
-                            <li class="nk-menu-item"><a href="/demo4/user-list-compact.html" class="nk-menu-link"
-                                    data-original-title="" title=""><span class="nk-menu-text">Report an
-                                        Issue</span></a></li>
-                        </ul>
-                    </li>
-                    <li class="nk-menu-item has-sub"><a href="#" class="nk-menu-link nk-menu-toggle"
-                            data-original-title="" title=""><span class="nk-menu-icon"><em
-                                    class="icon ni ni-users"></em></span>
-                            <h6 class="overline-title text-primary-alt">Services</h6>
-                        </a>
-                        <ul class="nk-menu-sub">
-                            <li class="nk-menu-item"><a href="/demo4/user-list-compact.html" class="nk-menu-link"
-                                    data-original-title="" title=""><span class="nk-menu-text">Custom
-                                        Development</span></a></li>
-                            <li class="nk-menu-item"><a href="/demo4/user-details-regular.html" class="nk-menu-link"
-                                    data-original-title="" title=""><span class="nk-menu-text">Find an
-                                        Accountant</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul><!-- .nk-menu-sub -->
-            </li><!-- .nk-menu-item -->
             <li class="nk-menu-item">
                 <a href="html/support-kb.html" class="nk-menu-link">
                     <span class="nk-menu-text">Pricing</span>
@@ -180,6 +130,7 @@
             </li><!-- .nk-menu-item -->
         </ul><!-- .nk-menu -->
         <ul class="nk-menu">
+            {% if current_user.is_authenticated %}
             <li class="nk-menu-heading">
                 <h6 class="overline-title text-primary-alt">Menu</h6>
             </li><!-- .nk-menu-heading -->
@@ -195,6 +146,7 @@
                     <span class="nk-menu-text">Home</span>
                 </a>
             </li>
+            {% endif %}
             {% if module %}
             <li class="nk-menu-heading">
                 <h6 class="overline-title text-primary-alt">{{module.name}}</h6>
@@ -275,7 +227,7 @@
                 </ul><!-- .nk-menu-sub -->
             </li><!-- .nk-menu-item -->
             {% endfor %}
-            {% if current_user.can(16) %}
+            {% if current_user.is_authenticated %}
             <li class="nk-menu-heading">
                 <h6 class="overline-title text-primary-alt">Others</h6>
             </li><!-- .nk-menu-heading -->

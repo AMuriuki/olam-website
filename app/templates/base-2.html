@@ -12,8 +12,8 @@
     <!-- Page Title  -->
     <title>{% if title %} {{title}} {% else %} Welcome to Shalem {% endif %}</title>
     <!-- StyleSheets  -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/dashlite.css') }}">
-    <link id="skin-default" rel="stylesheet" href="{{ url_for('static', filename='assets/css/theme.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base-2/css/dashlite.css') }}">
+    <link id="skin-default" rel="stylesheet" href="{{ url_for('static', filename='base-2/css/theme.css') }}">
     {{ JSGlue.include() }}
 </head>
 {% if title == 'Getting Started | Shalem' or title == 'New Database | Shalem' or title == 'Manage Your Databases |
@@ -66,9 +66,9 @@ Shalem' %}
             </div>
         </div>
     </div>
-    <script src="{{ url_for('static', filename='assets/js/bundle.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/scripts.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/demo-settings.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/demo-settings.js') }}"></script>
 </body>
 {% elif title == 'Getting Started | Shalem' or title == 'New Database | Shalem' %}
 
@@ -78,7 +78,7 @@ Shalem' %}
         <div class="nk-main ">
             <!-- wrap @s -->
             <div class="nk-wrap">
-                {% include "header.html" %}
+                {% include "header-2.html" %}
                 <div class="nk-content ">
                     <div class="container wide-xl">
                         <div class="nk-content-inner">
@@ -114,14 +114,14 @@ Shalem' %}
     </div>
     <!-- app-root @e -->
     <!-- JavaScript -->
-    <script src="{{ url_for('static', filename='assets/js/bundle.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/scripts.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/charts/gd-default.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/demo-settings.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/libs/jkanban.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/apps/kanban.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/kanban-custom.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/charts/gd-default.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/demo-settings.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/libs/jkanban.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/apps/kanban.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/kanban-custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/custom.js') }}"></script>
 </body>
 
 {% elif title == 'Manage Your Databases | Shalem' %}
@@ -132,7 +132,7 @@ Shalem' %}
         <div class="nk-main ">
             <!-- wrap @s -->
             <div class="nk-wrap">
-                {% include "header.html" %}
+                {% include "header-2.html" %}
                 <div class="nk-content ">
                     <div class="container wide-xl">
                         <div class="nk-content-inner">
@@ -168,14 +168,14 @@ Shalem' %}
     </div>
     <!-- app-root @e -->
     <!-- JavaScript -->
-    <script src="{{ url_for('static', filename='assets/js/bundle.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/scripts.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/charts/gd-default.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/demo-settings.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/libs/jkanban.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/apps/kanban.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/kanban-custom.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/charts/gd-default.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/demo-settings.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/libs/jkanban.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/apps/kanban.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/kanban-custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/custom.js') }}"></script>
 </body>
 {% else %}
 
@@ -185,7 +185,7 @@ Shalem' %}
         <div class="nk-main ">
             <!-- wrap @s -->
             <div class="nk-wrap">
-                {% include "header.html" %}
+                {% include "header-2.html" %}
                 <div class="nk-content ">
                     <div class="container wide-xl">
                         <div class="nk-content-inner">
@@ -202,14 +202,14 @@ Shalem' %}
     </div>
     <!-- app-root @e -->
     <!-- JavaScript -->
-    <script src="{{ url_for('static', filename='assets/js/bundle.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/scripts.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/charts/gd-default.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/demo-settings.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/libs/jkanban.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/apps/kanban.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/kanban-custom.js') }}"></script>
-    <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/charts/gd-default.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/demo-settings.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/libs/jkanban.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/apps/kanban.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/kanban-custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/custom.js') }}"></script>
 </body>
 {% endif %}
 

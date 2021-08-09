@@ -33,3 +33,9 @@ def choose_apps():
 @login_required
 def dashboard():
     return render_template('main/dashboard.html', title=_('Dashboard | Shalem'))
+
+
+@bp.route('/all-apps', methods=['GET', 'POST'])
+@login_required
+def all_apps():
+    return render_template('main/apps.html', title=_('Shalem | All Apps'))
