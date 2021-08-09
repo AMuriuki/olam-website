@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+
+<head>
+    <base href="../">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Grow your business with our suite of apps">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="{{url_for('static', filename='images/favicon.png')}}">
+    <!-- Page Title  -->
+    <title>{% if title %}{{ title }}{% else %}Welcome to Shalem{% endif %}</title>
+    <!-- StyleSheets  -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashlite.css')}}">
+    <link id="skin-default" rel="stylesheet" href="{{url_for('static', filename='css/theme.css')}}">
+</head>
+
+{% block content %}
+{% endblock %}
+
+</html>
