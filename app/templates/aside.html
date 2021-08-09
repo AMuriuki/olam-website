@@ -1,0 +1,302 @@
+<style>
+    #pricingPanel {
+        position: fixed;
+        width: inherit;
+    }
+
+    .ul_apps {
+        list-style: inside;
+        margin-bottom: .75rem;
+    }
+</style>
+<div class="nk-aside" data-content="sideNav" data-toggle-overlay="true" data-toggle-screen="lg" data-toggle-body="true">
+    {% if title == 'New Database | Teleios' %}
+    <div id="pricingPanel" class="card card-bordered">
+        <div class="card-body">
+            <h6 class="card-title"><span class="noApps">x</span>&nbsp;apps selected</h6>
+            <ul class="ul_apps">
+            </ul>
+            <div class="alert alert-pro alert-primary">
+                <div class="alert-text">
+                    <span><strong>Total</strong>/month</span>
+                    <p>KSH&nbsp;<span class="total_price"></span></p>
+                </div>
+            </div>
+            <a style="{% if errors %} display:none {% endif %}" href="javascript:select_modules()"
+                class="btn btn-wider btn-primary continue"><span>Continue</span><em
+                    class="icon ni ni-arrow-right"></em></a>
+        </div>
+    </div>
+    {% endif %}
+
+    <div id="div_nk-sidebar-menu" class="nk-sidebar-menu" data-simplebar>
+        <ul class="nk-menu nk-menu-main">
+            <li class="nk-menu-item has-sub">
+                <a href="#" class="nk-menu-link nk-menu-toggle">
+                    <span class="nk-menu-text">Apps</span>
+                </a>
+                <ul class="nk-menu-sub">
+                    <li class="nk-menu-item has-sub"><a href="#" class="nk-menu-link nk-menu-toggle"
+                            data-original-title="" title=""><span class="nk-menu-icon"><em
+                                    class="icon ni ni-users"></em></span>
+                            <h6 class="overline-title text-primary-alt">Finance</h6>
+                        </a>
+                        <ul class="nk-menu-sub">
+                            <li class="nk-menu-item"><a href="/demo4/user-list-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Acounting</span></a></li>
+                            <li class="nk-menu-item"><a href="/demo4/user-list-compact.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Invoicing</span></a></li>
+                            <li class="nk-menu-item"><a href="/demo4/user-details-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Expenses</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nk-menu-item has-sub"><a href="#" class="nk-menu-link nk-menu-toggle"
+                            data-original-title="" title=""><span class="nk-menu-icon"><em
+                                    class="icon ni ni-users"></em></span>
+                            <h6 class="overline-title text-primary-alt">Sales</h6>
+                        </a>
+                        <ul class="nk-menu-sub">
+                            <li class="nk-menu-item"><a href="/demo4/user-list-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">CRM</span></a></li>
+                            <li class="nk-menu-item"><a href="/demo4/user-list-compact.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Sales</span></a></li>
+                            <li class="nk-menu-item"><a href="/demo4/user-details-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Point of Sale</span></a>
+                            </li>
+                            <li class="nk-menu-item"><a href="/demo4/user-list-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Inventory</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nk-menu-item has-sub"><a href="#" class="nk-menu-link nk-menu-toggle"
+                            data-original-title="" title=""><span class="nk-menu-icon"><em
+                                    class="icon ni ni-users"></em></span>
+                            <h6 class="overline-title text-primary-alt">People Experience</h6>
+                        </a>
+                        <ul class="nk-menu-sub">
+                            <li class="nk-menu-item"><a href="/demo4/user-list-compact.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Staff</span></a></li>
+                            <li class="nk-menu-item"><a href="/demo4/user-details-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">New Talent</span></a>
+                            </li>
+                            <li class="nk-menu-item"><a href="/demo4/user-details-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Time Off</span></a></li>
+                            <li class="nk-menu-item"><a href="/demo4/user-details-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Appraisals</span></a>
+                            </li>
+                            <li class="nk-menu-item"><a href="/demo4/user-details-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Fleet</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nk-menu-item has-sub"><a href="#" class="nk-menu-link nk-menu-toggle"
+                            data-original-title="" title=""><span class="nk-menu-icon"><em
+                                    class="icon ni ni-users"></em></span>
+                            <h6 class="overline-title text-primary-alt">Services</h6>
+                        </a>
+                        <ul class="nk-menu-sub">
+                            <li class="nk-menu-item"><a href="/demo4/user-list-compact.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Projects</span></a></li>
+                            <li class="nk-menu-item"><a href="/demo4/user-details-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Timesheets</span></a>
+                            </li>
+                            <li class="nk-menu-item"><a href="/demo4/user-details-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Help Desk</span></a></li>
+                            <li class="nk-menu-item"><a href="/demo4/user-details-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Planning</span></a></li>
+                            <li class="nk-menu-item"><a href="/demo4/user-details-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Appointments</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nk-menu-item has-sub"><a href="#" class="nk-menu-link nk-menu-toggle"
+                            data-original-title="" title=""><span class="nk-menu-icon"><em
+                                    class="icon ni ni-users"></em></span>
+                            <h6 class="overline-title text-primary-alt">Productivity</h6>
+                        </a>
+                        <ul class="nk-menu-sub">
+                            <li class="nk-menu-item"><a href="/demo4/user-list-compact.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Video
+                                        Conferencing</span></a></li>
+                            <li class="nk-menu-item"><a href="/demo4/user-details-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Let's Chat</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul><!-- .nk-menu-sub -->
+            </li><!-- .nk-menu-item -->
+            <li class="nk-menu-item has-sub">
+                <a href="html/components.html" class="nk-menu-link nk-menu-toggle">
+                    <span class="nk-menu-text">Community</span>
+                </a>
+                <ul class="nk-menu-sub">
+                    <li class="nk-menu-item has-sub"><a href="#" class="nk-menu-link nk-menu-toggle"
+                            data-original-title="" title=""><span class="nk-menu-icon"><em
+                                    class="icon ni ni-users"></em></span>
+                            <h6 class="overline-title text-primary-alt">Learn</h6>
+                        </a>
+                        <ul class="nk-menu-sub">
+                            <li class="nk-menu-item"><a href="/demo4/user-list-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Tutorials</span></a></li>
+                            <li class="nk-menu-item"><a href="/demo4/user-list-compact.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Documentation</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nk-menu-item has-sub"><a href="#" class="nk-menu-link nk-menu-toggle"
+                            data-original-title="" title=""><span class="nk-menu-icon"><em
+                                    class="icon ni ni-users"></em></span>
+                            <h6 class="overline-title text-primary-alt">Collaborate</h6>
+                        </a>
+                        <ul class="nk-menu-sub">
+                            <li class="nk-menu-item"><a href="/demo4/user-list-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Forums</span></a></li>
+                            <li class="nk-menu-item"><a href="/demo4/user-list-compact.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Events</span></a></li>
+                            <li class="nk-menu-item"><a href="/demo4/user-list-compact.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Report an
+                                        Issue</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nk-menu-item has-sub"><a href="#" class="nk-menu-link nk-menu-toggle"
+                            data-original-title="" title=""><span class="nk-menu-icon"><em
+                                    class="icon ni ni-users"></em></span>
+                            <h6 class="overline-title text-primary-alt">Services</h6>
+                        </a>
+                        <ul class="nk-menu-sub">
+                            <li class="nk-menu-item"><a href="/demo4/user-list-compact.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Custom
+                                        Development</span></a></li>
+                            <li class="nk-menu-item"><a href="/demo4/user-details-regular.html" class="nk-menu-link"
+                                    data-original-title="" title=""><span class="nk-menu-text">Find an
+                                        Accountant</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul><!-- .nk-menu-sub -->
+            </li><!-- .nk-menu-item -->
+            <li class="nk-menu-item">
+                <a href="html/support-kb.html" class="nk-menu-link">
+                    <span class="nk-menu-text">Pricing</span>
+                </a>
+            </li><!-- .nk-menu-item -->
+        </ul><!-- .nk-menu -->
+        <ul class="nk-menu">
+            <li class="nk-menu-heading">
+                <h6 class="overline-title text-primary-alt">Menu</h6>
+            </li><!-- .nk-menu-heading -->
+            <li class="nk-menu-item">
+                <a href="{{url_for('main.dashboard')}}" class="nk-menu-link">
+                    <span class="nk-menu-icon"><em class="icon ni ni-dashboard"></em></span>
+                    <span class="nk-menu-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nk-menu-item">
+                <a href="" class="nk-menu-link">
+                    <span class="nk-menu-icon"><em class="icon ni ni-home"></em></span>
+                    <span class="nk-menu-text">Home</span>
+                </a>
+            </li>
+            {% if module %}
+            <li class="nk-menu-heading">
+                <h6 class="overline-title text-primary-alt">{{module.name}}</h6>
+            </li><!-- .nk-menu-heading -->
+            <li class="nk-menu-item">
+                <a href="{{url_for('account.dashboard')}}" class="nk-menu-link">
+                    <span class="nk-menu-icon"></span>
+                    <span class="nk-menu-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nk-menu-item">
+                <a href="{{url_for('account.customers')}}" class="nk-menu-link">
+                    <span class="nk-menu-icon"></span>
+                    <span class="nk-menu-text">Customers</span>
+                </a>
+            </li>
+            <li class="nk-menu-item">
+                <a href="{{url_for('account.vendors')}}" class="nk-menu-link">
+                    <span class="nk-menu-icon"></span>
+                    <span class="nk-menu-text">Vendors</span>
+                </a>
+            </li>
+            <li class="nk-menu-item">
+                <a href="{{url_for('account.account')}}" class="nk-menu-link">
+                    <span class="nk-menu-icon"></span>
+                    <span class="nk-menu-text">Accounting</span>
+                </a>
+            </li>
+            <li class="nk-menu-item">
+                <a href="{{url_for('account.reporting')}}" class="nk-menu-link">
+                    <span class="nk-menu-icon"></span>
+                    <span class="nk-menu-text">Reporting</span>
+                </a>
+            </li>
+            <li class="nk-menu-item">
+                <a href="{{url_for('account.configuration')}}" class="nk-menu-link">
+                    <span class="nk-menu-icon"></span>
+                    <span class="nk-menu-text">Configuration</span>
+                </a>
+            </li>
+            {% endif %}
+            <!-- .nk-menu-item -->
+            {% for salesdocument in salesdocuments %}
+            <li class="nk-menu-item has-sub">
+                <a href="#" class="nk-menu-link nk-menu-toggle">
+                    <span class="nk-menu=text">{{salesdocument.name}}</span>
+                </a>
+                <ul class="nk-menu-sub">
+                    {% for subdocument in salesdocument.subdocuments %}
+                    <li class="nk-menu-item">
+                        <a href="{{url_for('sales.document', document=subdocument.name.lower())}}"
+                            class="nk-menu-link"><span class="nk-menu-text">{{subdocument.name}}</span></a>
+                    </li>
+                    {% endfor %}
+                </ul><!-- .nk-menu-sub -->
+            </li>
+            {% endfor %}
+
+            {% if modulecategories %}
+            <li class="nk-menu-heading">
+                <h6 class="overline-title text-primary-alt">Categories</h6>
+            </li><!-- .nk-menu-heading -->
+            {% endif %}
+
+            {% for modulecategory in modulecategories %}
+            <li class="nk-menu-item has-sub">
+                <a href="#" class="nk-menu-link nk-menu-toggle">
+                    <span class="nk-menu-icon">{{modulecategory.nioicon|safe}}</span>
+                    <span class="nk-menu-text">{{modulecategory.name}}</span>
+                </a>
+                <ul class="nk-menu-sub">
+                    {% for module in modulecategory.modules %}
+                    <li class="nk-menu-item">
+                        <a href="{{url_for('main._module', name=module.name)}}" class="nk-menu-link"><span
+                                class="nk-menu-text">{{module.shortdesc}}</span></a>
+                    </li>
+                    {% endfor %}
+                </ul><!-- .nk-menu-sub -->
+            </li><!-- .nk-menu-item -->
+            {% endfor %}
+            {% if current_user.can(16) %}
+            <li class="nk-menu-heading">
+                <h6 class="overline-title text-primary-alt">Others</h6>
+            </li><!-- .nk-menu-heading -->
+            <li class="nk-menu-item">
+                <a href="{{url_for('settings.settings')}}" class="nk-menu-link">
+                    <span class="nk-menu-icon"><em class="icon ni ni-setting"></em></span>
+                    <span class="nk-menu-text">Settings</span>
+                </a>
+            </li>
+            
+            <li class="nk-menu-item">
+                <a href="{{url_for('main.all_apps')}}" class="nk-menu-link">
+                    <span class="nk-menu-icon"><em class="icon ni ni-layers"></em></span>
+                    <span class="nk-menu-text">All Apps</span>
+                </a>
+            </li>
+            {% endif %}
+        </ul><!-- .nk-menu -->
+    </div><!-- .nk-sidebar-menu -->
+    <div class="nk-aside-close">
+        <a href="#" class="toggle" data-target="sideNav"><em class="icon ni ni-cross"></em></a>
+    </div><!-- .nk-aside-close -->
+
+</div>

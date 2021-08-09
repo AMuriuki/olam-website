@@ -502,7 +502,7 @@
                                 <p>No credit card required - Instant access</p>
                                 <ul class="btns-inline justify-center pt-2">
                                     <li>
-                                        <a href="#" class="btn btn-xl btn-primary btn-round">Start now - It's free</a>
+                                        <a href="{{url_for('main.choose_apps')}}" class="btn btn-xl btn-primary btn-round">Start now - It's free</a>
                                     </li>
                                 </ul>
                             </div>
@@ -510,7 +510,7 @@
                     </div><!-- .row -->
                 </div><!-- .container -->
                 <div class="bg-image bg-overlay after-bg-dark after-opacity-90">
-                    <img src="./images/bg/b.jpg" alt="">
+                    <img src="{{url_for('static', filename='images/bg/b.jpg')}}" alt="">
                 </div>
             </section><!-- .section -->
             {% include "footer.html" %}
