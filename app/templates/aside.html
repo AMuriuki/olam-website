@@ -9,8 +9,8 @@
         margin-bottom: .75rem;
     }
 </style>
-<div class="nk-aside" data-content="sideNav" data-toggle-overlay="true" data-toggle-screen="lg" data-toggle-body="true">
-    {% if title == 'New Database | Teleios' %}
+<div style="{% if errors %} display:block {% endif %}" class="nk-aside" data-content="sideNav" data-toggle-overlay="true" data-toggle-screen="lg" data-toggle-body="true">
+    {% if title == 'New Database | Shalem' %}
     <div id="pricingPanel" class="card card-bordered">
         <div class="card-body">
             <h6 class="card-title"><span class="noApps">x</span>&nbsp;apps selected</h6>
@@ -22,7 +22,7 @@
                     <p>KSH&nbsp;<span class="total_price"></span></p>
                 </div>
             </div>
-            <a style="{% if errors %} display:none {% endif %}" href="javascript:select_modules()"
+            <a style="{% if errors %} display:block {% endif %}" href="javascript:select_modules()"
                 class="btn btn-wider btn-primary continue"><span>Continue</span><em
                     class="icon ni ni-arrow-right"></em></a>
         </div>

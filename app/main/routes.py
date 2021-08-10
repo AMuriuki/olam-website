@@ -1,3 +1,5 @@
+from app.main.utils import search_dict
+from app.main.models.module import Module, ModuleCategory
 from datetime import datetime
 from flask import render_template, flash, redirect, url_for, request, g, \
     jsonify, current_app, session, request, abort
@@ -20,12 +22,17 @@ def index():
 
 @bp.route('/new/database', methods=['GET', 'POST'])
 def choose_apps():
+    errors = False
     form = GetStartedForm()
+    module_categories = ModuleCategory.query.join(
+        Module, ModuleCategory.id == Module.category_id).filter(Module.enable.is_(True)).all()
+    modules = Module.query.filter(Module.enable.is_(True)).all()
+
     if form.validate_on_submit():
         return redirect(url_for('main.home'))
     if form.errors:
-        pass
-    return render_template('main/set-up.html', title=_('New Database | Shalem'), form=form)
+        errors = True        
+    return render_template('main/set-up.html', title=_('New Database | Shalem'), form=form, moduleCategories=module_categories, modules=modules, errors=errors)
 
 
 @bp.route('/dashboard')
@@ -37,4 +44,12 @@ def dashboard():
 @bp.route('/all-apps', methods=['GET', 'POST'])
 @login_required
 def all_apps():
-    return render_template('main/apps.html', title=_('Shalem | All Apps'))
+    return render_template('main/apps.html', title=_('All Apps | Shalem'))
+
+
+@bp.route('/selected_modules', methods=['GET', 'POST'])
+def selected_modules():
+    if request.method == "POST":
+        session['selected_modules'] = request.form.getlist(
+            'selected_modules[]')
+        return jsonify({"response": "success"})
