@@ -20,6 +20,11 @@ def index():
     return render_template('index.html', title=_('Tools to Grow Your Business | Shalem'))
 
 
+def onboarding(email, name, domainname, company_name, phonenumber):
+    # On Default DB
+    pass
+
+
 @bp.route('/new/database', methods=['GET', 'POST'])
 def choose_apps():
     errors = False
@@ -29,9 +34,13 @@ def choose_apps():
     modules = Module.query.filter(Module.enable.is_(True)).all()
 
     if form.validate_on_submit():
+        domain_name = (form.domainoutput.data).replace('.shalem.com', '')  # -> *.shalem.com        
+        session['domain'] = domain_name
+        onboarding(form.email.data, form.name.data,
+                   domain_name, form.companyname.data, form.phonenumber.data)
         return redirect(url_for('main.home'))
     if form.errors:
-        errors = True        
+        errors = True
     return render_template('main/set-up.html', title=_('New Database | Shalem'), form=form, moduleCategories=module_categories, modules=modules, errors=errors)
 
 

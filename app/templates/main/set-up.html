@@ -158,9 +158,7 @@
                                     <div style="{% if domainerrors or subdomain %} display: block; {% else %} display: none; {% endif %}"
                                         id="dvDomainOutput" class="col-sm-6">
                                         <div class="form-group">
-                                            {{form.domainoutput.label(class="form-label")}}<a style="margin-left: 1%;"
-                                                data-toggle="Edit domain" href="javascript:edit_domain()"><em
-                                                    class="icon ni ni-edit-alt"></em></a>
+                                            {{form.domainoutput.label(class="form-label")}}
                                             <div class="form-control-wrap">
                                                 <div style="{% if domainerrors %} display:block; {% endif %}"
                                                     class="form-text-hint"><span
