@@ -1,0 +1,7 @@
+id,website,summary,name,author,icon,state,latest_version,shortdesc,category_id,description,application,demo,web,license,sequence,auto_install,to_buy,maintainer,contributors,published_version,url,menus_by_module,reports_by_module,views_by_module
+1,,From quotations to invoices,sale_management,Shalem,,uninstalled,1,Sales,1,From quotations to invoices,t,f,f,,5,f,f,,,,,,,
+2,,Track leads and close opportunities,crm,Shalem,,uninstalled,1,CRM,1,Shalem CRM,t,f,f,,15,f,f,,,,,,,
+3,,User-friendly PoS interface for shops and restaurants,point_of_sale,Shalem,,uninstalled,1,Point of Sale,1,Shalem POS,t,f,f,,40,f,f,,,,,,,
+4,,Centralize your address book,contacts,Shalem,,uninstalled,1,Contacts,1,Shalem Contacts,t,f,f,,150,f,f,,,,,,,
+5,,Online appointments scheduler,calendar,Shalem,,uninstalled,1,Appointments,1,Shalem Appointments,t,f,f,,215,f,t,,,,,,,
+6,,"Accounting, Taxes, Budgets, Assets...",account,Shalem,,uninstalled,1,Accounting,3,Shalem Accounting,t,f,f,,30,f,t,,,,,,,

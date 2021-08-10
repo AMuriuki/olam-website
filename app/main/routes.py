@@ -21,7 +21,6 @@ def index():
 @bp.route('/new/database', methods=['GET', 'POST'])
 def choose_apps():
     form = GetStartedForm()
-
     if form.validate_on_submit():
         return redirect(url_for('main.home'))
     if form.errors:
