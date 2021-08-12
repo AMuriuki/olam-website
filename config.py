@@ -8,7 +8,7 @@ load_dotenv(os.path.join(basedir, '.env'))
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-        'sqlite:///' + os.path.join(basedir, 'shalem.db')
+        'sqlite:///' + os.path.join(basedir, 'olam.db')
     SQLALCHEMY_BINDS = {
 
     }
@@ -25,5 +25,5 @@ class Config(object):
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
     REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'
     POSTS_PER_PAGE = 25
-    TELEIOS_ADMIN = os.environ.get('SHALEM_ADMIN')
+    OLAM_ADMIN = os.environ.get('OLAM_ADMIN')
     # SERVER_NAME = 'teleioserp.com:5000'

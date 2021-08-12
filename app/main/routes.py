@@ -1,3 +1,4 @@
+from app.auth.models.user import User
 from app.main.utils import search_dict
 from app.main.models.module import Module, ModuleCategory
 from datetime import datetime
@@ -17,12 +18,13 @@ from urllib.parse import urlparse
 
 @bp.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html', title=_('Tools to Grow Your Business | Shalem'))
+    return render_template('index.html', title=_('Tools to Grow Your Business | Olam ERP'))
 
 
 def onboarding(email, name, domainname, company_name, phonenumber):
-    # On Default DB
-    pass
+    user = User.query.filter_by(email=email).first()
+    if user is None:
+        user = User(name=name, email=email, phone=phonenumber)
 
 
 @bp.route('/new/database', methods=['GET', 'POST'])
@@ -34,26 +36,27 @@ def choose_apps():
     modules = Module.query.filter(Module.enable.is_(True)).all()
 
     if form.validate_on_submit():
-        domain_name = (form.domainoutput.data).replace('.shalem.com', '')  # -> *.shalem.com        
+        domain_name = (form.domainoutput.data).replace(
+            '.olam-erp.com', '')  # -> *.olam-erp.com
         session['domain'] = domain_name
         onboarding(form.email.data, form.name.data,
                    domain_name, form.companyname.data, form.phonenumber.data)
         return redirect(url_for('main.home'))
     if form.errors:
         errors = True
-    return render_template('main/set-up.html', title=_('New Database | Shalem'), form=form, moduleCategories=module_categories, modules=modules, errors=errors)
+    return render_template('main/set-up.html', title=_('New Database | Olam ERP'), form=form, moduleCategories=module_categories, modules=modules, errors=errors)
 
 
 @bp.route('/dashboard')
 @login_required
 def dashboard():
-    return render_template('main/dashboard.html', title=_('Dashboard | Shalem'))
+    return render_template('main/dashboard.html', title=_('Dashboard | Olam ERP'))
 
 
 @bp.route('/all-apps', methods=['GET', 'POST'])
 @login_required
 def all_apps():
-    return render_template('main/apps.html', title=_('All Apps | Shalem'))
+    return render_template('main/apps.html', title=_('All Apps | Olam ERP'))
 
 
 @bp.route('/selected_modules', methods=['GET', 'POST'])
@@ -62,3 +65,9 @@ def selected_modules():
         session['selected_modules'] = request.form.getlist(
             'selected_modules[]')
         return jsonify({"response": "success"})
+
+
+@bp.route('/home', methods=['GET', 'POST'])
+# @login_required
+def home():
+    return render_template('main/home.html', title=_('Home | Olam ERP'))

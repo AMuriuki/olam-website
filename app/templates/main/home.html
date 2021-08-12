@@ -1,0 +1,74 @@
+{% extends "base-2.html" %}
+
+{% block content %}
+<div class="nk-content-body">
+    <div class="nk-content-wrap">
+        <div style="margin-bottom: 3%;">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-primary" role="alert">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+        <div class="nk-block-head nk-block-head-sm">
+            <div class="nk-block-between">
+                <div class="nk-block-head-content">
+                    <h3 class="nk-block-title page-title">Your apps</h3>
+                    <div class="nk-block-des text-soft">
+                        <p>You have {{modules|length}} installed apps.</p>
+                    </div>
+                </div>
+                {% if current_user.is_authenticated %}
+                <div class="nk-block-head-content">
+                    <div class="toggle-wrap nk-block-tools-toggle"><a href="#"
+                            class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em
+                                class="icon ni ni-menu-alt-r"></em></a>
+                        <div class="toggle-expand-content" data-content="pageMenu">
+                            <ul class="nk-block-tools g-3">
+                                <li class="nk-block-tools-opt"><a href="#" class="btn btn-primary"><em
+                                            class="icon ni ni-plus"></em><span>Add App</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="nk-block">
+            <div class="row g-gs">
+                {% for module in modules %}
+                <div class="col-sm-6 col-xl-4">
+                    <div class="card card-bordered h-100">
+                        <div class="card-inner">
+                            <div class="project">
+                                <div class="project-head"><a href="/demo4/apps-kanban.html" class="project-title">
+                                        <div class="user-avatar sq bg-purple">
+                                            <span>{{module.shortdesc[0]}}</span>
+                                        </div>
+                                        <div class="project-info">
+                                            <h6 class="title">{{module.shortdesc}}</h6><span
+                                                class="sub-text">{{module.category.name}}</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="project-details">
+                                    <p>{{module.long_description}}</p>
+                                </div>
+                                <a href="{{url_for('main.connect', id=module.id)}}"
+                                    class="btn btn-wider btn-primary"><span>Connect</span><em
+                                        class="icon ni ni-arrow-right"></em></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% include "footer-2.html" %}
+</div>
+{% endblock %}

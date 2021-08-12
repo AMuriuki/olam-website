@@ -1,1 +1,1 @@
-FLASK_APP=shalem.py
+FLASK_APP=olam.py

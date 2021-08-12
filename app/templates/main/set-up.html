@@ -28,7 +28,7 @@
         display: none;
     }
 </style>
-{% if title == 'Getting Started | Shalem' %}
+{% if title == 'Getting Started | Olam ERP' %}
 <div class="nk-content-body">
     <div class="nk-content-wrap">
         <div class="nk-block-head nk-block-head-sm">
@@ -53,7 +53,7 @@
     {% include "footer-2.html" %}
 </div>
 {% endif %}
-{% if title == 'New Database | Shalem' %}
+{% if title == 'New Database | Olam ERP' %}
 <div style="{% if errors %} display: none {% endif %}" id="dv_new_database" class="nk-content-body">
     <div class="nk-content-wrap">
         <div class="nk-block-head nk-block-head-sm">
@@ -74,7 +74,7 @@
                         <div class="card-inner">
                             <div class="align-center justify-between">
                                 <div class="g">
-                                    <h6 id="title-{{module.id}}" class="title">{{module.shortdesc}}</h6>
+                                    <h6 id="title-{{module.id}}" class="title">{% if module.technical_name == 'crm' %}{{module.technical_name|upper}}{% else %}{{module.technical_name|title}}{% endif %}</h6>
                                     <p>{{module.summary}}</p>
                                 </div>
                                 <div class="custom-control custom-checkbox">
@@ -100,7 +100,7 @@
                 <div class="nk-block-head-content">
                     <div class="nk-block-head-sub"><a class="back" href="#"><em
                                 class="icon ni ni-arrow-left"></em><span>Change apps selection</span></a></div>
-                    <h2 class="nk-block-title fw-normal">Shalem | Get Started</h2>
+                    <h2 class="nk-block-title fw-normal">Olam ERP | Get Started</h2>
                 </div>
             </div><!-- .nk-block-head -->
             <div class="nk-block nk-block-lg">
@@ -162,7 +162,7 @@
                                             <div class="form-control-wrap">
                                                 <div style="{% if domainerrors %} display:block; {% endif %}"
                                                     class="form-text-hint"><span
-                                                        class="overline-title">.shalem.com</span>
+                                                        class="overline-title">.olam-erp.com</span>
                                                 </div>
                                                 {{form.domainoutput(class="form-control", id="domainoutput")}}
                                                 {% for error in form.domainoutput.errors %}
@@ -213,7 +213,7 @@
             <div class="nk-block nk-block-lg">
                 <div class="nk-block-head">
                     <div class="nk-block-head-content">
-                        <h4 class="title nk-block-title">Building your Shalem apps</h4>
+                        <h4 class="title nk-block-title">Building your Olam apps</h4>
                         <p>We'll be ready shortly.
                         </p>
                     </div>

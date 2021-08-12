@@ -10,14 +10,14 @@
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="../static/images/favicon.png">
     <!-- Page Title  -->
-    <title>{% if title %} {{title}} {% else %} Welcome to Shalem {% endif %}</title>
+    <title>{% if title %} {{title}} {% else %} Welcome to Olam {% endif %}</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{ url_for('static', filename='base-2/css/dashlite.css') }}">
     <link id="skin-default" rel="stylesheet" href="{{ url_for('static', filename='base-2/css/theme.css') }}">
     {{ JSGlue.include() }}
 </head>
-{% if title == 'Getting Started | Shalem' or title == 'New Database | Shalem' or title == 'Manage Your Databases |
-Shalem' %}
+{% if title == 'Getting Started | Olam ERP' or title == 'New Database | Olam ERP' or title == 'Manage Your Databases |
+Olam ERP' %}
 <style>
     .nk-wg1-text {
         margin-bottom: 1.25rem;
@@ -55,8 +55,8 @@ Shalem' %}
 </style>
 {% endif %}
 
-{% if title == 'Sign In | Shalem' or title == 'Reset Password | Shalem' or title == 'Register | Shalem' or title ==
-'Set Password | Shalem' %}
+{% if title == 'Sign In | Olam ERP' or title == 'Reset Password | Olam ERP' or title == 'Register | Olam ERP' or title ==
+'Set Password | Olam ERP' %}
 
 <body class="nk-body bg-white npc-default pg-auth">
     <div class="nk-app-root">
@@ -70,7 +70,7 @@ Shalem' %}
     <script src="{{ url_for('static', filename='base-2/js/scripts.js') }}"></script>
     <script src="{{ url_for('static', filename='base-2/js/demo-settings.js') }}"></script>
 </body>
-{% elif title == 'Getting Started | Shalem' or title == 'New Database | Shalem' %}
+{% elif title == 'Getting Started | Olam ERP' or title == 'New Database | Olam ERP' %}
 
 <body class="nk-body bg-white npc-default">
     <div class="nk-app-root">
@@ -87,7 +87,7 @@ Shalem' %}
                         </div>
                     </div>
                 </div>
-                {% if title == 'New Database | Shalem' %}
+                {% if title == 'New Database | Olam ERP' %}
                 <div style="{% if errors %} display: none {% endif %}" id="responsivePricingPanel"
                     class="card card-bordered">
                     <div class="card-body">
@@ -124,7 +124,7 @@ Shalem' %}
     <script src="{{ url_for('static', filename='base-2/js/custom.js') }}"></script>
 </body>
 
-{% elif title == 'Manage Your Databases | Shalem' %}
+{% elif title == 'Manage Your Databases | Olam ERP' %}
 
 <body class="nk-body bg-white npc-default">
     <div class="nk-app-root">
@@ -141,7 +141,7 @@ Shalem' %}
                         </div>
                     </div>
                 </div>
-                {% if title == 'New Database | Shalem' %}
+                {% if title == 'New Database | Olam ERP' %}
                 <div style="{% if errors %} display: none; {% endif %}" id="responsivePricingPanel"
                     class="card card-bordered">
                     <div class="card-body">

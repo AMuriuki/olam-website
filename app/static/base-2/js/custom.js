@@ -217,7 +217,7 @@ function select_modules() {
 function edit_domain() {
   $('#dvDomainOutput').css('display', 'block');
   $('input[name=domainoutput]').val(function (index, value) {
-    return value.replace('.shalem.com', '');
+    return value.replace('.olam-erp.com', '');
   });
   $('.form-text-hint').css('display', 'block')
   $('#domainoutput').attr("readonly", false);
@@ -249,8 +249,8 @@ $(function () {
   $('#txtcompany').keyup(function () {
     $('#dv_domain').css('display', 'block');
     $('#dvDomainOutput').css('display', 'block');
-    $('#sp_domain').text(this.value.replace(/ /g, "-").toLowerCase() + '.shalem.com');
-    $('#domainoutput').val(this.value.replace(/ /g, "-").toLowerCase() + '.shalem.com');
+    $('#sp_domain').text(this.value.replace(/ /g, "-").toLowerCase() + '.olam-erp.com');
+    $('#domainoutput').val(this.value.replace(/ /g, "-").toLowerCase() + '.olam-erp.com');
   });
 });
 
