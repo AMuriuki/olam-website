@@ -104,4 +104,4 @@ def get_locale():
     return request.accept_languages.best_match(current_app.config['LANGUAGES'])
 
 
-from app.main.models import module
+from app.main.models import module, company
