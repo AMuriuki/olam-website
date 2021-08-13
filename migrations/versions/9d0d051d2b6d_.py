@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: b3cb64e8dc62
+Revision ID: 9d0d051d2b6d
 Revises: 
-Create Date: 2021-08-12 16:38:51.896160
+Create Date: 2021-08-13 16:12:54.579193
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'b3cb64e8dc62'
+revision = '9d0d051d2b6d'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -25,18 +25,35 @@ def upgrade():
     )
     op.create_table('user',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('active', sa.Boolean(), nullable=True),
-    sa.Column('password_hash', sa.String(length=128), nullable=True),
-    sa.Column('last_seen', sa.DateTime(), nullable=True),
+    sa.Column('token', sa.String(length=32), nullable=True),
+    sa.Column('token_expiration', sa.DateTime(), nullable=True),
+    sa.Column('is_active', sa.Boolean(), nullable=True),
     sa.Column('name', sa.String(length=128), nullable=True),
     sa.Column('email', sa.String(length=120), nullable=True),
+    sa.Column('is_staff', sa.Boolean(), nullable=True),
+    sa.Column('last_seen', sa.DateTime(), nullable=True),
+    sa.Column('registered_on', sa.DateTime(), nullable=True),
     sa.Column('phone_no', sa.String(length=120), nullable=True),
     sa.PrimaryKeyConstraint('id', name=op.f('pk_user'))
     )
     with op.batch_alter_table('user', schema=None) as batch_op:
         batch_op.create_index(batch_op.f('ix_user_email'), ['email'], unique=True)
         batch_op.create_index(batch_op.f('ix_user_name'), ['name'], unique=False)
-        batch_op.create_index(batch_op.f('ix_user_phone_no'), ['phone_no'], unique=True)
+        batch_op.create_index(batch_op.f('ix_user_phone_no'), ['phone_no'], unique=False)
+        batch_op.create_index(batch_op.f('ix_user_token'), ['token'], unique=True)
+
+    op.create_table('company',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('name', sa.String(length=120), nullable=True),
+    sa.Column('domain_name', sa.String(length=120), nullable=True),
+    sa.Column('user_id', sa.Integer(), nullable=True),
+    sa.Column('registered_on', sa.DateTime(), nullable=True),
+    sa.ForeignKeyConstraint(['user_id'], ['user.id'], name=op.f('fk_company_user_id_user')),
+    sa.PrimaryKeyConstraint('id', name=op.f('pk_company'))
+    )
+    with op.batch_alter_table('company', schema=None) as batch_op:
+        batch_op.create_index(batch_op.f('ix_company_domain_name'), ['domain_name'], unique=True)
+        batch_op.create_index(batch_op.f('ix_company_name'), ['name'], unique=False)
 
     op.create_table('module',
     sa.Column('id', sa.Integer(), nullable=False),
@@ -70,7 +87,13 @@ def downgrade():
         batch_op.drop_index(batch_op.f('ix_module_official_name'))
 
     op.drop_table('module')
+    with op.batch_alter_table('company', schema=None) as batch_op:
+        batch_op.drop_index(batch_op.f('ix_company_name'))
+        batch_op.drop_index(batch_op.f('ix_company_domain_name'))
+
+    op.drop_table('company')
     with op.batch_alter_table('user', schema=None) as batch_op:
+        batch_op.drop_index(batch_op.f('ix_user_token'))
         batch_op.drop_index(batch_op.f('ix_user_phone_no'))
         batch_op.drop_index(batch_op.f('ix_user_name'))
         batch_op.drop_index(batch_op.f('ix_user_email'))
