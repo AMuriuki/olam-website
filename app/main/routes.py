@@ -1,3 +1,4 @@
+from app.main.models.company import Company
 from app.auth.models.user import User
 from app.main.utils import search_dict
 from app.main.models.module import Module, ModuleCategory
@@ -21,10 +22,30 @@ def index():
     return render_template('index.html', title=_('Tools to Grow Your Business | Olam ERP'))
 
 
+def generate_unique_domainname(domain_name):
+    if (domain_name[-1].isdigit()):
+        int_value = int(domain_name[-1])
+        domain_name = domain_name + str(int_value + 1)
+    else:
+        domain_name = domain_name + "1"
+    return domain_name
+
+
 def onboarding(email, name, domainname, company_name, phonenumber):
     user = User.query.filter_by(email=email).first()
+    company = Company.query.filter_by(domain_name=domainname).first()
     if user is None:
-        user = User(name=name, email=email, phone=phonenumber)
+        user = User(name=name, email=email, phone_no=phonenumber)
+        db.session.add(user)
+        db.session.commit()
+    if company is None:
+        company = Company(name=company_name, user_id=user.id, domain_name=domainname)
+    else:
+        domain_name = generate_unique_domainname(domainname)
+        company = Company(name=company_name, user_id=user.id,
+                          domain_name=domain_name)
+    db.session.add(company)
+    db.session.commit()
 
 
 @bp.route('/new/database', methods=['GET', 'POST'])
@@ -38,7 +59,6 @@ def choose_apps():
     if form.validate_on_submit():
         domain_name = (form.domainoutput.data).replace(
             '.olam-erp.com', '')  # -> *.olam-erp.com
-        session['domain'] = domain_name
         onboarding(form.email.data, form.name.data,
                    domain_name, form.companyname.data, form.phonenumber.data)
         return redirect(url_for('main.home'))
