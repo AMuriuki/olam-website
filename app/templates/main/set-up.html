@@ -114,7 +114,7 @@
                                         <div class="form-group">
                                             {{form.name.label(class="form-label")}}
                                             <div class="form-control-wrap">
-                                                {{form.name(class="form-control", id="name", value=current_user.name)}}
+                                                {{form.name(class="form-control", id="name", value=current_user.name, placeholder="First and Last Name")}}
                                                 {% for error in form.name.errors %}
                                                 <span style="color: red;">[{{ error }}]</span>
                                                 {% endfor %}
@@ -126,7 +126,7 @@
                                             {{form.email.label(class="form-label")}}
                                             <div class="form-control-wrap">
                                                 {{form.email(class="form-control", id="email",
-                                                value=current_user.email)}}
+                                                value=current_user.email, placeholder="Email")}}
                                                 {% for error in form.email.errors %}
                                                 <span style="color: red;">[{{ error }}]</span>
                                                 {% endfor %}
@@ -137,7 +137,7 @@
                                         <div class="form-group">
                                             {{form.phonenumber.label(class="form-label")}}
                                             <div class="form-control-wrap">
-                                                {{form.phonenumber(class="form-control", id="phneNumber")}}
+                                                {{form.phonenumber(class="form-control", id="phneNumber", placeholder="Phone Number")}}
                                                 {% for error in form.phonenumber.errors %}
                                                 <span style="color: red;">[{{ error }}]</span>
                                                 {% endfor %}
@@ -148,7 +148,7 @@
                                         <div class="form-group">
                                             {{form.companyname.label(class="form-label")}}
                                             <div class="form-control-wrap">
-                                                {{form.companyname(class="form-control", id="txtcompany")}}
+                                                {{form.companyname(class="form-control", id="txtcompany", placeholder="Name of your company")}}
                                                 {% for error in form.companyname.errors %}
                                                 <span style="color: red;">[{{ error }}]</span>
                                                 {% endfor %}
