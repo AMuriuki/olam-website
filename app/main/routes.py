@@ -1,3 +1,4 @@
+from app.main.models.database import Database
 from app.main.models.company import Company
 from app.auth.models.user import User
 from app.main.utils import search_dict
@@ -31,21 +32,29 @@ def generate_unique_domainname(domain_name):
     return domain_name
 
 
-def onboarding(email, name, domainname, company_name, phonenumber):
+def onboarding(email, name, domain_name, company_name, phonenumber):
     user = User.query.filter_by(email=email).first()
-    company = Company.query.filter_by(domain_name=domainname).first()
+    company = Company.query.filter_by(domain_name=domain_name).first()
     if user is None:
         user = User(name=name, email=email, phone_no=phonenumber)
         db.session.add(user)
         db.session.commit()
     if company is None:
-        company = Company(name=company_name, user_id=user.id, domain_name=domainname)
-    else:
-        domain_name = generate_unique_domainname(domainname)
         company = Company(name=company_name, user_id=user.id,
                           domain_name=domain_name)
-    db.session.add(company)
+    else:
+        domain_name = generate_unique_domainname(domain_name)
+        company = Company(name=company_name, user_id=user.id,
+                          domain_name=domain_name)
+    database = Database(name=domain_name)
+    db.session.add(database)
     db.session.commit()
+    db.session.add(company)
+    company.database_id = database.id
+
+    # Install selected App(s)
+    modules = session['selected_modules']
+    
 
 
 @bp.route('/new/database', methods=['GET', 'POST'])
@@ -61,6 +70,7 @@ def choose_apps():
             '.olam-erp.com', '')  # -> *.olam-erp.com
         onboarding(form.email.data, form.name.data,
                    domain_name, form.companyname.data, form.phonenumber.data)
+        flash(_('Welcome to Olam ERP, our team is setting up your account. Please check your email'))
         return redirect(url_for('main.home'))
     if form.errors:
         errors = True
@@ -90,4 +100,5 @@ def selected_modules():
 @bp.route('/home', methods=['GET', 'POST'])
 # @login_required
 def home():
+
     return render_template('main/home.html', title=_('Home | Olam ERP'))

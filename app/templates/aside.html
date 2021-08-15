@@ -9,7 +9,8 @@
         margin-bottom: .75rem;
     }
 </style>
-<div style="{% if errors %} display:block {% endif %}" class="nk-aside" data-content="sideNav" data-toggle-overlay="true" data-toggle-screen="lg" data-toggle-body="true">
+<div style="{% if errors %} display:block {% endif %}" class="nk-aside" data-content="sideNav"
+    data-toggle-overlay="true" data-toggle-screen="lg" data-toggle-body="true">
     {% if title == 'New Database | Olam ERP' %}
     <div id="pricingPanel" class="card card-bordered">
         <div class="card-body">
@@ -237,7 +238,7 @@
                     <span class="nk-menu-text">Settings</span>
                 </a>
             </li>
-            
+
             <li class="nk-menu-item">
                 <a href="{{url_for('main.all_apps')}}" class="nk-menu-link">
                     <span class="nk-menu-icon"><em class="icon ni ni-layers"></em></span>
