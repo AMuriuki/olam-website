@@ -7,3 +7,6 @@ gitlabuser=arnoldnderitu1
 gitlabpassword=G70zz0Lal!A
 app_name=olam-erp
 ansible_sudo_pass=Arn0ldNd3r12
+letsencrypt_email=arnoldnderitu@gmail.com
+domain=olam-erp
+letsencrypt_directory=/var/www/letsencrypt

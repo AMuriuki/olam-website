@@ -3,3 +3,4 @@
 packages:
 - python-dev
 - nginx
+- letsencrypt

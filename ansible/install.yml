@@ -20,46 +20,6 @@
         virtualenv_python: python3.8
 
 - hosts: local
-  gather_facts: no
-  vars:
-    certs_path: /home/{{ ansible_ssh_user }}/{{ app_name }}/certs
-    crt_common_name: "{{domain}}"
-    crt_subject_alt_name:
-      - "{{alt_domain}}"
-    cloudflare_email: "arnoldnderitu@gmail.com"  
-    cloudflare_api_token: "Cu98lunuuqBOy0VFie_lFdTMFr3ZuW-lnX6EaRkH"
-    cloudflare_zone: "{{ lookup('env','CF_ZONE') }}"
-  tasks:
-    - name: Create directory to store certs
-      file:
-        path: "{{ certs_path }}"
-        state: directory
-
-    - name: Generate account key
-      openssl_privatekey:
-        path: "{{ certs_path }}//{{ domain }}.pem"
-        size: 4096
-
-    - name: generate csr
-      openssl_csr:
-        path: "{{ certs_path }}/{{ domain }}.csr"
-        privatekey_path: "{{ certs_path }}/{{ domain }}.pem"
-        common_name: "{{ domain }}"
-        subject_alt_name: "DNS: {{alt_domain | join(', DNS:')}}"
-
-    - name: create acme challenge
-      acme_certificate:
-        acme_version: 2
-        terms_agreed: yes
-        account_key_src: "{{ certs_path }}/account-key.pem"
-        src: "{{ certs_path }}/{{ domain }}.csr"
-        cert: "{{ certs_path }}/{{ domain }}.crt"
-        challenge: dns-01
-        acme_directory: https://acme-v02.api.letsencrypt.org/directory
-        remaining_days: 60
-      register: challenge
-
-- hosts: local
   connection: local
   become: yes
   become_user: root

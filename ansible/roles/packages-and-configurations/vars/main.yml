@@ -1,5 +1,5 @@
 ---
 # vars file for packages-and-configurations
-domain: olam-erp.com
+domain: olam-erp
 app_name: olam-erp
 ansible_ssh_user: amuriuki

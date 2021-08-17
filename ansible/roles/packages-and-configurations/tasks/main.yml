@@ -30,6 +30,21 @@
     path: /etc/nginx/sites-enabled/default
     state: absent
 
+- name: Create Letsencrypt Directory
+  file:
+    name: "{{letsencrypt_directory}}"
+    state: directory
+
+- name: Create letsencrypt certificate
+  shell: letsencrypt certonly -n --webroot -w "{{letsencrypt_directory}}" -m {{letsencrypt_email}} --agree-tos {{domain}}
+  args:
+    creates: /etc/letsencrypt/live/{{domain}}
+
+- name: Generate dhparams
+  shell: openssl dhparam -out /etc/nginx/dhparams.pem 2048
+  args:
+    creates: /etc/nginx/dhparams.pem
+
 - name: Add Nginx Site Config
   register: sfhconfig
   template:
@@ -46,6 +61,12 @@
     force: yes
   notify:
     - Restart nginx
+
+- name: Add letsencrypt cronjob for cert renewal
+  cron:
+    name: letsencrypt_renewal
+    special_time: weekly
+    job: letsencrypt --renew certonly -n --webroot -w /var/www/letsencrypt -m {{ letsencrypt_email }} --agree-tos -d {{ domain_name }} && service nginx reload
 
 - name: open firewall for nginx
   ufw:

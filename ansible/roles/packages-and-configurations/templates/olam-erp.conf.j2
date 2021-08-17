@@ -13,8 +13,10 @@ server {
     listen 443 ssl default_server;
     server_name {{ domain }};
 
-    ssl_certificate     /home/{{ ansible_ssh_user }}/{{ app_name }}/certs/{{ domain }}.crt;
-    ssl_certificate_key /home/{{ ansible_ssh_user }}/{{ app_name }}/certs/{{ domain }}.pem;
+    ssl on;
+    ssl_certificate         /etc/letsencrypt/live/{{ domain }}/fullchain.pem;
+    ssl_certificate_key     /etc/letsencrypt/live/{{ domain }}/privkey.pem;
+    ssl_trusted_certificate /etc/letsencrypt/live/{{ domain }}/fullchain.pem;
 
     access_log /var/log/nginx/{{ app_name }}.log;
     error_log /var/log/nginx/{{ app_name }}-error.log error;
