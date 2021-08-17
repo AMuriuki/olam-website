@@ -1,0 +1,5 @@
+---
+# defaults file for packages-and-configurations
+packages:
+- python-dev
+- nginx
