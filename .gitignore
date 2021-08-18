@@ -37,4 +37,6 @@ nosetests.xml
 
 venv
 app.db
+olam.db
+olam.sql
 olam.log*
