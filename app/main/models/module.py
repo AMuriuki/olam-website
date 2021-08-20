@@ -17,20 +17,18 @@ class ModuleCategory(db.Model):
             basedir, 'app/main/data/module_category.csv')
         with open(csv_file, 'r') as fin:
             dr = csv.DictReader(fin)
-            if 'sqlite' in current_app.config['SQLALCHEMY_DATABASE_URI']:
-                current_app.logger.setLevel(logging.INFO)
-                current_app.logger.info('seeding module_categories table')
-                for i in dr:
-                    print(i)
-                    exists = db.session.query(
-                        ModuleCategory.id).filter_by(id=i['id']).first() is not None
-                    if exists:
-                        pass
-                    else:
-                        category = ModuleCategory(
-                            id=i['id'], name=i['name'])
-                        db.session.add(category)
-                    db.session.commit()
+            current_app.logger.setLevel(logging.INFO)
+            current_app.logger.info('seeding module_categories table')
+            for i in dr:
+                exists = db.session.query(
+                    ModuleCategory.id).filter_by(id=i['id']).first() is not None
+                if exists:
+                    pass
+                else:
+                    category = ModuleCategory(
+                        id=i['id'], name=i['name'])
+                db.session.add(category)
+                db.session.commit()
 
 
 class Module(db.Model):
@@ -55,16 +53,15 @@ class Module(db.Model):
             basedir, 'app/main/data/modules.csv')
         with open(csv_file, 'r', encoding='mac_roman', newline='') as fin:
             dr = csv.DictReader(fin)
-            if 'sqlite' in current_app.config['SQLALCHEMY_DATABASE_URI']:
-                current_app.logger.setLevel(logging.INFO)
-                current_app.logger.info('seeding modules table')
-                for i in dr:
-                    exists = db.session.query(
-                        Module.id).filter_by(id=i['id']).first() is not None
-                    if exists:
-                        pass
-                    else:
-                        module = Module(
-                            id=i['id'], summary=i['summary'], technical_name=i['technical_name'], author=i['author'], icon=i['icon'], state=i['state'], latest_version=i['latest_version'], official_name=i['official_name'], category_id=i['category_id'], auto_install=True if i['auto_install'] == 't' else False, enable=True if i['enable'] == 't' else False)
-                        db.session.add(module)
-                    db.session.commit()
+            current_app.logger.setLevel(logging.INFO)
+            current_app.logger.info('seeding modules table')
+            for i in dr:
+                exists = db.session.query(
+                    Module.id).filter_by(id=i['id']).first() is not None
+                if exists:
+                    pass
+                else:
+                    module = Module(
+                        id=i['id'], summary=i['summary'], technical_name=i['technical_name'], author=i['author'], icon=i['icon'], state=i['state'], latest_version=i['latest_version'], official_name=i['official_name'], category_id=i['category_id'], auto_install=True if i['auto_install'] == 't' else False, enable=True if i['enable'] == 't' else False)
+                db.session.add(module)
+                db.session.commit()
