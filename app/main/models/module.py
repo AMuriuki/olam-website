@@ -21,6 +21,7 @@ class ModuleCategory(db.Model):
                 current_app.logger.setLevel(logging.INFO)
                 current_app.logger.info('seeding module_categories table')
                 for i in dr:
+                    print(i)
                     exists = db.session.query(
                         ModuleCategory.id).filter_by(id=i['id']).first() is not None
                     if exists:
