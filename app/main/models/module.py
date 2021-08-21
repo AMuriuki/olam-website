@@ -27,8 +27,8 @@ class ModuleCategory(db.Model):
                 else:
                     category = ModuleCategory(
                         id=i['id'], name=i['name'])
-                db.session.add(category)
-                db.session.commit()
+                    db.session.add(category)
+                    db.session.commit()
 
 
 class Module(db.Model):
@@ -63,5 +63,5 @@ class Module(db.Model):
                 else:
                     module = Module(
                         id=i['id'], summary=i['summary'], technical_name=i['technical_name'], author=i['author'], icon=i['icon'], state=i['state'], latest_version=i['latest_version'], official_name=i['official_name'], category_id=i['category_id'], auto_install=True if i['auto_install'] == 't' else False, enable=True if i['enable'] == 't' else False)
-                db.session.add(module)
-                db.session.commit()
+                    db.session.add(module)
+                    db.session.commit()
