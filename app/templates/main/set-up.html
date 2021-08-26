@@ -74,7 +74,9 @@
                         <div class="card-inner">
                             <div class="align-center justify-between">
                                 <div class="g">
-                                    <h6 id="title-{{module.id}}" class="title">{% if module.technical_name == 'crm' %}{{module.technical_name|upper}}{% else %}{{module.technical_name|title}}{% endif %}</h6>
+                                    <h6 id="title-{{module.id}}" class="title">{% if module.technical_name == 'crm'
+                                        %}{{module.technical_name|upper}}{% else %}{{module.technical_name|title}}{%
+                                        endif %}</h6>
                                     <p>{{module.summary}}</p>
                                 </div>
                                 <div class="custom-control custom-checkbox">
@@ -107,14 +109,15 @@
                 <div class="card card-preview">
                     <div class="card-inner">
                         <div class="preview-block">
-                            <form action="" method="POST">
+                            <form id="frm_setup" action="{{url_for('main.choose_apps')}}" method="POST">
                                 {{form.hidden_tag()}}
                                 <div class="row gy-4">
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             {{form.name.label(class="form-label")}}
                                             <div class="form-control-wrap">
-                                                {{form.name(class="form-control", id="name", value=current_user.name, placeholder="First and Last Name")}}
+                                                {{form.name(class="form-control", id="name", value=current_user.name,
+                                                placeholder="First and Last Name")}}
                                                 {% for error in form.name.errors %}
                                                 <span style="color: red;">[{{ error }}]</span>
                                                 {% endfor %}
@@ -137,7 +140,8 @@
                                         <div class="form-group">
                                             {{form.phonenumber.label(class="form-label")}}
                                             <div class="form-control-wrap">
-                                                {{form.phonenumber(class="form-control", id="phneNumber", placeholder="Phone Number")}}
+                                                {{form.phonenumber(class="form-control", id="phneNumber",
+                                                placeholder="Phone Number")}}
                                                 {% for error in form.phonenumber.errors %}
                                                 <span style="color: red;">[{{ error }}]</span>
                                                 {% endfor %}
@@ -148,7 +152,8 @@
                                         <div class="form-group">
                                             {{form.companyname.label(class="form-label")}}
                                             <div class="form-control-wrap">
-                                                {{form.companyname(class="form-control", id="txtcompany", placeholder="Name of your company")}}
+                                                {{form.companyname(class="form-control", id="txtcompany",
+                                                placeholder="Name of your company")}}
                                                 {% for error in form.companyname.errors %}
                                                 <span style="color: red;">[{{ error }}]</span>
                                                 {% endfor %}
@@ -233,6 +238,4 @@
 </div>
 
 {% endif %}
-
-{% include "modals/installing.html" %}
 {% endblock %}

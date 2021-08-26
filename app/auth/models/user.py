@@ -36,8 +36,8 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
     name = db.Column(db.String(128), index=True)
     email = db.Column(db.String(120), index=True, unique=True)
     is_staff = db.Column(db.Boolean, default=True)
-    last_seen = db.Column(db.DateTime, default=datetime.utcnow)
-    registered_on = db.Column(db.DateTime, default=datetime.utcnow)
+    last_seen = db.Column(db.DateTime, default=datetime.now)
+    registered_on = db.Column(db.DateTime, default=datetime.now)
     phone_no = db.Column(db.String(120), index=True)
 
     def __repr__(self):
@@ -90,7 +90,7 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
             self.set_password(data['password'])
 
     def get_token(self, expires_in=3600):
-        now = datetime.utcnow()
+        now = datetime.now
         if self.token and self.token_expiration > now + timedelta(seconds=60):
             return self.token
         self.token = base64.b64encode(os.urandom(24)).decode('utf-8')
@@ -99,12 +99,12 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
         return self.token
 
     def revoke_token(self):
-        self.token_expiration = datetime.utcnow() - timedelta(seconds=1)
+        self.token_expiration = datetime.now - timedelta(seconds=1)
 
     @staticmethod
     def check_token(token):
         user = User.query.filter_by(token=token).first()
-        if user is None or user.token_expiration < datetime.utcnow():
+        if user is None or user.token_expiration < datetime.now:
             return None
         return user
 

@@ -264,3 +264,23 @@ $(window).bind('scroll', function () {
   }
 });
 
+jQuery(document).ready(function () {
+  $('#frm_setup').submit(function (e) {
+    e.preventDefault();
+    var form = $(this)
+    var url = form.attr('action')
+
+    // $('.nk-main').hide();
+    $('#modalInstalling').modal({ backdrop: 'static', keyboard: false })
+    $('#modalInstalling').modal('show');
+
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: form.serialize(),
+      success: function (data) {
+        location.href = '/home';
+      }
+    })
+  })
+})
