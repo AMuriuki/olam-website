@@ -1,0 +1,9 @@
+---
+# tasks file for supervisor
+- name: Create Configuration
+  become: yes
+  template:
+    src: gsupervisor.conf.j2
+    dest: /etc/supervisor/conf.d/{{app_name}}.conf
+  notify:
+    - Restart Supervisor

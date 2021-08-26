@@ -1,0 +1,86 @@
+---
+# tasks file for ec2
+- name: Launch Instance
+  amazon.aws.ec2:
+    aws_access_key: AKIAYOFW4TZ2TLEKGQFP
+    aws_secret_key: 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
+    key_name: "{{keypair}}"
+    group: "{{security_group}}"
+    instance_type: "{{instance_type}}"
+    image: "{{image}}"
+    wait: true
+    region: "{{region}}"
+    vpc_subnet_id: subnet-74cf8738
+    instance_tags:
+      Name: "{{app_name}}"
+  register: ec2
+
+- name: Add new instance to host group
+  add_host:
+    hostname: "{{item.public_ip}}"
+    groupname: launched
+  loop: "{{ec2.instances}}"
+
+- name: Wait for SSH to come up
+  delegate_to: "{{ item.public_dns_name}}"
+  wait_for_connection:
+    delay: 60
+    timeout: 320
+  loop: "{{ ec2.instances }}"
+
+- name: Gather and Save Instance Info
+  set_fact:
+    Pub_IP: "{{ ec2.instances[0].public_ip }}"
+    Pvt_IP: "{{ ec2.instances[0].private_ip }}"
+
+- name: Set Host Variable
+  set_fact:
+    new_instance: "{{ Pub_IP }}"
+
+- name: Write variables to CSV
+  copy:
+    content: "{{ Pub_IP }},{{ Pvt_IP }}"
+    dest: ec2instances.csv
+
+- name: Add EC2 Instance to Host Group
+  lineinfile:
+    dest: "{{hostpath}}"
+    regexp: "{{ Pub_IP }}"
+    insertafter: "[webserver]"
+    line: "{{ Pub_IP }} {{hoststring}}"
+    state: present
+
+- wait_for:
+    path: "{{ hostpath }}"
+    search_regex: "{{hoststring}}"
+
+- name: Add IP to hosts group
+  add_host:
+    hostname: "{{ Pub_IP }}"
+    groups: "{{app_name}}"
+
+- name: Route 53 A record addition
+  route53:
+    aws_access_key: AKIAYOFW4TZ2TLEKGQFP
+    aws_secret_key: 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
+    state: present
+    zone: "olam-erp.com"
+    record: "{{app_name}}.olam-erp.com"
+    type: A
+    ttl: "300"
+    value: "{{ Pub_IP }}"
+    wait: yes
+  register: result
+
+# - name: Route 53 A record addition
+#   route53:
+#     aws_access_key: AKIAYOFW4TZ2TLEKGQFP
+#     aws_secret_key: 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
+#     state: present
+#     zone: "olam-erp.com"
+#     record: "www.olam-erp.com"
+#     type: A
+#     ttl: "300"
+#     value: "{{ Pub_IP }}"
+#     wait: yes
+#   register: result

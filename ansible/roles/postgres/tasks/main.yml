@@ -1,0 +1,44 @@
+---
+# tasks file for postgres
+- name: Ensure PostgreSQL Service is Running
+  service:
+    name: postgresql
+    state: started
+    enabled: yes
+
+- name: Create Database
+  become: true
+  become_user: postgres
+  vars:
+    allow_world_readable_tmpfiles: true
+  postgresql_db:
+    name: "{{db_name}}"
+    template: "template0"
+    state: present
+
+- name: Ensure User has Access to DB
+  become: true
+  become_user: postgres
+  postgresql_user:
+    db: "{{ db_name }}"
+    name: "{{ db_user }}"
+    password: "{{ db_password }}"
+    priv: ALL
+    state: present
+
+# - name: Ensure User does not have superuser permissions
+#   become: true
+#   become_user: postgres
+#   postgresql_user:
+#     name: "{{db_user}}"
+#     role_attr_flags: "[NO]SUPERUSER"
+#     state: present
+
+# - name: Ensure User does not have create db permissions
+#   become: true
+#   become_user: postgres
+#   postgresql_user:
+#     name: "{{db_user}}"
+#     role_attr_flags: "[NO]CREATEDB"
+#     state: present
+

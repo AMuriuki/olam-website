@@ -1,12 +1,7 @@
 [local]
-127.0.0.1 
+127.0.0.1 ansible_python_interpreter=venv/bin/python3
 
-[local:vars]
-ansible_ssh_user=amuriuki
-gitlabuser=arnoldnderitu1
-gitlabpassword=G70zz0Lal!A
-app_name=olam-erp
-ansible_sudo_pass=Arn0ldNd3r12
-letsencrypt_email=arnoldnderitu@gmail.com
-domain=olam-erp
-letsencrypt_directory=/var/www/letsencrypt
+[incentro]
+3.131.142.76 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=roles/ec2/files/ansible.pem
+
+

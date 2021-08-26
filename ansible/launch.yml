@@ -1,0 +1,47 @@
+- name: Create Ec2 Instance
+  hosts: local
+  connection: local
+  become: False
+  gather_facts: False
+  roles:
+    - ec2
+
+- name: Install Base Dependencies
+  vars:
+    app_name: "incentro"
+  hosts: "{{app_name}}"
+  timeout: 360
+  roles:
+    - base_dependencies
+
+- name: Set-Up PG
+  vars:
+    app_name: "incentro"
+  hosts: "{{app_name}}"
+  timeout: 360
+  roles:
+    - postgres
+
+- name: Install Olam
+  vars:
+    app_name: "incentro"
+  hosts: "{{app_name}}"
+  timeout: 360
+  roles:
+    - olam
+
+- name: Set-Up Gunicorn & Supervisor
+  vars:
+    app_name: "incentro"
+  hosts: "{{app_name}}"
+  timeout: 360
+  roles:
+    - supervisor
+
+- name: Set-Up SSL & Nginx
+  vars:
+    app_name: "incentro"
+  hosts: "{{app_name}}"
+  timeout: 360
+  roles:
+    - nginx
