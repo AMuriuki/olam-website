@@ -1,3 +1,4 @@
+from app.auth.email import send_database_activation_email
 import re
 import time
 from os import fsync
@@ -24,6 +25,11 @@ from urllib.parse import urlparse
 @bp.route('/', methods=['GET', 'POST'])
 def index():
     return render_template('index.html', title=_('Tools to Grow Your Business | Olam ERP'))
+
+
+@bp.route('/email_template', methods=['GET', 'POST'])
+def email_template():
+    return render_template('email/activate_database.html', title=_('Tools to Grow Your Business | Olam ERP'))
 
 
 def generate_unique_domainname(domain_name):
@@ -55,6 +61,8 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
     db.session.add(company)
     company.database_id = database.id
 
+    send_database_activation_email(user, domain_name)
+
     # Install selected App(s)
     modules = session['selected_modules']
 
@@ -80,12 +88,26 @@ def choose_apps():
         results = 0
         if results == 0:
             flash(
-                _('Welcome to Olam ERP, our team is setting up your account. Please check your email'))
+                _('Activatation Pending! Your database expires in 4 hours. Check your email for the activation link'))
             time.sleep(3600)
         return jsonify({"response": "success" if results == 0 else "fail"})
     if form.errors:
         errors = True
     return render_template('main/set-up.html', title=_('New Database | Olam ERP'), form=form, moduleCategories=module_categories, modules=modules, errors=errors)
+
+
+@bp.route('/activate_database/<token>', methods=['GET', 'POST'])
+def activate_database(token):
+    user = User.verify_reset_password_token(token)
+    if not user:
+        return redirect(url_for('main.index'))
+    form = ResetPasswordForm()
+    if form.validate_on_submit():
+        user.set_password(form.password.data)
+        db.session.commit()
+        flash(_('Your password has been reset.'))
+        return redirect(url_for('auth.login'))
+    return render_template('auth/reset_password.html', form=form)
 
 
 @ bp.route('/dashboard')

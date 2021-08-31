@@ -123,7 +123,7 @@ $('.check').on('click', function () {
     //remove unselected from list of selected apps
     $('#' + splitAppTitle[0]).remove()
 
-    price = 400 * selectedModules.length
+    price = 600 * selectedModules.length
 
     $('.total_price').text(price)
   } else {
@@ -146,7 +146,7 @@ $('.check').on('click', function () {
     )
 
     //add price
-    price = 400 * selectedModules.length
+    price = 600 * selectedModules.length
 
     $('.total_price').text(price)
   }
@@ -175,7 +175,7 @@ $('.dv-module').on('click', function () {
       '<li id=' + splitAppTitle[0] + '>' + appTitle + '</li>'
     )
     //add price
-    price = 400 * selectedModules.length
+    price = 600 * selectedModules.length
 
     $('.total_price').text(price)
   } else {
@@ -190,7 +190,7 @@ $('.dv-module').on('click', function () {
     $('#' + splitAppTitle[0]).remove()
     console.log($('#' + splitAppTitle[0]).remove())
 
-    price = 400 * selectedModules.length
+    price = 600 * selectedModules.length
 
     $('.total_price').text(price)
   }
@@ -270,7 +270,8 @@ jQuery(document).ready(function () {
     var form = $(this)
     var url = form.attr('action')
 
-    // $('.nk-main').hide();
+    $('.nk-main').hide();
+    $('#bdy_newdb').addClass('bg-black').removeClass('bg-white');
     $('#modalInstalling').modal({ backdrop: 'static', keyboard: false })
     $('#modalInstalling').modal('show');
 

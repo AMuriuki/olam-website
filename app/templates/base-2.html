@@ -14,6 +14,7 @@
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{ url_for('static', filename='base-2/css/dashlite.css') }}">
     <link id="skin-default" rel="stylesheet" href="{{ url_for('static', filename='base-2/css/theme.css') }}">
+    <link id="skin-default" rel="stylesheet" href="{{ url_for('static', filename='base-2/css/style-email.css') }}">
     {{ JSGlue.include() }}
 </head>
 {% if title == 'Getting Started | Olam ERP' or title == 'New Database | Olam ERP' or title == 'Manage Your Databases |
@@ -72,8 +73,17 @@ Olam ERP' %}
     <script src="{{ url_for('static', filename='base-2/js/demo-settings.js') }}"></script>
 </body>
 {% elif title == 'Getting Started | Olam ERP' or title == 'New Database | Olam ERP' %}
+<style>
+    .nk-footer {
+        margin-top: 16%;
+    }
 
-<body class="nk-body bg-white npc-default">
+    .bg-black {
+        background-color: black;
+    }
+</style>
+
+<body id="bdy_newdb" class="nk-body bg-white npc-default has-aside">
     <div class="nk-app-root">
         <!-- main @s -->
         <div class="nk-main ">

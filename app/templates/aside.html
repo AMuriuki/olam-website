@@ -8,6 +8,16 @@
         list-style: inside;
         margin-bottom: .75rem;
     }
+
+    @media (min-width: 992px) {
+        .nk-aside {
+            width: 15%;
+        }
+    }
+
+    .alert {
+        padding: 1rem 1rem;
+    }
 </style>
 <div style="{% if errors %} display:block {% endif %}" class="nk-aside" data-content="sideNav"
     data-toggle-overlay="true" data-toggle-screen="lg" data-toggle-body="true">
@@ -21,6 +31,9 @@
                 <div class="alert-text">
                     <span><strong>Total</strong>/month</span>
                     <p>KSH&nbsp;<span class="total_price"></span></p>
+                    <div class="alert alert-primary" role="alert">
+                        <strong>15 day free trial</strong>
+                    </div>
                 </div>
             </div>
             <a style="{% if errors %} display:block {% endif %}" href="javascript:select_modules()"

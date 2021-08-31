@@ -54,6 +54,11 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
             {'reset_password': self.id, 'exp': time() + expires_in},
             current_app.config['SECRET_KEY'], algorithm='HS256')
 
+    def get_database_activation_email(self, expires_in=600):
+        return jwt.encode(
+            {'activate_database': self.id, 'exp': time() + expires_in},
+            current_app.config['SECRET_KEY'], algorithm='HS256')
+
     @staticmethod
     def verify_reset_password_token(token):
         try:

@@ -1,0 +1,9 @@
+{{ domain_name }}olam-erp.com has been created,
+
+Please activate your database by clicking the link below.
+
+Any question? Schedule a call with an expert.
+
+Sincerely,
+
+The Olam Team

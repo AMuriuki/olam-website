@@ -1,0 +1,78 @@
+{% extends "base-2.html" %}
+
+{% block content %}
+<table class="email-wraper">
+    <tr>
+        <td class="py-5">
+            <table class="email-header">
+                <tbody>
+                    <tr>
+                        <td class="text-center pb-4">
+                            <a href="#"><img class="logo-dark logo-img"
+                                    src="{{url_for('static', filename='images/logo-dark.png')}}"
+                                    srcset="../static/images/logo-dark2x.png 2x" alt="logo-dark"></a>
+                            <p class="email-title">Conceptual Base Modern Dashboard Theme</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="email-body text-center">
+                <tbody>
+                    <tr>
+                        <td class="px-3 px-sm-5 pt-3 pt-sm-5 pb-3">
+                            <h2 class="email-heading">Database Confirmation</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-3 px-sm-5 pb-2">
+                            <p><a href="">{{domain_name}}.olam-erp.com</a> has been created!</p>
+                            <p>Please activate your database by clicking the link below.</p>
+                            <a href="{{ url_for('main.activate_database', token=token, _external=True) }}"
+                                class="email-btn">Activate Database</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-3 px-sm-5 pt-4 pb-3 pb-sm-5">
+                            <p>Or copy/paste this link in your browser:</p>
+                            <p>{{ url_for('main.activate_database', token=token, _external=True) }}</p>
+                            <p class="email-note">This is an automatically generated email please do not
+                                reply to this email. If you face any issues, please contact us at
+                                help@olam-erp.com</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="email-footer">
+                <tbody>
+                    <tr>
+                        <td class="text-center pt-4">
+                            <p class="email-copyright-text">Copyright ©
+                                <script>
+                                    document.getElementById("year").innerHTML = new Date().getFullYear();
+                                </script> <a href="https://olam-erp.com">Olam ERP</a>. All rights
+                                reserved.
+                            </p>
+                            <ul class="email-social">
+                                <li><a href="#"><img src="{{url_for('static', filename='images/socials/facebook.png')}}"
+                                            alt=""></a>
+                                </li>
+                                <li><a href="#"><img src="{{url_for('static', filename='images/socials/twitter.png')}}"
+                                            alt=""></a></li>
+                                <li><a href="#"><img src="{{url_for('static', filename='images/socials/youtube.png')}}"
+                                            alt=""></a></li>
+                                <li><a href="#"><img src="{{url_for('static', filename='images/socials/medium.png')}}"
+                                            alt=""></a></li>
+                            </ul>
+                            <p class="fs-12px pt-4">This email was sent to you as a registered member of
+                                <a href="https://olam-erp.com">Olam ERP</a>. To update your emails
+                                preferences <a href="#">click here</a>.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
+
+{% endblock %}

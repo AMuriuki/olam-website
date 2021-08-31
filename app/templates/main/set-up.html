@@ -116,11 +116,8 @@
                                         <div class="form-group">
                                             {{form.name.label(class="form-label")}}
                                             <div class="form-control-wrap">
-                                                {{form.name(class="form-control", id="name", value=current_user.name,
-                                                placeholder="First and Last Name")}}
-                                                {% for error in form.name.errors %}
-                                                <span style="color: red;">[{{ error }}]</span>
-                                                {% endfor %}
+                                                <input class="required form-control" id="name" name="name"
+                                                    placeholder="First and Last Name" type="text" value="" , required>
                                             </div>
                                         </div>
                                     </div>
@@ -128,11 +125,8 @@
                                         <div class="form-group">
                                             {{form.email.label(class="form-label")}}
                                             <div class="form-control-wrap">
-                                                {{form.email(class="form-control", id="email",
-                                                value=current_user.email, placeholder="Email")}}
-                                                {% for error in form.email.errors %}
-                                                <span style="color: red;">[{{ error }}]</span>
-                                                {% endfor %}
+                                                <input class="form-control" id="email" name="email" placeholder="Email"
+                                                    type="text" value="" , required>
                                             </div>
                                         </div>
                                     </div>
@@ -140,11 +134,8 @@
                                         <div class="form-group">
                                             {{form.phonenumber.label(class="form-label")}}
                                             <div class="form-control-wrap">
-                                                {{form.phonenumber(class="form-control", id="phneNumber",
-                                                placeholder="Phone Number")}}
-                                                {% for error in form.phonenumber.errors %}
-                                                <span style="color: red;">[{{ error }}]</span>
-                                                {% endfor %}
+                                                <input class="form-control" id="phneNumber" name="phonenumber"
+                                                    placeholder="Phone Number" type="text" value="" , required>
                                             </div>
                                         </div>
                                     </div>
@@ -152,11 +143,8 @@
                                         <div class="form-group">
                                             {{form.companyname.label(class="form-label")}}
                                             <div class="form-control-wrap">
-                                                {{form.companyname(class="form-control", id="txtcompany",
-                                                placeholder="Name of your company")}}
-                                                {% for error in form.companyname.errors %}
-                                                <span style="color: red;">[{{ error }}]</span>
-                                                {% endfor %}
+                                                <input class="form-control" id="txtcompany" name="companyname"
+                                                    placeholder="Name of your company" type="text" value="", required>
                                             </div>
                                         </div>
                                     </div>
