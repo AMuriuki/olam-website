@@ -1,3 +1,4 @@
+import os
 from app.auth.email import send_database_activation_email
 import re
 import time
@@ -61,10 +62,9 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
     db.session.add(company)
     company.database_id = database.id
 
-    send_database_activation_email(user, domain_name)
-
     # Install selected App(s)
     modules = session['selected_modules']
+    return user
 
 
 @ bp.route('/new/database', methods=['GET', 'POST'])
@@ -78,7 +78,7 @@ def choose_apps():
     if form.validate_on_submit():
         domain_name = (form.domainoutput.data).replace(
             '.olam-erp.com', '')  # -> *.olam-erp.com
-        onboarding(form.email.data, form.name.data,
+        user = onboarding(form.email.data, form.name.data,
                    domain_name, form.companyname.data, form.phonenumber.data)
         vars = ['APP_NAME', 'SOMETHING']
         new_vars = [domain_name, 'ELSE']
@@ -87,9 +87,10 @@ def choose_apps():
         # results = call_ansible.run_playbook()
         results = 0
         if results == 0:
+            time.sleep(10)
             flash(
-                _('Activatation Pending! Your database expires in 4 hours. Check your email for the activation link'))
-            time.sleep(3600)
+                _('Activation Pending! Your database expires in 4 hours. Check your email for the activation link'))            
+            send_database_activation_email(user, domain_name)
         return jsonify({"response": "success" if results == 0 else "fail"})
     if form.errors:
         errors = True
@@ -98,7 +99,7 @@ def choose_apps():
 
 @bp.route('/activate_database/<token>', methods=['GET', 'POST'])
 def activate_database(token):
-    user = User.verify_reset_password_token(token)
+    user = User.verify_database_activation_token(token)
     if not user:
         return redirect(url_for('main.index'))
     form = ResetPasswordForm()
