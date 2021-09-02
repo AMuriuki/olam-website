@@ -34,9 +34,12 @@ def email_template():
 
 
 def generate_unique_domainname(domain_name):
+    print(domain_name)
     if (domain_name[-1].isdigit()):
+        string_domain_name = ''.join(
+            [i for i in domain_name if not i.isdigit()])
         int_value = int(domain_name[-1])
-        domain_name = domain_name + str(int_value + 1)
+        domain_name = string_domain_name + str(int_value + 1)
     else:
         domain_name = domain_name + "1"
     return domain_name
@@ -45,26 +48,29 @@ def generate_unique_domainname(domain_name):
 def onboarding(email, name, domain_name, company_name, phonenumber):
     user = User.query.filter_by(email=email).first()
     company = Company.query.filter_by(domain_name=domain_name).first()
-    if user is None:
-        user = User(name=name, email=email, phone_no=phonenumber)
-        db.session.add(user)
-        db.session.commit()
+    # if user is None:
+    #     user = User(name=name, email=email, phone_no=phonenumber)
+    #     db.session.add(user)
+    #     db.session.commit()
     if company is None:
         company = Company(name=company_name, user_id=user.id,
                           domain_name=domain_name)
     else:
-        domain_name = generate_unique_domainname(domain_name)
+        company = Company.query.filter(
+            Company.domain_name.contains(domain_name)).order_by(Company.id.desc()).first()
+        domain_name = generate_unique_domainname(company.domain_name)
         company = Company(name=company_name, user_id=user.id,
                           domain_name=domain_name)
     database = Database(name=domain_name)
     db.session.add(database)
     db.session.commit()
-    db.session.add(company)
     company.database_id = database.id
+    db.session.add(company)
+    db.session.commit()
 
     # Install selected App(s)
     modules = session['selected_modules']
-    return user
+    return {'user_id': user.id, 'user_name': user.name, 'domain_name': domain_name}
 
 
 @ bp.route('/new/database', methods=['GET', 'POST'])
@@ -78,8 +84,9 @@ def choose_apps():
     if form.validate_on_submit():
         domain_name = (form.domainoutput.data).replace(
             '.olam-erp.com', '')  # -> *.olam-erp.com
-        user = onboarding(form.email.data, form.name.data,
-                   domain_name, form.companyname.data, form.phonenumber.data)
+        response = onboarding(form.email.data, form.name.data,
+                              domain_name, form.companyname.data, form.phonenumber.data)
+
         vars = ['APP_NAME', 'SOMETHING']
         new_vars = [domain_name, 'ELSE']
         to_update = dict(zip(vars, new_vars))
@@ -89,8 +96,9 @@ def choose_apps():
         if results == 0:
             time.sleep(10)
             flash(
-                _('Activation Pending! Your database expires in 4 hours. Check your email for the activation link'))            
-            send_database_activation_email(user, domain_name)
+                _('Activation Pending! Your database expires in 4 hours. Check your email for the activation link'))
+            send_database_activation_email(
+                response['user_id'], response['domain_name'])
         return jsonify({"response": "success" if results == 0 else "fail"})
     if form.errors:
         errors = True
@@ -102,13 +110,15 @@ def activate_database(token):
     user = User.verify_database_activation_token(token)
     if not user:
         return redirect(url_for('main.index'))
-    form = ResetPasswordForm()
-    if form.validate_on_submit():
-        user.set_password(form.password.data)
+    else:
+        user_details = db.session.query(User).join(
+            Company).filter(User.id == user.id).first()
+        user_domain = user_details.company.domain_name
+        database = Database.query.filter_by(
+            id=user_details.company.database_id).first()
+        database.is_activated = True
         db.session.commit()
-        flash(_('Your password has been reset.'))
-        return redirect(url_for('auth.login'))
-    return render_template('auth/reset_password.html', form=form)
+        return redirect(user_domain + '.olam-erp.com')
 
 
 @ bp.route('/dashboard')

@@ -2415,3 +2415,408 @@ print incorrect line lengths
 2021-09-02 09:44:30,656 p=17816 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:44:30] "GET /static/images/favicon.png HTTP/1.1" 200 -
 2021-09-02 09:44:31,573 p=17816 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:44:31] "GET /email_template HTTP/1.1" 200 -
 2021-09-02 09:44:31,615 p=17816 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:44:31] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 09:49:55,213 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:49:55] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 09:49:55,278 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:49:55] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 09:49:56,170 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:49:56] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 09:49:56,210 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:49:56] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 09:56:35,527 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:56:35] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 09:56:36,287 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:56:36] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 09:56:37,038 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:56:37] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 09:56:37,085 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:56:37] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 09:57:29,897 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:29] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 09:57:29,963 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:29] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 09:57:49,471 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:49] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 09:57:49,498 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:49] "GET /static/images/logo-dark.png HTTP/1.1" 200 -
+2021-09-02 09:57:49,515 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:49] "GET /static/images/socials/twitter.png HTTP/1.1" 200 -
+2021-09-02 09:57:49,515 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:49] "GET /static/images/socials/facebook.png HTTP/1.1" 200 -
+2021-09-02 09:57:49,515 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:49] "GET /static/images/socials/youtube.png HTTP/1.1" 200 -
+2021-09-02 09:57:49,515 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:49] "GET /static/images/socials/medium.png HTTP/1.1" 200 -
+2021-09-02 09:57:49,724 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:49] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 09:57:58,124 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:58] "GET / HTTP/1.1" 200 -
+2021-09-02 09:57:58,178 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:58] "GET /static/css/dashlite.css HTTP/1.1" 200 -
+2021-09-02 09:57:58,180 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:58] "GET /static/css/theme.css HTTP/1.1" 200 -
+2021-09-02 09:57:58,197 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:58] "GET /static/images/logo-dark.png HTTP/1.1" 200 -
+2021-09-02 09:57:58,199 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:58] "GET /static/images/logo.png HTTP/1.1" 200 -
+2021-09-02 09:57:58,199 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:58] "GET /static/js/bundle.js HTTP/1.1" 200 -
+2021-09-02 09:57:58,200 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:58] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2021-09-02 09:57:58,205 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:58] "GET /static/images/bg/a.jpg HTTP/1.1" 200 -
+2021-09-02 09:57:58,214 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:58] "GET /static/images/gfx/g.png HTTP/1.1" 200 -
+2021-09-02 09:57:58,231 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:58] "GET /static/images/bg/b.jpg HTTP/1.1" 200 -
+2021-09-02 09:57:58,529 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:58] "GET /static/fonts/Nioicon.ttf HTTP/1.1" 200 -
+2021-09-02 09:57:58,824 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:57:58] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 09:58:00,573 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:00] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 09:58:00,605 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:00] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 09:58:42,576 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 09:58:42,618 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 09:58:42,619 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /static/base-2/css/dashlite.css HTTP/1.1" 200 -
+2021-09-02 09:58:42,622 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /static/base-2/css/style-email.css HTTP/1.1" 200 -
+2021-09-02 09:58:42,620 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /static/base-2/css/theme.css HTTP/1.1" 200 -
+2021-09-02 09:58:42,661 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /static/base-2/js/bundle.js HTTP/1.1" 200 -
+2021-09-02 09:58:42,826 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /static/base-2/js/scripts.js HTTP/1.1" 200 -
+2021-09-02 09:58:42,833 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /static/base-2/js/charts/gd-default.js HTTP/1.1" 200 -
+2021-09-02 09:58:42,838 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /static/base-2/js/demo-settings.js HTTP/1.1" 200 -
+2021-09-02 09:58:42,848 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /static/base-2/js/libs/jkanban.js HTTP/1.1" 200 -
+2021-09-02 09:58:42,882 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /static/base-2/js/apps/kanban.js HTTP/1.1" 200 -
+2021-09-02 09:58:42,892 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /static/base-2/js/kanban-custom.js HTTP/1.1" 200 -
+2021-09-02 09:58:42,899 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /static/base-2/js/custom.js HTTP/1.1" 200 -
+2021-09-02 09:58:42,905 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /static/images/logo.png HTTP/1.1" 200 -
+2021-09-02 09:58:42,913 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:42] "GET /static/images/logo-dark.png HTTP/1.1" 200 -
+2021-09-02 09:58:43,394 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:43] "GET /static/base-2/fonts/Nioiconc731.ttf?3rpiw1 HTTP/1.1" 200 -
+2021-09-02 09:58:44,419 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:58:44] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 09:59:09,688 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:59:09] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 09:59:32,585 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:59:32] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 09:59:32,628 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:59:32] "GET /home HTTP/1.1" 200 -
+2021-09-02 09:59:32,684 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 09:59:32] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 10:05:40,431 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:05:40] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 10:05:42,064 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:05:42] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:05:43,750 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:05:43] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 10:05:44,597 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:05:44] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:06:38,505 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:06:38] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 10:06:39,478 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:06:39] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 10:06:39,872 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:06:39] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:06:41,780 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:06:41] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 10:06:41,817 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:06:41] "GET /static/images/logo-dark.png HTTP/1.1" 200 -
+2021-09-02 10:06:41,831 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:06:41] "GET /static/images/socials/twitter.png HTTP/1.1" 200 -
+2021-09-02 10:06:41,837 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:06:41] "GET /static/images/socials/medium.png HTTP/1.1" 200 -
+2021-09-02 10:06:41,837 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:06:41] "GET /static/images/socials/youtube.png HTTP/1.1" 200 -
+2021-09-02 10:06:42,483 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:06:42] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:07:51,022 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:07:51] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 10:07:54,611 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:07:54] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:08:25,069 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:08:25] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 10:08:28,487 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:08:28] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:08:56,834 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:08:56] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 10:08:58,299 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:08:58] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:09:10,898 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:10] "GET /home HTTP/1.1" 200 -
+2021-09-02 10:09:10,935 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:10] "GET /static/base-2/css/dashlite.css HTTP/1.1" 200 -
+2021-09-02 10:09:10,938 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:10] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 10:09:10,940 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:10] "GET /static/base-2/css/theme.css HTTP/1.1" 200 -
+2021-09-02 10:09:10,943 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:10] "GET /static/base-2/css/style-email.css HTTP/1.1" 200 -
+2021-09-02 10:09:10,974 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:10] "GET /static/base-2/js/bundle.js HTTP/1.1" 200 -
+2021-09-02 10:09:11,078 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:11] "GET /static/base-2/js/scripts.js HTTP/1.1" 200 -
+2021-09-02 10:09:11,087 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:11] "GET /static/base-2/js/charts/gd-default.js HTTP/1.1" 200 -
+2021-09-02 10:09:11,095 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:11] "GET /static/base-2/js/demo-settings.js HTTP/1.1" 200 -
+2021-09-02 10:09:11,096 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:11] "GET /static/base-2/js/libs/jkanban.js HTTP/1.1" 200 -
+2021-09-02 10:09:11,100 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:11] "GET /static/base-2/js/apps/kanban.js HTTP/1.1" 200 -
+2021-09-02 10:09:11,103 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:11] "GET /static/base-2/js/custom.js HTTP/1.1" 200 -
+2021-09-02 10:09:11,111 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:11] "GET /static/base-2/js/kanban-custom.js HTTP/1.1" 200 -
+2021-09-02 10:09:11,114 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:11] "GET /static/images/logo.png HTTP/1.1" 200 -
+2021-09-02 10:09:11,117 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:11] "GET /static/images/logo-dark.png HTTP/1.1" 200 -
+2021-09-02 10:09:11,145 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:11] "GET /static/base-2/fonts/Nioiconc731.ttf?3rpiw1 HTTP/1.1" 200 -
+2021-09-02 10:09:11,479 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:11] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:09:12,696 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:12] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 10:09:14,299 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:14] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 10:09:14,336 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:14] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 10:09:14,451 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:14] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:09:16,999 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:16] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 10:09:37,355 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:37] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 10:09:37,387 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:37] "GET /home HTTP/1.1" 200 -
+2021-09-02 10:09:37,441 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:09:37] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 10:11:40,250 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:11:40] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 10:11:41,418 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:11:41] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 10:11:41,447 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:11:41] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 10:11:41,564 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:11:41] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:11:44,989 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:11:44] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 10:12:05,079 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:12:05] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 10:12:05,135 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:12:05] "GET /home HTTP/1.1" 200 -
+2021-09-02 10:12:05,209 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:12:05] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 10:12:25,051 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:12:25] "GET /activate_database/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY3RpdmF0ZV9kYXRhYmFzZSI6MSwiZXhwIjoxNjMwNTY3MzIyLjYzNTc2NH0.rW3v23x2hOUvx-jKBt-8rT1blWRVEdLj_xVGA73iXuQ HTTP/1.1" 500 -
+2021-09-02 10:12:25,076 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:12:25] "GET /activate_database/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY3RpdmF0ZV9kYXRhYmFzZSI6MSwiZXhwIjoxNjMwNTY3MzIyLjYzNTc2NH0.rW3v23x2hOUvx-jKBt-8rT1blWRVEdLj_xVGA73iXuQ?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2021-09-02 10:12:25,076 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:12:25] "GET /activate_database/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY3RpdmF0ZV9kYXRhYmFzZSI6MSwiZXhwIjoxNjMwNTY3MzIyLjYzNTc2NH0.rW3v23x2hOUvx-jKBt-8rT1blWRVEdLj_xVGA73iXuQ?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2021-09-02 10:12:25,077 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:12:25] "GET /activate_database/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY3RpdmF0ZV9kYXRhYmFzZSI6MSwiZXhwIjoxNjMwNTY3MzIyLjYzNTc2NH0.rW3v23x2hOUvx-jKBt-8rT1blWRVEdLj_xVGA73iXuQ?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+2021-09-02 10:12:25,177 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:12:25] "GET /activate_database/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY3RpdmF0ZV9kYXRhYmFzZSI6MSwiZXhwIjoxNjMwNTY3MzIyLjYzNTc2NH0.rW3v23x2hOUvx-jKBt-8rT1blWRVEdLj_xVGA73iXuQ?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-09-02 10:12:25,208 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:12:25] "GET /activate_database/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY3RpdmF0ZV9kYXRhYmFzZSI6MSwiZXhwIjoxNjMwNTY3MzIyLjYzNTc2NH0.rW3v23x2hOUvx-jKBt-8rT1blWRVEdLj_xVGA73iXuQ?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+2021-09-02 10:12:25,227 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:12:25] "GET /activate_database/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY3RpdmF0ZV9kYXRhYmFzZSI6MSwiZXhwIjoxNjMwNTY3MzIyLjYzNTc2NH0.rW3v23x2hOUvx-jKBt-8rT1blWRVEdLj_xVGA73iXuQ?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2021-09-02 10:13:29,390 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:29] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 10:13:30,882 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:30] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:13:33,450 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /home HTTP/1.1" 200 -
+2021-09-02 10:13:33,492 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 10:13:33,492 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/base-2/css/dashlite.css HTTP/1.1" 200 -
+2021-09-02 10:13:33,493 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/base-2/css/style-email.css HTTP/1.1" 200 -
+2021-09-02 10:13:33,501 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/base-2/css/theme.css HTTP/1.1" 200 -
+2021-09-02 10:13:33,540 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/base-2/js/bundle.js HTTP/1.1" 200 -
+2021-09-02 10:13:33,642 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/base-2/js/scripts.js HTTP/1.1" 200 -
+2021-09-02 10:13:33,653 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/base-2/js/charts/gd-default.js HTTP/1.1" 200 -
+2021-09-02 10:13:33,658 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/base-2/js/demo-settings.js HTTP/1.1" 200 -
+2021-09-02 10:13:33,659 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/base-2/js/libs/jkanban.js HTTP/1.1" 200 -
+2021-09-02 10:13:33,661 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/base-2/js/apps/kanban.js HTTP/1.1" 200 -
+2021-09-02 10:13:33,661 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/base-2/js/kanban-custom.js HTTP/1.1" 200 -
+2021-09-02 10:13:33,663 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/base-2/js/custom.js HTTP/1.1" 200 -
+2021-09-02 10:13:33,677 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/images/logo.png HTTP/1.1" 200 -
+2021-09-02 10:13:33,677 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/base-2/fonts/Nioiconc731.ttf?3rpiw1 HTTP/1.1" 200 -
+2021-09-02 10:13:33,677 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/images/logo-dark.png HTTP/1.1" 200 -
+2021-09-02 10:13:33,803 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:33] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:13:35,217 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:35] "GET / HTTP/1.1" 200 -
+2021-09-02 10:13:36,369 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:36] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 10:13:36,410 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:36] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 10:13:38,551 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:38] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 10:13:57,293 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:57] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 10:13:57,321 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:57] "GET /home HTTP/1.1" 200 -
+2021-09-02 10:13:57,363 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:13:57] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 10:15:59,315 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:15:59] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 10:16:00,115 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:16:00] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 10:16:00,142 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:16:00] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 10:16:00,256 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:16:00] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:16:02,330 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:16:02] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 10:16:22,288 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:16:22] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 10:16:22,321 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:16:22] "GET /home HTTP/1.1" 200 -
+2021-09-02 10:16:22,356 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:16:22] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 10:17:26,751 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:26] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 10:17:27,582 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:27] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 10:17:27,610 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:27] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 10:17:27,724 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:27] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:17:30,517 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 10:17:30,554 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 10:17:30,556 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /static/base-2/css/dashlite.css HTTP/1.1" 200 -
+2021-09-02 10:17:30,558 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /static/base-2/css/theme.css HTTP/1.1" 200 -
+2021-09-02 10:17:30,559 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /static/base-2/css/style-email.css HTTP/1.1" 200 -
+2021-09-02 10:17:30,580 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /static/base-2/js/bundle.js HTTP/1.1" 200 -
+2021-09-02 10:17:30,715 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /static/base-2/js/scripts.js HTTP/1.1" 200 -
+2021-09-02 10:17:30,753 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /static/base-2/js/charts/gd-default.js HTTP/1.1" 200 -
+2021-09-02 10:17:30,761 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /static/base-2/js/demo-settings.js HTTP/1.1" 200 -
+2021-09-02 10:17:30,772 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /static/base-2/js/libs/jkanban.js HTTP/1.1" 200 -
+2021-09-02 10:17:30,798 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /static/base-2/js/apps/kanban.js HTTP/1.1" 200 -
+2021-09-02 10:17:30,810 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /static/base-2/js/kanban-custom.js HTTP/1.1" 200 -
+2021-09-02 10:17:30,819 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /static/base-2/js/custom.js HTTP/1.1" 200 -
+2021-09-02 10:17:30,828 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /static/images/logo.png HTTP/1.1" 200 -
+2021-09-02 10:17:30,838 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /static/images/logo-dark.png HTTP/1.1" 200 -
+2021-09-02 10:17:30,973 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:30] "GET /static/base-2/fonts/Nioiconc731.ttf?3rpiw1 HTTP/1.1" 200 -
+2021-09-02 10:17:32,108 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:32] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 10:17:32,538 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:32] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 10:17:53,071 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:53] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 10:17:53,098 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:53] "GET /home HTTP/1.1" 200 -
+2021-09-02 10:17:53,136 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:17:53] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 10:18:47,267 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:18:47] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 10:18:49,181 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 10:18:49] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 11:06:15,131 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:15] "GET / HTTP/1.1" 200 -
+2021-09-02 11:06:16,384 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:16] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 11:06:16,418 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:16] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:06:17,786 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:17] "GET / HTTP/1.1" 200 -
+2021-09-02 11:06:19,854 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:19] "GET / HTTP/1.1" 200 -
+2021-09-02 11:06:19,892 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:19] "GET /static/css/dashlite.css HTTP/1.1" 200 -
+2021-09-02 11:06:19,901 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:19] "GET /static/css/theme.css HTTP/1.1" 200 -
+2021-09-02 11:06:19,905 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:19] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2021-09-02 11:06:19,905 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:19] "GET /static/images/logo-dark.png HTTP/1.1" 200 -
+2021-09-02 11:06:19,907 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:19] "GET /static/js/bundle.js HTTP/1.1" 200 -
+2021-09-02 11:06:19,922 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:19] "GET /static/images/logo.png HTTP/1.1" 200 -
+2021-09-02 11:06:19,954 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:19] "GET /static/images/bg/a.jpg HTTP/1.1" 200 -
+2021-09-02 11:06:19,955 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:19] "GET /static/images/gfx/g.png HTTP/1.1" 200 -
+2021-09-02 11:06:19,957 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:19] "GET /static/images/bg/b.jpg HTTP/1.1" 200 -
+2021-09-02 11:06:20,100 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:20] "GET /static/fonts/Nioicon.ttf HTTP/1.1" 200 -
+2021-09-02 11:06:20,220 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:20] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 11:06:31,580 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:31] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 11:06:31,613 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:31] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:06:34,089 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:06:34] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 11:08:17,264 p=18836 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:08:17] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 11:11:59,403 p=18836 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:11:59,401 p=18837 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:11:59,409 p=18838 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:12:05,599 p=19599 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:12:05,605 p=19600 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:12:06,637 p=19598 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:12:08,389 p=19619 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:12:08,389 p=19620 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:12:20,060 p=19659 u=amuriuki n=flask.app | olam startup
+2021-09-02 11:12:25,153 p=19666 u=amuriuki n=flask.app | olam startup
+2021-09-02 11:12:29,548 p=19671 u=amuriuki n=flask.app | olam startup
+2021-09-02 11:12:34,416 p=19676 u=amuriuki n=flask.app | olam startup
+2021-09-02 11:12:44,146 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:12:44] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 11:12:44,188 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:12:44] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:12:44,346 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:12:44] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 11:12:47,106 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:12:47] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 11:13:07,872 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:13:07] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 11:13:07,912 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:13:07] "GET /home HTTP/1.1" 200 -
+2021-09-02 11:13:07,967 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:13:07] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:13:39,740 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:13:39] "GET / HTTP/1.1" 200 -
+2021-09-02 11:13:41,237 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:13:41] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 11:13:41,279 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:13:41] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:16:35,968 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:16:35] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 11:16:55,896 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:16:55] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 11:16:55,983 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:16:55] "GET /home HTTP/1.1" 200 -
+2021-09-02 11:16:56,051 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:16:56] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:17:34,641 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:17:34] "GET / HTTP/1.1" 200 -
+2021-09-02 11:17:36,508 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:17:36] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 11:17:36,545 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:17:36] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:17:39,134 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:17:39] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 11:17:54,772 p=19641 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:17:54] "POST /new/database HTTP/1.1" 500 -
+2021-09-02 11:19:47,873 p=19641 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:19:47,874 p=19640 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:19:47,879 p=19635 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:19:56,086 p=19783 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:19:56,100 p=19781 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:19:56,100 p=19782 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:20:05,362 p=19804 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:20:05,379 p=19806 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:20:05,382 p=19805 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:20:08,140 p=19827 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:20:09,231 p=19826 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:20:09,242 p=19825 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:20:12,299 p=19852 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:20:12] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 11:20:12,330 p=19852 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:20:12] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:20:12,491 p=19852 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:20:12] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 11:20:15,171 p=19852 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:20:15] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 11:20:28,143 p=19852 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:20:28] "POST /new/database HTTP/1.1" 500 -
+2021-09-02 11:23:04,042 p=19852 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:23:04,042 p=19851 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:23:04,198 p=19841 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:23:07,882 p=19887 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:23:07,889 p=19886 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:23:07,978 p=19888 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:23:11,714 p=19907 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:23:11,714 p=19908 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:23:11,736 p=19909 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:23:36,563 p=19930 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:23:36,573 p=19928 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:23:36,576 p=19929 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:31:45,484 p=19952 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:31:45] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 11:31:45,521 p=19952 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:31:45] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:31:45,711 p=19952 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:31:45] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 11:31:47,840 p=19952 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:31:47] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 11:32:19,940 p=19952 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:32:19] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 11:32:19,982 p=19952 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:32:19] "GET /home HTTP/1.1" 200 -
+2021-09-02 11:32:20,020 p=19952 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:32:20] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:34:21,003 p=19952 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:34:30,070 p=20183 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:34:34,882 p=20196 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:35:43,580 p=20207 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:35:43] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 11:35:43,615 p=20207 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:35:43] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:35:43,788 p=20207 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:35:43] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 11:35:49,456 p=20207 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:35:49] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 11:36:10,023 p=20207 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:36:10] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 11:36:10,078 p=20207 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:36:10] "GET /home HTTP/1.1" 200 -
+2021-09-02 11:36:10,117 p=20207 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:36:10] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:37:11,366 p=20207 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:37:18,408 p=20298 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:37:27,429 p=20309 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:37:35,363 p=20322 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:38:12,500 p=20338 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:39:54,323 p=20350 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:39:57,058 p=20365 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:40:52,533 p=20376 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:40:52] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 11:40:52,569 p=20376 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:40:52] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:40:52,759 p=20376 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:40:52] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 11:40:54,751 p=20376 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:40:54] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 11:41:01,910 p=20376 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:41:01] "POST /new/database HTTP/1.1" 500 -
+2021-09-02 11:41:44,771 p=20376 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:41:48,546 p=20444 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:41:57,986 p=20455 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:41:57] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 11:41:58,019 p=20455 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:41:58] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:41:58,231 p=20455 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:41:58] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 11:42:00,653 p=20455 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:42:00] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 11:42:08,599 p=20455 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:42:08] "POST /new/database HTTP/1.1" 500 -
+2021-09-02 11:42:34,295 p=20455 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:42:44,299 p=20493 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:42:51,226 p=20505 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:43:00,248 p=20516 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:43:03,970 p=20534 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:43:07,725 p=20545 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 11:43:17,852 p=20557 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:43:17] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 11:43:17,893 p=20557 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:43:17] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:43:18,051 p=20557 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:43:18] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 11:43:18,711 p=20557 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:43:18] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 11:43:18,734 p=20557 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:43:18] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 11:43:18,850 p=20557 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:43:18] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 11:43:20,965 p=20557 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:43:20] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 11:43:38,627 p=20557 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 11:43:38] "POST /new/database HTTP/1.1" 500 -
+2021-09-02 11:44:21,643 p=20557 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 14:36:33,698 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:36:33] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 14:36:33,751 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:36:33] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 14:36:34,418 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:36:34] "GET /static/images/logo.png HTTP/1.1" 200 -
+2021-09-02 14:36:34,434 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:36:34] "GET /static/images/logo-dark.png HTTP/1.1" 200 -
+2021-09-02 14:36:34,621 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:36:34] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 14:36:41,818 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:36:41] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 14:37:06,061 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:37:06] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 14:37:06,101 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:37:06] "GET /home HTTP/1.1" 200 -
+2021-09-02 14:37:06,139 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:37:06] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 14:37:28,925 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:37:28] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 14:37:31,224 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:37:31] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 14:38:39,002 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:38:39] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 14:38:39,972 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:38:39] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 14:38:40,005 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:38:40] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 14:38:40,112 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:38:40] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 14:38:40,705 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:38:40] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 14:38:40,738 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:38:40] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 14:38:40,845 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:38:40] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 14:38:43,518 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:38:43] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 14:39:12,163 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:39:12] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 14:39:12,192 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:39:12] "GET /home HTTP/1.1" 200 -
+2021-09-02 14:39:12,244 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:39:12] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 14:57:55,425 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:57:55] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 14:57:57,340 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:57:57] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 14:58:04,863 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:58:04] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 14:58:07,055 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:58:07] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 14:58:15,150 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:58:15] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 14:58:20,931 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 14:58:20] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:05:27,407 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:05:27] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:05:28,925 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:05:28] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:05:29,009 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:05:29] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:05:30,523 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:05:30] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:08:16,932 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:08:16] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:08:17,571 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:08:17] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:08:23,245 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:08:23] "GET / HTTP/1.1" 200 -
+2021-09-02 15:08:24,898 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:08:24] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 15:08:24,938 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:08:24] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 15:08:27,790 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:08:27] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 15:08:47,720 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:08:47] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 15:08:47,751 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:08:47] "GET /home HTTP/1.1" 200 -
+2021-09-02 15:08:47,794 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:08:47] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 15:09:24,421 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:09:24] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:09:24,480 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:09:24] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:09:47,743 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:09:47] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:09:47,803 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:09:47] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:09:49,866 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:09:49] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:09:49,917 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:09:49] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:09:54,637 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:09:54] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:09:54,688 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:09:54] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:09:55,702 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:09:55] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:09:55,760 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:09:55] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:09:57,865 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:09:57] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:09:57,909 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:09:57] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:09:58,739 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:09:58] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:09:58,784 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:09:58] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:10:05,345 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:05] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:10:05,392 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:05] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:10:07,280 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:07] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:10:07,321 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:07] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:10:08,217 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:08] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:10:08,302 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:08] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:10:27,647 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:27] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:10:27,693 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:27] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:10:28,792 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:28] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:10:28,839 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:28] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:10:39,311 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:39] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:10:39,369 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:39] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:10:43,934 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:43] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:10:43,977 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:43] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:10:47,133 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:47] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:10:47,183 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:47] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:10:48,120 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:48] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:10:48,161 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:10:48] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:11:12,820 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:11:12] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:11:12,878 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:11:12] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:11:25,122 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:11:25] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 15:11:26,146 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:11:26] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 15:11:26,180 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:11:26] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 15:11:26,307 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:11:26] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:11:28,518 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:11:28] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 15:11:49,115 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:11:49] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 15:11:49,145 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:11:49] "GET /home HTTP/1.1" 200 -
+2021-09-02 15:11:49,192 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:11:49] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 15:13:20,394 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:13:20] "GET /email_template HTTP/1.1" 200 -
+2021-09-02 15:13:20,452 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:13:20] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:13:51,770 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:13:51] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 15:13:52,639 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:13:52] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 15:13:52,679 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:13:52] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 15:13:52,933 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:13:52] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 15:13:55,092 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:13:55] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-02 15:14:21,748 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:14:21] "POST /new/database HTTP/1.1" 200 -
+2021-09-02 15:14:21,792 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:14:21] "GET /home HTTP/1.1" 200 -
+2021-09-02 15:14:21,895 p=20594 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 15:14:21] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 15:18:26,505 p=20594 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 15:18:41,352 p=28160 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 15:25:27,348 p=28178 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olam-erp/app/main/routes.py', reloading
+2021-09-02 15:29:59,256 p=28587 u=amuriuki n=flask.app | olam startup
+2021-09-02 18:15:59,046 p=30775 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 18:15:59] "GET / HTTP/1.1" 200 -
+2021-09-02 18:15:59,862 p=30775 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 18:15:59] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-02 18:16:01,172 p=30775 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 18:16:01] "GET /new/database HTTP/1.1" 200 -
+2021-09-02 18:16:01,245 p=30775 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 18:16:01] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-02 18:16:07,587 p=30775 u=amuriuki n=werkzeug | 127.0.0.1 - - [02/Sep/2021 18:16:07] "POST /selected_modules HTTP/1.1" 200 -
