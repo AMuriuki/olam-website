@@ -30,7 +30,7 @@
                                             title=""><span class="nk-menu-text">Expenses</span></a></li>
                                     <li class="nk-menu-item"><a href="#" class="nk-menu-link" data-original-title=""
                                             title=""><span class="nk-menu-text">Documents</span></a></li>
-                                    <li class="nk-menu-item"><a href="#" class="nk-menu-link" data-original-title=""
+                                    <li class="nk-menu-item"><a href="" class="nk-menu-link" data-original-title=""
                                             title=""><span class="nk-menu-text">Sign</span></a></li>
                                 </ul>
                             </li>
@@ -255,7 +255,8 @@
                     </li><!-- .dropdown -->
                     {% else %}
                     <div class="intro-nav">
-                        <div class="intro-action"><a href="#" class="btn btn-primary">Sign In</a>
+                        <div class="intro-action"><a href="{{ url_for('auth.login') }}" class="btn btn-primary">Sign
+                                In</a>
                         </div>
                     </div>
                     {% endif %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+
+<head>
+    <base href="../">
+    <meta charset="utf-8">
+    <meta name="author" content="Arnold">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="ERP, CRM, etc. Business tools to help your organization grow.">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="../static/images/favicon.png">
+    <!-- Page Title  -->
+    <title>{% if title %} {{title}} {% else %} Welcome to Olam {% endif %}</title>
+    <!-- StyleSheets  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='base-2/css/dashlite.css') }}">
+    <link id="skin-default" rel="stylesheet" href="{{ url_for('static', filename='base-2/css/theme.css') }}">
+    <link id="skin-default" rel="stylesheet" href="{{ url_for('static', filename='base-2/css/style-email.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    {{ JSGlue.include() }}
+</head>
+<body class="nk-body bg-white npc-default pg-auth">
+    <div class="nk-app-root">
+        <!-- main @s -->
+        <div class="nk-main ">
+            <!-- wrap @s -->
+            <div class="nk-wrap nk-wrap-nosidebar">
+                <!-- content @s -->
+                <div class="nk-content ">
+                    <div class="nk-block nk-block-middle nk-auth-body  wide-xs">
+                        <div class="brand-logo pb-4 text-center">
+                            {% include "logo.html" %}
+                        </div>
+                        {% block auth %}{% endblock %}
+                    </div>
+                    {% include "footer-2.html" %}
+                </div>
+                <!-- wrap @e -->
+            </div>
+            <!-- content @e -->
+        </div>
+        <!-- main @e -->
+    </div>
+    <script src="{{ url_for('static', filename='base-2/js/bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/scripts.js') }}"></script>
+</body>
+</html>

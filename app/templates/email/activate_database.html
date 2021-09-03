@@ -50,7 +50,8 @@
                                                                 alt="logo-dark"
                                                                 style="box-sizing: border-box;vertical-align: middle;border-style: none;max-width: 100%;page-break-inside: avoid;opacity: 1;max-height: 36px;"></a>
                                                         <br><br>
-                                                        <h1 style="box-sizing: border-box;margin-top: 0;margin-bottom: 0;font-family: 'IBM Plex Sans Arabic', sans-serif;font-weight: 600;line-height: 1.4;color: #6576ff;page-break-after: avoid;letter-spacing: -0.03em;orphans: 3;widows: 3;margin: 0;">
+                                                        <h1
+                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 0;font-family: 'IBM Plex Sans Arabic', sans-serif;font-weight: 600;line-height: 1.4;color: #6576ff;page-break-after: avoid;letter-spacing: -0.03em;orphans: 3;widows: 3;margin: 0;">
                                                             Database Confirmation</h1>
                                                     </td>
                                                 </tr>
@@ -64,9 +65,9 @@
                                                         style="box-sizing: border-box;padding-bottom: .75rem !important;padding-right: 2.75rem !important;padding-left: 2.75rem !important;">
                                                         <p
                                                             style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
-                                                        <h1><a href="https://{{domain_name}}.olam-erp.com"
+                                                        <h2><a href="https://{{domain_name}}.olam-erp.com"
                                                                 style="cursor: pointer; box-sizing: border-box;color: #6576ff;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;word-break: break-all;">{{domain_name}}.olam-erp.com</a>
-                                                        </h1>
+                                                        </h2>
                                                         has been created!
                                                         </p>
                                                         <p
@@ -75,7 +76,7 @@
                                                         </p>
                                                         <a href="{{ url_for('main.activate_database', token=token, _external=True) }}"
                                                             class="email-btn"
-                                                            style="box-sizing: border-box;color: #ffffff !important;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;background: #6576ff;border-radius: 4px;display: inline-block;font-size: 13px;font-weight: 600;line-height: 44px;text-align: center;text-transform: uppercase;padding: 0 30px;word-break: break-all;">Activate
+                                                            style="box-sizing: border-box;color: #ffffff !important;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;background: #6576ff;border-radius: 4px;display: inline-block;font-size: 13px;font-weight: 600;line-height: 44px;text-align: center;text-transform: capitalize;padding: 0 30px;word-break: break-all;">Activate
                                                             Database</a>
                                                     </td>
                                                 </tr>
@@ -85,10 +86,12 @@
                                                         <p
                                                             style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
                                                             Or copy/paste this link in your browser:</p>
-                                                        <p
+                                                        <a href="{{ url_for('main.activate_database', token=token,
+                                                        _external=True) }}"
                                                             style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
                                                             {{ url_for('main.activate_database', token=token,
-                                                            _external=True) }}</p>
+                                                            _external=True) }}</a>
+                                                        <br><br>
                                                         <p class="email-note"
                                                             style="box-sizing: border-box;margin-top: 0;margin-bottom: 0;orphans: 3;widows: 3;margin: 0;font-size: 13px;line-height: 22px;color: #8094ae;">
                                                             This is an automatically generated email

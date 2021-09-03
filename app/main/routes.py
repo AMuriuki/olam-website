@@ -48,10 +48,10 @@ def generate_unique_domainname(domain_name):
 def onboarding(email, name, domain_name, company_name, phonenumber):
     user = User.query.filter_by(email=email).first()
     company = Company.query.filter_by(domain_name=domain_name).first()
-    # if user is None:
-    #     user = User(name=name, email=email, phone_no=phonenumber)
-    #     db.session.add(user)
-    #     db.session.commit()
+    if user is None:
+        user = User(name=name, email=email, phone_no=phonenumber)
+        db.session.add(user)
+        db.session.commit()
     if company is None:
         company = Company(name=company_name, user_id=user.id,
                           domain_name=domain_name)
@@ -70,10 +70,10 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
 
     # Install selected App(s)
     modules = session['selected_modules']
-    return {'user_id': user.id, 'user_name': user.name, 'domain_name': domain_name}
+    return {'user_id': user.id, 'user_name': user.name, 'domain_name': domain_name, 'companyname': company_name, 'user_email': user.email, 'user_phone': user.phone_no}
 
 
-@ bp.route('/new/database', methods=['GET', 'POST'])
+@bp.route('/new/database', methods=['GET', 'POST'])
 def choose_apps():
     errors = False
     form = GetStartedForm()
@@ -87,8 +87,8 @@ def choose_apps():
         response = onboarding(form.email.data, form.name.data,
                               domain_name, form.companyname.data, form.phonenumber.data)
 
-        vars = ['APP_NAME', 'SOMETHING']
-        new_vars = [domain_name, 'ELSE']
+        vars = ['APP_NAME']
+        new_vars = [response['domain_name']]
         to_update = dict(zip(vars, new_vars))
         updating('/home/amuriuki/projects/olam-ansible/variables.cnf', to_update)
         # results = call_ansible.run_playbook()
@@ -96,13 +96,39 @@ def choose_apps():
         if results == 0:
             time.sleep(10)
             flash(
-                _('Activation Pending! Your database expires in 4 hours. Check your email for the activation link'))
+                _('Activation pending! Your database expires in 4 hours. Check your email (' + form.email.data + ') for the activation link'))
             send_database_activation_email(
                 response['user_id'], response['domain_name'])
-        return jsonify({"response": "success" if results == 0 else "fail"})
+        return jsonify({"response": "success" if results == 0 else "fail", "domain": response['domain_name'], "username": response['user_name'], "domainname": response['domain_name'], "companyname": response['companyname'], "useremail": response['user_email'], "userphone": response['user_phone']})
     if form.errors:
         errors = True
     return render_template('main/set-up.html', title=_('New Database | Olam ERP'), form=form, moduleCategories=module_categories, modules=modules, errors=errors)
+
+
+@bp.route('/dashboard')
+@login_required
+def dashboard():
+    return render_template('main/dashboard.html', title=_('Dashboard | Olam ERP'))
+
+
+@bp.route('/all-apps', methods=['GET', 'POST'])
+@login_required
+def all_apps():
+    return render_template('main/apps.html', title=_('All Apps | Olam ERP'))
+
+
+@bp.route('/selected_modules', methods=['GET', 'POST'])
+def selected_modules():
+    if request.method == "POST":
+        session['selected_modules'] = request.form.getlist(
+            'selected_modules[]')
+        return jsonify({"response": "success"})
+
+
+@bp.route('/home', methods=['GET', 'POST'])
+# @login_required
+def home():
+    return render_template('main/home.html', title=_('Home | Olam ERP'))
 
 
 @bp.route('/activate_database/<token>', methods=['GET', 'POST'])
@@ -113,36 +139,8 @@ def activate_database(token):
     else:
         user_details = db.session.query(User).join(
             Company).filter(User.id == user.id).first()
-        user_domain = user_details.company.domain_name
         database = Database.query.filter_by(
             id=user_details.company.database_id).first()
         database.is_activated = True
         db.session.commit()
-        return redirect(user_domain + '.olam-erp.com')
-
-
-@ bp.route('/dashboard')
-@ login_required
-def dashboard():
-    return render_template('main/dashboard.html', title=_('Dashboard | Olam ERP'))
-
-
-@ bp.route('/all-apps', methods=['GET', 'POST'])
-@ login_required
-def all_apps():
-    return render_template('main/apps.html', title=_('All Apps | Olam ERP'))
-
-
-@ bp.route('/selected_modules', methods=['GET', 'POST'])
-def selected_modules():
-    if request.method == "POST":
-        session['selected_modules'] = request.form.getlist(
-            'selected_modules[]')
-        return jsonify({"response": "success"})
-
-
-@ bp.route('/home', methods=['GET', 'POST'])
-# @login_required
-def home():
-
-    return render_template('main/home.html', title=_('Home | Olam ERP'))
+        return redirect("https://" + user_details.company.domain_name + ".olam-erp.com/auth/set_password?username=" + user.name + "&companyname=" + user_details.company.name + "&domainname=" + user_details.company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no)

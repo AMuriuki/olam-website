@@ -41,7 +41,7 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
     phone_no = db.Column(db.String(120), index=True)
 
     def __repr__(self):
-        return '<User {}>'.format(self.username)
+        return '<User {}>'.format(self.name)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -54,7 +54,7 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
             {'reset_password': self.id, 'exp': time() + expires_in},
             current_app.config['SECRET_KEY'], algorithm='HS256')
 
-    def get_database_activation_token(self, expires_in=600):
+    def get_database_activation_token(self, expires_in=14400):
         return jwt.encode(
             {'activate_database': self.id, 'exp': time() + expires_in},
             current_app.config['SECRET_KEY'], algorithm='HS256')
@@ -80,7 +80,7 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
     def to_dict(self, include_email=False):
         data = {
             'id': self.id,
-            'token': self.username,
+            'token': self.name,
             'token_expiration': self.token_expiration,
             'company_id': self.company_id,
             'is_active': self.is_active,
