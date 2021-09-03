@@ -1,0 +1,24 @@
+server {
+    # Enforce the use of HTTPS
+    listen 80;
+    # server_name {{ domain }} {{alt_domain}};
+    server_name {{app_name}}.{{ domain }}
+
+    access_log /var/log/nginx/{{ app_name }}.log;
+    error_log /var/log/nginx/{{ app_name }}-error.log error;
+
+    location / {
+        # forward application requests to the gunicorn server
+        proxy_pass http://localhost:8000;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    location /static {
+        # handle static files directly, without forwarding to the application
+        alias /home/{{ ansible_ssh_user }}/{{ app_name }}/app/static;
+        expires 30d;
+    }
+}

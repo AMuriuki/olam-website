@@ -1,0 +1,22 @@
+ansible_sudo_pass: ubuntu
+ansible_ssh_user: ubuntu
+app_name: "{{ lookup('ini', 'app_name section=tenant file=./variables.cnf') }}"
+repo_name: olamerp-tenant
+db_user: olamerp
+db_name: olamerp
+db_password: olamerp
+letsencrypt_directory: /var/www/letsencrypt
+domain: olam-erp.com
+letsencrypt_email: arnoldnderitu@gmail.com
+gitlabuser: arnoldnderitu1
+gitlabpassword: G70zz0Lal!A
+alt_domain: www.olam-erp.com
+keypair: ansible
+instance_type: t2.micro
+security_group: Olam
+image: ami-00399ec92321828f5
+region: us-east-2
+hostpath: "./.hosts"
+ansible_ssh_private_key_file: ./automate/roles/ec2/files/ansible.pem
+hoststring: "ansible_ssh_user=ubuntu ansible_ssh_private_key_file=./automate/roles/ec2/files/ansible.pem"
+

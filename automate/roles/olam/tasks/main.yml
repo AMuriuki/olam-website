@@ -1,0 +1,38 @@
+---
+# tasks file for olam
+- name: Clone OlamERP
+  git:
+    repo: "https://{{ gitlabuser | urlencode }}:{{ gitlabpassword | urlencode }}@gitlab.com/{{ gitlabuser }}/{{ repo_name }}"
+    dest: /home/{{ ansible_ssh_user }}/{{ app_name }}
+    version: tenancy
+    update: yes # Does a git pull if the repo already exists
+
+- name: Install Virtual Env in Project Repo
+  pip:
+    name: virtualenv
+    executable: pip3
+  become: yes
+  become_user: root
+
+- name: Install Requirements
+  pip:
+    requirements: /home/{{ ansible_ssh_user }}/{{ app_name }}/requirements.txt
+    virtualenv: /home/{{ ansible_ssh_user }}/{{ app_name }}/venv
+    virtualenv_python: python3.8
+
+- name: Install Gunicorn
+  pip:
+    name: gunicorn
+    virtualenv: /home/{{ ansible_ssh_user }}/{{ app_name }}/venv
+    virtualenv_python: python3.8
+
+- name: Create .env File
+  template:
+    dest: /home/{{ ansible_ssh_user }}/{{ app_name }}/.env
+    src: .env.j2
+
+- name: Sync DB with Olam
+  # shell: ". venv/bin/activate; flask db upgrade; flask deploy"
+  shell: ". venv/bin/activate; flask db upgrade;"
+  args:
+    chdir: /home/{{ ansible_ssh_user }}/{{ app_name }}

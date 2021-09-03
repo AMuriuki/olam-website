@@ -1,0 +1,8 @@
+[program:{{app_name}}]
+command=/home/{{ansible_ssh_user}}/{{app_name}}/venv/bin/gunicorn -b localhost:8000 -w 4 olam:app
+directory=/home/{{ansible_ssh_user}}/{{app_name}}
+user={{ansible_ssh_user}}
+autostart=true
+autorestart=true
+stopasgroup=true
+killasgroup=true
