@@ -91,8 +91,9 @@ def choose_apps():
         new_vars = [response['domain_name']]
         to_update = dict(zip(vars, new_vars))
         updating('/home/amuriuki/projects/olam-ansible/variables.cnf', to_update)
-        # results = call_ansible.run_playbook()
-        results = 0
+        results = call_ansible.run_playbook()
+        print(results)
+        # results = 0
         if results == 0:
             time.sleep(10)
             flash(

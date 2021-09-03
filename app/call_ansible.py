@@ -19,7 +19,7 @@ def run_playbook():
                                     ssh_common_args=None, ssh_extra_args=None, sftp_extra_args=None, scp_extra_args=None, become=True,
                                     become_method='sudo', become_user='root', verbosity=True, check=False, start_at_task=None)
 
-    inventory = InventoryManager(loader=loader, sources=('.hosts',))
+    inventory = InventoryManager(loader=loader, sources=('/home/amuriuki/projects/olam-ansible/.hosts',))
 
     variable_manager = VariableManager(
         loader=loader, inventory=inventory, version_info=CLI.version_info(gitinfo=False))
@@ -28,4 +28,4 @@ def run_playbook():
                             variable_manager=variable_manager, loader=loader, passwords={})
 
     results = pbex.run()
-    return 0
+    return results

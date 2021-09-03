@@ -280,9 +280,8 @@ jQuery(document).ready(function () {
       url: url,
       data: form.serialize(),
       success: function (data) {
-        console.log(data['domain'])
-        // location.href = 'https://' + data['domain'] + '.olam-erp.com/auth/set_password?user=' + data['user'];
-        location.href = 'http://127.0.0.1:5050/auth/set_password?username=' + data['username'] + "&companyname=" + data['companyname'] + "&domainname=" + data['domainname'] + "&email=" + data['useremail'] + "&phone_no=" + data['userphone'];
+        location.href = 'https://' + data['domain'] + '.olam-erp.com/auth/set_password?username=' + data['username'] + "&companyname=" + data['companyname'] + "&domainname=" + data['domainname'] + "&email=" + data['useremail'] + "&phone_no=" + data['userphone'];
+        // location.href = 'http://127.0.0.1:5050/auth/set_password?username=' + data['username'] + "&companyname=" + data['companyname'] + "&domainname=" + data['domainname'] + "&email=" + data['useremail'] + "&phone_no=" + data['userphone'];
       }
     })
   })

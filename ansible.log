@@ -3325,3 +3325,913 @@ print incorrect line lengths
 2021-09-03 15:43:00,841 p=6727 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 15:43:00] "GET /activate_database/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY3RpdmF0ZV9kYXRhYmFzZSI6MSwiZXhwIjoxNjMwNjg3MzAyLjg2MzIzODN9.CxdDHgRIBpGBLlp-_p947EfBC2LB9iAacJxl5e6GnSw HTTP/1.1" 302 -
 2021-09-03 15:45:33,323 p=6727 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olamerp-website/app/main/routes.py', reloading
 2021-09-03 15:45:34,212 p=295 u=amuriuki n=werkzeug |  * Restarting with stat
+2021-09-03 16:03:57,585 p=7371 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olamerp-website/app/main/routes.py', reloading
+2021-09-03 16:03:58,570 p=295 u=amuriuki n=werkzeug |  * Restarting with stat
+2021-09-03 16:05:54,122 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:05:54] "GET / HTTP/1.1" 200 -
+2021-09-03 16:06:57,913 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:06:57] "GET / HTTP/1.1" 200 -
+2021-09-03 16:06:57,951 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:06:57] "GET /static/css/theme.css HTTP/1.1" 200 -
+2021-09-03 16:06:57,954 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:06:57] "GET /static/css/dashlite.css HTTP/1.1" 200 -
+2021-09-03 16:06:57,955 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:06:57] "GET /static/js/bundle.js HTTP/1.1" 200 -
+2021-09-03 16:06:57,968 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:06:57] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2021-09-03 16:06:57,969 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:06:57] "GET /static/images/logo.png HTTP/1.1" 200 -
+2021-09-03 16:06:57,974 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:06:57] "GET /static/images/logo-dark.png HTTP/1.1" 200 -
+2021-09-03 16:06:57,977 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:06:57] "GET /static/images/bg/a.jpg HTTP/1.1" 200 -
+2021-09-03 16:06:58,007 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:06:58] "GET /static/images/bg/b.jpg HTTP/1.1" 200 -
+2021-09-03 16:06:58,007 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:06:58] "GET /static/images/gfx/g.png HTTP/1.1" 200 -
+2021-09-03 16:06:58,454 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:06:58] "GET /static/fonts/Nioicon.ttf HTTP/1.1" 200 -
+2021-09-03 16:06:59,335 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:06:59] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:07:12,936 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:07:12] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:07:12,972 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:07:12] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:07:16,896 p=7688 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:07:16] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:07:30,709 p=7688 u=amuriuki n=ansible | [WARNING]: Unable to parse /home/amuriuki/projects/olamerp-website/.hosts as an inventory source
+
+2021-09-03 16:07:30,710 p=7688 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:07:33,527 p=7688 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: local
+
+2021-09-03 16:07:33,529 p=7688 u=amuriuki n=ansible | [WARNING]: ansible.utils.display.initialize_locale has not been called, this may result in incorrectly calculated text widths that can cause Display to
+print incorrect line lengths
+
+2021-09-03 16:07:33,533 p=7688 u=amuriuki n=ansible | PLAY [Create Ec2 Instance] *********************************************************************************************************************************
+2021-09-03 16:07:33,533 p=7688 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:07:33,557 p=7688 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house
+
+2021-09-03 16:07:33,557 p=7688 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***************************************************************************************************************************
+2021-09-03 16:07:33,558 p=7688 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:07:33,564 p=7688 u=amuriuki n=ansible | PLAY [Set-Up PG] *******************************************************************************************************************************************
+2021-09-03 16:07:33,564 p=7688 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:07:33,569 p=7688 u=amuriuki n=ansible | PLAY [Install Olam] ****************************************************************************************************************************************
+2021-09-03 16:07:33,570 p=7688 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:07:33,572 p=7688 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ************************************************************************************************************************
+2021-09-03 16:07:33,573 p=7688 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:07:33,575 p=7688 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] **********************************************************************************************************************************
+2021-09-03 16:07:33,576 p=7688 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:07:33,576 p=7688 u=amuriuki n=ansible | PLAY RECAP *************************************************************************************************************************************************
+2021-09-03 16:10:07,097 p=7949 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:10:07] "GET / HTTP/1.1" 200 -
+2021-09-03 16:10:07,894 p=7949 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:10:07] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:10:08,825 p=7949 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:10:08] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:10:08,882 p=7949 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:10:08] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:10:10,573 p=7949 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:10:10] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:10:17,948 p=7949 u=amuriuki n=ansible | [WARNING]: Unable to parse /home/amuriuki/projects/olamerp-website/.hosts as an inventory source
+
+2021-09-03 16:10:17,948 p=7949 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:10:19,004 p=7949 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: local
+
+2021-09-03 16:10:19,005 p=7949 u=amuriuki n=ansible | [WARNING]: ansible.utils.display.initialize_locale has not been called, this may result in incorrectly calculated text widths that can cause Display to print incorrect line lengths
+
+2021-09-03 16:10:19,006 p=7949 u=amuriuki n=ansible | PLAY [Create Ec2 Instance] **************************************************************************************************************************************************************************************
+2021-09-03 16:10:19,006 p=7949 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:10:19,018 p=7949 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: artisan1
+
+2021-09-03 16:10:19,018 p=7949 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ********************************************************************************************************************************************************************************
+2021-09-03 16:10:19,018 p=7949 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:10:19,022 p=7949 u=amuriuki n=ansible | PLAY [Set-Up PG] ************************************************************************************************************************************************************************************************
+2021-09-03 16:10:19,022 p=7949 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:10:19,025 p=7949 u=amuriuki n=ansible | PLAY [Install Olam] *********************************************************************************************************************************************************************************************
+2021-09-03 16:10:19,026 p=7949 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:10:19,031 p=7949 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] *****************************************************************************************************************************************************************************
+2021-09-03 16:10:19,031 p=7949 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:10:19,037 p=7949 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ***************************************************************************************************************************************************************************************
+2021-09-03 16:10:19,038 p=7949 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:10:19,038 p=7949 u=amuriuki n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-09-03 16:10:30,658 p=7949 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:10:30] "POST /new/database HTTP/1.1" 200 -
+2021-09-03 16:11:30,141 p=7949 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olamerp-website/app/main/routes.py', reloading
+2021-09-03 16:11:30,298 p=7946 u=amuriuki n=werkzeug |  * Restarting with stat
+2021-09-03 16:11:50,942 p=7999 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olamerp-website/app/call_ansible.py', reloading
+2021-09-03 16:11:51,058 p=7946 u=amuriuki n=werkzeug |  * Restarting with stat
+2021-09-03 16:12:00,928 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:12:00] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:12:02,060 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:12:02] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:12:02,095 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:12:02] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:12:02,203 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:12:02] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:12:04,125 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:12:04] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:12:11,684 p=8013 u=amuriuki n=ansible | [WARNING]: Unable to parse /home/amuriuki/projects/olamerp-website/.hosts as an inventory source
+
+2021-09-03 16:12:11,684 p=8013 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:12:12,300 p=8013 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: local
+
+2021-09-03 16:12:12,301 p=8013 u=amuriuki n=ansible | [WARNING]: ansible.utils.display.initialize_locale has not been called, this may result in incorrectly calculated text widths that can cause Display to print incorrect line lengths
+
+2021-09-03 16:12:12,302 p=8013 u=amuriuki n=ansible | PLAY [Create Ec2 Instance] **************************************************************************************************************************************************************************************
+2021-09-03 16:12:12,302 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:12:12,311 p=8013 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: artisan2
+
+2021-09-03 16:12:12,311 p=8013 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ********************************************************************************************************************************************************************************
+2021-09-03 16:12:12,311 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:12:12,314 p=8013 u=amuriuki n=ansible | PLAY [Set-Up PG] ************************************************************************************************************************************************************************************************
+2021-09-03 16:12:12,315 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:12:12,320 p=8013 u=amuriuki n=ansible | PLAY [Install Olam] *********************************************************************************************************************************************************************************************
+2021-09-03 16:12:12,320 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:12:12,324 p=8013 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] *****************************************************************************************************************************************************************************
+2021-09-03 16:12:12,324 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:12:12,328 p=8013 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ***************************************************************************************************************************************************************************************
+2021-09-03 16:12:12,328 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:12:12,328 p=8013 u=amuriuki n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-09-03 16:12:23,322 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:12:23] "POST /new/database HTTP/1.1" 200 -
+2021-09-03 16:12:28,054 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:12:28] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:12:28,083 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:12:28] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:12:28,195 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:12:28] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:12:31,574 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:12:31] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:12:38,489 p=8013 u=amuriuki n=ansible | PLAY [Create Ec2 Instance] **************************************************************************************************************************************************************************************
+2021-09-03 16:12:38,489 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:12:38,492 p=8013 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house1
+
+2021-09-03 16:12:38,492 p=8013 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ********************************************************************************************************************************************************************************
+2021-09-03 16:12:38,493 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:12:38,499 p=8013 u=amuriuki n=ansible | PLAY [Set-Up PG] ************************************************************************************************************************************************************************************************
+2021-09-03 16:12:38,500 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:12:38,504 p=8013 u=amuriuki n=ansible | PLAY [Install Olam] *********************************************************************************************************************************************************************************************
+2021-09-03 16:12:38,504 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:12:38,507 p=8013 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] *****************************************************************************************************************************************************************************
+2021-09-03 16:12:38,507 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:12:38,511 p=8013 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ***************************************************************************************************************************************************************************************
+2021-09-03 16:12:38,511 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:12:38,511 p=8013 u=amuriuki n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-09-03 16:12:50,047 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:12:50] "POST /new/database HTTP/1.1" 200 -
+2021-09-03 16:18:16,637 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:18:16] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:18:17,440 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:18:17] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:18:17,477 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:18:17] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:18:17,590 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:18:17] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:18:20,283 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:18:20] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:18:27,411 p=8013 u=amuriuki n=ansible | PLAY [Create Ec2 Instance] **************************************************************************************************************************************************************************************
+2021-09-03 16:18:27,412 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:18:27,413 p=8013 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ********************************************************************************************************************************************************************************
+2021-09-03 16:18:27,413 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:18:27,414 p=8013 u=amuriuki n=ansible | PLAY [Set-Up PG] ************************************************************************************************************************************************************************************************
+2021-09-03 16:18:27,414 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:18:27,415 p=8013 u=amuriuki n=ansible | PLAY [Install Olam] *********************************************************************************************************************************************************************************************
+2021-09-03 16:18:27,416 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:18:27,417 p=8013 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] *****************************************************************************************************************************************************************************
+2021-09-03 16:18:27,418 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:18:27,420 p=8013 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ***************************************************************************************************************************************************************************************
+2021-09-03 16:18:27,420 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:18:27,420 p=8013 u=amuriuki n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-09-03 16:18:38,884 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:18:38] "POST /new/database HTTP/1.1" 200 -
+2021-09-03 16:18:46,572 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:18:46] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:18:47,201 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:18:47] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:18:47,224 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:18:47] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:18:47,313 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:18:47] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:18:49,793 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:18:49] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:18:55,586 p=8013 u=amuriuki n=ansible | PLAY [Create Ec2 Instance] **************************************************************************************************************************************************************************************
+2021-09-03 16:18:55,587 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:18:55,600 p=8013 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house3
+
+2021-09-03 16:18:55,600 p=8013 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ********************************************************************************************************************************************************************************
+2021-09-03 16:18:55,601 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:18:55,609 p=8013 u=amuriuki n=ansible | PLAY [Set-Up PG] ************************************************************************************************************************************************************************************************
+2021-09-03 16:18:55,609 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:18:55,614 p=8013 u=amuriuki n=ansible | PLAY [Install Olam] *********************************************************************************************************************************************************************************************
+2021-09-03 16:18:55,614 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:18:55,617 p=8013 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] *****************************************************************************************************************************************************************************
+2021-09-03 16:18:55,617 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:18:55,625 p=8013 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ***************************************************************************************************************************************************************************************
+2021-09-03 16:18:55,625 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:18:55,626 p=8013 u=amuriuki n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-09-03 16:19:06,730 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:19:06] "POST /new/database HTTP/1.1" 200 -
+2021-09-03 16:19:44,111 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:19:44] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:19:44,785 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:19:44] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:19:44,806 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:19:44] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:19:44,910 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:19:44] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:19:48,202 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:19:48] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:19:54,003 p=8013 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house4
+
+2021-09-03 16:19:54,004 p=8013 u=amuriuki n=ansible | PLAY [Create Ec2 Instance] **************************************************************************************************************************************************************************************
+2021-09-03 16:19:54,004 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:19:54,011 p=8013 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ********************************************************************************************************************************************************************************
+2021-09-03 16:19:54,011 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:19:54,015 p=8013 u=amuriuki n=ansible | PLAY [Set-Up PG] ************************************************************************************************************************************************************************************************
+2021-09-03 16:19:54,016 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:19:54,019 p=8013 u=amuriuki n=ansible | PLAY [Install Olam] *********************************************************************************************************************************************************************************************
+2021-09-03 16:19:54,019 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:19:54,024 p=8013 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] *****************************************************************************************************************************************************************************
+2021-09-03 16:19:54,025 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:19:54,030 p=8013 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ***************************************************************************************************************************************************************************************
+2021-09-03 16:19:54,031 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:19:54,031 p=8013 u=amuriuki n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-09-03 16:20:05,499 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:20:05] "POST /new/database HTTP/1.1" 200 -
+2021-09-03 16:20:28,051 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:20:28] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:20:30,756 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:20:30] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:20:30,785 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:20:30] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:20:30,883 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:20:30] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:20:33,119 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:20:33] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:20:44,123 p=8013 u=amuriuki n=ansible | PLAY [Create Ec2 Instance] **************************************************************************************************************************************************************************************
+2021-09-03 16:20:44,123 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:20:44,130 p=8013 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: the-artisan
+
+2021-09-03 16:20:44,130 p=8013 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ********************************************************************************************************************************************************************************
+2021-09-03 16:20:44,130 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:20:44,135 p=8013 u=amuriuki n=ansible | PLAY [Set-Up PG] ************************************************************************************************************************************************************************************************
+2021-09-03 16:20:44,136 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:20:44,139 p=8013 u=amuriuki n=ansible | PLAY [Install Olam] *********************************************************************************************************************************************************************************************
+2021-09-03 16:20:44,139 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:20:44,145 p=8013 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] *****************************************************************************************************************************************************************************
+2021-09-03 16:20:44,146 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:20:44,151 p=8013 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ***************************************************************************************************************************************************************************************
+2021-09-03 16:20:44,151 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:20:44,151 p=8013 u=amuriuki n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-09-03 16:20:55,037 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:20:55] "POST /new/database HTTP/1.1" 200 -
+2021-09-03 16:21:22,849 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:21:22] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:21:23,798 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:21:23] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:21:23,822 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:21:23] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:21:23,920 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:21:23] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:21:26,009 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:21:26] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:21:31,557 p=8013 u=amuriuki n=ansible | PLAY [Create Ec2 Instance] **************************************************************************************************************************************************************************************
+2021-09-03 16:21:31,558 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:21:31,563 p=8013 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house5
+
+2021-09-03 16:21:31,563 p=8013 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ********************************************************************************************************************************************************************************
+2021-09-03 16:21:31,563 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:21:31,567 p=8013 u=amuriuki n=ansible | PLAY [Set-Up PG] ************************************************************************************************************************************************************************************************
+2021-09-03 16:21:31,568 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:21:31,575 p=8013 u=amuriuki n=ansible | PLAY [Install Olam] *********************************************************************************************************************************************************************************************
+2021-09-03 16:21:31,575 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:21:31,584 p=8013 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] *****************************************************************************************************************************************************************************
+2021-09-03 16:21:31,585 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:21:31,597 p=8013 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ***************************************************************************************************************************************************************************************
+2021-09-03 16:21:31,598 p=8013 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:21:31,599 p=8013 u=amuriuki n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2021-09-03 16:21:42,844 p=8013 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:21:42] "POST /new/database HTTP/1.1" 200 -
+2021-09-03 16:28:45,612 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:45] "GET / HTTP/1.1" 200 -
+2021-09-03 16:28:45,723 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:45] "GET /static/js/scripts.js HTTP/1.1" 200 -
+2021-09-03 16:28:45,726 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:45] "GET /static/js/bundle.js HTTP/1.1" 200 -
+2021-09-03 16:28:45,735 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:45] "GET /static/images/bg/a.jpg HTTP/1.1" 200 -
+2021-09-03 16:28:45,736 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:45] "GET /static/images/gfx/g.png HTTP/1.1" 200 -
+2021-09-03 16:28:45,740 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:45] "GET /static/images/bg/b.jpg HTTP/1.1" 200 -
+2021-09-03 16:28:46,007 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:46] "GET /static/fonts/Nioicon.ttf HTTP/1.1" 200 -
+2021-09-03 16:28:47,697 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:47] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:28:47,743 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:47] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:28:47,780 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:47] "GET /static/base-2/js/charts/gd-default.js HTTP/1.1" 200 -
+2021-09-03 16:28:47,781 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:47] "GET /static/base-2/js/demo-settings.js HTTP/1.1" 200 -
+2021-09-03 16:28:47,781 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:47] "GET /static/base-2/js/libs/jkanban.js HTTP/1.1" 200 -
+2021-09-03 16:28:47,801 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:47] "GET /static/base-2/js/apps/kanban.js HTTP/1.1" 200 -
+2021-09-03 16:28:47,804 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:47] "GET /static/base-2/js/kanban-custom.js HTTP/1.1" 200 -
+2021-09-03 16:28:47,845 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:47] "GET /static/base-2/js/custom.js HTTP/1.1" 200 -
+2021-09-03 16:28:51,333 p=677 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:28:51] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:30:14,521 p=874 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:30:14] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:30:14,564 p=874 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:30:14] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:30:14,822 p=874 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:30:14] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:30:17,916 p=874 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:30:17] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:30:25,955 p=874 u=amuriuki n=ansible | [WARNING]: Unable to parse /home/amuriuki/projects/olamerp-website/.hosts as an
+inventory source
+
+2021-09-03 16:30:25,956 p=874 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:30:26,701 p=874 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: local
+
+2021-09-03 16:30:26,702 p=874 u=amuriuki n=ansible | [WARNING]: ansible.utils.display.initialize_locale has not been called, this
+may result in incorrectly calculated text widths that can cause Display to
+print incorrect line lengths
+
+2021-09-03 16:30:26,703 p=874 u=amuriuki n=ansible | PLAY [Create Ec2 Instance] *****************************************************
+2021-09-03 16:30:26,704 p=874 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:30:26,719 p=874 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house
+
+2021-09-03 16:30:26,720 p=874 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:30:26,720 p=874 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:30:26,727 p=874 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:30:26,727 p=874 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:30:26,730 p=874 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:30:26,731 p=874 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:30:26,735 p=874 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:30:26,735 p=874 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:30:26,741 p=874 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:30:26,741 p=874 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:30:26,741 p=874 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:30:38,433 p=874 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:30:38] "POST /new/database HTTP/1.1" 200 -
+2021-09-03 16:31:05,335 p=874 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olamerp-website/app/call_ansible.py', reloading
+2021-09-03 16:31:05,472 p=871 u=amuriuki n=werkzeug |  * Restarting with stat
+2021-09-03 16:31:34,448 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:31:34] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:31:35,581 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:31:35] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:31:35,616 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:31:35] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:31:35,719 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:31:35] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:31:43,486 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:31:43] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:31:43,508 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:31:43] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:31:43,624 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:31:43] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:31:46,117 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:31:46] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:31:56,279 p=900 u=amuriuki n=ansible | [WARNING]: ansible.utils.display.initialize_locale has not been called, this
+may result in incorrectly calculated text widths that can cause Display to
+print incorrect line lengths
+
+2021-09-03 16:31:56,279 p=900 u=amuriuki n=ansible | PLAY [Create Ec2 Instance] *****************************************************
+2021-09-03 16:31:56,391 p=900 u=amuriuki n=ansible | TASK [ec2 : Launch Instance] ***************************************************
+2021-09-03 16:32:27,275 p=900 u=amuriuki n=ansible | changed: [127.0.0.1]
+2021-09-03 16:32:27,293 p=900 u=amuriuki n=ansible | TASK [ec2 : Add new instance to host group] ************************************
+2021-09-03 16:32:27,494 p=900 u=amuriuki n=ansible | ok: [127.0.0.1] => (item={'id': 'i-0e6a5e11a4ca22150', 'ami_launch_index': '0', 'private_ip': '172.31.39.45', 'private_dns_name': 'ip-172-31-39-45.us-east-2.compute.internal', 'public_ip': '18.218.37.39', 'dns_name': 'ec2-18-218-37-39.us-east-2.compute.amazonaws.com', 'public_dns_name': 'ec2-18-218-37-39.us-east-2.compute.amazonaws.com', 'state_code': 16, 'architecture': 'x86_64', 'image_id': 'ami-00399ec92321828f5', 'key_name': 'ansible', 'placement': 'us-east-2c', 'region': 'us-east-2', 'kernel': None, 'ramdisk': None, 'launch_time': '2021-09-03T13:32:03.000Z', 'instance_type': 't2.micro', 'root_device_type': 'ebs', 'root_device_name': '/dev/sda1', 'state': 'running', 'hypervisor': 'xen', 'tags': {'Name': 'club-house'}, 'groups': {'sg-055111b5912ce8355': 'Olam'}, 'virtualization_type': 'hvm', 'ebs_optimized': False, 'block_device_mapping': {'/dev/sda1': {'status': 'attached', 'volume_id': 'vol-024c4fac00c296250', 'delete_on_termination': True}}, 'tenancy': 'default'})
+2021-09-03 16:32:27,550 p=900 u=amuriuki n=ansible | TASK [ec2 : Wait for SSH to come up] *******************************************
+2021-09-03 16:33:27,601 p=985 u=amuriuki n=ansible | [WARNING]: Reset is not implemented for this connection
+
+2021-09-03 16:33:28,945 p=900 u=amuriuki n=ansible | ok: [127.0.0.1 -> ec2-18-218-37-39.us-east-2.compute.amazonaws.com] => (item={'id': 'i-0e6a5e11a4ca22150', 'ami_launch_index': '0', 'private_ip': '172.31.39.45', 'private_dns_name': 'ip-172-31-39-45.us-east-2.compute.internal', 'public_ip': '18.218.37.39', 'dns_name': 'ec2-18-218-37-39.us-east-2.compute.amazonaws.com', 'public_dns_name': 'ec2-18-218-37-39.us-east-2.compute.amazonaws.com', 'state_code': 16, 'architecture': 'x86_64', 'image_id': 'ami-00399ec92321828f5', 'key_name': 'ansible', 'placement': 'us-east-2c', 'region': 'us-east-2', 'kernel': None, 'ramdisk': None, 'launch_time': '2021-09-03T13:32:03.000Z', 'instance_type': 't2.micro', 'root_device_type': 'ebs', 'root_device_name': '/dev/sda1', 'state': 'running', 'hypervisor': 'xen', 'tags': {'Name': 'club-house'}, 'groups': {'sg-055111b5912ce8355': 'Olam'}, 'virtualization_type': 'hvm', 'ebs_optimized': False, 'block_device_mapping': {'/dev/sda1': {'status': 'attached', 'volume_id': 'vol-024c4fac00c296250', 'delete_on_termination': True}}, 'tenancy': 'default'})
+2021-09-03 16:33:28,961 p=900 u=amuriuki n=ansible | TASK [ec2 : Gather and Save Instance Info] *************************************
+2021-09-03 16:33:29,020 p=900 u=amuriuki n=ansible | ok: [127.0.0.1]
+2021-09-03 16:33:29,030 p=900 u=amuriuki n=ansible | TASK [ec2 : Set Host Variable] *************************************************
+2021-09-03 16:33:29,090 p=900 u=amuriuki n=ansible | ok: [127.0.0.1]
+2021-09-03 16:33:29,102 p=900 u=amuriuki n=ansible | TASK [ec2 : Add IP to hosts group] *********************************************
+2021-09-03 16:33:29,162 p=900 u=amuriuki n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use
+-vvvv to see details
+
+2021-09-03 16:33:29,163 p=900 u=amuriuki n=ansible | changed: [127.0.0.1]
+2021-09-03 16:33:29,177 p=900 u=amuriuki n=ansible | TASK [ec2 : Add Host Name] *****************************************************
+2021-09-03 16:33:30,192 p=900 u=amuriuki n=ansible | changed: [127.0.0.1]
+2021-09-03 16:33:30,205 p=900 u=amuriuki n=ansible | TASK [ec2 : Add EC2 Instance to Host Group] ************************************
+2021-09-03 16:33:30,874 p=900 u=amuriuki n=ansible | changed: [127.0.0.1]
+2021-09-03 16:33:30,884 p=900 u=amuriuki n=ansible | TASK [ec2 : wait_for] **********************************************************
+2021-09-03 16:33:31,723 p=900 u=amuriuki n=ansible | ok: [127.0.0.1]
+2021-09-03 16:33:31,731 p=900 u=amuriuki n=ansible | TASK [ec2 : Route 53 A record addition] ****************************************
+2021-09-03 16:34:15,318 p=900 u=amuriuki n=ansible | changed: [127.0.0.1]
+2021-09-03 16:34:15,348 p=900 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:34:15,366 p=900 u=amuriuki n=ansible | TASK [Gathering Facts] *********************************************************
+2021-09-03 16:34:15,502 p=900 u=amuriuki n=ansible | fatal: [18.218.37.39]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: command-line: line 0: Bad configuration option: -o", "unreachable": true}
+2021-09-03 16:34:15,504 p=900 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:34:15,505 p=900 u=amuriuki n=ansible | 127.0.0.1                  : ok=10   changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2021-09-03 16:34:15,505 p=900 u=amuriuki n=ansible | 18.218.37.39               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-09-03 16:34:15,510 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:34:15] "POST /new/database HTTP/1.1" 200 -
+2021-09-03 16:37:28,042 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:37:28] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:37:30,577 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:37:30] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:37:30,607 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:37:30] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:37:30,695 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:37:30] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:37:35,973 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:37:35] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:37:41,968 p=900 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house1
+
+2021-09-03 16:37:41,968 p=900 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:37:41,968 p=900 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:37:41,973 p=900 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:37:41,974 p=900 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:37:41,978 p=900 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:37:41,978 p=900 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:37:41,984 p=900 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:37:41,985 p=900 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:37:41,988 p=900 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:37:41,989 p=900 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:37:41,989 p=900 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:37:53,535 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:37:53] "POST /new/database HTTP/1.1" 200 -
+2021-09-03 16:39:26,994 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:39:26] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:39:27,115 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:39:27] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:39:33,302 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:39:33] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:39:33,335 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:39:33] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:39:33,456 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:39:33] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:39:35,594 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:39:35] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:39:41,089 p=900 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:39:41,102 p=900 u=amuriuki n=ansible | TASK [Gathering Facts] *********************************************************
+2021-09-03 16:39:41,250 p=900 u=amuriuki n=ansible | fatal: [18.218.37.39]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: command-line: line 0: Bad configuration option: -o", "unreachable": true}
+2021-09-03 16:39:41,253 p=900 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:39:41,254 p=900 u=amuriuki n=ansible | 18.218.37.39               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-09-03 16:39:41,261 p=900 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:39:41] "POST /new/database HTTP/1.1" 200 -
+2021-09-03 16:43:00,656 p=900 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olamerp-website/app/call_ansible.py', reloading
+2021-09-03 16:43:00,827 p=871 u=amuriuki n=werkzeug |  * Restarting with stat
+2021-09-03 16:43:09,695 p=1331 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olamerp-website/app/call_ansible.py', reloading
+2021-09-03 16:43:09,819 p=871 u=amuriuki n=werkzeug |  * Restarting with stat
+2021-09-03 16:43:42,138 p=1343 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:43:42] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:43:43,231 p=1343 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:43:43] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:43:43,256 p=1343 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:43:43] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:43:43,346 p=1343 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:43:43] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:43:45,698 p=1343 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:43:45] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:43:52,664 p=1343 u=amuriuki n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use
+-vvvv to see details
+
+2021-09-03 16:43:53,059 p=1343 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house3
+
+2021-09-03 16:43:53,060 p=1343 u=amuriuki n=ansible | [WARNING]: ansible.utils.display.initialize_locale has not been called, this
+may result in incorrectly calculated text widths that can cause Display to
+print incorrect line lengths
+
+2021-09-03 16:43:53,061 p=1343 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:43:53,061 p=1343 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:43:53,066 p=1343 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:43:53,066 p=1343 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:43:53,073 p=1343 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:43:53,074 p=1343 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:43:53,077 p=1343 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:43:53,078 p=1343 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:43:53,081 p=1343 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:43:53,081 p=1343 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:43:53,082 p=1343 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:44:04,652 p=1343 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:44:04] "POST /new/database HTTP/1.1" 200 -
+2021-09-03 16:44:07,627 p=1343 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:44:07] "GET /new/database HTTP/1.1" 200 -
+2021-09-03 16:44:07,647 p=1343 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:44:07] "GET /jsglue.js HTTP/1.1" 200 -
+2021-09-03 16:44:07,799 p=1343 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:44:07] "GET /static/images/favicon.png HTTP/1.1" 200 -
+2021-09-03 16:44:10,211 p=1343 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:44:10] "POST /selected_modules HTTP/1.1" 200 -
+2021-09-03 16:44:20,762 p=1343 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:44:20,795 p=1343 u=amuriuki n=ansible | TASK [Gathering Facts] *********************************************************
+2021-09-03 16:44:20,934 p=1343 u=amuriuki n=ansible | fatal: [18.218.37.39]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: command-line: line 0: Bad configuration option: -o", "unreachable": true}
+2021-09-03 16:44:20,938 p=1343 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:44:20,938 p=1343 u=amuriuki n=ansible | 18.218.37.39               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-09-03 16:44:20,945 p=1343 u=amuriuki n=werkzeug | 127.0.0.1 - - [03/Sep/2021 16:44:20] "POST /new/database HTTP/1.1" 200 -
+2021-09-03 16:49:13,637 p=1343 u=amuriuki n=werkzeug |  * Detected change in '/home/amuriuki/projects/olamerp-website/app/call_ansible.py', reloading
+2021-09-03 16:49:13,795 p=871 u=amuriuki n=werkzeug |  * Restarting with stat
+2021-09-03 16:50:25,144 p=1468 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:50:25,153 p=1468 u=amuriuki n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-09-03 16:50:25,449 p=1468 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house4
+
+2021-09-03 16:50:25,449 p=1468 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:50:25,449 p=1468 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:25,453 p=1468 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:50:25,453 p=1468 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:25,457 p=1468 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:50:25,458 p=1468 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:25,461 p=1468 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:50:25,461 p=1468 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:25,463 p=1468 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:50:25,464 p=1468 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:25,464 p=1468 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:50:51,340 p=1478 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:50:51,348 p=1478 u=amuriuki n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-09-03 16:50:51,628 p=1478 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house4
+
+2021-09-03 16:50:51,629 p=1478 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:50:51,629 p=1478 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:51,632 p=1478 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:50:51,633 p=1478 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:51,636 p=1478 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:50:51,636 p=1478 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:51,641 p=1478 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:50:51,641 p=1478 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:51,643 p=1478 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:50:51,643 p=1478 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:51,643 p=1478 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:50:57,198 p=1482 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:50:57,205 p=1482 u=amuriuki n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-09-03 16:50:57,458 p=1482 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house4
+
+2021-09-03 16:50:57,458 p=1482 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:50:57,458 p=1482 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:57,463 p=1482 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:50:57,463 p=1482 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:57,467 p=1482 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:50:57,467 p=1482 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:57,469 p=1482 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:50:57,470 p=1482 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:57,472 p=1482 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:50:57,472 p=1482 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:50:57,472 p=1482 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:51:02,788 p=1495 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:51:02,795 p=1495 u=amuriuki n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-09-03 16:51:03,042 p=1495 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house
+
+2021-09-03 16:51:03,042 p=1495 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:51:03,042 p=1495 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:51:03,046 p=1495 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:51:03,046 p=1495 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:51:03,049 p=1495 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:51:03,049 p=1495 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:51:03,052 p=1495 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:51:03,052 p=1495 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:51:03,054 p=1495 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:51:03,055 p=1495 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:51:03,055 p=1495 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:51:21,410 p=1499 u=amuriuki n=ansible | ansible-playbook [core 2.11.4] 
+  config file = /home/amuriuki/projects/olamerp-website/ansible.cfg
+  configured module search path = ['/home/amuriuki/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/amuriuki/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/amuriuki/projects/olamerp-website/venv/bin/ansible-playbook
+  python version = 3.8.5 (default, Jan 27 2021, 15:41:15) [GCC 9.3.0]
+  jinja version = 2.10
+  libyaml = True
+2021-09-03 16:51:21,410 p=1499 u=amuriuki n=ansible | Using /home/amuriuki/projects/olamerp-website/ansible.cfg as config file
+2021-09-03 16:51:21,426 p=1499 u=amuriuki n=ansible | host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:51:21,426 p=1499 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:51:21,426 p=1499 u=amuriuki n=ansible | script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:51:21,426 p=1499 u=amuriuki n=ansible | auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:51:21,426 p=1499 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:51:21,426 p=1499 u=amuriuki n=ansible | yaml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:51:21,426 p=1499 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:51:21,427 p=1499 u=amuriuki n=ansible | ini declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:51:21,427 p=1499 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:51:21,427 p=1499 u=amuriuki n=ansible | toml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:51:21,427 p=1499 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:51:21,433 p=1499 u=amuriuki n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-09-03 16:51:21,645 p=1499 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.postgresql_db to community.postgresql.postgresql_db
+2021-09-03 16:51:21,649 p=1499 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.postgresql_user to community.postgresql.postgresql_user
+2021-09-03 16:51:21,671 p=1499 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.ufw to community.general.ufw
+2021-09-03 16:51:21,689 p=1499 u=amuriuki n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2021-09-03 16:51:21,689 p=1499 u=amuriuki n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-09-03 16:51:21,689 p=1499 u=amuriuki n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-09-03 16:51:21,689 p=1499 u=amuriuki n=ansible | PLAYBOOK: launch.yml ***********************************************************
+2021-09-03 16:51:21,689 p=1499 u=amuriuki n=ansible | 5 plays in /home/amuriuki/projects/olam-ansible/launch.yml
+2021-09-03 16:51:21,698 p=1499 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house
+
+2021-09-03 16:51:21,698 p=1499 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:51:21,698 p=1499 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:51:21,701 p=1499 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:51:21,701 p=1499 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:51:21,704 p=1499 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:51:21,705 p=1499 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:51:21,709 p=1499 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:51:21,710 p=1499 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:51:21,714 p=1499 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:51:21,714 p=1499 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:51:21,714 p=1499 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:53:26,944 p=1521 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:53:26,951 p=1521 u=amuriuki n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-09-03 16:53:27,194 p=1521 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house
+
+2021-09-03 16:53:27,195 p=1521 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:53:27,195 p=1521 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:27,198 p=1521 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:53:27,199 p=1521 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:27,202 p=1521 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:53:27,202 p=1521 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:27,205 p=1521 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:53:27,206 p=1521 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:27,208 p=1521 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:53:27,208 p=1521 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:27,208 p=1521 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:53:34,553 p=1525 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:53:34,560 p=1525 u=amuriuki n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-09-03 16:53:34,796 p=1525 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house
+
+2021-09-03 16:53:34,797 p=1525 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:53:34,797 p=1525 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:34,800 p=1525 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:53:34,800 p=1525 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:34,804 p=1525 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:53:34,804 p=1525 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:34,807 p=1525 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:53:34,807 p=1525 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:34,810 p=1525 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:53:34,810 p=1525 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:34,810 p=1525 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:53:41,959 p=1529 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:53:41,968 p=1529 u=amuriuki n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-09-03 16:53:42,201 p=1529 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house
+
+2021-09-03 16:53:42,202 p=1529 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:53:42,202 p=1529 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:42,204 p=1529 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:53:42,204 p=1529 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:42,208 p=1529 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:53:42,209 p=1529 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:42,211 p=1529 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:53:42,212 p=1529 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:42,214 p=1529 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:53:42,215 p=1529 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:42,215 p=1529 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:53:47,335 p=1539 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:53:47,343 p=1539 u=amuriuki n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-09-03 16:53:47,578 p=1539 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house
+
+2021-09-03 16:53:47,579 p=1539 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:53:47,579 p=1539 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:47,581 p=1539 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:53:47,582 p=1539 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:47,585 p=1539 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:53:47,586 p=1539 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:47,588 p=1539 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:53:47,588 p=1539 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:47,591 p=1539 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:53:47,591 p=1539 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:53:47,591 p=1539 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:54:15,841 p=1561 u=amuriuki n=ansible | ansible-playbook [core 2.11.4] 
+  config file = /home/amuriuki/projects/olamerp-website/ansible.cfg
+  configured module search path = ['/home/amuriuki/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/amuriuki/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/amuriuki/projects/olamerp-website/venv/bin/ansible-playbook
+  python version = 3.8.5 (default, Jan 27 2021, 15:41:15) [GCC 9.3.0]
+  jinja version = 2.10
+  libyaml = True
+2021-09-03 16:54:15,842 p=1561 u=amuriuki n=ansible | Using /home/amuriuki/projects/olamerp-website/ansible.cfg as config file
+2021-09-03 16:54:15,843 p=1561 u=amuriuki n=ansible | setting up inventory plugins
+2021-09-03 16:54:15,858 p=1561 u=amuriuki n=ansible | host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:54:15,858 p=1561 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:54:15,858 p=1561 u=amuriuki n=ansible | script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:54:15,858 p=1561 u=amuriuki n=ansible | auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:54:15,858 p=1561 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:54:15,858 p=1561 u=amuriuki n=ansible | yaml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:54:15,859 p=1561 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:54:15,859 p=1561 u=amuriuki n=ansible | ini declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:54:15,859 p=1561 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:54:15,859 p=1561 u=amuriuki n=ansible | toml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:54:15,860 p=1561 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:54:15,867 p=1561 u=amuriuki n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-09-03 16:54:16,060 p=1561 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.postgresql_db to community.postgresql.postgresql_db
+2021-09-03 16:54:16,061 p=1561 u=amuriuki n=ansible | Loading collection community.postgresql from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible_collections/community/postgresql
+2021-09-03 16:54:16,065 p=1561 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.postgresql_user to community.postgresql.postgresql_user
+2021-09-03 16:54:16,093 p=1561 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.ufw to community.general.ufw
+2021-09-03 16:54:16,099 p=1561 u=amuriuki n=ansible | Loading collection community.general from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible_collections/community/general
+2021-09-03 16:54:16,107 p=1561 u=amuriuki n=ansible | Loading callback plugin default of type stdout, v2.0 from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible/plugins/callback/default.py
+2021-09-03 16:54:16,110 p=1561 u=amuriuki n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2021-09-03 16:54:16,110 p=1561 u=amuriuki n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-09-03 16:54:16,110 p=1561 u=amuriuki n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-09-03 16:54:16,111 p=1561 u=amuriuki n=ansible | PLAYBOOK: launch.yml ***********************************************************
+2021-09-03 16:54:16,111 p=1561 u=amuriuki n=ansible | 5 plays in /home/amuriuki/projects/olam-ansible/launch.yml
+2021-09-03 16:54:16,115 p=1561 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house
+
+2021-09-03 16:54:16,116 p=1561 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:54:16,116 p=1561 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:54:16,120 p=1561 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:54:16,120 p=1561 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:54:16,125 p=1561 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:54:16,125 p=1561 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:54:16,128 p=1561 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:54:16,128 p=1561 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:54:16,131 p=1561 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:54:16,131 p=1561 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:54:16,131 p=1561 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:55:11,054 p=1575 u=amuriuki n=ansible | ansible-playbook [core 2.11.4] 
+  config file = /home/amuriuki/projects/olamerp-website/ansible.cfg
+  configured module search path = ['/home/amuriuki/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/amuriuki/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/amuriuki/projects/olamerp-website/venv/bin/ansible-playbook
+  python version = 3.8.5 (default, Jan 27 2021, 15:41:15) [GCC 9.3.0]
+  jinja version = 2.10
+  libyaml = True
+2021-09-03 16:55:11,055 p=1575 u=amuriuki n=ansible | Using /home/amuriuki/projects/olamerp-website/ansible.cfg as config file
+2021-09-03 16:55:11,056 p=1575 u=amuriuki n=ansible | setting up inventory plugins
+2021-09-03 16:55:11,069 p=1575 u=amuriuki n=ansible | host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:55:11,070 p=1575 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:55:11,071 p=1575 u=amuriuki n=ansible | script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:55:11,071 p=1575 u=amuriuki n=ansible | auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:55:11,071 p=1575 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:55:11,071 p=1575 u=amuriuki n=ansible | yaml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:55:11,072 p=1575 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:55:11,072 p=1575 u=amuriuki n=ansible | ini declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:55:11,072 p=1575 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:55:11,072 p=1575 u=amuriuki n=ansible | toml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:55:11,073 p=1575 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:55:11,081 p=1575 u=amuriuki n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-09-03 16:55:11,269 p=1575 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.postgresql_db to community.postgresql.postgresql_db
+2021-09-03 16:55:11,270 p=1575 u=amuriuki n=ansible | Loading collection community.postgresql from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible_collections/community/postgresql
+2021-09-03 16:55:11,274 p=1575 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.postgresql_user to community.postgresql.postgresql_user
+2021-09-03 16:55:11,298 p=1575 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.ufw to community.general.ufw
+2021-09-03 16:55:11,306 p=1575 u=amuriuki n=ansible | Loading collection community.general from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible_collections/community/general
+2021-09-03 16:55:11,315 p=1575 u=amuriuki n=ansible | Loading callback plugin default of type stdout, v2.0 from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible/plugins/callback/default.py
+2021-09-03 16:55:11,319 p=1575 u=amuriuki n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2021-09-03 16:55:11,319 p=1575 u=amuriuki n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-09-03 16:55:11,319 p=1575 u=amuriuki n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-09-03 16:55:11,319 p=1575 u=amuriuki n=ansible | PLAYBOOK: launch.yml ***********************************************************
+2021-09-03 16:55:11,320 p=1575 u=amuriuki n=ansible | 5 plays in /home/amuriuki/projects/olam-ansible/launch.yml
+2021-09-03 16:55:11,327 p=1575 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house
+
+2021-09-03 16:55:11,327 p=1575 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:55:11,327 p=1575 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:55:11,330 p=1575 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:55:11,331 p=1575 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:55:11,335 p=1575 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:55:11,335 p=1575 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:55:11,339 p=1575 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:55:11,340 p=1575 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:55:11,342 p=1575 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:55:11,342 p=1575 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:55:11,342 p=1575 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:56:35,086 p=1585 u=amuriuki n=ansible | ansible-playbook [core 2.11.4] 
+  config file = /home/amuriuki/projects/olamerp-website/ansible.cfg
+  configured module search path = ['/home/amuriuki/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/amuriuki/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/amuriuki/projects/olamerp-website/venv/bin/ansible-playbook
+  python version = 3.8.5 (default, Jan 27 2021, 15:41:15) [GCC 9.3.0]
+  jinja version = 2.10
+  libyaml = True
+2021-09-03 16:56:35,087 p=1585 u=amuriuki n=ansible | Using /home/amuriuki/projects/olamerp-website/ansible.cfg as config file
+2021-09-03 16:56:35,089 p=1585 u=amuriuki n=ansible | setting up inventory plugins
+2021-09-03 16:56:35,101 p=1585 u=amuriuki n=ansible | host_list declined parsing /home/amuriuki/projects/olamerp-website/club-house as it did not pass its verify_file() method
+2021-09-03 16:56:35,101 p=1585 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:56:35,101 p=1585 u=amuriuki n=ansible | script declined parsing /home/amuriuki/projects/olamerp-website/club-house as it did not pass its verify_file() method
+2021-09-03 16:56:35,102 p=1585 u=amuriuki n=ansible | auto declined parsing /home/amuriuki/projects/olamerp-website/club-house as it did not pass its verify_file() method
+2021-09-03 16:56:35,102 p=1585 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:56:35,102 p=1585 u=amuriuki n=ansible | yaml declined parsing /home/amuriuki/projects/olamerp-website/club-house as it did not pass its verify_file() method
+2021-09-03 16:56:35,102 p=1585 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:56:35,102 p=1585 u=amuriuki n=ansible | ini declined parsing /home/amuriuki/projects/olamerp-website/club-house as it did not pass its verify_file() method
+2021-09-03 16:56:35,102 p=1585 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:56:35,103 p=1585 u=amuriuki n=ansible | toml declined parsing /home/amuriuki/projects/olamerp-website/club-house as it did not pass its verify_file() method
+2021-09-03 16:56:35,103 p=1585 u=amuriuki n=ansible | [WARNING]: Unable to parse /home/amuriuki/projects/olamerp-website/club-house
+as an inventory source
+
+2021-09-03 16:56:35,103 p=1585 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:56:35,110 p=1585 u=amuriuki n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-09-03 16:56:35,317 p=1585 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.postgresql_db to community.postgresql.postgresql_db
+2021-09-03 16:56:35,318 p=1585 u=amuriuki n=ansible | Loading collection community.postgresql from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible_collections/community/postgresql
+2021-09-03 16:56:35,322 p=1585 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.postgresql_user to community.postgresql.postgresql_user
+2021-09-03 16:56:35,343 p=1585 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.ufw to community.general.ufw
+2021-09-03 16:56:35,351 p=1585 u=amuriuki n=ansible | Loading collection community.general from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible_collections/community/general
+2021-09-03 16:56:35,360 p=1585 u=amuriuki n=ansible | Loading callback plugin default of type stdout, v2.0 from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible/plugins/callback/default.py
+2021-09-03 16:56:35,364 p=1585 u=amuriuki n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2021-09-03 16:56:35,364 p=1585 u=amuriuki n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-09-03 16:56:35,364 p=1585 u=amuriuki n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-09-03 16:56:35,365 p=1585 u=amuriuki n=ansible | PLAYBOOK: launch.yml ***********************************************************
+2021-09-03 16:56:35,366 p=1585 u=amuriuki n=ansible | 5 plays in /home/amuriuki/projects/olam-ansible/launch.yml
+2021-09-03 16:56:35,372 p=1585 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house
+
+2021-09-03 16:56:35,373 p=1585 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:56:35,373 p=1585 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:56:35,377 p=1585 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:56:35,377 p=1585 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:56:35,380 p=1585 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:56:35,380 p=1585 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:56:35,383 p=1585 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:56:35,384 p=1585 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:56:35,387 p=1585 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:56:35,387 p=1585 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:56:35,388 p=1585 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:56:52,138 p=1589 u=amuriuki n=ansible | ansible-playbook [core 2.11.4] 
+  config file = /home/amuriuki/projects/olamerp-website/ansible.cfg
+  configured module search path = ['/home/amuriuki/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/amuriuki/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/amuriuki/projects/olamerp-website/venv/bin/ansible-playbook
+  python version = 3.8.5 (default, Jan 27 2021, 15:41:15) [GCC 9.3.0]
+  jinja version = 2.10
+  libyaml = True
+2021-09-03 16:56:52,139 p=1589 u=amuriuki n=ansible | Using /home/amuriuki/projects/olamerp-website/ansible.cfg as config file
+2021-09-03 16:56:52,141 p=1589 u=amuriuki n=ansible | setting up inventory plugins
+2021-09-03 16:56:52,156 p=1589 u=amuriuki n=ansible | host_list declined parsing /home/amuriuki/projects/olamerp-website/.hosts as it did not pass its verify_file() method
+2021-09-03 16:56:52,156 p=1589 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:56:52,156 p=1589 u=amuriuki n=ansible | script declined parsing /home/amuriuki/projects/olamerp-website/.hosts as it did not pass its verify_file() method
+2021-09-03 16:56:52,156 p=1589 u=amuriuki n=ansible | auto declined parsing /home/amuriuki/projects/olamerp-website/.hosts as it did not pass its verify_file() method
+2021-09-03 16:56:52,156 p=1589 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:56:52,156 p=1589 u=amuriuki n=ansible | yaml declined parsing /home/amuriuki/projects/olamerp-website/.hosts as it did not pass its verify_file() method
+2021-09-03 16:56:52,156 p=1589 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:56:52,156 p=1589 u=amuriuki n=ansible | ini declined parsing /home/amuriuki/projects/olamerp-website/.hosts as it did not pass its verify_file() method
+2021-09-03 16:56:52,157 p=1589 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:56:52,157 p=1589 u=amuriuki n=ansible | toml declined parsing /home/amuriuki/projects/olamerp-website/.hosts as it did not pass its verify_file() method
+2021-09-03 16:56:52,157 p=1589 u=amuriuki n=ansible | [WARNING]: Unable to parse /home/amuriuki/projects/olamerp-website/.hosts as an
+inventory source
+
+2021-09-03 16:56:52,157 p=1589 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:56:52,166 p=1589 u=amuriuki n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-09-03 16:56:52,366 p=1589 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.postgresql_db to community.postgresql.postgresql_db
+2021-09-03 16:56:52,367 p=1589 u=amuriuki n=ansible | Loading collection community.postgresql from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible_collections/community/postgresql
+2021-09-03 16:56:52,369 p=1589 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.postgresql_user to community.postgresql.postgresql_user
+2021-09-03 16:56:52,395 p=1589 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.ufw to community.general.ufw
+2021-09-03 16:56:52,402 p=1589 u=amuriuki n=ansible | Loading collection community.general from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible_collections/community/general
+2021-09-03 16:56:52,411 p=1589 u=amuriuki n=ansible | Loading callback plugin default of type stdout, v2.0 from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible/plugins/callback/default.py
+2021-09-03 16:56:52,415 p=1589 u=amuriuki n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2021-09-03 16:56:52,416 p=1589 u=amuriuki n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-09-03 16:56:52,416 p=1589 u=amuriuki n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-09-03 16:56:52,416 p=1589 u=amuriuki n=ansible | PLAYBOOK: launch.yml ***********************************************************
+2021-09-03 16:56:52,416 p=1589 u=amuriuki n=ansible | 5 plays in /home/amuriuki/projects/olam-ansible/launch.yml
+2021-09-03 16:56:52,422 p=1589 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: club-house
+
+2021-09-03 16:56:52,422 p=1589 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:56:52,422 p=1589 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:56:52,425 p=1589 u=amuriuki n=ansible | PLAY [Set-Up PG] ***************************************************************
+2021-09-03 16:56:52,425 p=1589 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:56:52,432 p=1589 u=amuriuki n=ansible | PLAY [Install Olam] ************************************************************
+2021-09-03 16:56:52,432 p=1589 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:56:52,435 p=1589 u=amuriuki n=ansible | PLAY [Set-Up Gunicorn & Supervisor] ********************************************
+2021-09-03 16:56:52,435 p=1589 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:56:52,438 p=1589 u=amuriuki n=ansible | PLAY [Set-Up SSL & Nginx] ******************************************************
+2021-09-03 16:56:52,438 p=1589 u=amuriuki n=ansible | skipping: no hosts matched
+2021-09-03 16:56:52,438 p=1589 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:57:16,643 p=1603 u=amuriuki n=ansible | ansible-playbook [core 2.11.4] 
+  config file = /home/amuriuki/projects/olamerp-website/ansible.cfg
+  configured module search path = ['/home/amuriuki/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/amuriuki/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/amuriuki/projects/olamerp-website/venv/bin/ansible-playbook
+  python version = 3.8.5 (default, Jan 27 2021, 15:41:15) [GCC 9.3.0]
+  jinja version = 2.10
+  libyaml = True
+2021-09-03 16:57:16,644 p=1603 u=amuriuki n=ansible | Using /home/amuriuki/projects/olamerp-website/ansible.cfg as config file
+2021-09-03 16:57:16,645 p=1603 u=amuriuki n=ansible | setting up inventory plugins
+2021-09-03 16:57:16,658 p=1603 u=amuriuki n=ansible | host_list declined parsing /home/amuriuki/projects/olam-ansible/.hosts as it did not pass its verify_file() method
+2021-09-03 16:57:16,658 p=1603 u=amuriuki n=ansible | script declined parsing /home/amuriuki/projects/olam-ansible/.hosts as it did not pass its verify_file() method
+2021-09-03 16:57:16,659 p=1603 u=amuriuki n=ansible | auto declined parsing /home/amuriuki/projects/olam-ansible/.hosts as it did not pass its verify_file() method
+2021-09-03 16:57:16,665 p=1603 u=amuriuki n=ansible | Set default localhost to 127.0.0.1
+2021-09-03 16:57:16,666 p=1603 u=amuriuki n=ansible | Not replacing invalid character(s) "{'-'}" in group name (club-house)
+2021-09-03 16:57:16,666 p=1603 u=amuriuki n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use
+-vvvv to see details
+
+2021-09-03 16:57:16,666 p=1603 u=amuriuki n=ansible | Not replacing invalid character(s) "{'-'}" in group name (club-house)
+2021-09-03 16:57:16,666 p=1603 u=amuriuki n=ansible | Parsed /home/amuriuki/projects/olam-ansible/.hosts inventory source with ini plugin
+2021-09-03 16:57:16,869 p=1603 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.postgresql_db to community.postgresql.postgresql_db
+2021-09-03 16:57:16,870 p=1603 u=amuriuki n=ansible | Loading collection community.postgresql from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible_collections/community/postgresql
+2021-09-03 16:57:16,873 p=1603 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.postgresql_user to community.postgresql.postgresql_user
+2021-09-03 16:57:16,895 p=1603 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.ufw to community.general.ufw
+2021-09-03 16:57:16,904 p=1603 u=amuriuki n=ansible | Loading collection community.general from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible_collections/community/general
+2021-09-03 16:57:16,912 p=1603 u=amuriuki n=ansible | Loading callback plugin default of type stdout, v2.0 from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible/plugins/callback/default.py
+2021-09-03 16:57:16,916 p=1603 u=amuriuki n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2021-09-03 16:57:16,916 p=1603 u=amuriuki n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-09-03 16:57:16,916 p=1603 u=amuriuki n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-09-03 16:57:16,916 p=1603 u=amuriuki n=ansible | PLAYBOOK: launch.yml ***********************************************************
+2021-09-03 16:57:16,917 p=1603 u=amuriuki n=ansible | 5 plays in /home/amuriuki/projects/olam-ansible/launch.yml
+2021-09-03 16:57:16,924 p=1603 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:57:16,947 p=1603 u=amuriuki n=ansible | TASK [Gathering Facts] *********************************************************
+2021-09-03 16:57:16,981 p=1608 u=amuriuki n=ansible | <18.218.37.39> ESTABLISH SSH CONNECTION FOR USER: ubuntu
+2021-09-03 16:57:16,983 p=1608 u=amuriuki n=ansible | <18.218.37.39> SSH: EXEC ssh -vvv -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o -o StrictHostKeyChecking=no -o 'IdentityFile="roles/ec2/files/ansible.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ubuntu"' -o ConnectTimeout=10 18.218.37.39 '/bin/sh -c '"'"'echo ~ubuntu && sleep 0'"'"''
+2021-09-03 16:57:17,015 p=1608 u=amuriuki n=ansible | <18.218.37.39> (255, b'', b'command-line: line 0: Bad configuration option: -o\r\n')
+2021-09-03 16:57:17,022 p=1603 u=amuriuki n=ansible | fatal: [18.218.37.39]: UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: command-line: line 0: Bad configuration option: -o",
+    "unreachable": true
+}
+2021-09-03 16:57:17,024 p=1603 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:57:17,024 p=1603 u=amuriuki n=ansible | 18.218.37.39               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2021-09-03 16:59:02,658 p=1612 u=amuriuki n=ansible | ansible [core 2.11.4] 
+  config file = /home/amuriuki/projects/olamerp-website/ansible.cfg
+  configured module search path = ['/home/amuriuki/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/amuriuki/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/amuriuki/projects/olamerp-website/venv/bin/ansible
+  python version = 3.8.5 (default, Jan 27 2021, 15:41:15) [GCC 9.3.0]
+  jinja version = 2.10
+  libyaml = True
+2021-09-03 16:59:02,658 p=1612 u=amuriuki n=ansible | Using /home/amuriuki/projects/olamerp-website/ansible.cfg as config file
+2021-09-03 16:59:02,659 p=1612 u=amuriuki n=ansible | setting up inventory plugins
+2021-09-03 16:59:02,673 p=1612 u=amuriuki n=ansible | host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:59:02,673 p=1612 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:59:02,673 p=1612 u=amuriuki n=ansible | script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:59:02,674 p=1612 u=amuriuki n=ansible | auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:59:02,674 p=1612 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:59:02,674 p=1612 u=amuriuki n=ansible | yaml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:59:02,674 p=1612 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:59:02,674 p=1612 u=amuriuki n=ansible | ini declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:59:02,674 p=1612 u=amuriuki n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2021-09-03 16:59:02,675 p=1612 u=amuriuki n=ansible | toml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2021-09-03 16:59:02,675 p=1612 u=amuriuki n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2021-09-03 16:59:02,681 p=1612 u=amuriuki n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+2021-09-03 16:59:02,681 p=1612 u=amuriuki n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: 18.218.37.39
+
+2021-09-03 16:59:02,701 p=1612 u=amuriuki n=ansible | Loading callback plugin minimal of type stdout, v2.0 from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible/plugins/callback/minimal.py
+2021-09-03 16:59:02,707 p=1612 u=amuriuki n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2021-09-03 16:59:02,707 p=1612 u=amuriuki n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-09-03 16:59:02,707 p=1612 u=amuriuki n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-09-03 16:59:56,685 p=1624 u=amuriuki n=ansible | ansible-playbook [core 2.11.4] 
+  config file = /home/amuriuki/projects/olamerp-website/ansible.cfg
+  configured module search path = ['/home/amuriuki/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/amuriuki/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/amuriuki/projects/olamerp-website/venv/bin/ansible-playbook
+  python version = 3.8.5 (default, Jan 27 2021, 15:41:15) [GCC 9.3.0]
+  jinja version = 2.10
+  libyaml = True
+2021-09-03 16:59:56,685 p=1624 u=amuriuki n=ansible | Using /home/amuriuki/projects/olamerp-website/ansible.cfg as config file
+2021-09-03 16:59:56,687 p=1624 u=amuriuki n=ansible | setting up inventory plugins
+2021-09-03 16:59:56,699 p=1624 u=amuriuki n=ansible | host_list declined parsing /home/amuriuki/projects/olam-ansible/.hosts as it did not pass its verify_file() method
+2021-09-03 16:59:56,700 p=1624 u=amuriuki n=ansible | script declined parsing /home/amuriuki/projects/olam-ansible/.hosts as it did not pass its verify_file() method
+2021-09-03 16:59:56,700 p=1624 u=amuriuki n=ansible | auto declined parsing /home/amuriuki/projects/olam-ansible/.hosts as it did not pass its verify_file() method
+2021-09-03 16:59:56,704 p=1624 u=amuriuki n=ansible | Set default localhost to 127.0.0.1
+2021-09-03 16:59:56,704 p=1624 u=amuriuki n=ansible | Not replacing invalid character(s) "{'-'}" in group name (club-house)
+2021-09-03 16:59:56,705 p=1624 u=amuriuki n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use
+-vvvv to see details
+
+2021-09-03 16:59:56,705 p=1624 u=amuriuki n=ansible | Not replacing invalid character(s) "{'-'}" in group name (club-house)
+2021-09-03 16:59:56,706 p=1624 u=amuriuki n=ansible | Parsed /home/amuriuki/projects/olam-ansible/.hosts inventory source with ini plugin
+2021-09-03 16:59:56,908 p=1624 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.postgresql_db to community.postgresql.postgresql_db
+2021-09-03 16:59:56,909 p=1624 u=amuriuki n=ansible | Loading collection community.postgresql from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible_collections/community/postgresql
+2021-09-03 16:59:56,913 p=1624 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.postgresql_user to community.postgresql.postgresql_user
+2021-09-03 16:59:56,936 p=1624 u=amuriuki n=ansible | redirecting (type: modules) ansible.builtin.ufw to community.general.ufw
+2021-09-03 16:59:56,943 p=1624 u=amuriuki n=ansible | Loading collection community.general from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible_collections/community/general
+2021-09-03 16:59:56,950 p=1624 u=amuriuki n=ansible | Loading callback plugin default of type stdout, v2.0 from /home/amuriuki/projects/olamerp-website/venv/lib/python3.8/site-packages/ansible/plugins/callback/default.py
+2021-09-03 16:59:56,956 p=1624 u=amuriuki n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2021-09-03 16:59:56,957 p=1624 u=amuriuki n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2021-09-03 16:59:56,957 p=1624 u=amuriuki n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2021-09-03 16:59:56,957 p=1624 u=amuriuki n=ansible | PLAYBOOK: launch.yml ***********************************************************
+2021-09-03 16:59:56,958 p=1624 u=amuriuki n=ansible | 5 plays in /home/amuriuki/projects/olam-ansible/launch.yml
+2021-09-03 16:59:56,964 p=1624 u=amuriuki n=ansible | PLAY [Install Base Dependencies] ***********************************************
+2021-09-03 16:59:56,982 p=1624 u=amuriuki n=ansible | TASK [Gathering Facts] *********************************************************
+2021-09-03 16:59:57,012 p=1629 u=amuriuki n=ansible | <18.218.37.39> ESTABLISH SSH CONNECTION FOR USER: ubuntu
+2021-09-03 16:59:57,013 p=1629 u=amuriuki n=ansible | <18.218.37.39> SSH: EXEC ssh -vvv -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o -o StrictHostKeyChecking=no -o 'IdentityFile="roles/ec2/files/ansible.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ubuntu"' -o ConnectTimeout=10 18.218.37.39 '/bin/sh -c '"'"'echo ~ubuntu && sleep 0'"'"''
+2021-09-03 16:59:57,038 p=1629 u=amuriuki n=ansible | <18.218.37.39> (255, b'', b'command-line: line 0: Bad configuration option: -o\r\n')
+2021-09-03 16:59:57,043 p=1624 u=amuriuki n=ansible | fatal: [18.218.37.39]: UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: command-line: line 0: Bad configuration option: -o",
+    "unreachable": true
+}
+2021-09-03 16:59:57,045 p=1624 u=amuriuki n=ansible | PLAY RECAP *********************************************************************
+2021-09-03 16:59:57,045 p=1624 u=amuriuki n=ansible | 18.218.37.39               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
