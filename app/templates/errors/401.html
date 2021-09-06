@@ -10,10 +10,18 @@
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="../static/images/favicon.png">
     <!-- Page Title  -->
-    <title>Teleios</title>
+    <title>Expired Token | Olam ERP</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{ url_for('static', filename='base-2/css/dashlite.css') }}">
     <link id="skin-default" rel="stylesheet" href="{{ url_for('static', filename='base-2/css/theme.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .nk-error-head{
+            font-size: 100px !important;
+        }
+    </style>
 </head>
 
 <body class="nk-body bg-white npc-default pg-error">
@@ -26,10 +34,9 @@
                 <div class="nk-content ">
                     <div class="nk-block nk-block-middle wide-xs mx-auto">
                         <div class="nk-block-content nk-error-ld text-center">
-                            <h1 class="nk-error-head">404</h1>
-                            <h3 class="nk-error-title">We couldn't find the page you're looking for!</h3>
-                            <p class="nk-error-text">Don't panic. If you think it's our mistake, please send us a message on <a href="">this page</a></p>
-                            <a href="" class="btn btn-lg btn-primary mt-2">Home</a>
+                            <h1 class="nk-error-head">Token Expired</h1>                            
+                            <p class="nk-error-text">Your token has expired. Kindly create your account again.</p>
+                            <a href="{{url_for('main.choose_apps')}}" class="btn btn-lg btn-primary mt-2">Start here</a>
                         </div>
                     </div><!-- .nk-block -->
                 </div>

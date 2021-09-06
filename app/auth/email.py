@@ -18,9 +18,9 @@ def send_password_reset_email(user):
                                          user=user, token=token))
 
 
-def send_database_activation_email(user, domain_name):
+def send_server_activation_email(user, domain_name):
     user = User.query.filter_by(id=user).first()
-    token = user.get_database_activation_token()
+    token = user.get_server_activation_token()
     message = Mail(from_email=current_app.config['ADMINS'][0], to_emails=[user.email], subject='Activate ' + domain_name +
-                   '.olam-erp.com', html_content=render_template('email/activate_database.html', user=user, token=token, domain_name=domain_name))
+                   '.olam-erp.com', html_content=render_template('email/activate_server.html', user=user, token=token, domain_name=domain_name))
     send_email(message)

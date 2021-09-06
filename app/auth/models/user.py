@@ -58,6 +58,11 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
         return jwt.encode(
             {'activate_database': self.id, 'exp': time() + expires_in},
             current_app.config['SECRET_KEY'], algorithm='HS256')
+    
+    def get_server_activation_token(self, expires_in=14400):
+        return jwt.encode(
+            {'activate_server': self.id, 'exp': time() + expires_in},
+            current_app.config['SECRET_KEY'], algorithm='HS256')
 
     @staticmethod
     def verify_reset_password_token(token):
@@ -73,6 +78,15 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
         try:
             id = jwt.decode(token, current_app.config['SECRET_KEY'],
                             algorithms=['HS256'])['activate_database']
+        except:
+            return
+        return User.query.get(id)
+
+    @staticmethod
+    def verify_server_activation_token(token):
+        try:
+            id = jwt.decode(token, current_app.config['SECRET_KEY'],
+                            algorithms=['HS256'])['activate_server']
         except:
             return
         return User.query.get(id)

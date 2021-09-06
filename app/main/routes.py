@@ -1,5 +1,6 @@
+from app.api.errors import bad_request, expired_token
 import os
-from app.auth.email import send_database_activation_email
+from app.auth.email import send_server_activation_email
 import re
 import time
 from os import fsync
@@ -29,8 +30,13 @@ def index():
 
 
 @bp.route('/email_template', methods=['GET', 'POST'])
-def email_template():
+def errors():
     return render_template('email/activate_database.html', title=_('Tools to Grow Your Business | Olam ERP'))
+
+
+@bp.route('/401', methods=['GET', 'POST'])
+def email_template():
+    return render_template('errors/401.html', title=_('Tools to Grow Your Business | Olam ERP'))
 
 
 def generate_unique_domainname(domain_name):
@@ -92,13 +98,11 @@ def choose_apps():
         to_update = dict(zip(vars, new_vars))
         updating('./automate/variables.cnf', to_update)
         results = call_ansible.run_playbook()
-        print(results)
         # results = 0
         if results == 0:
-            time.sleep(10)
             flash(
                 _('Activation pending! Your database expires in 4 hours. Check your email (' + form.email.data + ') for the activation link'))
-            send_database_activation_email(
+            send_server_activation_email(
                 response['user_id'], response['domain_name'])
         return jsonify({"response": "success" if results == 0 else "fail", "domain": response['domain_name'], "username": response['user_name'], "domainname": response['domain_name'], "companyname": response['companyname'], "useremail": response['user_email'], "userphone": response['user_phone']})
     if form.errors:
@@ -132,16 +136,15 @@ def home():
     return render_template('main/home.html', title=_('Home | Olam ERP'))
 
 
-@bp.route('/activate_database/<token>', methods=['GET', 'POST'])
-def activate_database(token):
-    user = User.verify_database_activation_token(token)
+@bp.route('/activate_server/<token>', methods=['GET', 'POST'])
+def activate_server(token):
+    user = User.verify_server_activation_token(token)
     if not user:
-        return redirect(url_for('main.index'))
+        return expired_token('expired token')
     else:
-        user_details = db.session.query(User).join(
-            Company).filter(User.id == user.id).first()
+        company = Company.query.filter_by(user_id=user.id).order_by(Company.id.desc()).first()
         database = Database.query.filter_by(
-            id=user_details.company.database_id).first()
+            name=company.domain_name).first()
         database.is_activated = True
         db.session.commit()
-        return redirect("https://" + user_details.company.domain_name + ".olam-erp.com/auth/set_password?username=" + user.name + "&companyname=" + user_details.company.name + "&domainname=" + user_details.company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no)
+        return redirect("https://" + company.domain_name + ".olam-erp.com/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no)
