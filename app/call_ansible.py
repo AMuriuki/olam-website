@@ -1,7 +1,3 @@
-# import subprocess
-# from subprocess import Popen, PIPE
-# from subprocess import check_output
-
 from ansible import context
 from ansible.cli import CLI
 from ansible.module_utils.common.collections import ImmutableDict
