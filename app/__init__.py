@@ -55,8 +55,11 @@ def create_app(config_class=Config):
     app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
         if app.config['ELASTICSEARCH_URL'] else None
     app.redis = Redis.from_url(app.config['REDIS_URL'])
-    app.task_queue = rq.Queue('olam-tasks', connection=app.redis)
+    app.task_queue = rq.Queue('olam-tasks', connection=app.redis, default_timeout=3600)
     cors.init_app(app)
+
+    from app.errors import bp as errors_bp
+    app.register_blueprint(errors_bp)
 
     from app.auth import bp as auth_bp
     app.register_blueprint(auth_bp, url_prefix='/auth')
@@ -107,4 +110,3 @@ def get_locale():
     return request.accept_languages.best_match(current_app.config['LANGUAGES'])
 
 
-from app.main.models import module, company

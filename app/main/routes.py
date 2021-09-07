@@ -1,4 +1,3 @@
-from app.api.errors import bad_request, expired_token
 import os
 from app.auth.email import send_server_activation_email
 import re
@@ -22,6 +21,7 @@ from config import basedir
 from flask_login import login_user, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 from urllib.parse import urlparse
+from app.errors.handlers import expired_token
 
 
 @bp.route('/', methods=['GET', 'POST'])
@@ -41,10 +41,10 @@ def email_template():
 
 def generate_unique_domainname(domain_name):
     print(domain_name)
-    if (domain_name[-1].isdigit()):
+    if any(char.isdigit() for char in domain_name):
         string_domain_name = ''.join(
             [i for i in domain_name if not i.isdigit()])
-        int_value = int(domain_name[-1])
+        int_value = int(int(re.search(r'\d+', domain_name).group()))
         domain_name = string_domain_name + str(int_value + 1)
     else:
         domain_name = domain_name + "1"
@@ -76,7 +76,19 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
 
     # Install selected App(s)
     modules = session['selected_modules']
-    return {'user_id': user.id, 'user_name': user.name, 'domain_name': domain_name, 'companyname': company_name, 'user_email': user.email, 'user_phone': user.phone_no}
+
+    vars = ['APP_NAME']
+    new_vars = [domain_name]
+    to_update = dict(zip(vars, new_vars))
+    updating('./automate/variables.cnf', to_update)
+    user.launch_task('launch_instance', _('Installing...'))
+    db.session.commit()
+
+    flash(
+        _('Activation pending! Your database expires in 4 hours. Check your email (' + email + ') for the activation link'))
+    send_server_activation_email(user.id, domain_name)
+
+    return redirect("https://" + company.domain_name + ".olam-erp.com/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no)
 
 
 @bp.route('/new/database', methods=['GET', 'POST'])
@@ -90,22 +102,8 @@ def choose_apps():
     if form.validate_on_submit():
         domain_name = (form.domainoutput.data).replace(
             '.olam-erp.com', '')  # -> *.olam-erp.com
-        response = onboarding(form.email.data, form.name.data,
-                              domain_name, form.companyname.data, form.phonenumber.data)
-
-        vars = ['APP_NAME']
-        new_vars = [response['domain_name']]
-        to_update = dict(zip(vars, new_vars))
-        updating('./automate/variables.cnf', to_update)
-        results = call_ansible.run_playbook()
-        # results = 0
-        print(results)
-        if results == 0:
-            flash(
-                _('Activation pending! Your database expires in 4 hours. Check your email (' + form.email.data + ') for the activation link'))
-            send_server_activation_email(
-                response['user_id'], response['domain_name'])
-        return jsonify({"response": "success" if results == 0 else "fail", "domain": response['domain_name'], "username": response['user_name'], "domainname": response['domain_name'], "companyname": response['companyname'], "useremail": response['user_email'], "userphone": response['user_phone']})
+        onboarding(form.email.data, form.name.data,
+                   domain_name, form.companyname.data, form.phonenumber.data)
     if form.errors:
         errors = True
     return render_template('main/set-up.html', title=_('New Database | Olam ERP'), form=form, moduleCategories=module_categories, modules=modules, errors=errors)

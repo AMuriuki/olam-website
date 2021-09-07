@@ -1,4 +1,3 @@
-from app.main.models import company
 import base64
 from datetime import datetime, timedelta
 from hashlib import md5
@@ -14,7 +13,7 @@ import redis
 import rq
 from app import db, login_manager
 from app.search import add_to_index, remove_from_index, query_index
-from app.models import SearchableMixin, PaginatedAPIMixin
+from app.models import SearchableMixin, PaginatedAPIMixin, Task
 from flask_login import UserMixin, current_user
 from config import basedir
 
@@ -58,7 +57,7 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
         return jwt.encode(
             {'activate_database': self.id, 'exp': time() + expires_in},
             current_app.config['SECRET_KEY'], algorithm='HS256')
-    
+
     def get_server_activation_token(self, expires_in=14400):
         return jwt.encode(
             {'activate_server': self.id, 'exp': time() + expires_in},
@@ -135,6 +134,19 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
         if user is None or user.token_expiration < datetime.now:
             return None
         return user
+
+    def launch_task(self, name, description, *args, **kwargs):
+        rq_job = current_app.task_queue.enqueue('app.tasks.' + name)
+        task = Task(id=rq_job.get_id(), name=name,
+                    description=description, user=self)
+        db.session.add(task)
+        return task
+
+    def get_tasks_in_progress(self):
+        return Task.query.filter_by(user=self, complete=False).all()
+
+    def get_task_in_progress(self, name):
+        return Task.query.filter_by(name=name, user=self, complete=False).first()
 
 
 @login_manager.user_loader
