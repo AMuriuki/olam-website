@@ -100,7 +100,7 @@ def choose_apps():
         results = call_ansible.run_playbook()
         # results = 0
         print(results)
-        if results == 202:
+        if results == 0:
             flash(
                 _('Activation pending! Your database expires in 4 hours. Check your email (' + form.email.data + ') for the activation link'))
             send_server_activation_email(
