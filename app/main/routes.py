@@ -99,6 +99,7 @@ def choose_apps():
         updating('./automate/variables.cnf', to_update)
         results = call_ansible.run_playbook()
         # results = 0
+        print(results)
         if results == 202:
             flash(
                 _('Activation pending! Your database expires in 4 hours. Check your email (' + form.email.data + ') for the activation link'))
@@ -142,7 +143,8 @@ def activate_server(token):
     if not user:
         return expired_token('expired token')
     else:
-        company = Company.query.filter_by(user_id=user.id).order_by(Company.id.desc()).first()
+        company = Company.query.filter_by(
+            user_id=user.id).order_by(Company.id.desc()).first()
         database = Database.query.filter_by(
             name=company.domain_name).first()
         database.is_activated = True
