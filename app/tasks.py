@@ -1,4 +1,4 @@
-from app.auth.models.user import User
+from automate import launch
 from rq import get_current_job
 from app.models import Task
 from app import call_ansible, create_app, db
@@ -23,6 +23,6 @@ def _set_task_progress(progress):
 
 def launch_instance():
     try:
-        call_ansible.run_playbook()
+        launch.run_playbook()
     except:
         pass
