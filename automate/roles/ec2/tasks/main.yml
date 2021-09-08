@@ -58,12 +58,12 @@
     dest: "{{hostpath}}"
     regexp: "{{ Pub_IP }}"
     insertafter: "{{app_name}}"
-    line: "{{ Pub_IP }} {{hoststring}}"
+    line: "{{ Pub_IP }}"
     state: present
 
-- wait_for:
-    path: "{{ hostpath }}"
-    search_regex: "{{hoststring}}"
+# - wait_for:
+#     path: "{{ hostpath }}"
+#     search_regex: "{{hoststring}}"
 
 - name: Route 53 A record addition
   route53:
@@ -77,7 +77,6 @@
     value: "{{ Pub_IP }}"
     wait: yes
   register: result
-  
 # - name: Route 53 A record addition
 #   route53:
 #     aws_access_key: AKIAYOFW4TZ2TLEKGQFP

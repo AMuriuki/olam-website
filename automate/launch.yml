@@ -9,29 +9,34 @@
 - name: Install Base Dependencies
   hosts: "{{ lookup('ini', 'app_name section=tenant file=variables.cnf') }}"
   timeout: 360
+  gather_facts: False
   roles:
     - base_dependencies
 
 - name: Set-Up PG
   hosts: "{{ lookup('ini', 'app_name section=tenant file=variables.cnf') }}"
   timeout: 360
+  gather_facts: False
   roles:
     - postgres
 
 - name: Install Olam
   hosts: "{{ lookup('ini', 'app_name section=tenant file=variables.cnf') }}"
   timeout: 360
+  gather_facts: False
   roles:
     - olam
 
 - name: Set-Up Gunicorn & Supervisor
   hosts: "{{ lookup('ini', 'app_name section=tenant file=variables.cnf') }}"
   timeout: 360
+  gather_facts: False
   roles:
     - supervisor
 
 - name: Set-Up SSL & Nginx
   hosts: "{{ lookup('ini', 'app_name section=tenant file=variables.cnf') }}"
   timeout: 360
+  gather_facts: False
   roles:
     - nginx

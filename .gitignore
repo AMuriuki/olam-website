@@ -42,3 +42,4 @@ olam.sql
 olam.log*
 
 .env
+variables.cnf
