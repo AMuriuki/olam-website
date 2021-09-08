@@ -1,7 +1,7 @@
 from automate import launch
 from rq import get_current_job
 from app.models import Task
-from app import call_ansible, create_app, db
+from app import create_app, db
 
 app = create_app()
 app.app_context().push()
