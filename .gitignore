@@ -43,3 +43,4 @@ olam.log*
 
 .env
 variables.cnf
+dump.rdb

@@ -1,6 +1,8 @@
 [program:{{app_name}}]
 command=/home/{{ansible_ssh_user}}/{{app_name}}/venv/bin/gunicorn -b localhost:8000 -w 4 olam:app
 directory=/home/{{ansible_ssh_user}}/{{app_name}}
+stdout_logfile = /home/{{ansible_ssh_user}}/{{app_name}}/logs/{{app_name}}-out.log
+stderr_logfile = /home/{{ansible_ssh_user}}/{{app_name}}/logs/err.log
 user={{ansible_ssh_user}}
 autostart=true
 autorestart=true

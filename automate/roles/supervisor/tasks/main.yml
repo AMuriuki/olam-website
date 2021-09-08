@@ -1,9 +1,17 @@
 ---
 # tasks file for supervisor
+- name: Install supervisord
+  apt:
+    name: supervisor
+    state: present
+
 - name: Create Configuration
   become: yes
   template:
     src: gsupervisor.conf.j2
     dest: /etc/supervisor/conf.d/{{app_name}}.conf
   notify:
-    - Restart Supervisor
+    - reload supervisor
+  
+- name: update supervisorctl
+  command: supervisorctl update

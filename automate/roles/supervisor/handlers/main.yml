@@ -1,7 +1,7 @@
 ---
 # handlers file for supervisor
-- name: Restart Supervisor
-  become: yes
-  service:
-    name: supervisor
-    state: restarted
+- name: reload supervisor
+  command: supervisorctl reload
+
+- name: "supervisorctl restart {{ lookup('ini', 'app_name section=tenant file=variables.cnf') }}"
+  command: "supervisorctl restart {{ lookup('ini', 'app_name section=tenant file=variables.cnf') }}"
