@@ -83,12 +83,13 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
     updating('./automate/variables.cnf', to_update)
     user.launch_task('launch_instance', _('Installing...'))
     db.session.commit()
-
+    while user.get_task_in_progress('launch_instance'):
+        print(user.get_task_in_progress('launch_instance'))        
     flash(
         _('Activation pending! Your database expires in 4 hours. Check your email (' + email + ') for the activation link'))
     send_server_activation_email(user.id, domain_name)
 
-    return redirect("https://" + company.domain_name + ".olam-erp.com/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no)
+    return {'user_id': user.id, 'user_name': user.name, 'domain_name': domain_name, 'companyname': company_name, 'user_email': user.email, 'user_phone': user.phone_no}
 
 
 @bp.route('/new/database', methods=['GET', 'POST'])
@@ -102,8 +103,9 @@ def choose_apps():
     if form.validate_on_submit():
         domain_name = (form.domainoutput.data).replace(
             '.olam-erp.com', '')  # -> *.olam-erp.com
-        onboarding(form.email.data, form.name.data,
-                   domain_name, form.companyname.data, form.phonenumber.data)
+        response = onboarding(form.email.data, form.name.data,
+                              domain_name, form.companyname.data, form.phonenumber.data)
+        return jsonify({"response": "success", "domain": response['domain_name'], "username": response['user_name'], "domainname": response['domain_name'], "companyname": response['companyname'], "useremail": response['user_email'], "userphone": response['user_phone']})
     if form.errors:
         errors = True
     return render_template('main/set-up.html', title=_('New Database | Olam ERP'), form=form, moduleCategories=module_categories, modules=modules, errors=errors)

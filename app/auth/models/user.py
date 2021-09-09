@@ -38,6 +38,7 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
     last_seen = db.Column(db.DateTime, default=datetime.now)
     registered_on = db.Column(db.DateTime, default=datetime.now)
     phone_no = db.Column(db.String(120), index=True)
+    tasks = db.relationship('Task', backref='user', lazy='dynamic')
 
     def __repr__(self):
         return '<User {}>'.format(self.name)
@@ -146,7 +147,7 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
         return Task.query.filter_by(user=self, complete=False).all()
 
     def get_task_in_progress(self, name):
-        return Task.query.filter_by(name=name, user=self, complete=False).first()
+        return True if Task.query.filter_by(name=name, user=self, complete=False).first() else False
 
 
 @login_manager.user_loader
