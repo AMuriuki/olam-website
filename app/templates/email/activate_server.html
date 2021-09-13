@@ -1,171 +1,285 @@
-<!DOCTYPE html>
-<html lang="zxx" class="js" style="box-sizing: border-box;">
+<!doctype html>
+<html>
 
-<head style="box-sizing: border-box;">
-    <base href="../" style="box-sizing: border-box;">
-    <meta charset="utf-8" style="box-sizing: border-box;">
-    <meta name="author" content="Arnold" style="box-sizing: border-box;">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        style="box-sizing: border-box;">
-    <meta name="description" content="ERP, CRM, etc. Business tools to help your organization grow."
-        style="box-sizing: border-box;">
-    <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="../static/images/favicon.png" style="box-sizing: border-box;">
-    <!-- Page Title  -->
-    <title style="box-sizing: border-box;"> Tools to Grow Your Business | Olam ERP </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tools to Grow Your Business | Olam ERP</title>
+    <style>
+        @media only screen and (max-width: 620px) {
+            table[class='body'] h1 {
+                font-size: 28px !important;
+                margin-bottom: 10px !important;
+            }
 
+            table[class='body'] p,
+            table[class='body'] ul,
+            table[class='body'] ol,
+            table[class='body'] td,
+            table[class='body'] span,
+            table[class='body'] a {
+                font-size: 16px !important;
+            }
+
+            table[class='body'] .wrapper,
+            table[class='body'] .article {
+                padding: 10px !important;
+            }
+
+            table[class='body'] .content {
+                padding: 0 !important;
+            }
+
+            table[class='body'] .container {
+                padding: 0 !important;
+                width: 100% !important;
+            }
+
+            table[class='body'] .main {
+                border-left-width: 0 !important;
+                border-radius: 0 !important;
+                border-right-width: 0 !important;
+            }
+
+            table[class='body'] .btn table {
+                width: 100% !important;
+            }
+
+            table[class='body'] .btn a {
+                width: 100% !important;
+            }
+
+            table[class='body'] .img-responsive {
+                height: auto !important;
+                max-width: 100% !important;
+                width: auto !important;
+            }
+        }
+
+        @media all {
+            .ExternalClass {
+                width: 100%;
+            }
+
+            .ExternalClass,
+            .ExternalClass p,
+            .ExternalClass span,
+            .ExternalClass font,
+            .ExternalClass td,
+            .ExternalClass div {
+                line-height: 100%;
+            }
+
+            .apple-link a {
+                color: inherit !important;
+                font-family: inherit !important;
+                font-size: inherit !important;
+                font-weight: inherit !important;
+                line-height: inherit !important;
+                text-decoration: none !important;
+            }
+
+            .btn-primary table td:hover {
+                background-color: #6576ff !important;
+            }
+
+            .btn-primary a:hover {
+                background-color: #6576ff !important;
+                border-color: #6576ff !important;
+            }
+        }
+    </style>
 </head>
 
-<body class="nk-body bg-white npc-default has-aside"
-    style="box-sizing: border-box; font-family: 'IBM Plex Sans Arabic', sans-serif;">
-    <div class="nk-app-root" style="box-sizing: border-box;">
-        <!-- main @s -->
-        <div class="nk-main " style="box-sizing: border-box;">
-            <!-- wrap @s -->
-            <div class="nk-wrap" style="box-sizing: border-box;">
-                <div class="nk-content " style="box-sizing: border-box;">
-                    <div class="container wide-xl" style="box-sizing: border-box;">
-                        <div class="nk-content-inner" style="box-sizing: border-box;">
-                            <table class="email-wraper"
-                                style="box-sizing: border-box;border-collapse: collapse; width: 100%; background: #f5f6fa;">
-                                <tr style="box-sizing: border-box;page-break-inside: avoid;">
-                                    <td class="py-5"
-                                        style="box-sizing: border-box;padding-top: 2.75rem !important;padding-bottom: 2.75rem !important;">
-                                        <table class="email-header"
-                                            style="box-sizing: border-box;border-collapse: collapse;width: 100%;max-width: 620px;margin: 0 auto;">
-                                            <tbody style="box-sizing: border-box;">
-                                                <tr style="box-sizing: border-box;page-break-inside: avoid;">
-                                                    <td class="text-center pb-4"
-                                                        style="box-sizing: border-box;padding-bottom: 1.5rem !important;text-align: center !important;">
-                                                        <a href="{{url_for('main.index')}}" class="logo-link">
-                                                            <img class="logo-light logo-img"
-                                                                src="{{url_for('static', filename='images/logo.png')}}"
-                                                                srcset="../static/images/logo2x.png 2x" alt="logo">
-                                                            <img class="logo-dark logo-img"
-                                                                src="{{url_for('static', filename='images/logo-dark.png')}}"
-                                                                srcset="../static/images/logo-dark2x.png 2x"
-                                                                alt="logo-dark">
-                                                        </a>
-                                                        <br><br>
-                                                        <h1
-                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 0;font-family: 'IBM Plex Sans Arabic', sans-serif;font-weight: 600;line-height: 1.4;color: #6576ff;page-break-after: avoid;letter-spacing: -0.03em;orphans: 3;widows: 3;margin: 0;">
-                                                            Server Activation</h1>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <table class="email-body text-center"
-                                            style="box-sizing: border-box;border-collapse: collapse;width: 96%;max-width: 620px;margin: 0 auto;background: #ffffff;text-align: center !important;">
-                                            <tbody style="box-sizing: border-box;">
-                                                <tr style="box-sizing: border-box;page-break-inside: avoid;">
-                                                    <td class="px-3 px-sm-5 pb-2"
-                                                        style="box-sizing: border-box;padding-bottom: .75rem !important;padding-right: 2.75rem !important;padding-left: 2.75rem !important;">
-                                                        <p
-                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
-                                                        <h2><a href="https://{{domain_name}}.olam-erp.com"
-                                                                style="cursor: pointer; box-sizing: border-box;color: #6576ff;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;word-break: break-all;">{{domain_name}}.olam-erp.com</a>
-                                                        </h2>
-                                                        has been created!
-                                                        </p>
-                                                        <p
-                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
-                                                            Please activate your server by clicking the link below.
-                                                        </p>
-                                                        <a href="{{ url_for('main.activate_server', token=token, _external=True) }}"
-                                                            class="email-btn"
-                                                            style="box-sizing: border-box;color: #ffffff !important;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;background: #6576ff;border-radius: 4px;display: inline-block;font-size: 13px;font-weight: 600;line-height: 44px;text-align: center;text-transform: capitalize;padding: 0 30px;word-break: break-all;">Activate
-                                                            Server</a>
-                                                    </td>
-                                                </tr>
-                                                <tr style="box-sizing: border-box;page-break-inside: avoid;">
-                                                    <td class="px-3 px-sm-5 pt-4 pb-3 pb-sm-5"
-                                                        style="box-sizing: border-box;padding-right: 2.75rem !important;padding-left: 2.75rem !important;padding-bottom: 2.75rem !important;padding-top: 1.5rem !important;">
-                                                        <p
-                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
-                                                            Or copy/paste this link in your browser:</p>
-                                                        <a href="{{ url_for('main.activate_server', token=token,
-                                                        _external=True) }}"
-                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
-                                                            {{ url_for('main.activate_server', token=token,
-                                                            _external=True) }}</a>
-                                                        <br><br>
-                                                        <p class="email-note"
-                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 0;orphans: 3;widows: 3;margin: 0;font-size: 13px;line-height: 22px;color: #8094ae;">
-                                                            This is an automatically generated email
-                                                            please do not
-                                                            reply to this email. If you face any issues, please contact
-                                                            us at
-                                                            help@olam-erp.com</p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <table class="email-footer"
-                                            style="box-sizing: border-box;border-collapse: collapse;width: 100%;max-width: 620px;margin: 0 auto;">
-                                            <tbody style="box-sizing: border-box;">
-                                                <tr style="box-sizing: border-box;page-break-inside: avoid;">
-                                                    <td class="text-center pt-4"
-                                                        style="box-sizing: border-box;padding-top: 1.5rem !important;text-align: center !important;">
-                                                        <p class="email-copyright-text"
-                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;font-size: 13px;">
-                                                            Copyright ©
-                                                            <script style="box-sizing: border-box;">
-                                                                document.getElementById("year").innerHTML = new Date().getFullYear();
-                                                            </script> <a href="https://olam-erp.com"
-                                                                style="box-sizing: border-box;color: #6576ff;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;word-break: break-all;">Olam
-                                                                ERP</a>. All
-                                                            rights
-                                                            reserved.
-                                                        </p>
-                                                        <ul class="email-social">
-                                                            <li><a href="#"><img
-                                                                        src="{{url_for('static', filename='images/socials/facebook.png')}}"
-                                                                        alt=""></a>
-                                                            </li>
-                                                            <li><a href="#"><img
-                                                                        src="{{url_for('static', filename='images/socials/twitter.png')}}"
-                                                                        alt=""></a></li>
-                                                            <li><a href="#"><img
-                                                                        src="{{url_for('static', filename='images/socials/youtube.png')}}"
-                                                                        alt=""></a></li>
-                                                            <li><a href="#"><img
-                                                                        src="{{url_for('static', filename='images/socials/medium.png')}}"
-                                                                        alt=""></a></li>
-                                                        </ul>
-
-                                                        <p class="fs-12px pt-4"
-                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 0;orphans: 3;widows: 3;font-size: 12px;padding-top: 1.5rem !important;">
-                                                            This email was sent to you as a
-                                                            registered member of
-                                                            <a href="https://olam-erp.com"
-                                                                style="box-sizing: border-box;color: #6576ff;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;word-break: break-all;">Olam
-                                                                ERP</a>. To update your
-                                                            emails
-                                                            preferences <a href="#"
-                                                                style="box-sizing: border-box;color: #6576ff;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;word-break: break-all;">click
-                                                                here</a>.
-                                                        </p>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
+<body class
+    style="background-color: #161f33; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body"
+        style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; background-color: #161f33; width: 100%;"
+        width="100%" bgcolor="#161f33">
+        <tr>
+            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;" valign="top">&nbsp;</td>
+            <td class="container"
+                style="font-family: sans-serif; font-size: 14px; vertical-align: top; display: block; max-width: 580px; padding: 10px; width: 580px; margin: 0 auto;"
+                width="580" valign="top">
+                <div class="header" style="padding: 20px 0;">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0"
+                        style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; width: 100%;"
+                        width="100%">
+                        <tr>
+                            <td class="align-center"
+                                style="font-family: sans-serif; font-size: 14px; vertical-align: top; text-align: center;"
+                                valign="top" align="center">
+                                <a href="https://olam-erp.com" style="color: #6576ff; text-decoration: underline;"><img
+                                        src="https://res.cloudinary.com/dwyycjygp/image/upload/v1631474783/olamerp/images/logo-dark2x_w7ryxu.png"
+                                        height="40" alt="Olam ERP"
+                                        style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%;"></a>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-            </div>
-        </div>
-        <!-- wrap @e -->
-    </div>
-    <!-- main @e -->
-</body>
+                <div class="content"
+                    style="box-sizing: border-box; display: block; margin: 0 auto; max-width: 580px; padding: 10px;">
 
+                    <!-- START CENTERED WHITE CONTAINER -->
+                    <span class="preheader"
+                        style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">This
+                        is preheader text. Some clients will show this text as a preview.</span>
+                    <table role="presentation" class="main"
+                        style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; background: #ffffff; border-radius: 3px; width: 100%;"
+                        width="100%">
+
+                        <!-- START MAIN CONTENT AREA -->
+                        <tr>
+                            <td class="wrapper"
+                                style="font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px;"
+                                valign="top">
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0"
+                                    style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; width: 100%;"
+                                    width="100%">
+                                    <tr>
+                                        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;"
+                                            valign="top">
+                                            <p
+                                                style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">
+                                                Hi {{user.name}},</p>
+                                            <p
+                                                style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">
+                                                <a
+                                                    href="https://{{domain_name}}.olam-erp.com"><b>{{domain_name}}.olam-erp.com</b></a>&nbsp;is
+                                                now ready!
+                                            </p>
+                                            <p
+                                                style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">
+                                                Please activate your database by clicking the link below.
+                                            </p>
+                                            <table role="presentation" border="0" cellpadding="0" cellspacing="0"
+                                                class="btn btn-primary"
+                                                style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; box-sizing: border-box; min-width: 100%; width: 100%;"
+                                                width="100%">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center"
+                                                            style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding-bottom: 15px;"
+                                                            valign="top">
+                                                            <table role="presentation" border="0" cellpadding="0"
+                                                                cellspacing="0"
+                                                                style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: auto; width: auto;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: center; background-color: #6576ff;"
+                                                                            valign="top" align="center"
+                                                                            bgcolor="#6576ff"> <a
+                                                                                href="https://olam-erp.com"
+                                                                                target="_blank"
+                                                                                style="border: solid 1px #6576ff; border-radius: 5px; box-sizing: border-box; cursor: pointer; display: inline-block; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-decoration: none; text-transform: capitalize; background-color: #6576ff; border-color: #6576ff; color: #ffffff;">Activate
+                                                                                Database</a> </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p
+                                                style="font-family: sans-serif; text-align: center; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">
+                                                Or copy/paste this link in your browser:</p>
+                                            <p
+                                                style="font-family: sans-serif; text-align: center; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">
+                                                <a href="{{ url_for('main.activate_server', token=token,
+                                                _external=True) }}"
+                                                    style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;color: #6576ff;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;word-break: break-all;">
+                                                    {{ url_for('main.activate_server', token=token,
+                                                    _external=True) }}</a>
+                                            </p>
+
+                                            <p
+                                                style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">
+                                                Please do not reply to this email. If you face any issues, contact us at
+                                            <address
+                                                style="box-sizing: border-box;margin-bottom: 1rem;font-style: normal;line-height: inherit;">
+                                                help@olam-erp.com</address>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- END MAIN CONTENT AREA -->
+                    </table>
+
+                    <!-- START FOOTER -->
+                    <div class="footer" style="clear: both; margin-top: 10px; text-align: center; width: 100%;">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0"
+                            style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; width: 100%;"
+                            width="100%">
+                            <tr>
+                                <td class="content-block"
+                                    style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; color: #9a9ea6; font-size: 12px; text-align: center;"
+                                    valign="top" align="center">
+                                    <p
+                                        style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">
+                                        <span class="apple-link"
+                                            style="color: #9a9ea6; font-size: 12px; text-align: center;">Copyright
+                                            &copy; <span id="year" style="box-sizing: border-box;"></span>
+                                            <script style="box-sizing: border-box;">
+                                                document.getElementById("year").innerHTML = new Date().getFullYear();
+                                            </script> Olam ERP. All
+                                            rights reserved.
+                                        </span>
+                                    </p>
+                                    <ul class="email-social"
+                                        style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;list-style: none;margin: 0;padding: 0;">
+                                        <li style="box-sizing: border-box;display: inline-block;padding: 4px;"><a
+                                                href="#"
+                                                style="box-sizing: border-box;color: #6576ff;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;word-break: break-all;display: inline-block;height: 30px;width: 30px;border-radius: 50%;background: #ffffff;"><img
+                                                    src="https://res.cloudinary.com/dwyycjygp/image/upload/v1631476060/olamerp/images/facebook_mnro9a.png"
+                                                    alt=""
+                                                    style="box-sizing: border-box;vertical-align: middle;border-style: none;max-width: 100%;page-break-inside: avoid;width: 30px;"></a>
+                                        </li>
+                                        <li style="box-sizing: border-box;display: inline-block;padding: 4px;"><a
+                                                href="#"
+                                                style="box-sizing: border-box;color: #6576ff;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;word-break: break-all;display: inline-block;height: 30px;width: 30px;border-radius: 50%;background: #ffffff;"><img
+                                                    src="https://res.cloudinary.com/dwyycjygp/image/upload/v1631476060/olamerp/images/twitter_ewwcen.png"
+                                                    alt=""
+                                                    style="box-sizing: border-box;vertical-align: middle;border-style: none;max-width: 100%;page-break-inside: avoid;width: 30px;"></a>
+                                        </li>
+                                        <li style="box-sizing: border-box;display: inline-block;padding: 4px;"><a
+                                                href="#"
+                                                style="box-sizing: border-box;color: #6576ff;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;word-break: break-all;display: inline-block;height: 30px;width: 30px;border-radius: 50%;background: #ffffff;"><img
+                                                    src="https://res.cloudinary.com/dwyycjygp/image/upload/v1631476061/olamerp/images/youtube_c7jwe7.png"
+                                                    alt=""
+                                                    style="box-sizing: border-box;vertical-align: middle;border-style: none;max-width: 100%;page-break-inside: avoid;width: 30px;"></a>
+                                        </li>
+                                        <li style="box-sizing: border-box;display: inline-block;padding: 4px;"><a
+                                                href="#"
+                                                style="box-sizing: border-box;color: #6576ff;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;word-break: break-all;display: inline-block;height: 30px;width: 30px;border-radius: 50%;background: #ffffff;"><img
+                                                    src="https://res.cloudinary.com/dwyycjygp/image/upload/v1631476061/olamerp/images/medium_g5zxyh.png"
+                                                    alt=""
+                                                    style="box-sizing: border-box;vertical-align: middle;border-style: none;max-width: 100%;page-break-inside: avoid;width: 30px;"></a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="content-block powered-by"
+                                    style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; color: #9a9ea6; font-size: 12px; text-align: center;"
+                                    valign="top" align="center">
+                                    Powered by <a href="https://olam-technologies.com"
+                                        style="color: #9a9ea6; font-size: 12px; text-align: center; text-decoration: none;">Olam
+                                        Technologies</a>.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- END FOOTER -->
+
+                    <!-- END CENTERED WHITE CONTAINER -->
+                </div>
+            </td>
+            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;" valign="top">&nbsp;</td>
+        </tr>
+    </table>
+</body>
 
 </html>

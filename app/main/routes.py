@@ -31,7 +31,7 @@ def index():
 
 @bp.route('/email_template', methods=['GET', 'POST'])
 def errors():
-    return render_template('email/activate_database.html', title=_('Tools to Grow Your Business | Olam ERP'))
+    return render_template('email/activate_server.html', title=_('Tools to Grow Your Business | Olam ERP'))
 
 
 @bp.route('/401', methods=['GET', 'POST'])
