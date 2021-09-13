@@ -1,3 +1,6 @@
+from flask.helpers import url_for
+from sqlalchemy.orm import backref
+from app.main.models.company import CompanyModules
 import enum
 import os
 import csv
@@ -46,6 +49,8 @@ class Module(db.Model):
     icon = db.Column(db.String(60))  # icon url
     enable = db.Column(db.Boolean, default=True)
     summary = db.Column(db.String(350))
+    # companies = db.relationship(
+    #     'Company', secondary=CompanyModules, backref='module')
 
     @staticmethod
     def insert_modules():
@@ -65,3 +70,15 @@ class Module(db.Model):
                         id=i['id'], summary=i['summary'], technical_name=i['technical_name'], author=i['author'], icon=i['icon'], state=i['state'], latest_version=i['latest_version'], official_name=i['official_name'], category_id=i['category_id'], auto_install=True if i['auto_install'] == 't' else False, enable=True if i['enable'] == 't' else False)
                     db.session.add(module)
                     db.session.commit()
+
+    def to_dict(self):
+        data = {
+            'id': self.id,
+            'technical_name': self.technical_name,
+            'official_name': self.official_name,
+            '_links': {
+                'self': url_for('api.get_modules', id=self.id),
+                # 'category': url_for('api.get_category', id=self.id),
+            }
+        }
+        return data

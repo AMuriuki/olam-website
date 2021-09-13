@@ -23,7 +23,8 @@
     }
 </style>
 
-<div class="modal fade" tabindex="-1" id="modalInstalling">
+<div class="modal fade {% if installing %}show{% endif %}" tabindex="-1" id="modalInstalling" {% if installing
+    %}style="display: block" {% endif %}>
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <!-- <a href="#" class="close" data-dismiss="modal"><em class="icon ni ni-cross"></em></a> -->
@@ -34,7 +35,8 @@
                         minutes!</h4>
                     <div class="nk-modal-text">
                         <div class="caption-text">Installing...</div>
-                        <span class="sub-text-sm">Once the installation is complete check your email for details on how to access your private server</span>
+                        <span class="sub-text-sm">Once the installation is complete check your email for details on how
+                            to access your private server</span>
                     </div>
                     <div class="nk-modal-action">
                         <a href="/home" target="_blank" class="btn btn-lg btn-mw btn-primary">Learn
@@ -52,4 +54,5 @@
     </div>
 </div>
 
-<div id="dv_modal-backdrop" class="modal-backdrop fade" style="display: none;"></div>
+<div id="dv_modal-backdrop" class="modal-backdrop fade {% if installing %}show{% endif %}"
+    style="{% if installing %}display: block; {% else %}display: none;{% endif %}"></div>

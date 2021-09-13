@@ -88,10 +88,11 @@ Olam ERP' %}
     }
 </style>
 
-<body id="bdy_newdb" class="nk-body bg-white npc-default has-aside">
+<body id="bdy_newdb" class="nk-body bg-white npc-default has-aside" {% if installing %}
+    style="background-color: black !important;" {% endif %}>
     <div class="nk-app-root">
         <!-- main @s -->
-        <div class="nk-main ">
+        <div class="nk-main" {% if installing %} style="display: none !important;" {% endif %}>
             <!-- wrap @s -->
             <div class="nk-wrap">
                 {% include "header-2.html" %}

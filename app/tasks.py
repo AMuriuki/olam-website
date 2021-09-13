@@ -32,7 +32,7 @@ def _update_job_progress():
 
 def launch_instance():
     try:
-        # launch.run_playbook()
+        # launch.new_tenant_playbook()
         seconds = 10
         print('Starting task')
         for i in range(seconds):
@@ -40,5 +40,6 @@ def launch_instance():
             time.sleep(1)
         print('Task completed')
         _update_job_progress()
+        # launch.ami_launch_config
     except:
         pass

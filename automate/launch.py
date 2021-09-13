@@ -7,7 +7,7 @@ from ansible.inventory.manager import InventoryManager
 from ansible.vars.manager import VariableManager
 
 
-def run_playbook():
+def new_tenant_playbook():
     loader = DataLoader()
 
     context.CLIARGS = ImmutableDict(tags={}, listtags=False, listtasks=False, listhosts=False, syntax=False, connection='ssh',
@@ -25,3 +25,7 @@ def run_playbook():
 
     results = pbex.run()
     return results
+
+
+def ami_launch_config():
+    pass

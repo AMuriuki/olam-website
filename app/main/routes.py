@@ -21,7 +21,6 @@ from config import basedir
 from flask_login import login_user, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 from urllib.parse import urlparse
-from app.errors.handlers import expired_token
 
 
 @bp.route('/', methods=['GET', 'POST'])
@@ -40,7 +39,6 @@ def email_template():
 
 
 def generate_unique_domainname(domain_name):
-    print(domain_name)
     if any(char.isdigit() for char in domain_name):
         string_domain_name = ''.join(
             [i for i in domain_name if not i.isdigit()])
@@ -56,8 +54,12 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
     company = Company.query.filter_by(domain_name=domain_name).first()
     if user is None:
         user = User(name=name, email=email, phone_no=phonenumber)
+        user.set_password('api_user')
         db.session.add(user)
         db.session.commit()
+        login_user(user)
+    else:
+        login_user(user)
     if company is None:
         company = Company(name=company_name, user_id=user.id,
                           domain_name=domain_name)
@@ -76,6 +78,10 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
 
     # Install selected App(s)
     modules = session['selected_modules']
+    for module in modules:
+        module = Module.query.filter_by(id=module).first()
+        company.modules.append(module)
+        db.session.commit()
 
     vars = ['APP_NAME']
     new_vars = [domain_name]
@@ -84,7 +90,7 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
     user.launch_task('launch_instance', _('Installing...'))
     db.session.commit()
     while user.get_task_in_progress('launch_instance'):
-        print(user.get_task_in_progress('launch_instance'))        
+        pass
     flash(
         _('Activation pending! Your database expires in 4 hours. Check your email (' + email + ') for the activation link'))
     send_server_activation_email(user.id, domain_name)
@@ -94,6 +100,12 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
 
 @bp.route('/new/database', methods=['GET', 'POST'])
 def choose_apps():
+    installing = False
+    if current_user.is_authenticated:
+        if current_user.get_task_in_progress('launch_instance'):
+            installing = True
+        else:
+            installing = False
     errors = False
     form = GetStartedForm()
     module_categories = ModuleCategory.query.join(
@@ -108,7 +120,7 @@ def choose_apps():
         return jsonify({"response": "success", "domain": response['domain_name'], "username": response['user_name'], "domainname": response['domain_name'], "companyname": response['companyname'], "useremail": response['user_email'], "userphone": response['user_phone']})
     if form.errors:
         errors = True
-    return render_template('main/set-up.html', title=_('New Database | Olam ERP'), form=form, moduleCategories=module_categories, modules=modules, errors=errors)
+    return render_template('main/set-up.html', title=_('New Database | Olam ERP'), form=form, moduleCategories=module_categories, modules=modules, errors=errors, installing=installing)
 
 
 @bp.route('/dashboard')
