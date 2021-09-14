@@ -23,6 +23,6 @@ def internal_error(error):
         return api_error_response(500)
     return render_template('errors/500.html'), 500
 
-
-def expired_token(message):
-    return render_template('errors/401.html')
+@bp.app_errorhandler(401)
+def expired_token(error):
+    return render_template('errors/401.html'), 401

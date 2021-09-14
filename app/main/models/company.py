@@ -28,7 +28,7 @@ class Company(PaginatedAPIMixin, db.Model):
         data = {
             'id': self.id,
             'name': self.name,
-            # 'last_seen': self.last_seen.isoformat() + 'Z',
+            'last_seen': self.last_seen.isoformat() + 'Z',
             '_links': {
                 'self': url_for('api.get_company', id=self.id),
                 'modules': url_for('api.get_modules', id=self.id),

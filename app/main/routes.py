@@ -1,3 +1,4 @@
+from app.api import company
 import os
 from app.auth.email import send_server_activation_email
 import re
@@ -9,7 +10,7 @@ from app.auth.models.user import User
 from app.main.utils import search_dict, updating
 from app.main.models.module import Module, ModuleCategory
 from datetime import datetime
-from flask import render_template, flash, redirect, url_for, request, g, \
+from flask import json, render_template, flash, redirect, url_for, request, g, \
     jsonify, current_app, session, request, abort
 from flask_login import current_user, login_required
 from flask_babel import _, get_locale
@@ -76,6 +77,13 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
     db.session.add(company)
     db.session.commit()
 
+    session['user_name'] = user.name
+    session['domain_name'] = domain_name
+    session['companyname'] = company_name
+    session['companyid'] = company.id
+    session['useremail'] = user.email
+    session['user_phone'] = user.phone_no
+
     # Install selected App(s)
     modules = session['selected_modules']
     for module in modules:
@@ -94,8 +102,19 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
     flash(
         _('Activation pending! Your database expires in 4 hours. Check your email (' + email + ') for the activation link'))
     send_server_activation_email(user.id, domain_name)
+    return {'user_id': user.id, 'user_name': user.name, 'domain_name': domain_name, 'companyname': company_name, 'companyid': company.id, 'user_email': user.email, 'user_phone': user.phone_no}
 
-    return {'user_id': user.id, 'user_name': user.name, 'domain_name': domain_name, 'companyname': company_name, 'user_email': user.email, 'user_phone': user.phone_no}
+
+@bp.route('/check_task_in_progress', methods=['GET', 'POST'])
+def check_task_in_progress():
+    if request.method == "POST":
+        task_name = request.form['task_name']
+        if current_user.is_authenticated:
+            if current_user.get_task_in_progress(task_name):
+                pass
+            else:
+                return jsonify({"response": "success", "username": session['user_name'], "domainname": session['domain_name'], "companyname": session['companyname'], "companyid": session['companyid'], "useremail": session['user_email'], "userphone": session['user_phone']})
+        return jsonify({'response': 'nothing'})
 
 
 @bp.route('/new/database', methods=['GET', 'POST'])
@@ -107,6 +126,7 @@ def choose_apps():
         else:
             installing = False
     errors = False
+
     form = GetStartedForm()
     module_categories = ModuleCategory.query.join(
         Module, ModuleCategory.id == Module.category_id).filter(Module.enable.is_(True)).all()
@@ -117,7 +137,7 @@ def choose_apps():
             '.olam-erp.com', '')  # -> *.olam-erp.com
         response = onboarding(form.email.data, form.name.data,
                               domain_name, form.companyname.data, form.phonenumber.data)
-        return jsonify({"response": "success", "domain": response['domain_name'], "username": response['user_name'], "domainname": response['domain_name'], "companyname": response['companyname'], "useremail": response['user_email'], "userphone": response['user_phone']})
+        return jsonify({"response": "success", "username": response['user_name'], "domainname": response['domain_name'], "companyname": response['companyname'], "companyid": response['companyid'], "useremail": response['user_email'], "userphone": response['user_phone']})
     if form.errors:
         errors = True
     return render_template('main/set-up.html', title=_('New Database | Olam ERP'), form=form, moduleCategories=module_categories, modules=modules, errors=errors, installing=installing)
@@ -153,7 +173,7 @@ def home():
 def activate_server(token):
     user = User.verify_server_activation_token(token)
     if not user:
-        return expired_token('expired token')
+        abort(401)
     else:
         company = Company.query.filter_by(
             user_id=user.id).order_by(Company.id.desc()).first()
@@ -161,4 +181,5 @@ def activate_server(token):
             name=company.domain_name).first()
         database.is_activated = True
         db.session.commit()
-        return redirect("https://" + company.domain_name + ".olam-erp.com/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no)
+        # return redirect("https://" + company.domain_name + ".olam-erp.com/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&companyid=" + company.id + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no)
+        return redirect("https://127.0.0.1:5050/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&companyid=" + company.id + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no)
