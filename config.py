@@ -24,5 +24,5 @@ class Config(object):
     POSTS_PER_PAGE = 25
     OLAM_ADMIN = os.environ.get('OLAM_ADMIN')
     SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
-    
+    GEOIPIFY_API_KEY = os.environ.get('GEOIPIFY_API_KEY')
     # SERVER_NAME = 'teleioserp.com:5000'

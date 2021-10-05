@@ -37,7 +37,8 @@ class ModuleCategory(db.Model):
 class Module(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     technical_name = db.Column(db.String(128), index=True)  # technical name
-    official_name = db.Column(db.String(128), index=True)  # technical name
+    bp_name = db.Column(db.String(128), index=True)  # blueprint name
+    official_name = db.Column(db.String(128), index=True)  # official name
     category_id = db.Column(db.Integer, db.ForeignKey('module_category.id'))
     author = db.Column(db.String(60))
     url = db.Column(db.String(120))
@@ -47,7 +48,7 @@ class Module(db.Model):
     # auto_install = db.Column(db.Boolean, default=False)
     # state = db.Column(db.String(60))
     icon = db.Column(db.String(60))  # icon url
-    # enable = db.Column(db.Boolean, default=True)
+    enable = db.Column(db.Boolean, default=True)
     summary = db.Column(db.String(350))
     # companies = db.relationship(
     #     'Company', secondary=CompanyModules, backref='module')
@@ -67,7 +68,7 @@ class Module(db.Model):
                     pass
                 else:
                     module = Module(
-                        id=i['id'], summary=i['summary'], technical_name=i['technical_name'], author=i['author'], icon=i['icon'], state=i['state'], latest_version=i['latest_version'], official_name=i['official_name'], category_id=i['category_id'])
+                        id=i['id'], summary=i['summary'], technical_name=i['technical_name'], bp_name=i['bp_name'], author=i['author'], icon=i['icon'], latest_version=i['latest_version'], official_name=i['official_name'], category_id=i['category_id'])
                     db.session.add(module)
                     db.session.commit()
 
@@ -75,11 +76,9 @@ class Module(db.Model):
         data = {
             'id': self.id,
             'technical_name': self.technical_name,
+            'bp_name': self.bp_name,
             'official_name': self.official_name,
             'summary': self.summary,
-            'published_version': self.published_version,
-            '_links': {
-                'self': url_for('api.get_modules', id=self.id),
-            }
+            'published_version': self.published_version
         }
         return data

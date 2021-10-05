@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 903f39b48d8d
+Revision ID: 16a87da24446
 Revises: 
-Create Date: 2021-09-14 18:27:05.503875
+Create Date: 2021-09-27 11:27:17.053410
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '903f39b48d8d'
+revision = '16a87da24446'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -72,15 +72,13 @@ def upgrade():
     op.create_table('module',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('technical_name', sa.String(length=128), nullable=True),
+    sa.Column('bp_name', sa.String(length=128), nullable=True),
     sa.Column('official_name', sa.String(length=128), nullable=True),
     sa.Column('category_id', sa.Integer(), nullable=True),
     sa.Column('author', sa.String(length=60), nullable=True),
     sa.Column('url', sa.String(length=120), nullable=True),
-    sa.Column('installed_version', sa.String(length=60), nullable=True),
     sa.Column('latest_version', sa.String(length=60), nullable=True),
     sa.Column('published_version', sa.String(length=60), nullable=True),
-    sa.Column('auto_install', sa.Boolean(), nullable=True),
-    sa.Column('state', sa.String(length=60), nullable=True),
     sa.Column('icon', sa.String(length=60), nullable=True),
     sa.Column('enable', sa.Boolean(), nullable=True),
     sa.Column('summary', sa.String(length=350), nullable=True),
@@ -88,6 +86,7 @@ def upgrade():
     sa.PrimaryKeyConstraint('id', name=op.f('pk_module'))
     )
     with op.batch_alter_table('module', schema=None) as batch_op:
+        batch_op.create_index(batch_op.f('ix_module_bp_name'), ['bp_name'], unique=False)
         batch_op.create_index(batch_op.f('ix_module_official_name'), ['official_name'], unique=False)
         batch_op.create_index(batch_op.f('ix_module_technical_name'), ['technical_name'], unique=False)
 
@@ -123,6 +122,7 @@ def downgrade():
     with op.batch_alter_table('module', schema=None) as batch_op:
         batch_op.drop_index(batch_op.f('ix_module_technical_name'))
         batch_op.drop_index(batch_op.f('ix_module_official_name'))
+        batch_op.drop_index(batch_op.f('ix_module_bp_name'))
 
     op.drop_table('module')
     with op.batch_alter_table('company', schema=None) as batch_op:

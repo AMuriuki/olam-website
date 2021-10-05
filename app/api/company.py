@@ -31,6 +31,5 @@ def get_modules(id):
     per_page = min(request.args.get('per_page', 10, type=int), 100)
     data = Company.to_collection_dict(
         company.modules, page, per_page, 'api.get_modules', id=id)
+    print(len(data))
     return jsonify(data)
-
-

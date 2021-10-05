@@ -15,17 +15,22 @@ from flask import json, render_template, flash, redirect, url_for, request, g, \
 from flask_login import current_user, login_required
 from flask_babel import _, get_locale
 # from guess_language import guess_language
-from app import db
+from app import db, create_app
 from app.main import bp
 from app.main.forms import GetStartedForm
 from config import basedir
 from flask_login import login_user, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 from urllib.parse import urlparse
+from flask_simple_geoip import SimpleGeoIP
 
+app = create_app()
+simple_geoip = SimpleGeoIP(app)
 
 @bp.route('/', methods=['GET', 'POST'])
 def index():
+    geoip_data = simple_geoip.get_geoip_data()
+    print(geoip_data)
     return render_template('index.html', title=_('Tools to Grow Your Business | Olam ERP'))
 
 
@@ -84,8 +89,14 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
     session['useremail'] = user.email
     session['user_phone'] = user.phone_no
 
-    # Install selected App(s)
+    # Get selected App(s)
     modules = session['selected_modules']
+    
+    # first add free modules
+    module = Module.query.filter_by(technical_name="contacts").first()
+    company.modules.append(module)
+    db.session.commit()
+
     for module in modules:
         module = Module.query.filter_by(id=module).first()
         company.modules.append(module)
@@ -182,4 +193,4 @@ def activate_server(token):
         database.is_activated = True
         db.session.commit()
         # return redirect("https://" + company.domain_name + ".olam-erp.com/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&companyid=" + company.id + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no)
-        return redirect("https://127.0.0.1:5050/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&companyid=" + company.id + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no)
+        return redirect("https://127.0.0.1:5000/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&companyid=" + company.id + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no)
