@@ -26,6 +26,21 @@ import enum
 import logging
 
 
+class VisitorLog(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    last_seen = db.Column(db.DateTime, default=datetime.utcnow)
+    ip_address = db.Column(db.String(120), index=True)
+    country = db.Column(db.String(10), index=True)
+    region = db.Column(db.String(120), index=True)
+    city = db.Column(db.String(120), index=True)
+    lat = db.Column(db.String(120), index=True)
+    lng = db.Column(db.String(120), index=True)
+    postalcode = db.Column(db.String(120), index=True)
+    geonameid = db.Column(db.String(120), index=True)
+    connectionType = db.Column(db.String(120), index=True)
+    timezone = db.Column(db.String(120), index=True)
+
+
 class User(UserMixin, PaginatedAPIMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     token = db.Column(db.String(32), index=True, unique=True)

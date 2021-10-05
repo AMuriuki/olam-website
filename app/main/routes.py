@@ -1,3 +1,4 @@
+from ipaddress import ip_address
 from app.api import company
 import os
 from app.auth.email import send_server_activation_email
@@ -6,7 +7,7 @@ import time
 from os import fsync
 from app.main.models.database import Database
 from app.main.models.company import Company
-from app.auth.models.user import User
+from app.auth.models.user import User, VisitorLog
 from app.main.utils import search_dict, updating
 from app.main.models.module import Module, ModuleCategory
 from datetime import datetime
@@ -27,10 +28,58 @@ from flask_simple_geoip import SimpleGeoIP
 app = create_app()
 simple_geoip = SimpleGeoIP(app)
 
+
+def traverse_geoipdata(data):
+    if 'ip' in data:
+        ip_address = data['ip']
+    else:
+        ip_address = None
+    if 'location' in data:
+        if 'country' in data['location']:
+            country = data['location']['country']
+        else:
+            country = None
+        if 'region' in data['location']:
+            region = data['location']['region']
+        else:
+            city = None
+        if 'city' in data['location']:
+            city = data['location']['city']
+        else:
+            city = None
+        if 'lat' in data['location']:
+            lat = data['location']['lat']
+        else:
+            lat = None
+        if 'lng' in data['location']:
+            lng = data['location']['lng']
+        else:
+            lng = None
+        if 'postalcode' in data['location']:
+            postalcode = data['location']['postalcode']
+        else:
+            postalcode = None
+        if 'timezone' in data['location']:
+            timezone = data['location']['timezone']
+        else:
+            timezone = None
+    else:
+        country = None
+        region = None
+
+    return ip_address, country, region, city, lat, lng, postalcode, timezone
+
+
 @bp.route('/', methods=['GET', 'POST'])
 def index():
-    geoip_data = simple_geoip.get_geoip_data()
-    print(geoip_data)
+    data = simple_geoip.get_geoip_data()
+    traverse_geoipdata(data)
+    print(data)
+    visitor_log = VisitorLog(ip_address=data['ip'], country=data['location']['country'], region=data['location']['region'], city=data['location']['city'], lat=data['location']
+                             ['lat'], lng=data['location']['lng'], postalcode=data['location']['postalCode'], geonameid=geonameId, connectionType=data['as']['connectionType'])
+    db.session.add(visitor_log)
+    db.session.commit()
+    print(data)
     return render_template('index.html', title=_('Tools to Grow Your Business | Olam ERP'))
 
 
@@ -91,7 +140,7 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
 
     # Get selected App(s)
     modules = session['selected_modules']
-    
+
     # first add free modules
     module = Module.query.filter_by(technical_name="contacts").first()
     company.modules.append(module)
