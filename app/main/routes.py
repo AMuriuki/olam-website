@@ -8,7 +8,7 @@ from os import fsync
 from app.main.models.database import Database
 from app.main.models.company import Company
 from app.auth.models.user import User, VisitorLog
-from app.main.utils import search_dict, updating
+from app.main.utils import search_dict, traverse_geoipdata, updating
 from app.main.models.module import Module, ModuleCategory
 from datetime import datetime
 from flask import json, render_template, flash, redirect, url_for, request, g, \
@@ -29,57 +29,8 @@ app = create_app()
 simple_geoip = SimpleGeoIP(app)
 
 
-def traverse_geoipdata(data):
-    if 'ip' in data:
-        ip_address = data['ip']
-    else:
-        ip_address = None
-    if 'location' in data:
-        if 'country' in data['location']:
-            country = data['location']['country']
-        else:
-            country = None
-        if 'region' in data['location']:
-            region = data['location']['region']
-        else:
-            city = None
-        if 'city' in data['location']:
-            city = data['location']['city']
-        else:
-            city = None
-        if 'lat' in data['location']:
-            lat = data['location']['lat']
-        else:
-            lat = None
-        if 'lng' in data['location']:
-            lng = data['location']['lng']
-        else:
-            lng = None
-        if 'postalcode' in data['location']:
-            postalcode = data['location']['postalcode']
-        else:
-            postalcode = None
-        if 'timezone' in data['location']:
-            timezone = data['location']['timezone']
-        else:
-            timezone = None
-    else:
-        country = None
-        region = None
-
-    return ip_address, country, region, city, lat, lng, postalcode, timezone
-
-
 @bp.route('/', methods=['GET', 'POST'])
 def index():
-    data = simple_geoip.get_geoip_data()
-    traverse_geoipdata(data)
-    print(data)
-    visitor_log = VisitorLog(ip_address=data['ip'], country=data['location']['country'], region=data['location']['region'], city=data['location']['city'], lat=data['location']
-                             ['lat'], lng=data['location']['lng'], postalcode=data['location']['postalCode'], geonameid=geonameId, connectionType=data['as']['connectionType'])
-    db.session.add(visitor_log)
-    db.session.commit()
-    print(data)
     return render_template('index.html', title=_('Tools to Grow Your Business | Olam ERP'))
 
 
@@ -105,10 +56,13 @@ def generate_unique_domainname(domain_name):
 
 
 def onboarding(email, name, domain_name, company_name, phonenumber):
+    data = simple_geoip.get_geoip_data()
+    
     user = User.query.filter_by(email=email).first()
     company = Company.query.filter_by(domain_name=domain_name).first()
     if user is None:
-        user = User(name=name, email=email, phone_no=phonenumber)
+        user = User(name=name, email=email, phone_no=phonenumber,
+                    country_code=traverse_geoipdata(data)[1])
         user.set_password('api_user')
         db.session.add(user)
         db.session.commit()
@@ -162,7 +116,7 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
     flash(
         _('Activation pending! Your database expires in 4 hours. Check your email (' + email + ') for the activation link'))
     send_server_activation_email(user.id, domain_name)
-    return {'user_id': user.id, 'user_name': user.name, 'domain_name': domain_name, 'companyname': company_name, 'companyid': company.id, 'user_email': user.email, 'user_phone': user.phone_no}
+    return {'user_id': user.id, 'user_name': user.name, 'domain_name': domain_name, 'companyname': company_name, 'companyid': company.id, 'user_email': user.email, 'user_phone': user.phone_no, 'country_code': user.country_code}
 
 
 @bp.route('/check_task_in_progress', methods=['GET', 'POST'])
@@ -197,7 +151,7 @@ def choose_apps():
             '.olam-erp.com', '')  # -> *.olam-erp.com
         response = onboarding(form.email.data, form.name.data,
                               domain_name, form.companyname.data, form.phonenumber.data)
-        return jsonify({"response": "success", "username": response['user_name'], "domainname": response['domain_name'], "companyname": response['companyname'], "companyid": response['companyid'], "useremail": response['user_email'], "userphone": response['user_phone']})
+        return jsonify({"response": "success", "username": response['user_name'], "domainname": response['domain_name'], "companyname": response['companyname'], "companyid": response['companyid'], "useremail": response['user_email'], "userphone": response['user_phone'], 'country_code': response['country_code']})
     if form.errors:
         errors = True
     return render_template('main/set-up.html', title=_('New Database | Olam ERP'), form=form, moduleCategories=module_categories, modules=modules, errors=errors, installing=installing)
@@ -241,5 +195,5 @@ def activate_server(token):
             name=company.domain_name).first()
         database.is_activated = True
         db.session.commit()
-        # return redirect("https://" + company.domain_name + ".olam-erp.com/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&companyid=" + company.id + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no)
-        return redirect("https://127.0.0.1:5000/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&companyid=" + company.id + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no)
+        # return redirect("https://" + company.domain_name + ".olam-erp.com/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&companyid=" + company.id + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no + "&country_code=" + user.country_code)
+        return redirect("https://127.0.0.1:5000/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&companyid=" + company.id + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no + "&country_code=" + user.country_code)

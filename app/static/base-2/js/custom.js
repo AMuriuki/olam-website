@@ -123,9 +123,10 @@ $('.check').on('click', function () {
     //remove unselected from list of selected apps
     $('#' + splitAppTitle[0]).remove()
 
-    price = 600 * selectedModules.length
+    price = 1000 * selectedModules.length
 
     $('.total_price').text(price)
+    $('.discount_price').text(price / 2)
   } else {
     //insert id of selected app
     selectedModules.push(moduleId)
@@ -146,9 +147,9 @@ $('.check').on('click', function () {
     )
 
     //add price
-    price = 600 * selectedModules.length
-
+    price = 1000 * selectedModules.length
     $('.total_price').text(price)
+    $('.discount_price').text(price / 2)
   }
   if (selectedModules.length === 0) {
     $('.nk-aside').css('display', 'none')
@@ -175,9 +176,10 @@ $('.dv-module').on('click', function () {
       '<li id=' + splitAppTitle[0] + '>' + appTitle + '</li>'
     )
     //add price
-    price = 600 * selectedModules.length
+    price = 1000 * selectedModules.length
 
     $('.total_price').text(price)
+    $('.discount_price').text(price / 2)
   } else {
     const index = selectedModules.indexOf(moduleId)
     console.log(index)
@@ -190,9 +192,10 @@ $('.dv-module').on('click', function () {
     $('#' + splitAppTitle[0]).remove()
     console.log($('#' + splitAppTitle[0]).remove())
 
-    price = 600 * selectedModules.length
+    price = 1000 * selectedModules.length
 
     $('.total_price').text(price)
+    $('.discount_price').text(price / 2)
   }
   if (selectedModules.length === 0) {
     $('.nk-aside').css('display', 'none')
@@ -280,8 +283,8 @@ jQuery(document).ready(function () {
       url: url,
       data: form.serialize(),
       success: function (data) {
-        // location.href = 'https://' + data['domain'] + '.olam-erp.com/auth/set_password?username=' + data['username'] + "&companyname=" + data['companyname'] + "&companyid=" + data['companyid'] + "&domainname=" + data['domainname'] + "&email=" + data['useremail'] + "&phone_no=" + data['userphone'];
-        location.href = 'http://127.0.0.1:5000/auth/set_password?username=' + data['username'] + "&companyname=" + data['companyname'] + "&companyid=" + data['companyid'] + "&domainname=" + data['domainname'] + "&email=" + data['useremail'] + "&phone_no=" + data['userphone'];
+        // location.href = 'https://' + data['domain'] + '.olam-erp.com/auth/set_password?username=' + data['username'] + "&companyname=" + data['companyname'] + "&companyid=" + data['companyid'] + "&domainname=" + data['domainname'] + "&email=" + data['useremail'] + "&phone_no=" + data['userphone'] + data['country_code'];
+        location.href = 'http://127.0.0.1:5000/auth/set_password?username=' + data['username'] + "&companyname=" + data['companyname'] + "&companyid=" + data['companyid'] + "&domainname=" + data['domainname'] + "&email=" + data['useremail'] + "&phone_no=" + data['userphone'] + "&country_code=" + data['country_code'];
       }
     })
   })
