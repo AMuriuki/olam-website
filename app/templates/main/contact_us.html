@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .bg-lighter {
+        background-color: #ffff !important
+    }
+
+    header {
+        min-height: auto !important;
+    }
+</style>
+
+<body class="nk-body bg-white npc-landing ">
+    <div class="nk-app-root">
+        <!-- main @s -->
+        <div class="nk-main ">
+            <header class="header has-header-main-s1 bg-lighter" id="contact">
+                {% include "header-3.html" %}
+                <!-- main header @e -->
+            </header>
+            <!-- wrap @s -->
+            <div class="nk-wrap ">
+                <!-- content @s -->
+                <div class="nk-content ">
+                    <div class="container wide-sm">
+                        <div class="nk-content-inner">
+                            <div class="nk-content-body">
+                                <div class="nk-content-wrap">
+                                    <div class="nk-block-head nk-block-head-lg wide-sm m-auto text-center">
+                                        <div class="nk-block-head-content">
+                                            <h2 class="nk-block-title fw-normal">Contact Us</h2>
+                                            <div class="nk-block-des">
+                                                <p>Thank you for your interest in our services. Please fill the form
+                                                    below so that we can get back to you asap.</p>
+                                            </div>
+                                        </div>
+                                    </div><!-- .nk-block-head -->
+                                    <div class="nk-block mb-3">
+                                        <div class="card card-bordered">
+                                            <div class="card-inner">
+                                                <form action="#" class="form-contact">
+                                                    <div class="row g-4">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label"><span>First
+                                                                        Name</span></label>
+                                                                <div class="form-control-wrap">
+                                                                    <input type="text"
+                                                                        class="form-control form-control-lg"
+                                                                        placeholder="First name... ">
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- .col -->
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label"><span>Last Name</span></label>
+                                                                <div class="form-control-wrap">
+                                                                    <input type="text"
+                                                                        class="form-control form-control-lg"
+                                                                        placeholder="Last name... ">
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- .col -->
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label"><span>Organization
+                                                                        Name</span></label>
+                                                                <div class="form-control-wrap">
+                                                                    <input type="text"
+                                                                        class="form-control form-control-lg"
+                                                                        placeholder="Organization name... ">
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- .col -->
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="form-label"><span>Email
+                                                                        Address</span></label>
+                                                                <div class="form-control-wrap">
+                                                                    <input type="email"
+                                                                        class="form-control form-control-lg"
+                                                                        placeholder="Email... ">
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- .col -->
+                                                        <div class="col-12">
+                                                            <div class="form-group">
+                                                                <label class="form-label"><span>Details
+                                                                    </span></label>
+                                                                <p class="text-soft">Describe how you would like to use
+                                                                    Olam ERP.</p>
+                                                                <div class="form-control-wrap">
+                                                                    <div class="form-editor-custom">
+                                                                        <textarea
+                                                                            class="form-control form-control-lg no-resize"
+                                                                            placeholder="Write your message"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div><!-- .col -->
+                                                        <div class="col-12">
+                                                            <div class="form-group">
+                                                                <span><em class="icon ni ni-info"></em>&nbsp;We
+                                                                    will handle your personal data as described in our
+                                                                    <a href="#">Privacy Policy</a>&nbsp;to answer your
+                                                                    question and provide information about our products
+                                                                    and services.</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <a href="#" class="btn btn-primary">Submit</a>
+                                                        </div><!-- .col -->
+                                                    </div><!-- .row -->
+                                                </form><!-- .form-contact -->
+                                            </div><!-- .card-inner -->
+                                        </div><!-- .card -->
+                                    </div><!-- .nk-block -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content @e -->
+            </div>
+            <!-- wrap @e -->
+            <!-- footer @s -->
+            {% include "footer.html" %}
+            <!-- footer @e -->
+        </div>
+        <!-- main @e -->
+    </div>
+    <!-- app-root @e -->
+    <!-- JavaScript -->
+    {% include "scripts.html" %}
+</body>
+{% endblock %}
