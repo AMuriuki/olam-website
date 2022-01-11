@@ -12,6 +12,14 @@
     dest: /etc/supervisor/conf.d/{{app_name}}.conf
   notify:
     - reload supervisor
-  
+
+- name: Create redis Configuration
+  become: yes
+  template:
+    dest: /etc/supervisor/conf.d/redis.conf
+    src: redis.conf.j2
+  notify:
+    - reload supervisor
+
 - name: update supervisorctl
   command: supervisorctl update

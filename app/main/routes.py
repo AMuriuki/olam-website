@@ -61,8 +61,7 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
     user = User.query.filter_by(email=email).first()
     company = Company.query.filter_by(domain_name=domain_name).first()
     if user is None:
-        user = User(name=name, email=email, phone_no=phonenumber,
-                    country_code=traverse_geoipdata(data)[1])
+        user = User(name=name, email=email, phone_no=phonenumber)
         user.set_password('api_user')
         db.session.add(user)
         db.session.commit()

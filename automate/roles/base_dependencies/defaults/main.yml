@@ -18,3 +18,4 @@ packages:
   - postgresql-contrib
   - libpq-dev
   - python3-psycopg2
+  - redis-server

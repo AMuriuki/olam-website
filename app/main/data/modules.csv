@@ -2,7 +2,6 @@ id,url,summary,technical_name,author,icon,state,latest_version,bp_name,official_
 1,https://www.olam-erp.com/app/sales,Send polished quoations and invoices,sales management,Olam Tech,,not installed,1,sales,Olam Sales,1,f,t
 2,https://www.olam-erp.com/app/crm,Track leads and close opportunities,crm,Olam Tech,,not installed,1,crm,Olam CRM,1,f,t
 3,https://www.olam-erp.com/app/point-of-sale-shop,User-friendly PoS interface for shops and restaurants,point of sale,Olam Tech,,not installed,1,pos,Olam Point of Sale,1,f,t
-4,,Centralize your address book,contacts,Olam Tech,,not installed,1,contacts,Olam Contacts,1,t,t
 5,https://www.olam-erp.com/app/rental,From scheduling to invoicing,rental,Olam Tech,,not installed,1,rental,Olam Rental,1,f,t
 6,https://www.olam-erp.com/app/subscriptions,Recurring billing & subscriber management,subscriptions,Olam Tech,,not installed,1,subscriptions,Olam Subscriptions,1,f,t
 7,https://www.olam-erp.com/app/accounting,"Accounting, Taxes, Budgets, Assets...",account,Olam Tech,,not installed,1,accounting,Olam Accounting,3,f,t
@@ -25,4 +24,4 @@ id,url,summary,technical_name,author,icon,state,latest_version,bp_name,official_
 24,https://www.olam-erp.com/app/appointments,"Manage meetings online, automate your scheduling process",appointments,Olam Tech,,not installed,1,appointments,Olam Appointments,2,f,t
 25,https://www.olam-erp.com/app/discuss,Ehance team communication,discuss,Olam Tech,,not installed,1,discuss,Olam Discuss,9,f,t
 26,https://www.olam-erp.com/app/approvals,Easily manage your employees' requests,approvals ,Olam Tech,,not installed,1,approvals,Olam Approvals,9,f,t
-27,https://www.olam-erp.com/app/contacts,Successfully manage all your contacts,contacts,Olam Tech,,installed,1,contacts,Olam Contacts,0,t,t
+27,https://www.olam-erp.com/app/contacts,Successfully manage all your contacts,contacts,Olam Tech,,installed,1,contacts,Olam Contacts,1,t,t

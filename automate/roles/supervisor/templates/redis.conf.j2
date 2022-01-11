@@ -1,0 +1,12 @@
+[program:redis]
+command=/home/{{ansible_ssh_user}}/{{app_name}}/venv/bin/rq worker olam-tenant 
+process_name=%(program_name)s_%(process_num)02d
+directory=/home/{{ansible_ssh_user}}/{{app_name}}
+stdout_logfile = /home/{{ansible_ssh_user}}/{{app_name}}/logs/redis-out.log
+stderr_logfile = /home/{{ansible_ssh_user}}/{{app_name}}/logs/rediserr.log
+user={{ansible_ssh_user}}
+numprocs=5
+autostart=true
+autorestart=true
+stopasgroup=true
+killasgroup=true
