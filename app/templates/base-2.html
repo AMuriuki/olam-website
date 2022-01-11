@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="ERP, CRM, etc. Business tools to help your organization grow.">
     <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="../static/images/favicon.png">
+    <link rel="shortcut icon" href="../static/images/olamerp.png">
     <!-- Page Title  -->
     <title>{% if title %} {{title}} {% else %} Welcome to Olam {% endif %}</title>
     <!-- StyleSheets  -->
@@ -23,7 +23,7 @@
     {{ JSGlue.include() }}
 </head>
 {% if title == 'Getting Started | Olam ERP' or title == 'New Database | Olam ERP' or title == 'Manage Your Databases |
-Olam ERP' %}
+Olam ERP' or title == 'Installing | Olam ERP' %}
 <style>
     .nk-wg1-text {
         margin-bottom: 1.25rem;
@@ -77,19 +77,18 @@ Olam ERP' %}
     <script src="{{ url_for('static', filename='base-2/js/scripts.js') }}"></script>
     <script src="{{ url_for('static', filename='base-2/js/demo-settings.js') }}"></script>
 </body>
-{% elif title == 'Getting Started | Olam ERP' or title == 'New Database | Olam ERP' %}
+{% elif title == 'Getting Started | Olam ERP' or title == 'New Database | Olam ERP' or title == 'Installing | Olam ERP' %}
 <style>
     .nk-footer {
         margin-top: 16%;
     }
 
     .bg-black {
-        background-color: black;
+        background-color: black !important;
     }
 </style>
 
-<body id="bdy_newdb" class="nk-body bg-white npc-default has-aside" {% if installing %}
-    style="background-color: black !important;" {% endif %}>
+<body id="bdy_newdb" class="nk-body bg-white npc-default has-aside {% if installing %}bg-black{% endif %}">
     <div class="nk-app-root">
         <!-- main @s -->
         <div class="nk-main" {% if installing %} style="display: none !important;" {% endif %}>
@@ -104,7 +103,7 @@ Olam ERP' %}
                         </div>
                     </div>
                 </div>
-                {% if title == 'New Database | Olam ERP' %}
+                {% if title == 'New Database | Olam ERP' or title == 'Installing | Olam ERP' %}
                 <div style="{% if errors %} display: none {% endif %}" id="responsivePricingPanel"
                     class="card card-bordered">
                     <div class="card-body">
@@ -159,7 +158,7 @@ Olam ERP' %}
                         </div>
                     </div>
                 </div>
-                {% if title == 'New Database | Olam ERP' %}
+                {% if title == 'New Database | Olam ERP' or title == 'Installing | Olam ERP' %}
                 <div style="{% if errors %} display: none; {% endif %}" id="responsivePricingPanel"
                     class="card card-bordered">
                     <div class="card-body">

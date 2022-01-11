@@ -15,7 +15,6 @@ def register(app):
         """Run deployment tasks."""
         # migrate database to latest revision
         upgrade()
-
         ModuleCategory.insert_categories()
         Module.insert_modules()
 

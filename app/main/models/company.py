@@ -4,8 +4,8 @@ from app import db
 from datetime import date, datetime
 from app.models import PaginatedAPIMixin
 
-CompanyModules = db.Table(
-    'CompanyModules',
+company_modules = db.Table(
+    'company_modules',
     db.Column('company_id', db.Integer, db.ForeignKey(
         'company.id'), primary_key=True),
     db.Column('module_id', db.Integer, db.ForeignKey(
@@ -21,7 +21,7 @@ class Company(PaginatedAPIMixin, db.Model):
     registered_on = db.Column(db.DateTime, default=datetime.now)
     database_id = db.Column(db.Integer, db.ForeignKey('database.id'))
     modules = db.relationship(
-        'Module', secondary=CompanyModules, backref=db.backref('company', lazy='dynamic'), lazy='dynamic')
+        'Module', secondary=company_modules, backref=db.backref('company', lazy='dynamic'), lazy='dynamic')
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
 
     def to_dict(self):

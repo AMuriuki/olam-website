@@ -24,7 +24,6 @@ def get_companies():
 
 
 @bp.route('/companies/<int:id>/modules', methods=['GET'])
-@token_auth.login_required
 def get_modules(id):
     company = Company.query.get_or_404(id)
     page = request.args.get('page', 1, type=int)

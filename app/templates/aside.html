@@ -21,7 +21,7 @@
 </style>
 <div style="{% if errors %} display:block {% endif %}" class="nk-aside" data-content="sideNav"
     data-toggle-overlay="true" data-toggle-screen="lg" data-toggle-body="true">
-    {% if title == 'New Database | Olam ERP' %}
+    {% if title == 'New Database | Olam ERP' or title == 'Installing | Olam ERP' %}
     <div id="pricingPanel" class="card card-bordered">
         <div class="card-body">
             <h6 class="card-title"><span class="noApps">x</span>&nbsp;apps selected</h6>
@@ -184,7 +184,7 @@
                 </a>
             </li>
             <li class="nk-menu-item">
-                <a href="{{url_for('account.account')}}" class="nk-menu-link">
+                <a href="{{url_for('app.accounting')}}" class="nk-menu-link">
                     <span class="nk-menu-icon"></span>
                     <span class="nk-menu-text">Accounting</span>
                 </a>

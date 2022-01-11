@@ -1,6 +1,6 @@
 from flask.helpers import url_for
 from sqlalchemy.orm import backref
-from app.main.models.company import CompanyModules
+from app.main.models.company import company_modules
 import enum
 import os
 import csv

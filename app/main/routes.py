@@ -1,4 +1,6 @@
 from ipaddress import ip_address
+
+from rq.job import get_current_job
 from app.api import company
 import os
 from app.auth.email import send_server_activation_email
@@ -19,6 +21,7 @@ from flask_babel import _, get_locale
 from app import db, create_app
 from app.main import bp
 from app.main.forms import GetStartedForm
+from app.models import Task
 from config import basedir
 from flask_login import login_user, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -55,9 +58,22 @@ def generate_unique_domainname(domain_name):
     return domain_name
 
 
+@bp.route('/check_task_in_progress', methods=['GET', 'POST'])
+def check_task_in_progress():
+    if request.method == "POST":
+        task_name = request.form['task_name']
+        if current_user.is_authenticated:
+            if not current_user.task_in_progress(task_name):
+                task = current_user.get_completed_task(task_name)
+                if not task.user_redirected:
+                    task.user_redirected = True
+                    db.session.commit()
+                    return jsonify({"response": "success", "username": session['user_name'], "domainname": session['domain_name'], "companyname": session['companyname'], "companyid": session['companyid'], "useremail": session['useremail'], "userphone": session['user_phone']})
+            print("xxxxxx")
+        return jsonify({'response': 'nothing'})
+
+
 def onboarding(email, name, domain_name, company_name, phonenumber):
-    data = simple_geoip.get_geoip_data()
-    
     user = User.query.filter_by(email=email).first()
     company = Company.query.filter_by(domain_name=domain_name).first()
     if user is None:
@@ -84,15 +100,9 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
     db.session.add(company)
     db.session.commit()
 
-    session['user_name'] = user.name
-    session['domain_name'] = domain_name
-    session['companyname'] = company_name
-    session['companyid'] = company.id
-    session['useremail'] = user.email
-    session['user_phone'] = user.phone_no
-
     # Get selected App(s)
     modules = session['selected_modules']
+    print(modules)
 
     # first add free modules
     module = Module.query.filter_by(technical_name="contacts").first()
@@ -108,36 +118,29 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
     new_vars = [domain_name]
     to_update = dict(zip(vars, new_vars))
     updating('./automate/variables.cnf', to_update)
-    user.launch_task('launch_instance', _('Installing...'))
+    user.launch_task('launch_instance', _(
+        'Installing...'), user.id, user.email, domain_name)
     db.session.commit()
-    while user.get_task_in_progress('launch_instance'):
-        pass
-    flash(
-        _('Activation pending! Your database expires in 4 hours. Check your email (' + email + ') for the activation link'))
-    send_server_activation_email(user.id, domain_name)
+    # while user.get_task_in_progress('launch_instance'):
+    #     pass
+
     return {'user_id': user.id, 'user_name': user.name, 'domain_name': domain_name, 'companyname': company_name, 'companyid': company.id, 'user_email': user.email, 'user_phone': user.phone_no, 'country_code': user.country_code}
 
 
-@bp.route('/check_task_in_progress', methods=['GET', 'POST'])
-def check_task_in_progress():
-    if request.method == "POST":
-        task_name = request.form['task_name']
-        if current_user.is_authenticated:
-            if current_user.get_task_in_progress(task_name):
-                pass
-            else:
-                return jsonify({"response": "success", "username": session['user_name'], "domainname": session['domain_name'], "companyname": session['companyname'], "companyid": session['companyid'], "useremail": session['user_email'], "userphone": session['user_phone']})
-        return jsonify({'response': 'nothing'})
+@bp.route('/installing', methods=['GET', 'POST'])
+def installing():
+    installing = True
+    return render_template('main/installing.html', title=_('Installing | Olam ERP'), installing=installing)
 
 
 @bp.route('/new/database', methods=['GET', 'POST'])
 def choose_apps():
     installing = False
     if current_user.is_authenticated:
-        if current_user.get_task_in_progress('launch_instance'):
-            installing = True
-        else:
-            installing = False
+        if current_user.task_in_progress('launch_instance'):
+            task = current_user.get_task_in_progress('launch_instance')
+            if task.user_redirected == False:
+                installing = True
     errors = False
 
     form = GetStartedForm()
@@ -150,25 +153,39 @@ def choose_apps():
             '.olam-erp.com', '')  # -> *.olam-erp.com
         response = onboarding(form.email.data, form.name.data,
                               domain_name, form.companyname.data, form.phonenumber.data)
-        return jsonify({"response": "success", "username": response['user_name'], "domainname": response['domain_name'], "companyname": response['companyname'], "companyid": response['companyid'], "useremail": response['user_email'], "userphone": response['user_phone'], 'country_code': response['country_code']})
+
+        session['user_id'] = response['user_id']
+        session['user_name'] = response['user_name']
+        session['domain_name'] = response['domain_name']
+        session['companyname'] = response['companyname']
+        session['companyid'] = response['companyid']
+        session['useremail'] = response['user_email']
+        session['user_phone'] = response['user_phone']
+
+        flash(
+            _('Activation pending! Your database expires in 4 hours. Check your email (' + response['user_email'] + ') for the activation link'))
+        send_server_activation_email(
+            response['user_id'], response['domain_name'])
+
+        return jsonify({"response": "success"})
     if form.errors:
         errors = True
     return render_template('main/set-up.html', title=_('New Database | Olam ERP'), form=form, moduleCategories=module_categories, modules=modules, errors=errors, installing=installing)
 
 
-@bp.route('/dashboard')
-@login_required
+@ bp.route('/dashboard')
+@ login_required
 def dashboard():
     return render_template('main/dashboard.html', title=_('Dashboard | Olam ERP'))
 
 
-@bp.route('/all-apps', methods=['GET', 'POST'])
-@login_required
+@ bp.route('/all-apps', methods=['GET', 'POST'])
+@ login_required
 def all_apps():
     return render_template('main/apps.html', title=_('All Apps | Olam ERP'))
 
 
-@bp.route('/selected_modules', methods=['GET', 'POST'])
+@ bp.route('/selected_modules', methods=['GET', 'POST'])
 def selected_modules():
     if request.method == "POST":
         session['selected_modules'] = request.form.getlist(
@@ -176,13 +193,13 @@ def selected_modules():
         return jsonify({"response": "success"})
 
 
-@bp.route('/home', methods=['GET', 'POST'])
+@ bp.route('/home', methods=['GET', 'POST'])
 # @login_required
 def home():
     return render_template('main/home.html', title=_('Home | Olam ERP'))
 
 
-@bp.route('/activate_server/<token>', methods=['GET', 'POST'])
+@ bp.route('/activate_server/<token>', methods=['GET', 'POST'])
 def activate_server(token):
     user = User.verify_server_activation_token(token)
     if not user:
@@ -196,3 +213,9 @@ def activate_server(token):
         db.session.commit()
         # return redirect("https://" + company.domain_name + ".olam-erp.com/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&companyid=" + company.id + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no + "&country_code=" + user.country_code)
         return redirect("https://127.0.0.1:5000/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&companyid=" + company.id + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no + "&country_code=" + user.country_code)
+
+
+@bp.route('/contact_us')
+def contact_us():
+    app_name = None
+    return render_template("main/contact_us.html", app_name=app_name, title=_("Contact Us | Olam ERP"))

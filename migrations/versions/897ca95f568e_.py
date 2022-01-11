@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 16a87da24446
+Revision ID: 897ca95f568e
 Revises: 
-Create Date: 2021-09-27 11:27:17.053410
+Create Date: 2021-12-31 15:26:15.721333
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '16a87da24446'
+revision = '897ca95f568e'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -45,13 +45,42 @@ def upgrade():
     sa.Column('registered_on', sa.DateTime(), nullable=True),
     sa.Column('phone_no', sa.String(length=120), nullable=True),
     sa.Column('password_hash', sa.String(length=128), nullable=True),
+    sa.Column('country_code', sa.String(length=10), nullable=True),
     sa.PrimaryKeyConstraint('id', name=op.f('pk_user'))
     )
     with op.batch_alter_table('user', schema=None) as batch_op:
+        batch_op.create_index(batch_op.f('ix_user_country_code'), ['country_code'], unique=False)
         batch_op.create_index(batch_op.f('ix_user_email'), ['email'], unique=True)
         batch_op.create_index(batch_op.f('ix_user_name'), ['name'], unique=False)
         batch_op.create_index(batch_op.f('ix_user_phone_no'), ['phone_no'], unique=False)
         batch_op.create_index(batch_op.f('ix_user_token'), ['token'], unique=True)
+
+    op.create_table('visitor_log',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('last_seen', sa.DateTime(), nullable=True),
+    sa.Column('ip_address', sa.String(length=120), nullable=True),
+    sa.Column('country', sa.String(length=10), nullable=True),
+    sa.Column('region', sa.String(length=120), nullable=True),
+    sa.Column('city', sa.String(length=120), nullable=True),
+    sa.Column('lat', sa.String(length=120), nullable=True),
+    sa.Column('lng', sa.String(length=120), nullable=True),
+    sa.Column('postalcode', sa.String(length=120), nullable=True),
+    sa.Column('geonameid', sa.String(length=120), nullable=True),
+    sa.Column('connectionType', sa.String(length=120), nullable=True),
+    sa.Column('timezone', sa.String(length=120), nullable=True),
+    sa.PrimaryKeyConstraint('id', name=op.f('pk_visitor_log'))
+    )
+    with op.batch_alter_table('visitor_log', schema=None) as batch_op:
+        batch_op.create_index(batch_op.f('ix_visitor_log_city'), ['city'], unique=False)
+        batch_op.create_index(batch_op.f('ix_visitor_log_connectionType'), ['connectionType'], unique=False)
+        batch_op.create_index(batch_op.f('ix_visitor_log_country'), ['country'], unique=False)
+        batch_op.create_index(batch_op.f('ix_visitor_log_geonameid'), ['geonameid'], unique=False)
+        batch_op.create_index(batch_op.f('ix_visitor_log_ip_address'), ['ip_address'], unique=False)
+        batch_op.create_index(batch_op.f('ix_visitor_log_lat'), ['lat'], unique=False)
+        batch_op.create_index(batch_op.f('ix_visitor_log_lng'), ['lng'], unique=False)
+        batch_op.create_index(batch_op.f('ix_visitor_log_postalcode'), ['postalcode'], unique=False)
+        batch_op.create_index(batch_op.f('ix_visitor_log_region'), ['region'], unique=False)
+        batch_op.create_index(batch_op.f('ix_visitor_log_timezone'), ['timezone'], unique=False)
 
     op.create_table('company',
     sa.Column('id', sa.Integer(), nullable=False),
@@ -96,6 +125,7 @@ def upgrade():
     sa.Column('description', sa.String(length=128), nullable=True),
     sa.Column('user_id', sa.Integer(), nullable=True),
     sa.Column('complete', sa.Boolean(), nullable=True),
+    sa.Column('user_redirected', sa.Boolean(), nullable=True),
     sa.ForeignKeyConstraint(['user_id'], ['user.id'], name=op.f('fk_task_user_id_user')),
     sa.PrimaryKeyConstraint('id', name=op.f('pk_task'))
     )
@@ -130,11 +160,25 @@ def downgrade():
         batch_op.drop_index(batch_op.f('ix_company_domain_name'))
 
     op.drop_table('company')
+    with op.batch_alter_table('visitor_log', schema=None) as batch_op:
+        batch_op.drop_index(batch_op.f('ix_visitor_log_timezone'))
+        batch_op.drop_index(batch_op.f('ix_visitor_log_region'))
+        batch_op.drop_index(batch_op.f('ix_visitor_log_postalcode'))
+        batch_op.drop_index(batch_op.f('ix_visitor_log_lng'))
+        batch_op.drop_index(batch_op.f('ix_visitor_log_lat'))
+        batch_op.drop_index(batch_op.f('ix_visitor_log_ip_address'))
+        batch_op.drop_index(batch_op.f('ix_visitor_log_geonameid'))
+        batch_op.drop_index(batch_op.f('ix_visitor_log_country'))
+        batch_op.drop_index(batch_op.f('ix_visitor_log_connectionType'))
+        batch_op.drop_index(batch_op.f('ix_visitor_log_city'))
+
+    op.drop_table('visitor_log')
     with op.batch_alter_table('user', schema=None) as batch_op:
         batch_op.drop_index(batch_op.f('ix_user_token'))
         batch_op.drop_index(batch_op.f('ix_user_phone_no'))
         batch_op.drop_index(batch_op.f('ix_user_name'))
         batch_op.drop_index(batch_op.f('ix_user_email'))
+        batch_op.drop_index(batch_op.f('ix_user_country_code'))
 
     op.drop_table('user')
     op.drop_table('module_category')

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="ERP, CRM, etc. Business tools to help your organization grow.">
     <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="../static/images/favicon.png">
+    <link rel="shortcut icon" href="../static/images/olamerp.png">
     <!-- Page Title  -->
     <title>{% if title %} {{title}} {% else %} Welcome to Olam {% endif %}</title>
     <!-- StyleSheets  -->
@@ -20,6 +20,7 @@
         rel="stylesheet">
     {{ JSGlue.include() }}
 </head>
+
 <body class="nk-body bg-white npc-default pg-auth">
     <div class="nk-app-root">
         <!-- main @s -->
@@ -45,4 +46,5 @@
     <script src="{{ url_for('static', filename='base-2/js/bundle.js') }}"></script>
     <script src="{{ url_for('static', filename='base-2/js/scripts.js') }}"></script>
 </body>
+
 </html>

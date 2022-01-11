@@ -23,4 +23,5 @@ def send_server_activation_email(user, domain_name):
     token = user.get_server_activation_token()
     message = Mail(from_email=current_app.config['ADMINS'][0], to_emails=[user.email], subject='Activate ' + domain_name +
                    '.olam-erp.com', html_content=render_template('email/activate_server.html', user=user, token=token, domain_name=domain_name))
+    print("sending email...")
     send_email(message)
