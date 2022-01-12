@@ -2,12 +2,7 @@
     <div class="container header-container">
         <div class="header-wrap">
             <div class="header-logo">
-                <a href="{{url_for('main.index')}}" class="logo-link">
-                    <img class="logo-light logo-img" src="{{url_for('static', filename='images/olamerp.png')}}"
-                        srcset="../static/images/olamerp2x.png 2x" alt="logo">
-                    <img class="logo-dark logo-img" src="{{url_for('static', filename='images/olamerp-dark.png')}}"
-                        srcset="../static/images/olamerp-dark2x.png 2x" alt="logo-dark">
-                </a>
+                {% include "logo.html" %}
             </div>
             <div class="header-toggle">
                 <button class="menu-toggler" data-target="mainNav">

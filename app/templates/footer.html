@@ -3,12 +3,7 @@
         <div class="row g-gs justify-content-between py-4 py-md-6">
             <div class="col-lg-4 col-md-6">
                 <div class="widget widget-about">
-                    <a href="html/index.html" class="logo-link">
-                        <img class="logo-light logo-img" src="{{url_for('static', filename='images/olamerp.png')}}"
-                            srcset="../static/images/olamerp2x.png 2x" alt="logo">
-                        <img class="logo-dark logo-img" src="{{url_for('static', filename='images/olamerp-dark.png')}}"
-                            srcset="../static/images/olamerp-dark2x.png 2x" alt="logo-dark">
-                    </a>
+                    {% include "logo.html" %}
                     <p>Olam ERP is a suite of business apps that covers all your business processes needs: CRM, accounting, inventory, point of sales, project management etc.</p>
                 </div>
             </div><!-- .col -->
