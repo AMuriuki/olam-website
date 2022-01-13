@@ -3,6 +3,8 @@ import os
 import click
 from flask_migrate import upgrade
 
+from app.main.tasks import migrate_features
+
 
 def register(app):
     @app.cli.group()
@@ -17,6 +19,7 @@ def register(app):
         upgrade()
         ModuleCategory.insert_categories()
         Module.insert_modules()
+        migrate_features()
 
 
     @translate.command()

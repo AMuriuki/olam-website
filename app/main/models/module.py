@@ -1,7 +1,5 @@
 from flask.helpers import url_for
 from sqlalchemy.orm import backref
-from app.main.models.company import company_modules
-import enum
 import os
 import csv
 from config import basedir
@@ -50,6 +48,8 @@ class Module(db.Model):
     icon = db.Column(db.String(60))  # icon url
     enable = db.Column(db.Boolean, default=True)
     summary = db.Column(db.String(350))
+    features = db.relationship(
+        'ModuleFeature', backref='module', lazy='dynamic')
     # companies = db.relationship(
     #     'Company', secondary=CompanyModules, backref='module')
 
@@ -82,3 +82,19 @@ class Module(db.Model):
             'published_version': self.published_version
         }
         return data
+
+
+class ModuleFeature(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(250), index=True)
+    description = db.Column(db.Text())
+    feature_category = db.Column(
+        db.Integer, db.ForeignKey('feature_category.id'))
+    module_id = db.Column(db.Integer, db.ForeignKey('module.id'))
+
+
+class FeatureCategory(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(128), index=True)
+    features = db.relationship(
+        'ModuleFeature', backref='category', lazy='dynamic')

@@ -1,3 +1,5 @@
+import os
+import json
 from configparser import SafeConfigParser
 
 parser = SafeConfigParser()
@@ -84,3 +86,17 @@ def traverse_geoipdata(data):
         connectionType = None
 
     return ip_address, country, region, city, lat, lng, postalcode, timezone, geonameId, asn, name, connectionType
+
+
+def feature_categories():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "data", "feature-categories.json")
+    data = json.load(open(json_url))
+    return data
+
+
+def get_features():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "data", "module-features.json")
+    data = json.load(open(json_url))
+    return data

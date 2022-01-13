@@ -144,9 +144,6 @@ def choose_apps():
     errors = False
 
     form = GetStartedForm()
-    module_categories = ModuleCategory.query.join(
-        Module, ModuleCategory.id == Module.category_id).filter(Module.enable.is_(True)).all()
-    modules = Module.query.filter(Module.enable.is_(True)).all()
 
     if form.validate_on_submit():
         domain_name = (form.domainoutput.data).replace(
@@ -170,7 +167,7 @@ def choose_apps():
         return jsonify({"response": "success"})
     if form.errors:
         errors = True
-    return render_template('main/set-up.html', title=_('New Database | Olam ERP'), form=form, moduleCategories=module_categories, modules=modules, errors=errors, installing=installing)
+    return render_template('main/set-up.html', title=_('New Database | Olam ERP'), form=form, errors=errors, installing=installing)
 
 
 @ bp.route('/dashboard')
