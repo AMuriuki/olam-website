@@ -15,9 +15,15 @@
             max-width: 90% !important
         }
     }
-</style>
-{% if app_name == "accounting" %}
 
+    .nk-block-lg{
+        margin-top: 5%;
+    }
+
+    .nk-block-head-content{
+        margin-bottom: 5%;
+    }
+</style>
 <body class="nk-body bg-white npc-landing ">
     <div class="nk-app-root">
         <div class="nk-main ">
@@ -30,9 +36,9 @@
                                 <div class="nk-block nk-block-lg">
                                     <div class="nk-block-head-content">
                                         <div class="nk-block-head-sub"><a class="back-to"
-                                                href="{{url_for('app.view', app_name='accounting')}}"><em
+                                                href="{{url_for('app.view', app_name=app_name)}}"><em
                                                     class="icon ni ni-arrow-left"></em><span>Back</span></a></div>
-                                        <h2 class="nk-block-title fw-normal">Features</h2>
+                                        <h2 class="nk-block-title fw-normal">{{app_name|title}}&nbsp;Features</h2>
                                     </div>
                                     <div class="card-inner" style="padding: 0px !important;">
                                         <div id="accordion" class="accordion">
@@ -59,7 +65,29 @@
                                                                                 <h5 class="title">{{feature.name}}</h5>
                                                                                 <span>{{feature.description}}</span>
                                                                             </div>
+                                                                            {% if feature.name == "Sales" %}
+                                                                            <a href="{{url_for('app.view', app_name='sales')}}"
+                                                                                class="btn btn-wider btn-primary"><span>Read
+                                                                                    more</span><em
+                                                                                    class="icon ni ni-arrow-right"></em></a>
+                                                                            {% elif feature.name == "Inventory" %}
+                                                                            <a href="{{url_for('app.view', app_name='inventory')}}"
+                                                                                class="btn btn-wider btn-primary"><span>Read
+                                                                                    more</span><em
+                                                                                    class="icon ni ni-arrow-right"></em></a>
+                                                                            {% elif feature.name == "Purchase" %}
+                                                                            <a href="{{url_for('app.view', app_name='purchase')}}"
+                                                                                class="btn btn-wider btn-primary"><span>Read
+                                                                                    more</span><em
+                                                                                    class="icon ni ni-arrow-right"></em></a>
+                                                                            {% elif feature.name == "E-commerce" %}
+                                                                            <a href="{{url_for('app.view', app_name='e-commerce')}}"
+                                                                                class="btn btn-wider btn-primary"><span>Read
+                                                                                    more</span><em
+                                                                                    class="icon ni ni-arrow-right"></em></a>
+                                                                            {% endif %}
                                                                         </div>
+
                                                                     </div><!-- .price-item -->
                                                                 </div>
                                                                 <!-- .col -->
@@ -84,5 +112,4 @@
     </div>
     {% include "scripts.html" %}
 </body>
-{% endif %}
 {% endblock %}

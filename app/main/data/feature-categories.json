@@ -62,5 +62,13 @@
   {
     "id": 16,
     "title": "Integrations"
+  },
+  {
+    "id": 17,
+    "title": "Record"
+  },
+  {
+    "id": 18,
+    "title": "Manage"
   }
 ]
