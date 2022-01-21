@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Olam News",
+    "slug": "olam-news"
+  },
+  {
+    "id": 2,
+    "name": "Case Studies",
+    "slug": "case-study"
+  },
+  {
+    "id": 3,
+    "name": "Business Hacks",
+    "slug": "business-hack"
+  },
+  {
+    "id": 4,
+    "name": "Engineering",
+    "slug": "engineering"
+  }
+]

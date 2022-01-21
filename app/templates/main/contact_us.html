@@ -39,62 +39,76 @@
                                     <div class="nk-block mb-3">
                                         <div class="card card-bordered">
                                             <div class="card-inner">
-                                                <form action="#" class="form-contact">
+                                                <form method="post" action="{{url_for('main.contact_us')}}"
+                                                    class="form-contact">
+                                                    {{form.hidden_tag()}}
                                                     <div class="row g-4">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <label class="form-label"><span>First
-                                                                        Name</span></label>
+                                                                {{ form.fname.label(class="form-label") }}
                                                                 <div class="form-control-wrap">
-                                                                    <input type="text"
-                                                                        class="form-control form-control-lg"
-                                                                        placeholder="First name... ">
+                                                                    {% for error in form.fname.errors %}
+                                                                    <span style="color: red;">[{{ error }}]</span>
+                                                                    {% endfor %}
+                                                                    {{ form.fname(class="form-control form-control-lg",
+                                                                    id="fname",
+                                                                    placeholder="First name...") }}
                                                                 </div>
                                                             </div>
                                                         </div><!-- .col -->
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <label class="form-label"><span>Last Name</span></label>
+                                                                {{ form.lname.label(class="form-label") }}
                                                                 <div class="form-control-wrap">
-                                                                    <input type="text"
-                                                                        class="form-control form-control-lg"
-                                                                        placeholder="Last name... ">
+                                                                    {% for error in form.lname.errors %}
+                                                                    <span style="color: red;">[{{ error }}]</span>
+                                                                    {% endfor %}
+                                                                    {{ form.lname(class="form-control form-control-lg",
+                                                                    id="lname",
+                                                                    placeholder="Last name...") }}
                                                                 </div>
                                                             </div>
                                                         </div><!-- .col -->
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <label class="form-label"><span>Organization
-                                                                        Name</span></label>
+                                                                {{ form.org.label(class="form-label") }}
                                                                 <div class="form-control-wrap">
-                                                                    <input type="text"
-                                                                        class="form-control form-control-lg"
-                                                                        placeholder="Organization name... ">
+                                                                    {% for error in form.org.errors %}
+                                                                    <span style="color: red;">[{{ error }}]</span>
+                                                                    {% endfor %}
+                                                                    {{ form.org(class="form-control form-control-lg",
+                                                                    id="org",
+                                                                    placeholder="Organization name...") }}
                                                                 </div>
                                                             </div>
                                                         </div><!-- .col -->
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <label class="form-label"><span>Email
-                                                                        Address</span></label>
+                                                                {{ form.email.label(class="form-label") }}
                                                                 <div class="form-control-wrap">
-                                                                    <input type="email"
-                                                                        class="form-control form-control-lg"
-                                                                        placeholder="Email... ">
+                                                                    {% for error in form.email.errors %}
+                                                                    <span style="color: red;">[{{ error }}]</span>
+                                                                    {% endfor %}
+                                                                    {{ form.email(class="form-control form-control-lg",
+                                                                    id="email",
+                                                                    placeholder="Email address...") }}
                                                                 </div>
                                                             </div>
                                                         </div><!-- .col -->
                                                         <div class="col-12">
                                                             <div class="form-group">
-                                                                <label class="form-label"><span>Details
-                                                                    </span></label>
+                                                                {{ form.details.label(class="form-label") }}
                                                                 <p class="text-soft">Describe how you would like to use
                                                                     Olam ERP.</p>
                                                                 <div class="form-control-wrap">
                                                                     <div class="form-editor-custom">
-                                                                        <textarea
-                                                                            class="form-control form-control-lg no-resize"
-                                                                            placeholder="Write your message"></textarea>
+                                                                        {% for error in form.details.errors %}
+                                                                        <span style="color: red;">[{{ error }}]</span>
+                                                                        {% endfor %}
+                                                                        {{ form.details(class="form-control
+                                                                        form-control-lg",
+                                                                        id="details",
+                                                                        placeholder="Write your message here...") }}
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -109,7 +123,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-12">
-                                                            <a href="#" class="btn btn-primary">Submit</a>
+                                                            {{form.submit(class="btn btn-primary")}}                                                            
                                                         </div><!-- .col -->
                                                     </div><!-- .row -->
                                                 </form><!-- .form-contact -->

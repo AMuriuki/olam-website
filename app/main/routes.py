@@ -3,13 +3,15 @@ from ipaddress import ip_address
 from rq.job import get_current_job
 from app.api import company
 import os
-from app.auth.email import send_server_activation_email
+from app.auth.email import inquiry_email, send_server_activation_email
 import re
 import time
 from os import fsync
+from app.main.models.blog import Category, Post
 from app.main.models.database import Database
 from app.main.models.company import Company
 from app.auth.models.user import User, VisitorLog
+from app.main.models.lead import Lead
 from app.main.utils import search_dict, traverse_geoipdata, updating
 from app.main.models.module import Module, ModuleCategory
 from datetime import datetime
@@ -20,7 +22,7 @@ from flask_babel import _, get_locale
 # from guess_language import guess_language
 from app import db, create_app
 from app.main import bp
-from app.main.forms import GetStartedForm
+from app.main.forms import GetStartedForm, LeadForm
 from app.models import Task
 from config import basedir
 from flask_login import login_user, logout_user, current_user
@@ -39,7 +41,7 @@ def index():
 
 @bp.route('/email_template', methods=['GET', 'POST'])
 def errors():
-    return render_template('email/activate_server.html', title=_('Tools to Grow Your Business | Olam ERP'))
+    return render_template('email/inquire.html', title=_('Tools to Grow Your Business | Olam ERP'))
 
 
 @bp.route('/401', methods=['GET', 'POST'])
@@ -69,7 +71,6 @@ def check_task_in_progress():
                     task.user_redirected = True
                     db.session.commit()
                     return jsonify({"response": "success", "username": session['user_name'], "domainname": session['domain_name'], "companyname": session['companyname'], "companyid": session['companyid'], "useremail": session['useremail'], "userphone": session['user_phone']})
-            print("xxxxxx")
         return jsonify({'response': 'nothing'})
 
 
@@ -102,7 +103,6 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
 
     # Get selected App(s)
     modules = session['selected_modules']
-    print(modules)
 
     # first add free modules
     module = Module.query.filter_by(technical_name="contacts").first()
@@ -212,7 +212,50 @@ def activate_server(token):
         return redirect("https://127.0.0.1:5000/auth/set_password?username=" + user.name + "&companyname=" + company.name + "&companyid=" + company.id + "&domainname=" + company.domain_name + "&email=" + user.email + "&phone_no=" + user.phone_no + "&country_code=" + user.country_code)
 
 
-@bp.route('/contact_us')
+@bp.route('/contact-us', methods=['POST', 'GET'])
 def contact_us():
     app_name = None
-    return render_template("main/contact_us.html", app_name=app_name, title=_("Contact Us | Olam ERP"))
+    form = LeadForm()
+    if request.method == "GET":
+        session['utm_source'] = request.args.get('utm_source')
+        session['utm_medium'] = request.args.get('utm_medium')
+        session['utm_campaign'] = request.args.get('utm_campaign')
+        print("!!!!!!!!!")
+        print(session['utm_campaign'])
+    if form.validate_on_submit():
+        lead = Lead(fname=form.fname.data, lname=form.lname.data,
+                    orgname=form.org.data, email=form.email.data, details=form.details.data, utm_source=session['utm_source'], utm_medium=session['utm_medium'], utm_campaign=session['utm_campaign'])
+        db.session.add(lead)
+        db.session.commit()
+        inquiry_email(lead)
+        return redirect(url_for('main.thank_you'))
+    return render_template("main/contact_us.html", app_name=app_name, title=_("Contact Us | Olam ERP"), form=form)
+
+
+@bp.route('/contact-us/thank-you')
+def thank_you():
+    return render_template("main/thank_you.html", title=_("Thank you | Olam ERP"))
+
+
+@bp.route('/blog')
+def blog():
+    categories = Category.query.all()
+    posts = Post.query.all()
+    return render_template("blog.html", title=_("Blog | Olam ERP"), categories=categories, posts=posts)
+
+
+@bp.route('/blog/<slug>')
+def blog_category(slug):
+    posts = Post.query.join(Category).filter_by(slug=slug).all()
+    return render_template("blog_category.html", title=_(posts[0].category.name + " | Olam ERP"))
+
+
+@bp.route('/blog/<category>/<id>')
+def blog_details(id):
+    post = Post.query.filter_by(id=id).first()
+    return render_template("blog_details.html", title=_(post.title + " | Olam ERP"))
+
+
+@bp.route('/learn-more')
+def learn_more():
+    pass

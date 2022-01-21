@@ -3,7 +3,7 @@ import os
 import click
 from flask_migrate import upgrade
 
-from app.main.tasks import migrate_features
+from app.main.tasks import migrate_features, post_articles
 
 
 def register(app):
@@ -20,6 +20,12 @@ def register(app):
         ModuleCategory.insert_categories()
         Module.insert_modules()
         migrate_features()
+    
+
+    @app.cli.command()
+    def blog():
+        """Post blog articles"""
+        post_articles()
 
 
     @translate.command()

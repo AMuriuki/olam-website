@@ -20,3 +20,15 @@ class GetStartedForm(FlaskForm):
                                validators=[DataRequired(), Regexp(r'^[\w.@+-]+$', message="Spaces are not allowed in domain names")], render_kw={'readonly': True})
     submit = SubmitField(_l('Start Now'))
 
+
+class LeadForm(FlaskForm):
+    fname = StringField(_l('First Name'),
+                        validators=[DataRequired()])
+    lname = StringField(_l('Last Name'),
+                        validators=[DataRequired()])
+    org = StringField(_l('Organization Name'),
+                      validators=[DataRequired()])
+    email = StringField(_l('Email'),
+                        validators=[DataRequired(), Email()])
+    details = TextAreaField(_l('Details'), validators=[DataRequired()])
+    submit = SubmitField(_l('Submit'))

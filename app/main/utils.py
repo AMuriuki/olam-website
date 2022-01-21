@@ -100,3 +100,17 @@ def get_features():
     json_url = os.path.join(SITE_ROOT, "data", "module-features.json")
     data = json.load(open(json_url))
     return data
+
+
+def blog_articles():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "data", "articles.json")
+    data = json.load(open(json_url))
+    return data
+
+
+def blog_categories():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "data", "blog_categories.json")
+    data = json.load(open(json_url))
+    return data

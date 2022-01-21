@@ -12,13 +12,15 @@
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="../static/images/olamerp-dark.png" style="box-sizing: border-box;">
     <!-- Page Title  -->
-    <title style="box-sizing: border-box;"> Tools to Grow Your Business | Olam ERP </title>
+    <title style="box-sizing: border-box;">Tools to Grow Your Business | Olam ERP </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css"
+        integrity="sha512-f8mUMCRNrJxPBDzPJx3n+Y5TC5xp6SmStstEfgsDXZJTcxBakoB5hvPLhAfJKa9rCvH+n3xpJ2vQByxLk4WP2g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="nk-body bg-white npc-default has-aside"
@@ -43,62 +45,72 @@
                                                     <td class="text-center pb-4"
                                                         style="box-sizing: border-box;padding-bottom: 1.5rem !important;text-align: center !important;">
                                                         <a href="#"
-                                                            style="box-sizing: border-box;color: #6576ff;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;word-break: break-all;"><img
-                                                                class="logo-dark logo-img"
+                                                            style="box-sizing: border-box;color: #6576ff;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;word-break: break-all;">
+                                                            <img class="logo-dark logo-img"
                                                                 src="https://olamerp.s3.us-east-2.amazonaws.com/static/images/olamerp-dark.png"
-                                                                srcset="../static/images/logo-dark2x.png 2x"
                                                                 alt="logo-dark"
                                                                 style="box-sizing: border-box;vertical-align: middle;border-style: none;max-width: 100%;page-break-inside: avoid;opacity: 1;max-height: 36px;"></a>
                                                         <br><br>
                                                         <h1
                                                             style="box-sizing: border-box;margin-top: 0;margin-bottom: 0;font-family: 'IBM Plex Sans Arabic', sans-serif;font-weight: 600;line-height: 1.4;color: #6576ff;page-break-after: avoid;letter-spacing: -0.03em;orphans: 3;widows: 3;margin: 0;">
-                                                            Database Confirmation</h1>
+                                                            New Lead Generated</h1>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <table class="email-body text-center"
-                                            style="box-sizing: border-box;border-collapse: collapse;width: 96%;max-width: 620px;margin: 0 auto;background: #ffffff;text-align: center !important;">
+                                        <table class="email-body"
+                                            style="box-sizing: border-box;border-collapse: collapse;width: 96%;max-width: 620px;margin: 0 auto;background: #ffffff;">
                                             <tbody style="box-sizing: border-box;">
                                                 <tr style="box-sizing: border-box;page-break-inside: avoid;">
                                                     <td class="px-3 px-sm-5 pb-2"
-                                                        style="box-sizing: border-box;padding-bottom: .75rem !important;padding-right: 2.75rem !important;padding-left: 2.75rem !important;">
+                                                        style="box-sizing: border-box;padding-top: 2.75rem; padding-bottom: .75rem !important;padding-right: 2.75rem !important;padding-left: 2.75rem !important;">
                                                         <p
                                                             style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
-                                                        <h2><a href="https://{{domain_name}}.olam-erp.com"
-                                                                style="cursor: pointer; box-sizing: border-box;color: #6576ff;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;word-break: break-all;">{{domain_name}}.olam-erp.com</a>
-                                                        </h2>
-                                                        has been created!
+                                                            A new lead with the details below has been generated:
                                                         </p>
                                                         <p
                                                             style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
-                                                            Please activate your database by clicking the link below.
+                                                            <strong>First Name:&nbsp;</strong>{{lead.fname}}
                                                         </p>
-                                                        <a href="{{ url_for('main.activate_database', token=token, _external=True) }}"
-                                                            class="email-btn"
-                                                            style="box-sizing: border-box;color: #ffffff !important;text-decoration: underline;background-color: transparent;transition: color .4s, background-color .4s, border .4s, box-shadow .4s;background: #6576ff;border-radius: 4px;display: inline-block;font-size: 13px;font-weight: 600;line-height: 44px;text-align: center;text-transform: capitalize;padding: 0 30px;word-break: break-all;">Activate
-                                                            Database</a>
+                                                        <p
+                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
+                                                            <strong>Last Name:&nbsp;</strong>{{lead.lname}}
+                                                        </p>
+                                                        <p
+                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
+                                                            <strong>Organization Name:</strong>&nbsp;{{lead.orgname}}
+                                                        </p>
+                                                        <p
+                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
+                                                            <strong>Email Address:</strong>&nbsp;{{lead.email}}
+                                                        </p>
+                                                        <p
+                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
+                                                            <strong>Inquiry Details:</strong>&nbsp;{{lead.details}}
+                                                        </p>
+                                                        <p
+                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
+                                                            <strong>Source:</strong>&nbsp;{{lead.utm_source}}
+                                                        </p>
+                                                        <p
+                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
+                                                            <strong>Medium:</strong>&nbsp;{{lead.utm_medium}}
+                                                        </p>
+                                                        <p
+                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
+                                                            <strong>Campaign:</strong>&nbsp;{{lead.utm_campaign}}
+                                                        </p>
                                                     </td>
                                                 </tr>
                                                 <tr style="box-sizing: border-box;page-break-inside: avoid;">
                                                     <td class="px-3 px-sm-5 pt-4 pb-3 pb-sm-5"
                                                         style="box-sizing: border-box;padding-right: 2.75rem !important;padding-left: 2.75rem !important;padding-bottom: 2.75rem !important;padding-top: 1.5rem !important;">
-                                                        <p
-                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
-                                                            Or copy/paste this link in your browser:</p>
-                                                        <a href="{{ url_for('main.activate_database', token=token,
-                                                        _external=True) }}"
-                                                            style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3;widows: 3;">
-                                                            {{ url_for('main.activate_database', token=token,
-                                                            _external=True) }}</a>
-                                                        <br><br>
                                                         <p class="email-note"
                                                             style="box-sizing: border-box;margin-top: 0;margin-bottom: 0;orphans: 3;widows: 3;margin: 0;font-size: 13px;line-height: 22px;color: #8094ae;">
                                                             This is an automatically generated email
                                                             please do not
                                                             reply to this email. If you face any issues, please contact
-                                                            us at
-                                                            help@olam-erp.com</p>
+                                                            the support team at help@olam-erp.com</p>
                                                     </td>
                                                 </tr>
                                             </tbody>
