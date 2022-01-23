@@ -220,8 +220,6 @@ def contact_us():
         session['utm_source'] = request.args.get('utm_source')
         session['utm_medium'] = request.args.get('utm_medium')
         session['utm_campaign'] = request.args.get('utm_campaign')
-        print("!!!!!!!!!")
-        print(session['utm_campaign'])
     if form.validate_on_submit():
         lead = Lead(fname=form.fname.data, lname=form.lname.data,
                     orgname=form.org.data, email=form.email.data, details=form.details.data, utm_source=session['utm_source'], utm_medium=session['utm_medium'], utm_campaign=session['utm_campaign'])
