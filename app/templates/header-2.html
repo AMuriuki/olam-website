@@ -12,6 +12,7 @@
                         </a>
                         <ul class="nk-menu-sub">
                             {% for moduleCategory in moduleCategories %}
+                            {% if moduleCategory.id != 1 %}
                             <li class="nk-menu-item has-sub">
                                 <a href="#" class="nk-menu-link nk-menu-toggle" data-original-title="" title=""><span
                                         class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
@@ -20,7 +21,7 @@
                                 <ul class="nk-menu-sub">
                                     {% for module in modules %}
                                     {% if module.category_id == moduleCategory.id %}
-                                    <li class="nk-menu-item"><a href="#" class="nk-menu-link" data-original-title=""
+                                    <li class="nk-menu-item"><a href="{{module.url}}" class="nk-menu-link" data-original-title=""
                                             title=""><span class="nk-menu-text">{% if
                                                 module.technical_name == 'crm'
                                                 %}{{module.technical_name|upper}}{% else
@@ -30,6 +31,7 @@
                                     {% endfor %}
                                 </ul>
                             </li>
+                            {% endif %}
                             {% endfor %}
                         </ul><!-- .nk-menu-sub -->
                     </li><!-- .nk-menu-item -->

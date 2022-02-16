@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "technical_name": "settings",
+    "bp_name": "settings",
+    "official_name": "Olam ERP Settings",
+    "category_id": 1,
+    "author": "Olam Tech",
+    "url": null,
+    "latest_version": "1",
+    "published_version": null,
+    "icon": "",
+    "enable": true,
+    "summary": "Manage your Olam ERP settings"
+  },
+  {
+    "id": 2,
+    "technical_name": "crm",
+    "bp_name": "crm",
+    "official_name": "Olam CRM",
+    "category_id": 2,
+    "author": "Olam Tech",
+    "url": "https://www.olam-erp.com/app/crm",
+    "latest_version": "1",
+    "published_version": null,
+    "icon": "",
+    "enable": true,
+    "summary": "Track leads and close opportunities"
+  },
+  {
+    "id": 3,
+    "technical_name": "contacts",
+    "bp_name": "contacts",
+    "official_name": "Olam Contacts",
+    "category_id": 1,
+    "author": "Olam Tech",
+    "url": "https://www.olam-erp.com/app/contacts",
+    "latest_version": "1",
+    "published_version": null,
+    "icon": "",
+    "enable": true,
+    "summary": "Successfully manage all your contacts"
+  }
+]

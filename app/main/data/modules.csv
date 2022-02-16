@@ -25,3 +25,4 @@ id,url,summary,technical_name,author,icon,state,latest_version,bp_name,official_
 24,https://www.olam-erp.com/app/discuss,Ehance team communication,discuss,Olam Tech,,not installed,1,discuss,Olam Discuss,9,f,t
 25,https://www.olam-erp.com/app/approvals,Easily manage your employees' requests,approvals ,Olam Tech,,not installed,1,approvals,Olam Approvals,9,f,t
 26,https://www.olam-erp.com/app/contacts,Successfully manage all your contacts,contacts,Olam Tech,,installed,1,contacts,Olam Contacts,9,t,t
+27,,Manage your Olam ERP settings,settings,Olam Tech,,installed,1,settings,Olam ERP Settings,10,t,t

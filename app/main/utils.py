@@ -88,6 +88,20 @@ def traverse_geoipdata(data):
     return ip_address, country, region, city, lat, lng, postalcode, timezone, geonameId, asn, name, connectionType
 
 
+def get_modules():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "data", "modules.json")
+    data = json.load(open(json_url))
+    return data
+
+
+def get_module_categories():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "data", "module_categories.json")
+    data = json.load(open(json_url))
+    return data
+
+
 def feature_categories():
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
     json_url = os.path.join(SITE_ROOT, "data", "feature-categories.json")
@@ -112,5 +126,34 @@ def blog_articles():
 def blog_categories():
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
     json_url = os.path.join(SITE_ROOT, "data", "blog_categories.json")
+    data = json.load(open(json_url))
+    return data
+
+
+def get_access_groups():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "data", "access_groups.json")
+    data = json.load(open(json_url))
+    return data
+
+
+def get_access_rights():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "data", "access_rights.json")
+    data = json.load(open(json_url))
+    return data
+
+
+def get_models():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "data", "models.json")
+    data = json.load(open(json_url))
+    return data
+
+
+def get_access_group_assosciations():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(
+        SITE_ROOT, "data", "access_group_assosciations.json")
     data = json.load(open(json_url))
     return data

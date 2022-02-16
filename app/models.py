@@ -4,6 +4,12 @@ from app import db
 import redis
 import rq
 
+access_rights = db.Table(
+    'AccessRights',
+    db.Column('group_id', db.String(128), db.ForeignKey(
+        'group.id'), primary_key=True),
+    db.Column('access_id', db.String(128), db.ForeignKey('access.id'), primary_key=True))
+
 
 class PaginatedAPIMixin(object):
     @staticmethod
@@ -25,6 +31,14 @@ class PaginatedAPIMixin(object):
                 'prev': url_for(endpoint, page=page - 1, per_page=per_page,
                                 **kwargs) if resources.has_prev else None
             }
+        }
+        return data
+    
+    @staticmethod
+    def _to_collection_dict(query, page, per_page, endpoint, **kwargs):
+        resources = query
+        data = {
+            'items': [item.to_dict() for item in resources]
         }
         return data
 
@@ -93,3 +107,53 @@ class Task(db.Model):
     def get_progress(self):
         job = self.get_rq_job()
         return job.meta.get('progress', 0) if job is not None else 100
+
+
+class Group(PaginatedAPIMixin, db.Model):
+    id = db.Column(db.String(128), primary_key=True)
+    name = db.Column(db.String(128), index=True)
+    module_id = db.Column(db.Integer, db.ForeignKey('module.id'))
+    rights = db.relationship(
+        'Access', secondary=access_rights, back_populates="groups")
+    permission = db.Column(db.Integer)
+
+    def to_dict(self):
+        data = {
+            'id': self.id,
+            'name': self.name,
+            'module_id': self.module_id,
+            'permission': self.permission,
+            'links': {
+                'access_rights': url_for('api.get_access_rights', id=self.id),
+            }
+        }
+        return data
+
+
+class Access(db.Model):
+    id = db.Column(db.String(128), primary_key=True)
+    name = db.Column(db.String(120), index=True, unique=True)
+    model_id = db.Column(db.Integer, db.ForeignKey('model.id'))
+    read = db.Column(db.Boolean, default=False)
+    write = db.Column(db.Boolean, default=False)
+    create = db.Column(db.Boolean, default=False)
+    delete = db.Column(db.Boolean, default=False)
+    groups = db.relationship(
+        'Group', secondary=access_rights, back_populates="rights")
+    
+    def to_dict(self):
+        data = {
+            'id': self.id,
+            'name': self.name,
+            'model_id': self.model_id,
+            'read': self.read,
+            'write': self.write,
+            'create': self.create,
+            'delete': self.delete,
+            'links': {
+                # 'access_groups': url_for('api.get_access_groups', id=self.id),
+            }
+        }
+        return data
+
+

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Sales"
+  },
+  {
+    "id": 2,
+    "name": "Services"
+  },
+  {
+    "id": 3,
+    "name": "Finance"
+  },
+  {
+    "id": 4,
+    "name": "Inventory"
+  },
+  {
+    "id": 5,
+    "name": "Manufacturing"
+  },
+  {
+    "id": 6,
+    "name": "Websites"
+  },
+  {
+    "id": 7,
+    "name": "Marketing"
+  },
+  {
+    "id": 8,
+    "name": "Human Resources"
+  },
+  {
+    "id": 9,
+    "name": "Productivity"
+  },
+  {
+    "id": 10,
+    "name": "Administration"
+  }
+]

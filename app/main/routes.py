@@ -109,6 +109,10 @@ def onboarding(email, name, domain_name, company_name, phonenumber):
     company.modules.append(module)
     db.session.commit()
 
+    module = Module.query.filter_by(technical_name="settings").first()
+    company.modules.append(module)
+    db.session.commit()
+
     for module in modules:
         module = Module.query.filter_by(id=module).first()
         company.modules.append(module)

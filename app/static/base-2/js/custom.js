@@ -124,7 +124,7 @@ $(".check").on("click", function () {
     //remove unselected from list of selected apps
     $("#" + splitAppTitle[0]).remove();
 
-    price = 1000 * selectedModules.length;
+    price = 1400 * selectedModules.length;
 
     $(".total_price").text(price);
     $(".discount_price").text(price / 2);
@@ -148,7 +148,7 @@ $(".check").on("click", function () {
     );
 
     //add price
-    price = 1000 * selectedModules.length;
+    price = 1400 * selectedModules.length;
     $(".total_price").text(price);
     $(".discount_price").text(price / 2);
   }
@@ -177,7 +177,7 @@ $(".dv-module").on("click", function () {
       "<li id=" + splitAppTitle[0] + ">" + appTitle + "</li>"
     );
     //add price
-    price = 1000 * selectedModules.length;
+    price = 1400 * selectedModules.length;
 
     $(".total_price").text(price);
     $(".discount_price").text(price / 2);
@@ -193,7 +193,7 @@ $(".dv-module").on("click", function () {
     $("#" + splitAppTitle[0]).remove();
     console.log($("#" + splitAppTitle[0]).remove());
 
-    price = 1000 * selectedModules.length;
+    price = 1400 * selectedModules.length;
 
     $(".total_price").text(price);
     $(".discount_price").text(price / 2);

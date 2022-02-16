@@ -18,6 +18,7 @@
                             <div class="menu-sub">
                                 <ul class="menu-list">
                                     {% for moduleCategory in moduleCategories %}
+                                    {% if moduleCategory.id != 1 %}
                                     <li class="menu-item has-sub">
                                         <a href="#" class="menu-link menu-toggle">{{moduleCategory.name}}</a>
                                         <div class="menu-sub">
@@ -25,7 +26,7 @@
                                                 {% for module in modules %}
                                                 {% if module.category_id == moduleCategory.id %}
                                                 <li class="menu-item">
-                                                    <a href="{{url_for('app.view', app_name=module.bp_name)}}"
+                                                    <a href="{{module.url}}"
                                                         class="menu-link">
                                                         {% if module.technical_name == 'crm' %}
                                                         {{module.technical_name|upper}}
@@ -39,6 +40,7 @@
                                             </ul>
                                         </div>
                                     </li>
+                                    {% endif %}
                                     {% endfor %}
                                 </ul>
                             </div>
