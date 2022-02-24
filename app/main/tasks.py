@@ -113,6 +113,7 @@ def migrate_access_groups():
                     id=access_group['id'], name=access_group['name'], module_id=access_group['module_id'], permission=access_group['permission'])
                 db.session.add(access_group)
                 db.session.commit()
+                print("access group " + str(access_group.id) + " created.")
     except Exception as e:
         print(e)
 
@@ -144,6 +145,7 @@ def migrate_access_group_assosciations():
                 id=_group_access['access_id']).first()
             group.rights.append(access)
             db.session.commit()
+            print(group.id + " assosciation with " + access.id + " created")
     except Exception as e:
         print(e)
 
@@ -161,5 +163,6 @@ def migrate_models():
                               description=model['description'], module_id=model['module_id'])
                 db.session.add(model)
                 db.session.commit()
+                print(model.name + " created")
     except Exception as e:
         print(e)
