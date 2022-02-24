@@ -126,7 +126,7 @@ class FeatureCategory(db.Model):
 
 
 class Model(PaginatedAPIMixin, db.Model):
-    id = db.Column(db.String(128), primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(128), index=True)
     description = db.Column(db.String(128))
     accessrights = db.relationship('Access', backref='model', lazy='dynamic')
