@@ -132,7 +132,7 @@ class Group(PaginatedAPIMixin, db.Model):
 
 class Access(db.Model):
     id = db.Column(db.String(128), primary_key=True)
-    name = db.Column(db.String(120), index=True, unique=True)
+    name = db.Column(db.String(120), index=True)
     model_id = db.Column(db.Integer, db.ForeignKey('model.id'))
     read = db.Column(db.Boolean, default=False)
     write = db.Column(db.Boolean, default=False)

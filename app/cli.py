@@ -22,9 +22,10 @@ def register(app):
         migrate_access_groups()
         migrate_models()
         migrate_access_right()
+        migrate_access_group_assosciations()
         # migrate_features()
         # post_articles()
-        # migrate_access_group_assosciations()
+
 
     @translate.command()
     @click.argument('lang')

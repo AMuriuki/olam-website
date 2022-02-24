@@ -100,6 +100,7 @@ class Module(PaginatedAPIMixin, db.Model):
             'published_version': self.published_version,
             'category_id': self.category_id,
             'category_name': category.name,
+            'url': self.url,
             'links': {
                 'access_groups': url_for('api.get_access_groups', id=self.id),
                 'models': url_for('api.get_models', id=self.id)
@@ -125,7 +126,7 @@ class FeatureCategory(db.Model):
 
 
 class Model(PaginatedAPIMixin, db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.String(128), primary_key=True)
     name = db.Column(db.String(128), index=True)
     description = db.Column(db.String(128))
     accessrights = db.relationship('Access', backref='model', lazy='dynamic')
@@ -135,6 +136,7 @@ class Model(PaginatedAPIMixin, db.Model):
         data = {
             'id': self.id,
             'name': self.name,
-            'description': self.description
+            'description': self.description,
+            'module_id': self.module_id
         }
         return data

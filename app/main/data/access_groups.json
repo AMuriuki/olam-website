@@ -16,5 +16,17 @@
     "name": "Administrator",
     "module_id": 3,
     "permission": 3
+  },
+  {
+    "id": "3b13fec1-8a40-4c34-b29b-36a6da1e9be1",
+    "name": "Manager",
+    "module_id": 1,
+    "permission": 2
+  },
+  {
+    "id": "001277dc-8768-42fc-884c-b6a9567f0bf1",
+    "name": "User",
+    "module_id": 1,
+    "permission": 1
   }
 ]

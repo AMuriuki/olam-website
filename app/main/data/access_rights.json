@@ -1,0 +1,38 @@
+[
+  {
+    "id": "b2731b2a-baa5-428f-ad88-7789477028fb",
+    "name": "Manage users",
+    "model_id": 1,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "2b42be7a-9570-4c73-a097-16dda1da1873",
+    "name": "View users",
+    "model_id": 1,
+    "read": true,
+    "write": false,
+    "create": false,
+    "delete": false
+  },
+  {
+    "id": "bcfae81c-0a01-4352-8225-2b7719733e96",
+    "name": "Manage groups",
+    "model_id": 2,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "1",
+    "name": "View groups",
+    "model_id": 2,
+    "read": true,
+    "write": false,
+    "create": false,
+    "delete": false
+  }
+]

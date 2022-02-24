@@ -1,7 +1,19 @@
 [
     {
-        "group_id": 1,
-        "access_id": 1
+        "group_id": "e8e96379-887b-4d7b-b558-adde472c2f93",
+        "access_id": "b2731b2a-baa5-428f-ad88-7789477028fb"
+    },
+    {
+        "group_id": "3b13fec1-8a40-4c34-b29b-36a6da1e9be1",
+        "access_id": "2b42be7a-9570-4c73-a097-16dda1da1873"
+    },
+    {
+        "group_id": "e8e96379-887b-4d7b-b558-adde472c2f93",
+        "access_id": "bcfae81c-0a01-4352-8225-2b7719733e96" 
+    },
+    {
+        "group_id": "3b13fec1-8a40-4c34-b29b-36a6da1e9be1",
+        "access_id": "6fd6baec-a689-4000-bdde-f923301ff8fe"
     }
 ]
 
