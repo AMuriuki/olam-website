@@ -110,7 +110,7 @@ def migrate_access_groups():
             exists = Group.query.filter_by(id=access_group['id']).first()
             if not exists:
                 access_group = Group(
-                    id=str(uuid.uuid4()), name=access_group['name'], module_id=access_group['module_id'], permission=access_group['permission'])
+                    id=access_group['id'], name=access_group['name'], module_id=access_group['module_id'], permission=access_group['permission'])
                 db.session.add(access_group)
                 db.session.commit()
     except Exception as e:
@@ -124,7 +124,7 @@ def migrate_access_right():
         for access in access_rights:
             exists = Access.query.filter_by(id=access['id']).first()
             if not exists:
-                access = Access(id=str(uuid.uuid4()), name=access['name'], model_id=access['model_id'],
+                access = Access(id=access['id'], name=access['name'], model_id=access['model_id'],
                                 read=access['read'], write=access['write'], create=access['create'], delete=access['delete'])
                 db.session.add(access)
                 db.session.commit()
