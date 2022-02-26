@@ -320,8 +320,9 @@ if (
       task_name: "launch_instance",
     }).done(function (data) {
       if (data["response"] == "success") {
+        // location.href = 'https://' + data['domain'] + '.olam-erp.com/auth/set_password?username=' + data['username'] + "&companyname=" + data['companyname'] + "&companyid=" + data['companyid'] + "&domainname=" + data['domainname'] + "&email=" + data['useremail'] + "&phone_no=" + data['userphone'];
         location.href =
-          "https://olam-erp.com/auth/set_password?username=" +
+          'https://' + data['domain'] + '.olam-erp.com/auth/set_password?username=' +
           data["username"] +
           "&companyname=" +
           data["companyname"] +
