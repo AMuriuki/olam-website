@@ -3,6 +3,8 @@ import os
 import click
 from flask_migrate import upgrade
 
+from app.main.tasks import deploy_module_categories, deploy_modules, migrate_access_group_assosciations, migrate_access_groups, migrate_access_right, migrate_features, migrate_models, post_articles
+
 
 def register(app):
     @app.cli.group()
@@ -15,8 +17,14 @@ def register(app):
         """Run deployment tasks."""
         # migrate database to latest revision
         upgrade()
-        ModuleCategory.insert_categories()
-        Module.insert_modules()
+        deploy_module_categories()
+        deploy_modules()
+        migrate_access_groups()
+        migrate_models()
+        migrate_access_right()
+        migrate_access_group_assosciations()
+        # migrate_features()
+        # post_articles()
 
 
     @translate.command()

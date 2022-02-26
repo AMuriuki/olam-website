@@ -8,15 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="ERP, CRM, etc. Business tools to help your organization grow.">
     <!-- Fav Icon  -->
-    <link rel="shortcut icon" href="../static/images/olamerp.png">
+    <link rel="shortcut icon" href="../static/images/olamerp-dark.png">
     <!-- Page Title  -->
     <title>{% if title %} {{title}} {% else %} Welcome to Olam {% endif %}</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{ url_for('static', filename='base-2/css/dashlite.css') }}">
     <link id="skin-default" rel="stylesheet" href="{{ url_for('static', filename='base-2/css/theme.css') }}">
     <link id="skin-default" rel="stylesheet" href="{{ url_for('static', filename='base-2/css/style-email.css') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -138,7 +136,7 @@ Olam ERP' or title == 'Installing | Olam ERP' %}
     <script src="{{ url_for('static', filename='base-2/js/libs/jkanban.js') }}"></script>
     <script src="{{ url_for('static', filename='base-2/js/apps/kanban.js') }}"></script>
     <script src="{{ url_for('static', filename='base-2/js/kanban-custom.js') }}"></script>
-    <script src="{{ url_for('static', filename='base-2/js/custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/custom.js') }}?v0.1"></script>
 </body>
 
 {% elif title == 'Manage Your Databases | Olam ERP' %}
@@ -192,7 +190,7 @@ Olam ERP' or title == 'Installing | Olam ERP' %}
     <script src="{{ url_for('static', filename='base-2/js/libs/jkanban.js') }}"></script>
     <script src="{{ url_for('static', filename='base-2/js/apps/kanban.js') }}"></script>
     <script src="{{ url_for('static', filename='base-2/js/kanban-custom.js') }}"></script>
-    <script src="{{ url_for('static', filename='base-2/js/custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/custom.js') }}?v0.1"></script>
 </body>
 {% else %}
 
@@ -226,7 +224,7 @@ Olam ERP' or title == 'Installing | Olam ERP' %}
     <script src="{{ url_for('static', filename='base-2/js/libs/jkanban.js') }}"></script>
     <script src="{{ url_for('static', filename='base-2/js/apps/kanban.js') }}"></script>
     <script src="{{ url_for('static', filename='base-2/js/kanban-custom.js') }}"></script>
-    <script src="{{ url_for('static', filename='base-2/js/custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='base-2/js/custom.js') }}?v0.1"></script>
 </body>
 {% endif %}
 

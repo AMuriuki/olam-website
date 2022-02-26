@@ -19,7 +19,7 @@
                     <div class="section-content">
                         <div class="row gy-gs justify-content-center text-center">
                             <div class="col-mb-6 col-lg-4">
-                                <a href="">
+                                <a href="{{url_for('app.view', app_name='crm')}}">
                                     <div class="card card-full service service-s4 after-bg-info">
                                         <div class="card-inner">
                                             <div class="service-icon styled-icon styled-icon-6x text-info">
@@ -76,7 +76,7 @@
                                 </a>
                             </div><!-- .col -->
                             <div class="col-mb-6 col-lg-4">
-                                <a href="">
+                                <a href="{{url_for('app.view', app_name='pos')}}">
                                     <div class="card card-full service service-s4">
                                         <div class="card-inner">
                                             <div class="service-icon styled-icon styled-icon-6x text-primary">
@@ -134,7 +134,7 @@
                                 </a>
                             </div><!-- .col- -->
                             <div class="col-mb-6 col-lg-4">
-                                <a href="">
+                                <a href="{{url_for('app.view', app_name='sales')}}">
                                     <div class="card card-full service service-s4 after-bg-danger">
                                         <div class="card-inner">
                                             <div class="service-icon styled-icon styled-icon-6x text-danger">
@@ -183,46 +183,92 @@
                                 </a>
                             </div><!-- .col -->
                             <div class="col-mb-6 col-lg-4">
-                                <a href="">
+                                <a href="{{url_for('app.view', app_name='invoicing')}}">
                                     <div class="card card-full service service-s4 after-bg-info">
                                         <div class="card-inner">
                                             <div class="service-icon styled-icon styled-icon-6x text-info">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
-                                                    <path d="M68.14,80.86,30.21,72.69a5.93,5.93,0,0,1-4.57-7l12.26-56A6,6,0,0,1,45,5.14l28.18,6.07L85.5,29.51,75.24,76.33A6,6,0,0,1,68.14,80.86Z" fill="#eff1ff" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <polyline points="73 12.18 69.83 26.66 85.37 30.08" fill="#eff1ff" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <path d="M66.26,71.15,29.05,82.46a6,6,0,0,1-7.46-4L4.76,23.15a6,6,0,0,1,4-7.47l27.64-8.4L56.16,17.39,70.24,63.68A6,6,0,0,1,66.26,71.15Z" fill="#e3e7fe" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <polyline points="36.7 8.22 41.05 22.53 56.33 17.96" fill="#e3e7fe" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <path d="M68,85H29a6,6,0,0,1-6-6V21a6,6,0,0,1,6-6H58L74,30.47V79A6,6,0,0,1,68,85Z" fill="#fff" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <polyline points="58 16 58 31 74 31.07" fill="#fff" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <line x1="45" y1="41" x2="61" y2="41" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <line x1="35" y1="48" x2="61" y2="48" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <line x1="35" y1="55" x2="61" y2="55" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <line x1="35" y1="63" x2="61" y2="63" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <line x1="35" y1="69" x2="51" y2="69" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /><text transform="translate(34.54 43.18) scale(0.99 1)" font-size="9.31" fill="#6576ff" font-family="Nunito-Black, Nunito Black">$</text>
+                                                    <path
+                                                        d="M68.14,80.86,30.21,72.69a5.93,5.93,0,0,1-4.57-7l12.26-56A6,6,0,0,1,45,5.14l28.18,6.07L85.5,29.51,75.24,76.33A6,6,0,0,1,68.14,80.86Z"
+                                                        fill="#eff1ff" stroke="#6576ff" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" />
+                                                    <polyline points="73 12.18 69.83 26.66 85.37 30.08" fill="#eff1ff"
+                                                        stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <path
+                                                        d="M66.26,71.15,29.05,82.46a6,6,0,0,1-7.46-4L4.76,23.15a6,6,0,0,1,4-7.47l27.64-8.4L56.16,17.39,70.24,63.68A6,6,0,0,1,66.26,71.15Z"
+                                                        fill="#e3e7fe" stroke="#6576ff" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" />
+                                                    <polyline points="36.7 8.22 41.05 22.53 56.33 17.96" fill="#e3e7fe"
+                                                        stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <path
+                                                        d="M68,85H29a6,6,0,0,1-6-6V21a6,6,0,0,1,6-6H58L74,30.47V79A6,6,0,0,1,68,85Z"
+                                                        fill="#fff" stroke="#6576ff" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" />
+                                                    <polyline points="58 16 58 31 74 31.07" fill="#fff" stroke="#6576ff"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <line x1="45" y1="41" x2="61" y2="41" fill="none" stroke="#c4cefe"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <line x1="35" y1="48" x2="61" y2="48" fill="none" stroke="#c4cefe"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <line x1="35" y1="55" x2="61" y2="55" fill="none" stroke="#c4cefe"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <line x1="35" y1="63" x2="61" y2="63" fill="none" stroke="#c4cefe"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <line x1="35" y1="69" x2="51" y2="69" fill="none" stroke="#c4cefe"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" /><text
+                                                        transform="translate(34.54 43.18) scale(0.99 1)"
+                                                        font-size="9.31" fill="#6576ff"
+                                                        font-family="Nunito-Black, Nunito Black">$</text>
                                                 </svg>
                                             </div>
                                             <div class="service-text">
                                                 <h5 class="title text-dark">Invoicing</h5>
-                                                <p>Manage contracts, create recurring invoices, bill timesheets, get paid faster.</p>
+                                                <p>Manage contracts, create recurring invoices, bill timesheets, get
+                                                    paid faster.</p>
                                             </div>
                                         </div>
                                     </div><!-- .service -->
                                 </a>
                             </div><!-- .col -->
                             <div class="col-mb-6 col-lg-4">
-                                <a href="">
+                                <a href="{{url_for('app.view', app_name='accounting')}}">
                                     <div class="card card-full service service-s4">
                                         <div class="card-inner">
                                             <div class="service-icon styled-icon styled-icon-6x text-primary">
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
-                                                    <rect x="14.5" y="5" width="56" height="70" rx="6" ry="6" fill="#e3e7fe" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <path d="M69.38,85H29.62a6.06,6.06,0,0,1-6.12-6V21a6.06,6.06,0,0,1,6.12-6H59.16L75.5,30.47V79A6.06,6.06,0,0,1,69.38,85Z" fill="#fff" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <polyline points="59.5 16 59.5 31 74.5 31.07" fill="none" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <rect x="34.5" y="40" width="30" height="30" fill="#f5f7ff" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <line x1="34.5" y1="48" x2="63.5" y2="48" fill="none" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <line x1="45.5" y1="70" x2="45.5" y2="40" fill="none" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <line x1="34.5" y1="56" x2="63.5" y2="56" fill="none" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <line x1="34.5" y1="64" x2="63.5" y2="64" fill="none" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                    <rect x="14.5" y="5" width="56" height="70" rx="6" ry="6"
+                                                        fill="#e3e7fe" stroke="#6576ff" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" />
+                                                    <path
+                                                        d="M69.38,85H29.62a6.06,6.06,0,0,1-6.12-6V21a6.06,6.06,0,0,1,6.12-6H59.16L75.5,30.47V79A6.06,6.06,0,0,1,69.38,85Z"
+                                                        fill="#fff" stroke="#6576ff" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2" />
+                                                    <polyline points="59.5 16 59.5 31 74.5 31.07" fill="none"
+                                                        stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <rect x="34.5" y="40" width="30" height="30" fill="#f5f7ff"
+                                                        stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <line x1="34.5" y1="48" x2="63.5" y2="48" fill="none"
+                                                        stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <line x1="45.5" y1="70" x2="45.5" y2="40" fill="none"
+                                                        stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <line x1="34.5" y1="56" x2="63.5" y2="56" fill="none"
+                                                        stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
+                                                    <line x1="34.5" y1="64" x2="63.5" y2="64" fill="none"
+                                                        stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" />
                                                 </svg>
                                             </div>
                                             <div class="service-text">
@@ -234,7 +280,7 @@
                                 </a>
                             </div><!-- .col- -->
                             <div class="col-mb-6 col-lg-4">
-                                <a href="">
+                                <a href="{{url_for('app.view', app_name='project')}}">
                                     <div class="card card-full service service-s4 after-bg-danger">
                                         <div class="card-inner">
                                             <div class="service-icon styled-icon styled-icon-6x text-danger">
@@ -275,8 +321,8 @@
                                                 </svg>
                                             </div>
                                             <div class="service-text">
-                                                <h5 class="title text-dark">Sales</h5>
-                                                <p>Send polished quotations.</p>
+                                                <h5 class="title text-dark">Project</h5>
+                                                <p>Agile project management.</p>
                                             </div>
                                         </div>
                                     </div><!-- .service -->
@@ -502,7 +548,12 @@
                                 <p>No credit card required - Instant access</p>
                                 <ul class="btns-inline justify-center pt-2">
                                     <li>
+<<<<<<< HEAD
                                         <a href="{{url_for('main.choose_apps')}}" class="btn btn-xl btn-primary btn-round">Start now - It's free</a>
+=======
+                                        <a href="{{url_for('main.contact_us')}}"
+                                            class="btn btn-xl btn-primary btn-round">Contact Us</a>
+>>>>>>> main
                                     </li>
                                 </ul>
                             </div>

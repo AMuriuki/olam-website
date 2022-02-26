@@ -25,3 +25,9 @@ def send_server_activation_email(user, domain_name):
                    '.olam-erp.com', html_content=render_template('email/activate_server.html', user=user, token=token, domain_name=domain_name))
     print("sending email...")
     send_email(message)
+
+
+def inquiry_email(lead):
+    message = Mail(from_email=current_app.config['ADMINS'][0], to_emails=[
+                   "contact@olam-erp.com"], subject='Olam ERP Inquiry', html_content=render_template('email/inquire.html', lead=lead))
+    send_email(message)

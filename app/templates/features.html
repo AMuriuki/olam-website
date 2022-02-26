@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .col-lg-6 {
+        padding: 14px !important;
+    }
+
+    .card-preview {
+        border: 1px solid #dbdfea;
+    }
+
+    @media (min-width: 992px) {
+        .wide-md {
+            max-width: 90% !important
+        }
+    }
+
+    .nk-block-lg{
+        margin-top: 5%;
+    }
+
+    .nk-block-head-content{
+        margin-bottom: 5%;
+    }
+</style>
+<body class="nk-body bg-white npc-landing ">
+    <div class="nk-app-root">
+        <div class="nk-main ">
+            {% include "header-3.html" %}
+            <section class="section section-service pb-0">
+                <div class="nk-content ">
+                    <div class="container wide-xl">
+                        <div class="nk-content-inner">
+                            <div class="components-preview wide-md mx-auto">
+                                <div class="nk-block nk-block-lg">
+                                    <div class="nk-block-head-content">
+                                        <div class="nk-block-head-sub"><a class="back-to"
+                                                href="{{url_for('app.view', app_name=app_name)}}"><em
+                                                    class="icon ni ni-arrow-left"></em><span>Back</span></a></div>
+                                        <h2 class="nk-block-title fw-normal">{{app_name|title}}&nbsp;Features</h2>
+                                    </div>
+                                    <div class="card-inner" style="padding: 0px !important;">
+                                        <div id="accordion" class="accordion">
+                                            {% for category in categories %}
+                                            <div class="accordion-item">
+                                                <a href="#" class="accordion-head" data-toggle="collapse"
+                                                    data-target="#accordion-item-{{category.id}}" aria-expanded="true">
+                                                    <h6 class="title">{{category.title}}</h6>
+                                                    <span class="accordion-icon"></span>
+                                                </a>
+                                                <div class="accordion-body collapse" id="accordion-item-{{category.id}}"
+                                                    data-parent="#accordion">
+                                                    <div class="accordion-inner">
+                                                        <div class="nk-block">
+                                                            <div class="row g-gs">
+                                                                {% for feature in features %}
+                                                                {% if feature.feature_category == category.id %}
+                                                                <div class="col-md-4">
+                                                                    <div
+                                                                        class="price-plan card card-bordered text-center">
+                                                                        <div class="card-inner"
+                                                                            style="text-align: left !important;">
+                                                                            <div class="price-plan-info">
+                                                                                <h5 class="title">{{feature.name}}</h5>
+                                                                                <span>{{feature.description}}</span>
+                                                                            </div>
+                                                                            {% if feature.name == "Sales" %}
+                                                                            <a href="{{url_for('app.view', app_name='sales')}}"
+                                                                                class="btn btn-wider btn-primary"><span>Read
+                                                                                    more</span><em
+                                                                                    class="icon ni ni-arrow-right"></em></a>
+                                                                            {% elif feature.name == "Inventory" %}
+                                                                            <a href="{{url_for('app.view', app_name='inventory')}}"
+                                                                                class="btn btn-wider btn-primary"><span>Read
+                                                                                    more</span><em
+                                                                                    class="icon ni ni-arrow-right"></em></a>
+                                                                            {% elif feature.name == "Purchase" %}
+                                                                            <a href="{{url_for('app.view', app_name='purchase')}}"
+                                                                                class="btn btn-wider btn-primary"><span>Read
+                                                                                    more</span><em
+                                                                                    class="icon ni ni-arrow-right"></em></a>
+                                                                            {% elif feature.name == "E-commerce" %}
+                                                                            <a href="{{url_for('app.view', app_name='e-commerce')}}"
+                                                                                class="btn btn-wider btn-primary"><span>Read
+                                                                                    more</span><em
+                                                                                    class="icon ni ni-arrow-right"></em></a>
+                                                                            {% endif %}
+                                                                        </div>
+
+                                                                    </div><!-- .price-item -->
+                                                                </div>
+                                                                <!-- .col -->
+                                                                {% endif %}
+                                                                {% endfor %}
+                                                            </div><!-- .row -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {% include "footer.html" %}
+        </div>
+    </div>
+    {% include "scripts.html" %}
+</body>
+{% endblock %}

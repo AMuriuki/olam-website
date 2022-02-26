@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "User",
+    "description": "Stores authentication details for each user.",
+    "module_id": 1
+  },
+  {
+    "id": 2,
+    "name": "Group",
+    "description": "Stores user access groups.",
+    "module_id": 1
+  }
+]

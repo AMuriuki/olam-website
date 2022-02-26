@@ -2,12 +2,7 @@
     <div class="container header-container">
         <div class="header-wrap">
             <div class="header-logo">
-                <a href="{{url_for('main.index')}}" class="logo-link">
-                    <img class="logo-light logo-img" src="{{url_for('static', filename='images/olamerp.png')}}"
-                        srcset="../static/images/olamerp2x.png 2x" alt="logo">
-                    <img class="logo-dark logo-img" src="{{url_for('static', filename='images/olamerp-dark.png')}}"
-                        srcset="../static/images/olamerp-dark2x.png 2x" alt="logo-dark">
-                </a>
+                {% include "logo.html" %}
             </div>
             <div class="header-toggle">
                 <button class="menu-toggler" data-target="mainNav">
@@ -19,117 +14,46 @@
                 <ul class="menu-list ml-lg-auto">
                     <li class="menu-item has-sub">
                         {% if app_name %}
-                        <a href="#" class="menu-link menu-toggle">{{app_name}}</a>
+                        <a href="#" class="menu-link menu-toggle">{{app_name|capitalize}}</a>
                         {% else %}
                         <a href="#" class="menu-link menu-toggle">Apps</a>
                         {% endif %}
                         <div class="menu-sub">
                             <ul class="menu-list">
+                                {% for moduleCategory in moduleCategories %}
+                                {% if moduleCategory.id != 1 %}
                                 <li class="menu-item has-sub">
-                                    <a href="#" class="menu-link menu-toggle">Finance</a>
+                                    <a href="#" class="menu-link menu-toggle">{{moduleCategory.name}}</a>
                                     <div class="menu-sub">
                                         <ul class="menu-list">
-                                            <li class="menu-item"><a href="{{url_for('app.accounting')}}"
-                                                    class="menu-link">Accounting</a>
+                                            {% for module in modules %}
+                                            {% if module.category_id == moduleCategory.id %}
+                                            <li class="menu-item"><a
+                                                    href="{{module.url}}"
+                                                    class="menu-link">{% if
+                                                    module.technical_name == 'crm'
+                                                    %}{{module.technical_name|upper}}{% else
+                                                    %}{{module.technical_name|title}}{%
+                                                    endif %}</a>
                                             </li>
-                                            <li class="menu-item"><a href="#" class="menu-link">Invoicing</a></li>
-                                            <li class="menu-item"><a href="#" class="menu-link">Expenses</a></li>
-                                            <li class="menu-item"><a href="#" class="menu-link">Documents</a></li>
+                                            {% endif %}
+                                            {% endfor %}
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="menu-item has-sub">
-                                    <a href="#" class="menu-link menu-toggle">Sales</a>
-                                    <div class="menu-sub">
-                                        <ul class="menu-list">
-                                            <li class="menu-item"><a href="#" target="_blank" class="menu-link">CRM</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Sales</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank" class="menu-link">Point
-                                                    of Sale</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Subscriptions</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Rental</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="menu-item has-sub">
-                                    <a href="#" class="menu-link menu-toggle">Inventory</a>
-                                    <div class="menu-sub">
-                                        <ul class="menu-list">
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Inventory</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Purchase</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="menu-item has-sub">
-                                    <a href="#" class="menu-link menu-toggle">Human Resources</a>
-                                    <div class="menu-sub">
-                                        <ul class="menu-list">
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Employees</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Recruitment</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank" class="menu-link">Time
-                                                    Off</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Appraisals</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Referrals</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Fleet</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="menu-item has-sub">
-                                    <a href="#" class="menu-link menu-toggle">Services</a>
-                                    <div class="menu-sub">
-                                        <ul class="menu-list">
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Project</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Timesheet</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank" class="menu-link">Field
-                                                    Service</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Helpdesk</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Planning</a>
-                                            </li>
-                                            <li class="menu-item"><a href="#" target="_blank"
-                                                    class="menu-link">Appointments</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
+                                {% endif %}
+                                {% endfor %}
                             </ul>
                         </div>
                     </li>
-                    {% if app_name == "Accounting" %}
-                    <li class="menu-item"><a href="{{url_for('app.accounting')}}"
+                    {% if app_name == "accounting" %}
+                    <li class="menu-item"><a href="{{url_for('app.view', app_name='accounting')}}"
                             class="menu-link nav-link">Overview</a>
                     </li>
-                    <li class="menu-item"><a href="/app/accounting/features" class="menu-link nav-link">Features</a>
+                    {% endif %}
+                    {% if app_name %}
+                    <li class="menu-item"><a href="{{url_for('app.features', app_name=app_name)}}"
+                            class="menu-link nav-link">Features</a>
                     </li>
                     {% endif %}
                     <li class="menu-item"><a href="{{ url_for('auth.login') }}" class="menu-link nav-link">Sign

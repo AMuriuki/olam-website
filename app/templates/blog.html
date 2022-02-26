@@ -1,0 +1,257 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    main {
+        padding-bottom: 6.875rem !important
+    }
+
+    .g-0>li,
+    .g-0>div {
+        padding: 0 !important;
+    }
+
+    .p-4 {
+        padding: 1.5rem !important;
+    }
+
+    .nav {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+    }
+
+    .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: visible;
+    }
+
+    .py-1 {
+        padding-top: .25rem !important;
+        padding-bottom: .25rem !important;
+    }
+
+    .mb-2 {
+        margin-bottom: .5rem !important;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+    }
+
+    .nav-scroller .nav {
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .justify-content-between {
+        justify-content: space-between !important;
+    }
+
+    .d-flex {
+        display: flex !important;
+    }
+</style>
+
+<body class="nk-body bg-white npc-landing ">
+    <div class="container">
+        <header class="blog-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4 pt-1">
+                    {% include "logo.html" %}
+                </div>
+                <div class="header-toggle">
+                    <button class="menu-toggler" data-target="mainNav">
+                        <em class="menu-on icon ni ni-menu"></em>
+                        <em class="menu-off icon ni ni-cross"></em>
+                    </button>
+                </div><!-- .header-nav-toggle -->
+                <nav class="header-menu" data-content="mainNav">
+                    <ul class="menu-list ml-lg-auto">
+                        <li class="menu-item has-sub">
+                            <a href="#" class="menu-link menu-toggle">Apps</a>
+                            <div class="menu-sub">
+                                <ul class="menu-list">
+                                    {% for moduleCategory in moduleCategories %}
+                                    <li class="menu-item has-sub">
+                                        <a href="#" class="menu-link menu-toggle">{{moduleCategory.name}}</a>
+                                        <div class="menu-sub">
+                                            <ul class="menu-list">
+                                                {% for module in modules %}
+                                                {% if module.category_id == moduleCategory.id %}
+                                                <li class="menu-item">
+                                                    <a href="{{url_for('app.view', app_name=module.bp_name)}}"
+                                                        class="menu-link">
+                                                        {% if module.technical_name == 'crm' %}
+                                                        {{module.technical_name|upper}}
+                                                        {% else %}
+                                                        {{module.technical_name|title}}
+                                                        {% endif %}
+                                                    </a>
+                                                </li>
+                                                {% endif %}
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item"><a href="{{ url_for('auth.login') }}" class="menu-link nav-link">Sign
+                                in</a></li>
+                    </ul>
+                    <ul class="menu-btns">
+                        <li>
+                            <a href="{{url_for('main.contact_us')}}" class="btn btn-primary btn-lg">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav><!-- .nk-nav-menu -->
+            </div>
+        </header>
+
+        <div class="nav-scroller py-1 mb-2">
+            <nav class="nav d-flex justify-content-between">
+                {% for category in categories %}
+                <a class="p-2 link-secondary" href="{{url_for('main.blog_category', slug=category.slug)}}">{{category.name}}</a>
+                {% endfor %}
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        {% for post in posts %}
+        {% if post.is_featured == True %}
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 fst-italic">{{post.title}}</h1>
+                <p class="lead my-3">{{post.body_html[:143]|safe}}...</p>
+                <p class="lead mb-0"><a href="{{url_for('main.blog_details', category=post.category.slug, id=post.id)}}" class="text-white fw-bold">Continue reading...</a></p>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+        <div class="row mb-2">
+            <div class="col-lg-6">
+                <div class="card card-bordered" style="margin-bottom: 1.375rem !important">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                        class="card-img-top" alt="">
+                    <div class="card-inner">
+                        <h5 class="card-title">Card with stretched link</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card card-bordered" style="margin-bottom: 1.375rem !important">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                        class="card-img-top" alt="">
+                    <div class="card-inner">
+                        <h5 class="card-title">Card with stretched link</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-md-8">
+                <div class="card card-bordered" style="margin-bottom: 1.375rem !important">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                        class="card-img-top" alt="">
+                    <div class="card-inner">
+                        <h5 class="card-title">Card with stretched link</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card card-bordered" style="margin-bottom: 1.375rem !important">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                        class="card-img-top" alt="">
+                    <div class="card-inner">
+                        <h5 class="card-title">Card with stretched link</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+                <nav class="blog-pagination" aria-label="Pagination">
+                    <a class="btn btn-outline-primary" href="#">Older</a>
+                    <a class="btn btn-outline-secondary disabled">Newer</a>
+                </nav>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-sticky" style="top: 2rem;">
+                    <div class="p-4 mb-3 bg-light rounded">
+                        <h4 class="fst-italic">About</h4>
+                        <p class="mb-0">Customize this section to tell your visitors a little bit about your
+                            publication, writers,
+                            content, or something else entirely. Totally up to you.</p>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">Archives</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li><a href="#">March 2021</a></li>
+                            <li><a href="#">February 2021</a></li>
+                            <li><a href="#">January 2021</a></li>
+                            <li><a href="#">December 2020</a></li>
+                            <li><a href="#">November 2020</a></li>
+                            <li><a href="#">October 2020</a></li>
+                            <li><a href="#">September 2020</a></li>
+                            <li><a href="#">August 2020</a></li>
+                            <li><a href="#">July 2020</a></li>
+                            <li><a href="#">June 2020</a></li>
+                            <li><a href="#">May 2020</a></li>
+                            <li><a href="#">April 2020</a></li>
+                        </ol>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">Elsewhere</h4>
+                        <ol class="list-unstyled">
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    {% include "footer.html" %}
+    {% include "scripts.html" %}
+</body>
+{% endblock %}

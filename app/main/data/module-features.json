@@ -1,0 +1,534 @@
+[
+  {
+    "id": 1,
+    "name": "Beautiful user interface",
+    "description": "A fast and modern user interface your users will love. Based on Twitter's Bootstrap Design trend.",
+    "feature_category": 1,
+    "module_id": 6
+  },
+  {
+    "id": 2,
+    "name": "Collaboration & Alerts",
+    "description": "Follow what interests you, get automatic alerts and collaborate on documents easily.",
+    "feature_category": 1,
+    "module_id": 6
+  },
+  {
+    "id": 3,
+    "name": "Easy setup",
+    "description": "Simplified initial setup with a configuration progress bar (example: set your initial balances from one screen).",
+    "feature_category": 1,
+    "module_id": 6
+  },
+  {
+    "id": 4,
+    "name": "Reduce data entry",
+    "description": "No need to create invoices manually, print and send them, register bank statements, follow-up payments... Automate more, save time.",
+    "feature_category": 1,
+    "module_id": 6
+  },
+  {
+    "id": 5,
+    "name": "Pay Multiple Invoices",
+    "description": "Ability to reconcile a payment with several invoices using a button on the payment form.",
+    "feature_category": 1,
+    "module_id": 6
+  },
+  {
+    "id": 6,
+    "name": "Mobile",
+    "description": "Get an instant access to all accounting features, wherever you are, on tablets or smart phones.",
+    "feature_category": 1,
+    "module_id": 6
+  },
+  {
+    "id": 7,
+    "name": "Clean customer invoices",
+    "description": "Olam invoices are easy to create, beautiful and full featured. (payment terms, multiple taxes, discounts, price lists)",
+    "feature_category": 2,
+    "module_id": 6
+  },
+  {
+    "id": 8,
+    "name": "Draft invoice propositions",
+    "description": "Draft invoices are created automatically by Olam based on sales order, timesheets or delivery orders.",
+    "feature_category": 2,
+    "module_id": 6
+  },
+  {
+    "id": 9,
+    "name": "Advanced Payment terms",
+    "description": "Support multiple payments for one invoice, cash discounts, advance invoice and partial reconciliations.",
+    "feature_category": 2,
+    "module_id": 6
+  },
+  {
+    "id": 10,
+    "name": "On-the-fly payment reconciliation",
+    "description": "When creating an invoice, Olam suggests outstanding payments automatically so that you don't have to reconcile it later.",
+    "feature_category": 2,
+    "module_id": 6
+  },
+  {
+    "id": 11,
+    "name": "Credit Card/Mobile Money Payments",
+    "description": "Get paid quickly by supporting online payment with credit cards. We support main payment gateways like Paypal, M-Pesa, etc.",
+    "feature_category": 3,
+    "module_id": 6
+  },
+  {
+    "id": 12,
+    "name": "Aged receivable balance",
+    "description": "The receivable report gives you a clear overview of overdue payments and treasury forecast.",
+    "feature_category": 3,
+    "module_id": 6
+  },
+  {
+    "id": 13,
+    "name": "Customer Portal",
+    "description": "Your customer can track their order status, invoices, and payments through their portal.",
+    "feature_category": 3,
+    "module_id": 6
+  },
+  {
+    "id": 14,
+    "name": "Advanced customer statements",
+    "description": "Get clear reports on customer statements and navigate easily through the documents to understand every customer use case.",
+    "feature_category": 3,
+    "module_id": 6
+  },
+  {
+    "id": 15,
+    "name": "QR Codes",
+    "description": "Your customers can scan a QR code with their banking app to pay. The QR code is on PDF invoices and shows up in the payment screen of quotations and invoices.",
+    "feature_category": 3,
+    "module_id": 6
+  },
+  {
+    "id": 16,
+    "name": "Control supplier bills",
+    "description": "Compare the information appearing on the Purchase Order, the Vendor Bill, and the Receipt to make sure you pay the correct bill",
+    "feature_category": 4,
+    "module_id": 6
+  },
+  {
+    "id": 17,
+    "name": "Employee expenses",
+    "description": "Track employee expenses, from the recording to the validation and reimbursement.",
+    "feature_category": 4,
+    "module_id": 6
+  },
+  {
+    "id": 18,
+    "name": "Forecast expenses",
+    "description": "Get a clear forecast of your future bills to pay.",
+    "feature_category": 4,
+    "module_id": 6
+  },
+  {
+    "id": 19,
+    "name": "Print checks",
+    "description": "Get a proposition of supplier bills to pay and print checks in batch in just a few clicks.",
+    "feature_category": 5,
+    "module_id": 6
+  },
+  {
+    "id": 20,
+    "name": "Deposit ticket",
+    "description": "Keep track of deposit tickets in just a few clicks to ease the bank reconciliation process.",
+    "feature_category": 5,
+    "module_id": 6
+  },
+  {
+    "id": 21,
+    "name": "Organize payment orders",
+    "description": "Support your own payment flows with optional validation steps.",
+    "feature_category": 5,
+    "module_id": 6
+  },
+  {
+    "id": 22,
+    "name": "Manage cash registers",
+    "description": "Easily track every cash transaction with opening and closing.",
+    "feature_category": 6,
+    "module_id": 6
+  },
+  {
+    "id": 23,
+    "name": "Import Statements",
+    "description": "Use CSV files to import statements easily.",
+    "feature_category": 6,
+    "module_id": 6
+  },
+  {
+    "id": 24,
+    "name": "Smart Reconciliation Tool",
+    "description": "Get reconciliation propositions automatically, register extra journal items on the fly, search efficiently. Interface for manual reconciliations, for both open and paid invoices. Learning of account numbers based on first manual reconciliation. Olam matches 95% of invoices & payments automatically and the smart matching tool allows to do the remaining 5% super fast.",
+    "feature_category": 7,
+    "module_id": 6
+  },
+  {
+    "id": 25,
+    "name": "Easy outstanding payments",
+    "description": "Get partial and full reconciliation proposition directly from the invoice or the bank statement.",
+    "feature_category": 7,
+    "module_id": 6
+  },
+  {
+    "id": 26,
+    "name": "Online Payments",
+    "description": "Confirmed online transactions create a payment for easy reconciliation. They also show up as notifications in the document’s chatter for easier follow-up.",
+    "feature_category": 7,
+    "module_id": 6
+  },
+  {
+    "id": 27,
+    "name": "Access Control Lists",
+    "description": "Access rights are super flexible. Default configurations are already setup for accountants and advisers.",
+    "feature_category": 8,
+    "module_id": 6
+  },
+  {
+    "id": 28,
+    "name": "Multi-currency support",
+    "description": "Get your currencies rate updated automatically every day.",
+    "feature_category": 9,
+    "module_id": 6
+  },
+  {
+    "id": 29,
+    "name": "Multi companies",
+    "description": "Get all your subsidiaries integrated in the same system with consolidation reports in real time. Automate business flows with inter-company rules.",
+    "feature_category": 9,
+    "module_id": 6
+  },
+  {
+    "id": 30,
+    "name": "Multiple users",
+    "description": "Define as many users as you want with different access rights.",
+    "feature_category": 9,
+    "module_id": 6
+  },
+  {
+    "id": 31,
+    "name": "Multi Journals",
+    "description": "Organize your document into several journals (by departments, by type of activity) to split roles across several users.",
+    "feature_category": 9,
+    "module_id": 6
+  },
+  {
+    "id": 32,
+    "name": "Business Intelligence reports",
+    "description": "Use Olam pivot table to navigate through the information: consolidations, drill-up/down, group data, filters, etc. Multiple standard reports are available - Profit & Loss, cash flow statements, cash reports, executive summary and aged payable/receivables, etc. Get standard reports and chart of accounts available for 80+ countries. Export to Excel and pdf.",
+    "feature_category": 10,
+    "module_id": 6
+  },
+  {
+    "id": 33,
+    "name": "Customizable dashboards",
+    "description": "Create your own dashboard by assembling custom reports. Generate reports for any time period, comparing time period. Get dynamic calculation of certain fields e.g. YTD earning. Share filters and dashboard across teams.",
+    "feature_category": 10,
+    "module_id": 6
+  },
+  {
+    "id": 34,
+    "name": "Annotate any report",
+    "description": "All reports are full dynamic allowing you to navigate easily. Create multiple annotations. Annotate reports to add your notes for the managers inline.",
+    "feature_category": 10,
+    "module_id": 6
+  },
+  {
+    "id": 35,
+    "name": "Customizable KPI's",
+    "description": "Define your own KPIs based on formulas: gross margin, customer acquisition costs, growth rate by products.",
+    "feature_category": 10,
+    "module_id": 6
+  },
+  {
+    "id": 36,
+    "name": "Perpetual fiscal year closing",
+    "description": "No need to report balance sheet accounts from one year to another. Automatic calculation of P&L based on chosen dates, only need to write the handling of earnings for closure. Choose lock entry dates for non advisers and all users.",
+    "feature_category": 10,
+    "module_id": 6
+  },
+  {
+    "id": 37,
+    "name": "Profit & Loss",
+    "description": "Navigate easily through the flow of information from the Profit & Loss report.",
+    "feature_category": 11,
+    "module_id": 6
+  },
+  {
+    "id": 38,
+    "name": "Advanced Payment terms",
+    "description": "Support multiple payments for one invoice, cash discounts, advance invoice and partial reconciliations.",
+    "feature_category": 11,
+    "module_id": 6
+  },
+  {
+    "id": 39,
+    "name": "Cash flow statement",
+    "description": "Get a cash flow statement in real time with lots of options in the filters.",
+    "feature_category": 11,
+    "module_id": 6
+  },
+  {
+    "id": 40,
+    "name": "General ledger",
+    "description": "Search and filter in the general ledger easily and zoom into documents in just a click.",
+    "feature_category": 11,
+    "module_id": 6
+  },
+  {
+    "id": 41,
+    "name": "Advanced Taxes Management",
+    "description": "Olam's tax engine support a wide range of tax computations: price included / excluded, percentage, grid, tax on taxes, partial exemptions, etc.",
+    "feature_category": 11,
+    "module_id": 6
+  },
+  {
+    "id": 42,
+    "name": "Consolidated Journal Report",
+    "description": "The consolidated journal displays what happened in each journal organized month by month for readability.",
+    "feature_category": 11,
+    "module_id": 6
+  },
+  {
+    "id": 43,
+    "name": "Balance Sheet",
+    "description": "Get your current year earnings automatically reported to your balance sheet to report at any time without having to close/open fiscal years.",
+    "feature_category": 11,
+    "module_id": 6
+  },
+  {
+    "id": 44,
+    "name": "Tax reports",
+    "description": "Get your tax reports in accrual or cash based, formatted according to the right country.",
+    "feature_category": 11,
+    "module_id": 6
+  },
+  {
+    "id": 45,
+    "name": "Tax Audit Report",
+    "description": "The tax audit report allows you to check how the tax report is computed for audit purposes. In the tax report, select a line and click on the 'audit' button to audit the journal items (base and tax in the same report).",
+    "feature_category": 11,
+    "module_id": 6
+  },
+  {
+    "id": 46,
+    "name": "Consolidation",
+    "description": "Combine financial information from multiple companies to generate a consolidated set of statements.  Leverage closing, historic, or average exchange rates and add multiple adjustment columns (no GL impact). Use data from other financial systems and adjust for partial control or ownership of one or more companies.",
+    "feature_category": 11,
+    "module_id": 6
+  },
+  {
+    "id": 47,
+    "name": "Hierarchies of cost accounts",
+    "description": "Structure automatically your analytic accounts based on projects, contracts, departments, etc.",
+    "feature_category": 12,
+    "module_id": 6
+  },
+  {
+    "id": 48,
+    "name": "Fully integrated",
+    "description": "Get analytic entries automatically produced based on timesheets, supplier bills, work orders, etc.",
+    "feature_category": 12,
+    "module_id": 6
+  },
+  {
+    "id": 49,
+    "name": "Analytic distribution",
+    "description": "Distribute one accounting entry into multiple analytic accounts by using analytics tags and flexible distribution.",
+    "feature_category": 12,
+    "module_id": 6
+  },
+  {
+    "id": 50,
+    "name": "Multiple-plans",
+    "description": "Manage multiple analytic plans with default values and assignations ratios between cost accounts or projects.",
+    "feature_category": 12,
+    "module_id": 6
+  },
+  {
+    "id": 51,
+    "name": "Analytic report",
+    "description": "Get clear reports on your analytic accounts with hierarchy and subtotals.",
+    "feature_category": 12,
+    "module_id": 6
+  },
+  {
+    "id": 52,
+    "name": "Automatic Invoicing",
+    "description": "Manage subscription and recurring revenues easily with contracts. Automate recurring invoices, payments and renewal alerts.",
+    "feature_category": 13,
+    "module_id": 6
+  },
+  {
+    "id": 53,
+    "name": "Renewal alerts",
+    "description": "Your salesperson get automated alerts when contracts have to be renewed.",
+    "feature_category": 13,
+    "module_id": 6
+  },
+  {
+    "id": 54,
+    "name": "Customer portal",
+    "description": "Your customers can change their plans, order upgrades or downgrades / unsubscribe through the customer portal. (Based on your configuration)",
+    "feature_category": 13,
+    "module_id": 6
+  },
+  {
+    "id": 55,
+    "name": "Recurring revenues & extra",
+    "description": "Manage multiple subscription plans, templates and extra fees.",
+    "feature_category": 13,
+    "module_id": 6
+  },
+  {
+    "id": 56,
+    "name": "Assets Management",
+    "description": "Track assets, depreciation boards and generate amortization entries automatically. Manage all events on your assets in just a few clicks.",
+    "feature_category": 14,
+    "module_id": 6
+  },
+  {
+    "id": 57,
+    "name": "Revenue Recognition",
+    "description": "Manage multi-year contracts, automate deferred revenues entries and get clear dashboards on your recurring revenues.",
+    "feature_category": 14,
+    "module_id": 6
+  },
+  {
+    "id": 58,
+    "name": "Budgets",
+    "description": "Track your budget and compare actual performance with different budget. Manage budget on your financial accounting or analytic accounts.",
+    "feature_category": 14,
+    "module_id": 6
+  },
+  {
+    "id": 59,
+    "name": "Web-service API",
+    "description": "Connect third party applications with the Olam web service API. We support all languages: python, PHP, java, c#, ruby, ...",
+    "feature_category": 15,
+    "module_id": 6
+  },
+  {
+    "id": 60,
+    "name": "Sales",
+    "description": "Get your customer invoices created automatically from your sales order, tasks or delivery orders.",
+    "feature_category": 16,
+    "module_id": 6
+  },
+  {
+    "id": 61,
+    "name": "Inventory",
+    "description": "Work in periodic or perpetal inventory valuations. Get your accounting entries created automatically in standard price, average price of FIFO.",
+    "feature_category": 16,
+    "module_id": 6
+  },
+  {
+    "id": 62,
+    "name": "Purchase",
+    "description": "Control supplier bills is just a few clicks. No need to record everything, they are proposed by Olam based on purchase orders or incoming shipments.",
+    "feature_category": 16,
+    "module_id": 6
+  },
+  {
+    "id": 63,
+    "name": "E-commerce",
+    "description": "Get all your ecommerce transactions reported automatically in your accounts: sales, payments, refunds, shipping, etc.",
+    "feature_category": 16,
+    "module_id": 6
+  },
+  {
+    "id": 64,
+    "name": "Customer Portal",
+    "description": "Your customers get an access to their portal where they can download invoices, check order status, track payments, etc.",
+    "feature_category": 16,
+    "module_id": 6
+  },
+  {
+    "id": 65,
+    "name": "Expense request",
+    "description": "Easily submit expense requests: from your laptop, pad, or mobile phone. Or simply send the picture of the receipt to a configurable email alias.",
+    "feature_category": 17,
+    "module_id": 8
+  },
+  {
+    "id": 66,
+    "name": "Ask questions and give answers",
+    "description": "Allow employees to record expenses for their professional spendings with a clear overview of all the spendings for a defined period, for events, travels, etc.",
+    "feature_category": 17,
+    "module_id": 8
+  },
+  {
+    "id": 67,
+    "name": "Add attachments",
+    "description": "Easily add attachments to expense records to provide reviewers with proof of spendings such as tickets, bills, etc.",
+    "feature_category": 17,
+    "module_id": 8
+  },
+  {
+    "id": 68,
+    "name": "Expense reports",
+    "description": "Group similar expenses in an expense report and speed up the approval process by approving all the expenses in one click.",
+    "feature_category": 17,
+    "module_id": 8
+  },
+  {
+    "id": 69,
+    "name": "Add comments",
+    "description": "Write notes to expense records to add information for reviewers.",
+    "feature_category": 17,
+    "module_id": 8
+  },
+  {
+    "id": 70,
+    "name": "Submit to Managers",
+    "description": "Submit drafts of expenses to managers to request for an approval.",
+    "feature_category": 17,
+    "module_id": 8
+  },
+  {
+    "id": 71,
+    "name": "Check status",
+    "description": "Have a clear overview of all expenses'statuses at once as well as separately.",
+    "feature_category": 17,
+    "module_id": 8
+  },
+  {
+    "id": 72,
+    "name": "Review expense records",
+    "description": "Review employee’s notes to complete, validate or refuse them. Add a comment when refusing to give employees an explanation.",
+    "feature_category": 18,
+    "module_id": 8
+  },
+  {
+    "id": 73,
+    "name": "Compare expense and receipts",
+    "description": "Olam displays a preview of the receipt next to the expense request in order to facilitate the expenses approval processes.",
+    "feature_category": 18,
+    "module_id": 8
+  },
+  {
+    "id": 74,
+    "name": "Accounting integration",
+    "description": "Once approved, journal entries for the expense will be posted and reconciled.",
+    "feature_category": 18,
+    "module_id": 8
+  },
+  {
+    "id": 75,
+    "name": "Manage per team",
+    "description": "Follow expenses for a whole team.",
+    "feature_category": 18,
+    "module_id": 8
+  },
+  {
+    "id": 76,
+    "name": "Reinvoice your expenses",
+    "description": "Easily invoice your expenses to a customer.",
+    "feature_category": 18,
+    "module_id": 8
+  }
+]

@@ -56,6 +56,7 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
     tasks = db.relationship('Task', backref='user', lazy='dynamic')
     password_hash = db.Column(db.String(128))
     country_code = db.Column(db.String(10), index=True)
+    posts = db.relationship('Post', backref='author', lazy='dynamic')
 
     def __repr__(self):
         return '<User {}>'.format(self.name)

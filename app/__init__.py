@@ -112,6 +112,8 @@ def create_app(config_class=Config):
 
     return app
 
+from app.main.models.module import Model, Module
+
 
 @babel.localeselector
 def get_locale():
