@@ -28,5 +28,11 @@
     "name": "User",
     "module_id": 1,
     "permission": 1
+  },
+  {
+    "id": "950f2df6-64bf-4a99-8659-6abba655e8d5",
+    "name": "Manager",
+    "module_id": 2,
+    "permission": 2
   }
 ]

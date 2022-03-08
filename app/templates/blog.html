@@ -95,6 +95,7 @@
                             <div class="menu-sub">
                                 <ul class="menu-list">
                                     {% for moduleCategory in moduleCategories %}
+                                    {% if moduleCategory.id != 1 %}
                                     <li class="menu-item has-sub">
                                         <a href="#" class="menu-link menu-toggle">{{moduleCategory.name}}</a>
                                         <div class="menu-sub">
@@ -116,6 +117,7 @@
                                             </ul>
                                         </div>
                                     </li>
+                                    {% endif %}
                                     {% endfor %}
                                 </ul>
                             </div>

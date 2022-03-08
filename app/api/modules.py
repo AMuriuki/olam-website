@@ -1,6 +1,6 @@
 from flask import request, jsonify
 from app.api import bp
-from app.main.models.module import Module, ModuleCategory
+from app.main.models.module import Model, Module, ModuleCategory
 
 
 @bp.route('/module_categories', methods=['GET'])
@@ -30,4 +30,22 @@ def get_apps():
     per_page = min(request.args.get('per_page', 10, type=int), 100)
     data = Module._to_collection_dict(
         Module.query, page, per_page, 'api.get_apps')
+    return jsonify(data)
+
+
+@bp.route('/modules', methods=['GET'])
+def get_modules():
+    page = request.args.get('page', 1, type=int)
+    per_page = min(request.args.get('per_page', 10, type=int), 100)
+    data = Module._to_collection_dict(
+        Module.query, page, per_page, 'api.get_modules')
+    return jsonify(data)
+
+
+@bp.route('/models', methods=['GET'])
+def get_models():
+    page = request.args.get('page', 1, type=int)
+    per_page = min(request.args.get('per_page', 10, type=int), 100)
+    data = Model._to_collection_dict(
+        Model.query, page, per_page, 'api.get_models')
     return jsonify(data)

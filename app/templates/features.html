@@ -2,114 +2,593 @@
 
 {% block content %}
 <style>
-    .col-lg-6 {
-        padding: 14px !important;
+    header {
+        background-size: auto 100%;
+        opacity: 1;
     }
 
-    .card-preview {
-        border: 1px solid #dbdfea;
-    }
-
-    @media (min-width: 992px) {
-        .wide-md {
-            max-width: 90% !important
-        }
-    }
-
-    .nk-block-lg{
-        margin-top: 5%;
-    }
-
-    .nk-block-head-content{
-        margin-bottom: 5%;
+    .card-bordered {
+        border: 1px solid #dbdfea !important;
     }
 </style>
+
 <body class="nk-body bg-white npc-landing ">
     <div class="nk-app-root">
         <div class="nk-main ">
             {% include "header-3.html" %}
-            <section class="section section-service pb-0">
-                <div class="nk-content ">
-                    <div class="container wide-xl">
-                        <div class="nk-content-inner">
-                            <div class="components-preview wide-md mx-auto">
-                                <div class="nk-block nk-block-lg">
-                                    <div class="nk-block-head-content">
-                                        <div class="nk-block-head-sub"><a class="back-to"
-                                                href="{{url_for('app.view', app_name=app_name)}}"><em
-                                                    class="icon ni ni-arrow-left"></em><span>Back</span></a></div>
-                                        <h2 class="nk-block-title fw-normal">{{app_name|title}}&nbsp;Features</h2>
-                                    </div>
-                                    <div class="card-inner" style="padding: 0px !important;">
-                                        <div id="accordion" class="accordion">
-                                            {% for category in categories %}
-                                            <div class="accordion-item">
-                                                <a href="#" class="accordion-head" data-toggle="collapse"
-                                                    data-target="#accordion-item-{{category.id}}" aria-expanded="true">
-                                                    <h6 class="title">{{category.title}}</h6>
-                                                    <span class="accordion-icon"></span>
-                                                </a>
-                                                <div class="accordion-body collapse" id="accordion-item-{{category.id}}"
-                                                    data-parent="#accordion">
-                                                    <div class="accordion-inner">
-                                                        <div class="nk-block">
-                                                            <div class="row g-gs">
-                                                                {% for feature in features %}
-                                                                {% if feature.feature_category == category.id %}
-                                                                <div class="col-md-4">
-                                                                    <div
-                                                                        class="price-plan card card-bordered text-center">
-                                                                        <div class="card-inner"
-                                                                            style="text-align: left !important;">
-                                                                            <div class="price-plan-info">
-                                                                                <h5 class="title">{{feature.name}}</h5>
-                                                                                <span>{{feature.description}}</span>
-                                                                            </div>
-                                                                            {% if feature.name == "Sales" %}
-                                                                            <a href="{{url_for('app.view', app_name='sales')}}"
-                                                                                class="btn btn-wider btn-primary"><span>Read
-                                                                                    more</span><em
-                                                                                    class="icon ni ni-arrow-right"></em></a>
-                                                                            {% elif feature.name == "Inventory" %}
-                                                                            <a href="{{url_for('app.view', app_name='inventory')}}"
-                                                                                class="btn btn-wider btn-primary"><span>Read
-                                                                                    more</span><em
-                                                                                    class="icon ni ni-arrow-right"></em></a>
-                                                                            {% elif feature.name == "Purchase" %}
-                                                                            <a href="{{url_for('app.view', app_name='purchase')}}"
-                                                                                class="btn btn-wider btn-primary"><span>Read
-                                                                                    more</span><em
-                                                                                    class="icon ni ni-arrow-right"></em></a>
-                                                                            {% elif feature.name == "E-commerce" %}
-                                                                            <a href="{{url_for('app.view', app_name='e-commerce')}}"
-                                                                                class="btn btn-wider btn-primary"><span>Read
-                                                                                    more</span><em
-                                                                                    class="icon ni ni-arrow-right"></em></a>
-                                                                            {% endif %}
-                                                                        </div>
+            <section class="section section-product" id="product">
+                <div class="container">
+                    <div class="row justify-content-center text-tenter">
+                        <div class="col-lg-7">
+                            <div class="section-head text-center">
+                                <h3 class="title">Sell Faster</h3>
+                            </div><!-- .section-head -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                    <div class="section-content">
+                        <div class="row justify-content-start text-left g-gs">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Modern User Interface</h4>
+                                                <p>An intuitive user interface designed for sales. A Dashboard for a
+                                                    better overview of the sales activities. Useful tips and best
+                                                    practices to configure and deploy your CRM.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Mobile</h4>
+                                                <p>Sell on the road with Olam's mobile friendly user interface.</p>
+                                            </div><!-- .secvice-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col- -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Reduce Data Entry</h4>
+                                                <p>Get leads automatically created from emails, VoIP call. Send quotes
+                                                    in just a few clicks, manage your pipeline with drag and drop, etc.
+                                                </p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Large Sreen View</h4>
+                                                <p>Optimized view for large screens.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div><!-- .container -->
+            </section><!-- .section product -->
+            <section class="section" style="padding-top: 0rem !important;">
+                <div class="container">
+                    <div class="row justify-content-center text-tenter">
+                        <div class="col-lg-7">
+                            <div class="section-head text-center">
+                                <h3 class="title">Leads</h3>
+                            </div><!-- .section-head -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                    <div class="section-content">
+                        <div class="row justify-content-start text-left g-gs">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Leads Nurturing</h4>
+                                                <p>Create campaigns to automatically send emails tailored to the lead
+                                                    segment and activities of the lead.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Lead Scoring</h4>
+                                                <p>Score your leads based on explicit and implicit criteria (on pages
+                                                    viewed, localisation, time). Define different actions based on lead
+                                                    score and team assignation rules. Decide which total score deserves
+                                                    to be converted into an opportunity</p>
+                                            </div><!-- .secvice-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col- -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Import Leads</h4>
+                                                <p>Easily import prospects files with Olams's column matching tool.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">GeoIP</h4>
+                                                <p>Detect countries, states and cities of leads automatically from
+                                                    visitor IP address.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Live Chat</h4>
+                                                <p>Activate Olam live chat on your website to talk to your visitors and
+                                                    convert them into leads. Define rules for key countries or pages.
+                                                </p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Deduplication</h4>
+                                                <p>Get propositions of leads to merge when converting a lead into an
+                                                    opportunity.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Assignation Rules</h4>
+                                                <p>Define your own rules to assign to assign leads to the right sales team or sales person based on quotas and segments.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Call-to-Actions</h4>
+                                                <p>Optimize leads acquisition with Olam's five call-to-actions and the a/b testing tool.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">URL Trackers</h4>
+                                                <p>Track the source of the leads using UTM trackers in all your marketing campaigns.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div><!-- .container -->
+            </section><!-- .section product -->
+            <section class="section" style="padding-top: 0rem !important;">
+                <div class="container">
+                    <div class="row justify-content-center text-tenter">
+                        <div class="col-lg-7">
+                            <div class="section-head text-center">
+                                <h3 class="title">Opportunities</h3>
+                            </div><!-- .section-head -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                    <div class="section-content">
+                        <div class="row justify-content-start text-left g-gs">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Activities and Calls Management</h4>
+                                                <p>Organize sequence of activities per opportunity. Schedule activities. Log every activity immediately in the opportunity's chatter with predefined actions. Track, log and analyse the activities of your team.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Pipeline Management</h4>
+                                                <p>Get a clear overview of the opportunity pipeline. Work faster with the drag & drop interface. Set up specific stages for each sales team. Possibility to create sub-stages to better organize the processes. Automatic archiving of lost opportunities. Lost is no longer a stage but a separate field, enabling more powerful analysis of the pipeline - e.g lost ratio per stage.</p>
+                                            </div><!-- .secvice-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col- -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Customize Stages</h4>
+                                                <p>Customize your pipeline by adding description on stages.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Schedule Meetings</h4>
+                                                <p>Schedule meetings from the opportunity of customer. Sync with mobile phone and Google calendar.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Plan Next Actions</h4>
+                                                <p>Plan next actions and schedule your daily work based on most important opportunities and tasks.
+                                                </p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">360° Visibility</h4>
+                                                <p>Get all information right into the opportunity: pages visited on your website, mails, meetings, next actions, preceeding orders, etc.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Log Calls</h4>
+                                                <p>Log calls or trigger VoIP calls in just a few clicks. Olam proposes to automatically reschedule the next action after the call.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Lost Reasons</h4>
+                                                <p>Analyze lost reasons on your opportunities to improve your sales effectiveness.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Revised Configuration Options</h4>
+                                                <p>Activate leads if needed.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div><!-- .container -->
+            </section><!-- .section product -->
+            <section class="section" style="padding-top: 0rem !important;">
+                <div class="container">
+                    <div class="row justify-content-center text-tenter">
+                        <div class="col-lg-7">
+                            <div class="section-head text-center">
+                                <h3 class="title">Customers</h3>
+                            </div><!-- .section-head -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                    <div class="section-content">
+                        <div class="row justify-content-start text-left g-gs">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Address Book</h4>
+                                                <p>Get a clear address book shared amongst your sales persons.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Customer Preferences</h4>
+                                                <p>Set customer preferences easily: language, delivery methods, financial data, etc.</p>
+                                            </div><!-- .secvice-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col- -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Multi-Address</h4>
+                                                <p>Have multiple addresses and contacts for a single company.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->                            
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div><!-- .container -->
+            </section><!-- .section product -->
+            <section class="section" style="padding-top: 0rem !important;">
+                <div class="container">
+                    <div class="row justify-content-center text-tenter">
+                        <div class="col-lg-7">
+                            <div class="section-head text-center">
+                                <h3 class="title">Efficient Communication</h3>
+                            </div><!-- .section-head -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                    <div class="section-content">
+                        <div class="row justify-content-start text-left g-gs">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Emails Templates</h4>
+                                                <p>Create template of emails for most common communications with your customers or opportunities.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Email Gateways</h4>
+                                                <p>Get all your email communications automatically attached to the right opportunity. Create new leads automatically based on incoming calls.</p>
+                                            </div><!-- .secvice-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col- -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">VoIP</h4>
+                                                <p>Create a dial queue on customers or opportunities, call from the browser automatically or manually. Log calls automatically, open the customer form, automate next actions, etc. Reschedule or send email for failed calls. An auto pop-up is generated for receiving calls. Integrated with Asterix v13.2 VoIP server.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Custom Alerts</h4>
+                                                <p>Follow key opportunities in just a click and get alerts based on relevant activities.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->                            
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div><!-- .container -->
+            </section><!-- .section product -->
+            <section class="section" style="padding-top: 0rem !important;">
+                <div class="container">
+                    <div class="row justify-content-center text-tenter">
+                        <div class="col-lg-7">
+                            <div class="section-head text-center">
+                                <h3 class="title">Reporting</h3>
+                            </div><!-- .section-head -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                    <div class="section-content">
+                        <div class="row justify-content-start text-left g-gs">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Dashboard</h4>
+                                                <p>Use predefined dashboards or build your own with the advanced reporting engine. Share filters with the team.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Cohort Analysis</h4>
+                                                <p>Keep track of the evolution of your KPI's over time and detect trends.</p>
+                                            </div><!-- .secvice-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col- -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">CRM Dashboard</h4>
+                                                <p>Visualize your sales teams KPI's at a glance.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Opportunities Analysis</h4>
+                                                <p>Analyse your opportunities pipeline with advanced filters, grouping, drill down, etc.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card card-shadow card-bordered">
+                                    <div class="card-inner card-inner-lg">
+                                        <div class="service">
+                                            <div class="service-text">
+                                                <h4 class="title">Leads Analysis</h4>
+                                                <p>Get statistics about your sources of leads to evaluate the ROI of your marketing campaigns.</p>
+                                            </div><!-- .service-text -->
+                                        </div><!-- .service -->
+                                    </div><!-- .card-inner -->
+                                </div><!-- .card -->
+                            </div><!-- .col -->                            
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div><!-- .container -->
+            </section><!-- .section product -->
+            <section class="section section-pricing bg-lighter mt-5" id="pricing">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-7 col-md-8 col-10">
+                            <div class="section-head text-center">
+                                <h2 class="title">Integrations</h2>
+                            </div><!-- .section-head -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                    <div class="section-content">
+                        <div class="row justify-content-center text-center g-gs">
+                            <div class="col-sm-8 col-md-6 col-lg-3">
+                                <a href="{{url_for('app.view', app_name='sales')}}">
+                                    <div class="service">
+                                        <div
+                                            class="service-icon styled-icon styled-icon-s4 styled-icon-6x circle text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z" />
+                                            </svg>
+                                        </div><!-- .service-icon -->
+                                        <div class="service-text">
+                                            <h4 class="title">Sales</h4>
+                                            <p style="color: #8094ae !important;">Convert opportunities into quotes in just a few clicks. Get a complete overview of the customer history..</p>
 
-                                                                    </div><!-- .price-item -->
-                                                                </div>
-                                                                <!-- .col -->
-                                                                {% endif %}
-                                                                {% endfor %}
-                                                            </div><!-- .row -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            {% endfor %}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                        </div><!-- .service-text -->
+                                    </div><!-- .service -->
+                                </a>
+                                <a href="{{url_for('app.view', app_name='sales')}}"
+                                    class="badge badge-light">Read more</a>
+                            </div><!-- .col -->
+
+                            <div class="col-sm-8 col-md-6 col-lg-3">
+                                <a href="{{url_for('app.view', app_name='inventory')}}">
+                                    <div class="service">
+                                        <div
+                                            class="service-icon styled-icon styled-icon-s4 styled-icon-6x circle text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-stack" viewBox="0 0 16 16">
+                                                <path
+                                                    d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z" />
+                                                <path
+                                                    d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z" />
+                                            </svg>
+                                        </div><!-- .service-icon -->
+                                        <div class="service-text">
+                                            <h4 class="title">Inventory</h4>
+                                            <p style="color: #8094ae !important;">Get products availabilities information right into the quotation. Trigger delivery orders and check delivery status from the order.</p>
+
+                                        </div><!-- .service-text -->
+                                    </div><!-- .service -->
+                                </a>
+                                <a href="{{url_for('app.view', app_name='inventory')}}"
+                                    class="badge badge-light">Read more</a>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
                     </div>
-                </div>
-            </section>
+                </div><!-- .container -->
+            </section><!-- .section -->
             {% include "footer.html" %}
         </div>
     </div>
-    {% include "scripts.html" %}
 </body>
 {% endblock %}

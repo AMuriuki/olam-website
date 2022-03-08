@@ -128,6 +128,11 @@ class Group(PaginatedAPIMixin, db.Model):
             }
         }
         return data
+    
+    def from_dict(self, data):
+        for field in ['name', 'module_id', 'permission']:
+            if field in data:
+                setattr(self, field, data[field])
 
 
 class Access(db.Model):

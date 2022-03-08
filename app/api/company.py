@@ -25,13 +25,13 @@ def get_companies():
 
 
 @bp.route('/companies/<int:id>/modules', methods=['GET'])
-def get_modules(id):
+def get_modulesByCompany(id):
     company = Company.query.get_or_404(id)
     page = request.args.get('page', 1, type=int)
     per_page = min(request.args.get('per_page', 10, type=int), 100)
     data = Company.to_collection_dict(
         company.modules, page, per_page, 'api.get_modules', id=id)
-    print(len(data))
+    
     return jsonify(data)
 
 
@@ -42,7 +42,7 @@ def get_access_groups(id):
     per_page = min(request.args.get('per_page', 10, type=int), 100)
     data = Module.to_collection_dict(
         module.access_groups, page, per_page, 'api.get_access_groups', id=id)
-    print(len(data))
+    
     return jsonify(data)
 
 
@@ -57,10 +57,10 @@ def get_access_rights(id):
 
 
 @bp.route('/modules/<int:id>/models', methods=['GET', 'POST'])
-def get_models(id):
+def get_modelsByCompany(id):
     module = Module.query.get_or_404(id)
     page = request.args.get('page', 1, type=int)
     per_page = min(request.args.get('per_page', 10, type=int), 100)
     data = Module._to_collection_dict(
-        module.models, page, per_page, 'api.get_models', id=id)
+        module.models, page, per_page, 'api.get_modelsByCompany', id=id)
     return jsonify(data)

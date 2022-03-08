@@ -12,7 +12,7 @@
 <body class="nk-body bg-white npc-landing ">
     <div class="nk-app-root">
         <!-- main @s -->
-        {% if app_name == "accounting" %}
+        {% if app_name == "Accounting" %}
         <div class="nk-main ">
             <header class="header has-header-main-s1 bg-lighter" id="home"
                 style="background-image: url({{url_for('static', filename='images/bg/accountant.jpg' )}});">
@@ -422,7 +422,7 @@
             </section><!-- .section -->
             {% include "footer.html" %}
         </div>
-        {% elif app_name == "expenses" %}
+        {% elif app_name == "Expenses" %}
         <div class="nk-main ">
             <header class="header has-header-main-s1 bg-lighter" id="home"
                 style="background-image: url({{url_for('static', filename='images/bg/expenses_top_banner.jpg' )}});">
@@ -845,9 +845,11 @@
                                     <div class="service">
                                         <div
                                             class="service-icon styled-icon styled-icon-s4 styled-icon-6x circle text-primary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
-                                                <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-                                              </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                            </svg>
                                         </div><!-- .service-icon -->
                                         <div class="service-text">
                                             <h4 class="title">Fleet</h4>
@@ -917,6 +919,406 @@
                                     </svg>
                                 </div>
                                 <h2 class="title">Get Started with Olam Expenses</h2>
+                                <p class="lead">Unleash your growth potential.</p>
+                                <ul class="btns-inline justify-center">
+                                    <li>
+                                        <a href="{{url_for('main.contact_us', product=app_name)}}"
+                                            class="btn btn-xl btn-primary">Get Started</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!-- ,col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+            {% include "footer.html" %}
+        </div>
+        {% elif app_name == "CRM" %}
+        <div class="nk-main ">
+            <header class="header has-header-main-s1 bg-lighter" id="home"
+                style="background-image: url({{url_for('static', filename='images/bg/crm_top_banner.jpg' )}});">
+                {% include "header-3.html" %}
+                <div class="header-content my-auto py-5 mt-n1">
+                    <div class="container">
+                        <div class="row flex-lg-row-reverse align-items-center justify-content-between g-gs">
+                            <div class="col-lg-12">
+                                <div class="header-caption">
+
+                                    <h1 class="header-title">The <b>real</b> customer<br>centric CRM.</h1>
+                                    <div class="header-text">
+                                        <p>Track leads, close opportunities and get accurate forecasts.</p>
+                                    </div>
+                                    <ul class="header-action btns-inline">
+                                        <li><a href="{{url_for('main.contact_us', product=app_name)}}"
+                                                class="btn btn-primary btn-lg"><span>Get Started</span></a>
+                                        </li>
+                                    </ul>
+                                </div><!-- .header-caption -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .container -->
+                </div><!-- .header-content -->
+                <div class="header-brand pb-4 pt-2 pb-lg-5">
+                    <div class="container">
+                        <div class="row align-items-center g-gs">
+                            <div class="col-4 col-md-2">
+                                <div class="brand-item">
+                                    <img src="./images/brand/brand-a.png" alt="">
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-4 col-md-2">
+                                <div class="brand-item">
+                                    <img src="./images/brand/brand-b.png" alt="">
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-4 col-md-2">
+                                <div class="brand-item">
+                                    <img src="./images/brand/brand-c.png" alt="">
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-4 col-md-2">
+                                <div class="brand-item">
+                                    <img src="./images/brand/brand-d.png" alt="">
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-4 col-md-2">
+                                <div class="brand-item">
+                                    <img src="./images/brand/brand-a.png" alt="">
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .header-brand -->
+                </div><!-- .container -->
+            </header>
+            <section class="section section-feature pb-0">
+                <div class="container">
+                    <div class="row flex-row-reverse align-items-center justify-content-between g-gs">
+                        <div class="col-lg-5">
+                            <div class="img-block img-block-s1 right">
+                                <img src="{{url_for('static', filename='images/gfx/crm_preview.gif')}}" alt="img">
+                            </div><!-- .img-block -->
+                        </div><!-- .col -->
+                        <div class="col-lg-6">
+                            <div class="text-block">
+                                <h2 class="title">Get <b>accurate</b> forecasts</h2>
+                                <h4 class="title">Use actionable data to make better decisions</h4>
+                                <div class="review review-s3">
+                                    <div class="review-content">
+                                        <div class="review-text">
+                                            <ul style="list-style:inside;">
+                                                <li>Get the insights you need to make smarter decisions.</li>
+                                                <li>Design custom dashboards to get a picture of your business at a
+                                                    glance.</li>
+                                                <li>Dig deeper with real-time reports and flow charts that anyone can
+                                                    create and share.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- .text-block -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+            <section class="section section-feature pb-0" id="feature">
+                <div class="container">
+                    <div class="row align-items-center justify-content-lg-between g-gs">
+                        <div class="col-lg-5">
+                            <div class="img-block img-block-s1 left">
+                                <img src="{{url_for('static', filename='images/gfx/crm_screenshot_03.gif')}}" alt="img">
+                            </div><!-- .img-block -->
+                        </div><!-- .col -->
+                        <div class="col-lg-6">
+                            <div class="text-block mr-xl-5">
+                                <h2 class="title">Get <b>more done</b>&nbsp;in <b>less time</b></h2>
+                                <h4 class="title">Great Tools = Happy People.</h4>
+                                <div class="g-gs">
+                                    <div class="service service-s3">
+                                        <div class="service-text">
+                                            <p>Schedule activities based on your sales script: calls, meetings, mailing,
+                                                and quotations. Get all the information you need, directly on the
+                                                opportunity: website pages viewed, mail received etc.</p>
+                                        </div>
+                                    </div>    
+                                    <div class="service service-s3">
+                                        <div class="img-block img-block-s1">
+                                            <img src="{{url_for('static', filename='images/gfx/crm_infographic_01.gif')}}"
+                                                alt="img">
+                                        </div><!-- .img-block -->
+                                    </div>                                
+                                </div><!-- .review -->                                
+                            </div><!-- .text-block -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </section>
+            <section class="section section-feature pb-0">
+                <div class="container">
+                    <div class="row flex-row-reverse align-items-center justify-content-between g-gs">
+                        <div class="col-lg-5">
+                            <div class="img-block img-block-s1 right">
+                                <img src="{{url_for('static', filename='images/gfx/Sales-Analysis.png')}}" alt="img">
+                            </div><!-- .img-block -->
+                        </div><!-- .col -->
+                        <div class="col-lg-6">
+                            <div class="text-block">
+                                <h2 class="title"><b>Real-time overview</b></h2>
+                                <h4 class="title">Easily review your performances & next activities.</h4>
+                                <div class="g-gs">
+                                    <div class="service service-s3">
+                                        <div class="service-text">
+                                            <p>
+                                                Kow exactly how you perform compared to your monthly targets. Organize your work based on your scheduled next actions.
+                                            </p>
+                                        </div>
+                                    </div><!-- .service -->
+                                </div>
+                            </div><!-- .text-block -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+            <section class="section section-feature pb-0" id="feature">
+                <div class="container">
+                    <div class="row align-items-center justify-content-lg-between g-gs">
+                        <div class="col-lg-5">
+                            <div class="img-block img-block-s1 left">
+                                <img src="{{url_for('static', filename='images/gfx/CRM-Discuss.png')}}" alt="img">
+                            </div><!-- .img-block -->
+                        </div><!-- .col -->
+                        <div class="col-lg-6">
+                            <div class="text-block mr-xl-5">
+                                <h2 class="title">Stay <b>connected</b>&nbsp;to your <b>customers</b></h2>
+                                <h4 class="title">Real-time messaging to enhance collaboration.</h4>
+                                <div class="g-gs">
+                                    <div class="service service-s3">
+                                        <div class="service-text">
+                                            <p>Get a quick overview of what's going on in your team. See when a colleague logs a call or sends a quote. Share ideas and files in real-time and catch-up on things you missed when you were away.</p>
+                                        </div>
+                                    </div>                                        
+                                </div><!-- .review -->                                
+                            </div><!-- .text-block -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </section>
+            <section class="section section-pricing bg-lighter mt-5" id="pricing">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-7 col-md-8 col-10">
+                            <div class="section-head text-center">
+                                <h2 class="title">Fully <b>integrated</b> with other <b>Olam Apps</b></h2>
+                            </div><!-- .section-head -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                    <div class="section-content">
+                        <div class="row justify-content-center text-center g-gs">
+
+                            <div class="col-sm-8 col-md-6 col-lg-3">
+                                <a href="{{url_for('app.view', app_name='sales')}}">
+                                    <div class="service">
+                                        <div
+                                            class="service-icon styled-icon styled-icon-s4 styled-icon-6x circle text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z" />
+                                            </svg>
+                                        </div><!-- .service-icon -->
+                                        <div class="service-text">
+                                            <h4 class="title">Sales</h4>
+                                            <p style="color: #8094ae !important;">Turn sales & purchase orders into invoices in one-click and track them through their payment.</p>
+
+                                        </div><!-- .service-text -->
+                                    </div><!-- .service -->
+                                </a>
+                                <a href="{{url_for('app.view', app_name='sales')}}"
+                                    class="badge badge-light">Discover</a>
+                            </div><!-- .col -->
+
+                            <div class="col-sm-8 col-md-6 col-lg-3">
+                                <a href="{{url_for('app.view', app_name='sign')}}">
+                                    <div class="service">
+                                        <div
+                                            class="service-icon styled-icon styled-icon-s4 styled-icon-6x circle text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
+                                                <rect x="15" y="5" width="56" height="70" rx="6" ry="6" fill="#e3e7fe" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <path d="M69.88,85H30.12A6.06,6.06,0,0,1,24,79V21a6.06,6.06,0,0,1,6.12-6H59.66L76,30.47V79A6.06,6.06,0,0,1,69.88,85Z" fill="#fff" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <polyline points="60 16 60 31 75 31.07" fill="none" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <line x1="58" y1="50" x2="32" y2="50" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <line x1="46" y1="38" x2="32" y2="38" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <line x1="68" y1="44" x2="32" y2="44" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <line x1="68" y1="56" x2="32" y2="56" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <line x1="58" y1="62" x2="32" y2="62" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <line x1="68" y1="68" x2="32" y2="68" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <line x1="58" y1="75" x2="32" y2="75" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            </svg>
+                                        </div><!-- .service-icon -->
+                                        <div class="service-text">
+                                            <h4 class="title">Sign</h4>
+                                            <p style="color: #8094ae !important;">Automate the signing process of your contracts.</p>
+
+                                        </div><!-- .service-text -->
+                                    </div><!-- .service -->
+                                </a>
+                                <a href="{{url_for('app.view', app_name='sign')}}"
+                                    class="badge badge-light">Discover</a>
+                            </div><!-- .col -->
+
+                            <div class="col-sm-8 col-md-6 col-lg-3">
+                                <a href="{{url_for('app.view', app_name='invoicing')}}">
+                                    <div class="service">
+                                        <div
+                                            class="service-icon styled-icon styled-icon-s4 styled-icon-6x circle text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
+                                                <path
+                                                    d="M68.14,80.86,30.21,72.69a5.93,5.93,0,0,1-4.57-7l12.26-56A6,6,0,0,1,45,5.14l28.18,6.07L85.5,29.51,75.24,76.33A6,6,0,0,1,68.14,80.86Z"
+                                                    fill="#eff1ff" stroke="#6576ff" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"></path>
+                                                <polyline points="73 12.18 69.83 26.66 85.37 30.08" fill="#eff1ff"
+                                                    stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"></polyline>
+                                                <path
+                                                    d="M66.26,71.15,29.05,82.46a6,6,0,0,1-7.46-4L4.76,23.15a6,6,0,0,1,4-7.47l27.64-8.4L56.16,17.39,70.24,63.68A6,6,0,0,1,66.26,71.15Z"
+                                                    fill="#e3e7fe" stroke="#6576ff" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"></path>
+                                                <polyline points="36.7 8.22 41.05 22.53 56.33 17.96" fill="#e3e7fe"
+                                                    stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"></polyline>
+                                                <path
+                                                    d="M68,85H29a6,6,0,0,1-6-6V21a6,6,0,0,1,6-6H58L74,30.47V79A6,6,0,0,1,68,85Z"
+                                                    fill="#fff" stroke="#6576ff" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"></path>
+                                                <polyline points="58 16 58 31 74 31.07" fill="#fff" stroke="#6576ff"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                </polyline>
+                                                <line x1="45" y1="41" x2="61" y2="41" fill="none" stroke="#c4cefe"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                </line>
+                                                <line x1="35" y1="48" x2="61" y2="48" fill="none" stroke="#c4cefe"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                </line>
+                                                <line x1="35" y1="55" x2="61" y2="55" fill="none" stroke="#c4cefe"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                </line>
+                                                <line x1="35" y1="63" x2="61" y2="63" fill="none" stroke="#c4cefe"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                </line>
+                                                <line x1="35" y1="69" x2="51" y2="69" fill="none" stroke="#c4cefe"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                </line><text transform="translate(34.54 43.18) scale(0.99 1)"
+                                                    font-size="9.31" fill="#6576ff"
+                                                    font-family="Nunito-Black, Nunito Black">$</text>
+                                            </svg>
+                                        </div><!-- .service-icon -->
+                                        <div class="service-text">
+                                            <h4 class="title">Invoicing</h4>
+                                            <p style="color: #8094ae !important;">Manage contracts, create recurring
+                                                invoices, bill timesheets, and get paid faster.</p>
+
+                                        </div><!-- .service-text -->
+                                    </div><!-- .service -->
+                                </a>
+                                <a href="{{url_for('app.view', app_name='invoicing')}}"
+                                    class="badge badge-light">Discover</a>
+                            </div><!-- .col -->
+
+                            <div class="col-sm-8 col-md-6 col-lg-3">
+                                <a href="{{url_for('app.view', app_name='email-marketing')}}">
+                                    <div class="service">
+                                        <div
+                                            class="service-icon styled-icon styled-icon-s4 styled-icon-6x circle text-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
+                                                <path d="M64.77,26.89,34.1,48,4.5,26.89,32.84,7.4a2.26,2.26,0,0,1,2.53,0Z" fill="#fff" />
+                                                <path d="M4.42,26H64.56A1.45,1.45,0,0,1,66,27.44V60.58A1.43,1.43,0,0,1,64.58,62H4.44A1.45,1.45,0,0,1,3,60.56V27.42A1.43,1.43,0,0,1,4.42,26Z" fill="#fff" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <path d="M18.51,36.11,28.66,16.77,45.6,25.49,37,41.91,35.1,40.79a1.39,1.39,0,0,0-1.55,0l-4.34,2.82Z" fill="#c4cefe" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <path d="M26.52,41.7l3.33-14s18.24,4,18.7,4.35l-1.48,6.25-7.76,5.19-5.09-3.11-5,3.23Z" fill="#fff" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <line x1="32.47" y1="32.04" x2="42.98" y2="34.5" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" />
+                                                <line x1="31.64" y1="35.5" x2="42.16" y2="37.96" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" />
+                                                <line x1="30.82" y1="38.96" x2="41.34" y2="41.41" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" />
+                                                <line x1="30.17" y1="41.73" x2="40.68" y2="44.18" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" />
+                                                <line x1="29.51" y1="44.5" x2="35.08" y2="45.8" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M64.64,26.43,34.1,47,4.64,26.43l28.21-19a2.29,2.29,0,0,1,2.52,0Z" fill="none" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <path d="M65.72,61.48,35.71,41A2.31,2.31,0,0,0,33,40.92L3.71,61.36" fill="#eff1ff" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <path d="M66.89,82.72,45.69,70.18A2,2,0,0,1,45,67.45L62.07,39.13a2,2,0,0,1,2.75-.69L86,51a2,2,0,0,1,.7,2.72L69.64,82A2,2,0,0,1,66.89,82.72Z" fill="#fff" />
+                                                <path d="M66.89,82.72,45.69,70.18A2,2,0,0,1,45,67.45L62.07,39.13a2,2,0,0,1,2.75-.69L86,51a2,2,0,0,1,.7,2.72L69.64,82A2,2,0,0,1,66.89,82.72Z" fill="none" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                <ellipse cx="72.6" cy="48.73" rx="1.44" ry="1.42" fill="#c4cefe" stroke="#c4cefe" stroke-miterlimit="10" stroke-width="2" />
+                                                <path d="M61.92,67.69l-8.41-5a1,1,0,0,1-.34-1.36l.31-.52a1,1,0,0,1,1.37-.34l8.41,5a1,1,0,0,1,.35,1.36l-.31.51A1,1,0,0,1,61.92,67.69Z" fill="#9cabff" />
+                                                <line x1="77.65" y1="61.3" x2="59.79" y2="50.73" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" />
+                                                <line x1="76.21" y1="63.69" x2="58.34" y2="53.13" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" />
+                                                <line x1="74.76" y1="66.09" x2="56.9" y2="55.52" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" />
+                                                <line x1="73.31" y1="68.49" x2="55.45" y2="57.92" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" />
+                                                <polyline points="68.01 52.34 61.48 48.47 61.48 48.47" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" />
+                                                <line x1="67.67" y1="77.86" x2="49.8" y2="67.29" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" />
+                                                <polyline points="57.43 68.5 51.51 64.99 51.51 64.99" fill="none" stroke="#c4cefe" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div><!-- .service-icon -->
+                                        <div class="service-text">
+                                            <h4 class="title">Email Marketing</h4>
+                                            <p style="color: #8094ae !important;">Send the right message to your leads, opportunities and customers.</p>
+
+                                        </div><!-- .service-text -->
+                                    </div><!-- .service -->
+                                </a>
+                                <a href="{{url_for('app.view', app_name='email-marketing')}}"
+                                    class="badge badge-light">Discover</a>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div>
+                </div><!-- .container -->
+            </section><!-- .section -->
+            <section class="section section-cta">
+                <div class="container">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-xl-6 col-lg-7 col-md-8">
+                            <div class="text-block is-compact">
+                                <div class="img-block h-150px mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
+                                        <path d="M81.8,22.23a2.89,2.89,0,1,1,2.89-2.89,2.89,2.89,0,0,1-2.89,2.89"
+                                            fill="#e3e7fe"></path>
+                                        <circle cx="72.42" cy="73.31" r="2.89" fill="none" stroke="#c4cefe"
+                                            stroke-linecap="round" stroke-linejoin="round"></circle>
+                                        <path d="M15,78.12a1.93,1.93,0,1,1,1.93-1.92A1.93,1.93,0,0,1,15,78.12"
+                                            fill="#e3e7fe"></path>
+                                        <path d="M14,51.35a1.93,1.93,0,1,1,1.93-1.93A1.94,1.94,0,0,1,14,51.35"
+                                            fill="#e3e7fe"></path>
+                                        <rect x="6.01" y="13.19" width="5.97" height="1.99" fill="#e3e7fe"></rect>
+                                        <rect x="8" y="11.2" width="1.99" height="5.97" fill="#e3e7fe"></rect>
+                                        <polygon points="74.3 34.88 68.3 26.12 66.35 15.69 47.16 34.88 74.3 34.88"
+                                            fill="#e3e7fe"></polygon>
+                                        <polygon points="42.54 6.45 33.78 12.44 23.34 14.39 42.54 33.59 42.54 6.45"
+                                            fill="#e3e7fe"></polygon>
+                                        <polygon points="14.16 37.73 20.15 46.49 22.11 56.92 41.3 37.73 14.16 37.73"
+                                            fill="#e3e7fe"></polygon>
+                                        <polygon points="23.34 58.64 33.78 60.59 42.54 66.59 42.54 39.44 23.34 58.64"
+                                            fill="#e3e7fe"></polygon>
+                                        <polygon points="22.11 15.69 20.15 26.12 14.16 34.88 41.3 34.88 22.11 15.69"
+                                            fill="#e3e7fe"></polygon>
+                                        <polygon points="74.3 37.87 47.16 37.87 66.35 57.06 68.3 46.62 74.3 37.87"
+                                            fill="#e3e7fe"></polygon>
+                                        <polygon points="45.52 66.59 54.28 60.59 64.72 58.64 45.52 39.44 45.52 66.59"
+                                            fill="#e3e7fe"></polygon>
+                                        <polygon points="64.72 14.39 54.28 12.44 45.52 6.45 45.52 33.59 64.72 14.39"
+                                            fill="#e3e7fe"></polygon>
+                                        <polygon
+                                            points="53.84 62.75 44.03 69.48 34.22 62.75 30.6 62.75 30.6 85.64 34.22 85.64 44.03 78.91 53.84 85.64 57.47 85.64 57.47 62.75 53.84 62.75"
+                                            fill="#e3e7fe"></polygon>
+                                        <path
+                                            d="M61.84,36.52A17.62,17.62,0,1,1,44.23,18.9,17.61,17.61,0,0,1,61.84,36.52"
+                                            fill="#fff" stroke="#6576ff" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"></path>
+                                        <path
+                                            d="M50.71,30.06v9a1.44,1.44,0,0,1-.77,1.26l-4.67,2.55a1.62,1.62,0,0,1-1.54,0l-4.67-2.55a1.44,1.44,0,0,1-.77-1.26V34a1.44,1.44,0,0,1,.77-1.26l4.67-2.55a1.6,1.6,0,0,1,1.4-.07v1.52l0,0a1.26,1.26,0,0,0-1.19,0l-3.63,2a1.1,1.1,0,0,0-.59,1v4a1.1,1.1,0,0,0,.59,1l3.63,2a1.26,1.26,0,0,0,1.19,0l3.62-2a1.11,1.11,0,0,0,.6-1V29.3Z"
+                                            fill="#6576ff"></path>
+                                        <path
+                                            d="M47.92,28.54l-1.4-.76v9.55a.45.45,0,0,1-.25.41l-1.52.83a.5.5,0,0,1-.5,0l-1.52-.83a.45.45,0,0,1-.25-.41V35.67a.45.45,0,0,1,.25-.41l1.52-.83a.5.5,0,0,1,.5,0l.38.2V33.11l-.2-.11a.93.93,0,0,0-.86,0l-2.56,1.4a.79.79,0,0,0-.43.7v2.8a.79.79,0,0,0,.43.7L44.07,40a.93.93,0,0,0,.86,0l2.56-1.4a.81.81,0,0,0,.43-.7V28.54Z"
+                                            fill="#6576ff"></path>
+                                        <path
+                                            d="M52.11,30.83v8.79a1.77,1.77,0,0,1-1,1.55l-5.72,3.12a2,2,0,0,1-1.88,0l-5.72-3.12a1.76,1.76,0,0,1-.94-1.55V33.38a1.76,1.76,0,0,1,.94-1.55l5.72-3.12a2,2,0,0,1,1.88,0l1.08.59V27.78l-.9-.5a2.4,2.4,0,0,0-2.24,0L36.62,31a2.07,2.07,0,0,0-1.12,1.83v7.38A2.07,2.07,0,0,0,36.62,42l6.76,3.7a2.4,2.4,0,0,0,2.24,0L52.38,42a2.07,2.07,0,0,0,1.12-1.83V31.6Z"
+                                            fill="#6576ff"></path>
+                                    </svg>
+                                </div>
+                                <h2 class="title">Get Started with Olam CRM</h2>
                                 <p class="lead">Unleash your growth potential.</p>
                                 <ul class="btns-inline justify-center">
                                     <li>
