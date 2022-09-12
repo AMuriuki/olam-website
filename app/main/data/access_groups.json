@@ -6,18 +6,6 @@
     "permission": 3
   },
   {
-    "id": "306aef03-7f21-43c8-8431-f00181135d05",
-    "name": "Administrator",
-    "module_id": 2,
-    "permission": 3
-  },
-  {
-    "id": "8a10dcf6-954d-485e-959a-93eb3c63a2b2",
-    "name": "Administrator",
-    "module_id": 3,
-    "permission": 3
-  },
-  {
     "id": "3b13fec1-8a40-4c34-b29b-36a6da1e9be1",
     "name": "Manager",
     "module_id": 1,
@@ -30,9 +18,75 @@
     "permission": 1
   },
   {
+    "id": "306aef03-7f21-43c8-8431-f00181135d05",
+    "name": "Administrator",
+    "module_id": 2,
+    "permission": 3
+  },
+  {
     "id": "950f2df6-64bf-4a99-8659-6abba655e8d5",
     "name": "Manager",
     "module_id": 2,
     "permission": 2
+  },
+  {
+    "id": "d8e22748-0eb3-4352-a0b0-164a3627df27",
+    "name": "User",
+    "module_id": 2,
+    "permission": 1
+  },
+  {
+    "id": "8a10dcf6-954d-485e-959a-93eb3c63a2b2",
+    "name": "Administrator",
+    "module_id": 3,
+    "permission": 3
+  },
+  {
+    "id": "885d0c81-f058-426e-bf43-e661386976ea",
+    "name": "Manager",
+    "module_id": 3,
+    "permission": 2
+  },
+  {
+    "id": "457fae5d-eecd-4b4f-98c5-519fb3317ee1",
+    "name": "User",
+    "module_id": 3,
+    "permission": 1
+  },
+  {
+    "id": "34755e2d-2293-43a2-8925-5c61ecd061a6",
+    "name": "Administrator",
+    "module_id": 4,
+    "permission": 3
+  },
+  {
+    "id": "ab86dc1f-99ae-4a24-ac3d-8863a76635ef",
+    "name": "Manager",
+    "module_id": 4,
+    "permission": 2
+  },
+  {
+    "id": "39fa6ffb-b562-45f4-8aed-5cd351d4ef76",
+    "name": "User",
+    "module_id": 4,
+    "permission": 1
+  },
+  {
+    "id": "8538f394-1e8e-474b-8a83-28f75d79fc11",
+    "name": "Administrator",
+    "module_id": 5,
+    "permission": 3
+  },
+  {
+    "id": "629b33c4-d07b-4da9-81b0-aea9e4230b76",
+    "name": "Manager",
+    "module_id": 5,
+    "permission": 2
+  },
+  {
+    "id": "786c83c7-24d2-43ce-b046-4d1908335e34",
+    "name": "User",
+    "module_id": 5,
+    "permission": 1
   }
 ]

@@ -18,9 +18,45 @@
     "delete": false
   },
   {
+    "id": "a9ccd261-cf0e-44fb-adc4-d62f3d73fe5e",
+    "name": "Manage titles",
+    "model_id": 11,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "12b2927d-23f8-4339-b316-9ba82507a09b",
+    "name": "Manage tags",
+    "model_id": 12,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "763af197-9821-41c8-9cb1-49539334e1c1",
+    "name": "Manage positions",
+    "model_id": 13,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
     "id": "bcfae81c-0a01-4352-8225-2b7719733e96",
     "name": "Manage groups",
     "model_id": 2,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "92015e49-73cf-42f5-a49a-92b20b529547",
+    "name": "Manage access records",
+    "model_id": 4,
     "read": true,
     "write": true,
     "create": true,
@@ -34,5 +70,167 @@
     "write": false,
     "create": false,
     "delete": false
+  },
+  {
+    "id": "9926182d-f006-4a41-8e36-daa95e6b6fb6",
+    "name": "Manage Contacts",
+    "model_id": 3,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "62183702-bce3-4bf0-a670-4defa492623e",
+    "name": "View Contacts",
+    "model_id": 3,
+    "read": true,
+    "write": false,
+    "create": false,
+    "delete": false
+  },
+  {
+    "id": "9997a2dc-495b-4907-842d-23769bd7fcfd",
+    "name": "Manage contacts",
+    "model_id": 3,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": false
+  },
+  {
+    "id": "87ab0d9e-6eeb-4408-9b73-daf96feb9526",
+    "name": "Manage Leads",
+    "model_id": 5,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "0140b3e4-e204-473f-bba6-05113efa82d0",
+    "name": "Manage Sales Stages",
+    "model_id": 6,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "d096daba-59e4-4f5d-81f8-b7bd1d27fbfd",
+    "name": "Manage Pipeline",
+    "model_id": 5,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": false
+  },
+  {
+    "id": "b1ad71ab-f6db-4ff6-a6e3-a72aa563f964",
+    "name": "Manage Pipeline",
+    "model_id": 5,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": false
+  },
+  {
+    "id": "c44a28a1-1061-4fb8-9051-38566eb6cb38",
+    "name": "Manage Sales Stages",
+    "model_id": 6,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": false
+  },
+  {
+    "id": "d4a175a7-ef01-48c9-af32-59c666949225",
+    "name": "Manage Activities",
+    "model_id": 7,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "21d884e7-caeb-4b02-bc96-a75afca1c7c5",
+    "name": "Manage Activities",
+    "model_id": 7,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": false
+  },
+  {
+    "id": "acecafba-57b2-4f9d-9022-973ff101ac0a",
+    "name": "Manage Activities",
+    "model_id": 7,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": false
+  },
+  {
+    "id": "bcd1fce2-7514-42b4-b7e8-fabfe67b7084",
+    "name": "Manage Purchase Orders",
+    "model_id": 8,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "9893de5a-91f1-4e61-a807-214c32819d9c",
+    "name": "Manage Products",
+    "model_id": 9,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "2289ebc8-4aca-495b-94a1-c52931a8e1b2",
+    "name": "Manage UoMs",
+    "model_id": 10,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "0ac74714-f09b-4b6b-b7e5-b38e39c83aae",
+    "name": "Manage product attributes",
+    "model_id": 14,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "8bccc4fe-7569-4461-820d-e7e85e222150",
+    "name": "Manage product categories",
+    "model_id": 15,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "c0eef292-c0d2-4023-89a5-725343e7315c",
+    "name": "Manage company information",
+    "model_id": 16,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
+  },
+  {
+    "id": "7e6eed0c-db90-4188-b80c-64af6b5b57df",
+    "name": "Manage recurring plans records",
+    "model_id": 17,
+    "read": true,
+    "write": true,
+    "create": true,
+    "delete": true
   }
 ]
